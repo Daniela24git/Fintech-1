@@ -29,5 +29,11 @@
 #cliente{
     position: absolute;
     top: 340px;
-    left: 145px;
+    left: 110px;
+}
+
+#tabla{
+    position: absolute;
+    top: 160px;
+    left: 710px;
 }

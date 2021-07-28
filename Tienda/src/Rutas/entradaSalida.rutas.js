@@ -1,12 +1,12 @@
 const express = require('express');
-const app = require('../app');
 const rutas = express.Router()
 
-const {lista} = require('../Controladores/entradaSalida.controlador')
+const {mostrarEntradasSalidas, mostrarEntrada, mostrarProductos} = require('../Controladores/entradaSalida.controlador')
 const {isLoggedIn} = require('../lib/auth')
 
 rutas.use(isLoggedIn)
 
-rutas.get('/agregar/:id', isLoggedIn, lista)
+rutas.get('/eleccion/:id', isLoggedIn, mostrarEntradasSalidas)
+rutas.get('/entradas/agregar/:id', isLoggedIn, mostrarEntrada)
 
 module.exports = rutas

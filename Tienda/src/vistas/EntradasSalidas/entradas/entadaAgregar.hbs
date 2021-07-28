@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/entradasSalidas/entradasSalidas.css">
+<form action="/entradaSalida/entradas/agregar/{{user.id}}" method="get">
+    <div id="Entradas">
+        <label>Entradas</label>
+    </div>
+    <div id="fecha">
+        <label>Fecha:</label>
+        <input type="text" value="" name="fecha" id="fechas" readonly>
+    </div>
+    <div id="CODIGO">
+        <label>C.Documento:</label>
+        {{#each entrasLista}}
+        <input type="text" value="{{codigo}}" name="codigoDocumento" id="codigoDocumento" readonly>
+        {{/each}}
+    </div>
+    <div id="Dtienda">
+        <label>Tienda:</label>
+        {{#each listaTienda}}
+        <input type="text" value="{{nombreNegocio}}" name="Tienda" id="Tienda" readonly>
+        {{/each}}
+    </div>
+    <div id="cliente">
+        <label>Proveedor:</label>
+        <select name="NombreProvedor" id="NombreProvedor">
+        {{#each listaProveedor}}
+        <option value="{{this.NombreProveedor}}">{{this.NombreProveedor}}</option>
+        {{/each}}
+        </select>
+        <div>
+            <button><a href="#">consultar</a></button>
+        </div>
+    </div>
+    <div id="tabla">
+        <table border="1">
+            <tr>
+                <td>Codigo</td>
+                <td>Producto</td>
+                <td>Medida</td>
+                <td>Entrada</td>
+                <td>CantidadActual</td>
+            </tr>
+            <tr>
+                {{#each listaProductos}}
+                <td>{{codigo}}</td>
+                <td>{{NombreProducto}}</td>
+                <td>{{UnidadMedida}}</td>
+                <td>{{Cantidad}}</td>
+                <td>{{Cantidad}}</td>
+                {{/each}}
+            </tr>
+        </table>
+    </div>
+</form>
+
+<script src="/js/fecha.js"></script>

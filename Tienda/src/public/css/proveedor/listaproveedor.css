@@ -110,6 +110,7 @@ nav{
 }
 
 #agregarProducto{
+    width: 270px;
     position: absolute;
     margin-top: 190px;
     margin-left: 130px;

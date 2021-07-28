@@ -1,0 +1,14 @@
+#logo{
+    top: 80px;
+}
+
+#eleccion1{
+    position: absolute;
+    top: 300px;
+    left: 340px;
+}
+#eleccion2{
+    position: absolute;
+    top: 300px;
+    left: 680px;
+}
