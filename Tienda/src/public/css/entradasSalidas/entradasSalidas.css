@@ -34,6 +34,15 @@
 
 #tabla{
     position: absolute;
-    top: 160px;
-    left: 710px;
+    top: 400px;
+    left: 10px;
+    text-align: center;
+}
+
+#codigo{
+    width: 250px;
+}
+
+#Cantidad{
+    width: 150px;
 }

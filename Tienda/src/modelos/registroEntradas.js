@@ -7,6 +7,7 @@ const registroEntradas = (sequelize, type)=>{
         },
         codigo: type.INTEGER,
         codigoProducto: type.STRING,
+        nombreProducto: type.STRING,
         nombreProveedor: type.STRING,
         unidadMedida: type.STRING,
         entraCantidad: type.INTEGER,

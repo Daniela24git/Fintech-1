@@ -9,13 +9,13 @@ entradaSalida.mostrarEntradasSalidas= (req, res)=>{
 
 entradaSalida.mostrarEntrada = async(req,res)=>{
     const ids = req.user.id
-    const NombreProvedor = req.body
+    const id = req.params.id
     const entrasLista = await sql.query('SELECT max(codigo) FROM registroentradas')
     const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioId = ?', [ids])
     const listaProveedor = await sql.query('SELECT NombreProveedor FROM provedores WHERE usuarioId = ?', [ids])
-    const listaProductos = sql.query('SELECT * FROM productoentradas WHERE NombreProvedor = ?', [NombreProvedor])
-    console.log(NombreProvedor)
-    res.render('EntradasSalidas/entradas/entadaAgregar', {entrasLista, listaTienda, listaProveedor, listaProductos});
+    const listaProductos = await sql.query('SELECT * FROM productoentradas WHERE provedoreId = ?', [id])
+    const productosLista = await sql.query('SELECT Cantidad FROM productos WHERE tiendaId = ?', [ids])
+    res.render('EntradasSalidas/entradas/entadaAgregar', {entrasLista, listaTienda, listaProveedor, listaProductos, productosLista});
 }
-
+ 
 module.exports= entradaSalida

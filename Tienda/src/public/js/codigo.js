@@ -16,7 +16,7 @@ class codijoProducto{
     inicio() {
         this.concatenar = this.codigoPais + this.codigoEmpresa + this.codigoProducto;
         this.array = this.concatenar.split("", this.concatenar);
-        for (let i = 0; i < 11; i++) {
+        for (let i = 0; i < 12; i++) {
             let legtura = this.array[i];
             if (i == 0) {
                 this.suma = parseInt(legtura) * 1;

@@ -12,7 +12,10 @@ class fecha {
     sumaNumeros(){
         if(this.numeroDocumento.value == ""){
             this.numeroDocumento.value = 1
+        }else{
+            this.numeroDocumento.value = this.numeroDocumento.value + 1
         }
+        fechas.cambio()
     }
 }
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const rutas = express.Router()
 
-const {mostrarEntradasSalidas, mostrarEntrada, mostrarProductos} = require('../Controladores/entradaSalida.controlador')
+const {mostrarEntradasSalidas, mostrarEntrada} = require('../Controladores/entradaSalida.controlador')
 const {isLoggedIn} = require('../lib/auth')
 
 rutas.use(isLoggedIn)

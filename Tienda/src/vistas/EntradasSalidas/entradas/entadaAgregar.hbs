@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/entradasSalidas/entradasSalidas.css">
-<form action="/entradaSalida/entradas/agregar/{{user.id}}" method="get">
+<form action="/entradaSalida/entradas/agregar/{{user.id}}" method="POST">
     <div id="Entradas">
         <label>Entradas</label>
     </div>
@@ -21,14 +21,9 @@
     </div>
     <div id="cliente">
         <label>Proveedor:</label>
-        <select name="NombreProvedor" id="NombreProvedor">
         {{#each listaProveedor}}
-        <option value="{{this.NombreProveedor}}">{{this.NombreProveedor}}</option>
+        <input type="text" name="nombreProveedor" id="NombreProveedor" value="{{NombreProveedor}}" readonly>
         {{/each}}
-        </select>
-        <div>
-            <button><a href="#">consultar</a></button>
-        </div>
     </div>
     <div id="tabla">
         <table border="1">
@@ -41,11 +36,13 @@
             </tr>
             <tr>
                 {{#each listaProductos}}
-                <td>{{codigo}}</td>
-                <td>{{NombreProducto}}</td>
-                <td>{{UnidadMedida}}</td>
-                <td>{{Cantidad}}</td>
-                <td>{{Cantidad}}</td>
+                <td><input type="text" name="codigoProducto" id="codigo" value="{{codigo}}" readonly></td>
+                <td><input type="text" name="nombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly></td>
+                <td><input type="text" name="unidadMedida" id="UnidadMedida" value="{{UnidadMedida}}" readonly></td>
+                <td><input type="text" name="entraCantidad" id="Cantidad" value="{{Cantidad}}" readonly></td>
+                {{/each}}
+                {{#each productosLista}}
+                <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{Cantidad}}" readonly></td>
                 {{/each}}
             </tr>
         </table>
