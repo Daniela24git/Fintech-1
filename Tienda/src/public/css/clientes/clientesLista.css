@@ -64,3 +64,15 @@ input{
     top: 120px;
     width: 300px;
 }
+
+#mas{
+    width: 50px;
+}
+
+#masProveedor{
+    position: absolute;
+    top: 10px;
+    left: 1120px;
+    background-color: transparent;
+    border-color: transparent;
+}

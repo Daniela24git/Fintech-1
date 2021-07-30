@@ -1,38 +1,37 @@
 <form action="/clientes/lista/{{user.id}}"></form>
 <LINK REL=StyleSheet HREF="/css/clientes/clientesLista.css" TYPE="text/css" MEDIA=screen>
-    <div id="contenedor">
-        <div class="row">
-            {{#each clientes}}
-            <div id="tarjeta">
-                <div id="CODIGO">
-                    <label>Codigo:</label>
-                    <input type="text" value="{{Nombres}}" id="codigo" readonly></input>
-                </div>
-                <div id="PRODUCTO">
-                    <label>Producto:</label>
-                    <input type="text" value="{{Direccion}}" id="NombreProducto" readonly></input>
-                </div>
-                <div id="CANTIDAD">
-                    <label>Cantidad:</label>
-                    <input type="text" value="{{Celular}}" id="Cantidad" readonly></input>
-                </div>
-                <div>
-                    <a href="/clientes/editar/{{id}}" id="BotonEditar"><img
-                                src="/img/iconos/editar.png" id="editar"></a>
-                </div>
-                <div>
-                   <a href="/clientes/Eliminar/{{id}}" id="botonX"><img src="/img/iconos/eliminar.png"
-                            id="eliminar"></a></a>
-                </div>
+<div id="contenedor">
+    <div class="row">
+        {{#each clientes}}
+        <div id="tarjeta">
+            <div id="CODIGO">
+                <label>Nombres:</label>
+                <input type="text" value="{{Nombres}}" id="codigo" readonly></input>
             </div>
-            {{else}}
-            <div id="agregar">
-                <div>
-                    <p>¡No has registrado Productos.!</p>
-                    <a href="/clientes/agregar/{{user.id}}">¡Introducir uno!</a>
-                </div>
+            <div id="PRODUCTO">
+                <label>Direccion:</label>
+                <input type="text" value="{{Direccion}}" id="NombreProducto" readonly></input>
             </div>
-            {{/each}}
+            <div id="CANTIDAD">
+                <label>Celular:</label>
+                <input type="text" value="{{Celular}}" id="Cantidad" readonly></input>
+            </div>
+            <div>
+                <a href="/clientes/editar/{{id}}" id="BotonEditar"><img src="/img/iconos/editar.png" id="editar"></a>
+            </div>
+            <div>
+                <a href="/clientes/Eliminar/{{id}}" id="botonX"><img src="/img/iconos/eliminar.png"
+                        id="eliminar"></a></a>
+            </div>
         </div>
+        {{else}}
+        <div id="masProveedor">
+            <a href="/clientes/agregar/{{user.id}}"><img src="/img/iconos/mas.png" id="mas"></a>
+        </div>
+        {{/each}}
     </div>
+    <div id="masProveedor">
+        <a href="/clientes/agregar/{{user.id}}"><img src="/img/iconos/mas.png" id="mas"></a>
+    </div>
+</div>
 </form>
