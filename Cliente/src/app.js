@@ -59,7 +59,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //public
 
 //routers
-app.use(require('./rutas/login.rutas'))
+app.use(require('./rutas/index.rutas'))
 app.use(require('./rutas/registro.rutas'))
 app.use(require('./rutas/usuario.rutas'))
 

@@ -1,37 +1,15 @@
 <link rel="stylesheet" href="/css/login.css">
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <br>
-      <br>
-      <p id="frase">¡La más inteligente de las especies, <br> no es la que sobrevive, <br> ni la más fuerte,<br> es la
-        que sabe adaptarse al cambio.!</p>
+<div id="contenedor">
+  <form action="/Login" method="POST">
+    <div id="cedula">
+      <label>Cedula:</label>
+      <input type="text" name="username" id="Cedula">
     </div>
-    <div class="col">
-      <br><br><br><br><br>
-      <div id="container">
-        <!-- login-->
-        <table>
-          <form action="/Login" method="POST">
-            <div id="cedula">
-              <br>
-              <h5 style="font-style: oblique; position: relative; left: 10px; font-size: 25px;">Cedula:</h5>
-              <input type="text" name="username" id="Cedula" style="width:400px; position: relative; left: 10px;">
-            </div>
-            <div id="contraseña">
-              <h5 style="font-style: oblique; position: relative; left: 10px; font-size: 25px;">Contraseña:</h5>
-              <input type="password" name="password" id="Contraseña"
-                style="width:400px; position: relative; left: 10px;">
-            </div>
-            <br>
-
-            <button type="submit" id="button" style="width: 150px;">Ingresar</button>
-            <br><br>
-            <button type="submit" id="button2" style="width: 150px;"><a href="/registro">Registrate</a></button>
-          </form>
-        </table>
-        <!--login-->
-      </div>
+    <div id="contraseña">
+      <label>Contraseña:</label>
+      <input type="password" name="password" id="Contraseña">
     </div>
-  </div>
+    <button type="submit" id="button">Ingresar</button>
+    <button type="submit" id="button2"><a href="/registro">Registrate</a></button>
+  </form>
 </div>

@@ -1,7 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const pool = require("../configuracionBaseDatos/baseDatos.sql");
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const helpers = require("./helpers");
 
 passport.use(
@@ -13,15 +13,15 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await pool.query("SELECT * FROM cliente WHERE username = ?", [username]);
-      if (rows.length > 0) {
-        const user = rows[0];
+      const rows = await await orm.cliente.findOne({ where: { username: username } });
+      if (rows) {
+        const user = rows
         const validPassword = await helpers.matchPassword(
           password,
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("success", "Bienvenido " + user.username));
+          done(null, user, req.flash("success", "Bienvenido " + "" + user.username));
         } else {
           done(null, false, req.flash("message", "Contraseña incorrecta"));
         }
@@ -45,7 +45,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const {Nombres } = req.body;
+      const { Nombres } = req.body;
       let newcliente = {
         Nombres,
         username,
@@ -53,18 +53,17 @@ passport.use(
       }
       newcliente.password = await helpers.encryptPassword(password);
       // Saving in the Database
-      const result = await pool.query("INSERT INTO cliente SET ?", newcliente)
+      const result = await orm.cliente.create(newUser);
       newcliente.id = result.insertId;
       return done(null, newcliente);
     }
   )
 );
 
-passport.serializeUser((user, done) => {
-  done(null, user.id);
+passport.serializeUser(function (user, done) {
+  done(null, user);
 });
 
-passport.deserializeUser(async (id, done) => {
-  const rows = await pool.query("SELECT * FROM cliente WHERE id = ?", [id]);
-  done(null, rows[0]);
+passport.deserializeUser(function (user, done) {
+  done(null, user);
 });
