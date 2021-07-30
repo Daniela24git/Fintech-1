@@ -1,6 +1,6 @@
 const lista = {}
 
-const pool = require("../database")
+const pool = require("../configuracionBaseDatos/baseDatos.sql")
 
 lista.mostrar = (req, res) => {
     res.render("productos/lista");

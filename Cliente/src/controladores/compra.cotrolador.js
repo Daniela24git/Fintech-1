@@ -1,5 +1,5 @@
 const compra = {}
-const pool = require('../database')
+const pool = require('../configuracionBaseDatos/baseDatos.sql')
 
 compra.traer = async(req,res)=>{
     const {id} = req.params

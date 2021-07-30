@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const { isLoggedIn } = require('../lib/auth')
-const { renderConsumibles, renderNoConsumibles, renderBebidas } = require('../controllers/Categorias.controller');
+const { renderConsumibles, renderNoConsumibles, renderBebidas } = require('../controladores/Categorias.controlador');
 
 
 router.use(isLoggedIn)

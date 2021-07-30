@@ -1,5 +1,5 @@
 const formaPago = {}
-const pool = require("../database")
+const pool = require("../configuracionBaseDatos/baseDatos.sql")
 
 
 formaPago.traer = async(req,res)=>{

@@ -1,5 +1,5 @@
 const productos={}
-const pool=require("../database")
+const pool=require("../configuracionBaseDatos/baseDatos.sql")
 
 productos.calidad=async(req,res)=>{
     const {id} = req.params

@@ -1,5 +1,5 @@
 const categoriaCtrl = {};
-const pool = require('../database');
+const pool = require('../configuracionBaseDatos/baseDatos.sql');
 
 categoriaCtrl.renderConsumibles = async (req, res) => {
     const consumibles = await pool.query("SELECT * FROM producto WHERE categoria = 'Consumible'");

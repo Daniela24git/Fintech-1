@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { renderSignUp, signUp, renderSignIn, signIn, logout } = require('../controllers/auth.controller')
+const { renderSignUp, signUp, renderSignIn, signIn, logout } = require('../controladores/auth.controlador')
 
 // SIGNUP
 router.get('/registro', renderSignUp);

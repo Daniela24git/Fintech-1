@@ -1,7 +1,7 @@
 const express = require('express');
 const rutas = express.Router()
 
-const {traer} = require("../controllers/formaPago.controlador")
+const {traer} = require("../controladores/formaPago.controlador")
 
 const {isLoggedIn} = require("../lib/auth")
 

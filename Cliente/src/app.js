@@ -16,7 +16,7 @@ require('./lib/passport');
 
 /// archivos compartidos
 app.set('port', process.env.PORT || 5000);
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'vistas'));
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
   layoutsDir: path.join(app.get('views'), 'layouts'),
@@ -59,16 +59,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 //public
 
 //routers
-app.use(require('./routers/login.router'))
-app.use(require('./routers/auth.router'))
-app.use(require('./routers/user.router'))
+app.use(require('./rutas/login.rutas'))
+app.use(require('./rutas/registro.rutas'))
+app.use(require('./rutas/usuario.rutas'))
 
-app.use('/tienda', require('./routers/Tienda'));
-app.use('/producto', require('./routers/productos'));
-app.use('/productos', require('./routers/Categoria.router'));
-app.use('/Compra', require('./routers/lista'));
-app.use('/Compras', require('./routers/compras'));
-app.use('/formaPago', require('./routers/formasPago'));
+app.use('/tienda', require('./rutas/Tienda.rutas'));
+app.use('/producto', require('./rutas/productos.rutas'));
+app.use('/productos', require('./rutas/Categoria.rutas'));
+app.use('/Compra', require('./rutas/lista.rutas'));
+app.use('/Compras', require('./rutas/compras.rutas'));
+app.use('/formaPago', require('./rutas/formasPago.rutas'));
 
 //public
 
