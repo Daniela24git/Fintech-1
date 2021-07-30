@@ -62,7 +62,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./rutas/index.rutas'))
 app.use(require('./rutas/registro.rutas'))
 app.use(require('./rutas/usuario.rutas'))
-
+app.use('/actualizacion', require('./rutas/actulizarDatos.rutas'));
 app.use('/tienda', require('./rutas/Tienda.rutas'));
 app.use('/producto', require('./rutas/productos.rutas'));
 app.use('/productos', require('./rutas/Categoria.rutas'));

@@ -6,8 +6,8 @@ const { renderConsumibles, renderNoConsumibles, renderBebidas } = require('../co
 
 
 router.use(isLoggedIn)
-router.get('/consumibles', isLoggedIn, renderConsumibles);
-router.get('/bebidas', isLoggedIn, renderBebidas);
-router.get('/noconsumibles', isLoggedIn, renderNoConsumibles);
+router.get('/consumibles/:id', isLoggedIn, renderConsumibles);
+router.get('/bebidas/:id', isLoggedIn, renderBebidas);
+router.get('/noconsumibles/:id', isLoggedIn, renderNoConsumibles);
 
 module.exports = router;

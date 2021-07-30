@@ -1,11 +1,11 @@
-<link rel="stylesheet" href="/css/productos.css">
+<link rel="stylesheet" href="/css/productos/productos.css">
 <div id="navegacion">
     <div id="categorias">
         <a id="Tiendas" href="/tienda/lista"> Tiendas</a>
-        <a id="Tiendas" href="/producto/lista"> Todos</a>
-        <a id="Consumibles" href="/productos/consumibles"> Consumibles</a>
-        <a id="noConsumibles" href="/productos/noconsumibles"> No consumibles</a>
-        <a id="Bebidas" href="/productos/bebidas"> Bebidas </a>
+        <a id="Tiendas" href="/producto/lista/{{user.id}}"> Todos</a>
+        <a id="Consumibles" href="/productos/consumibles/{{user.id}}"> Consumibles</a>
+        <a id="noConsumibles" href="/productos/noconsumibles/{{user.id}}"> No consumibles</a>
+        <a id="Bebidas" href="/productos/bebidas/{{user.id}}"> Bebidas </a>
     </div>
 </div>
 <hr>
@@ -40,7 +40,7 @@
 </div>
 <div id="contenido">
     <!--card--->
-    <form action="/producto/lista" method="POST" id="tienda">
+    <form action="/producto/noconsumibles/{{user.id}}" method="POST" id="tienda">
         <div class="container p-4">
             <div class="row">
                 {{#each NoConsumibles}}

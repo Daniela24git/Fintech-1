@@ -1,9 +1,9 @@
 const Tiendas = {};
 
-const pool = require('../configuracionBaseDatos/baseDatos.sql');
+const sql = require('../configuracionBaseDatos/baseDatos.sql');
 
 Tiendas.rederList = async (req, res) => {
-    const lista = await pool.query('SELECT * FROM Tienda')
+    const lista = await sql.query('SELECT * FROM Tiendas')
     res.render('Tiendas', { lista });
 }
 

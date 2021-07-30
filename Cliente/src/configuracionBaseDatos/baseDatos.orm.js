@@ -5,6 +5,7 @@ const tiendaModelos = require('../modelos/tienda')
 const listaProductosModelos = require('../modelos/listaProductos')
 const clienteModelos = require('../modelos/cliente')
 const detalleListaProductosModelos = require('../modelos/detalleListaProductos') 
+const productoModelos = require('../modelos/productos')
 
 const sequelize = new Sequelize(
     'fintech', 
@@ -40,11 +41,13 @@ const tienda = tiendaModelos(sequelize, Sequelize)
 const listaProductos = listaProductosModelos(sequelize, Sequelize)
 const cliente = clienteModelos(sequelize, Sequelize)
 const detalleListaProductos = detalleListaProductosModelos(sequelize, Sequelize)
+const productos = productoModelos(sequelize, Sequelize)
 
 module.exports = {
   categoria,
   tienda,
   listaProductos,
   cliente,
-  detalleListaProductos
+  detalleListaProductos,
+  productos
 }

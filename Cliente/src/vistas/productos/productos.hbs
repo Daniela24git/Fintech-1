@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="/css/productos.css">
+<link rel="stylesheet" href="/css/productos/productos.css">
 <div id="navegacion">
     <div id="categorias">
         <a id="Tiendas" href="/tienda/lista"> Tiendas</a>
         {{#each tienda}}
         <a id="Consumibles" href="/productos/consumibles/{{id}}"> Consumibles</a>
         {{/each}}
-        <a id="noConsumibles" href="/productos/noconsumibles"> No consumibles</a>
-        <a id="Bebidas" href="/productos/bebidas"> Bebidas </a>
+        <a id="noConsumibles" href="/productos/noconsumibles/{{user.id}}"> No consumibles</a>
+        <a id="Bebidas" href="/productos/bebidas/{{user.id}}"> Bebidas </a>
     </div>
 </div>
 <hr>

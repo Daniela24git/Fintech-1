@@ -1,8 +1,9 @@
 const express = require('express');
-const router = express.Router();
+const rutas = express.Router();
 
-const { mostrar } = require('../controladores/index.controlador');
+const { mostrar, madar } = require('../controladores/index.controlador');
 
-router.get('/', mostrar);
+rutas.get('/', mostrar);
+rutas.post('/', madar)
 
-module.exports = router;
+module.exports = rutas;
