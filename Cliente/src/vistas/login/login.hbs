@@ -1,15 +1,20 @@
-<link rel="stylesheet" href="/css/login/login.css">
-<div id="contenedor">
-  <form action="/Login" method="POST">
-    <div id="cedula">
-      <label>Cedula:</label>
-      <input type="text" name="username" id="Cedula">
-    </div>
-    <div id="contraseña">
-      <label>Contraseña:</label>
-      <input type="password" name="password" id="Contraseña">
-    </div>
-    <button type="submit" id="button">Ingresar</button>
-    <button type="submit" id="button2"><a href="/registro">Registrate</a></button>
-  </form>
+<LINK REL=StyleSheet HREF="/css/login/login.css" TYPE="text/css" MEDIA=screen>
+<div id="imegen">
+  <img src="/img/avatar.png" id="avatar">
 </div>
+<form action="/Login" method="POST" id="ingresar">
+    <div id="contenedor">
+      <div id="datos">
+      <label id="Usuario">Cedula:</label>
+      <input type="text" id="Nombre" name="username">
+      </div>
+      <div>
+        <label id="contraseña">Contraseña: </label>
+        <input type="password" id="Contraseña" name="password">
+      </div>
+      <div>
+        <button type="submit" id="boton"><img src="/img/flechaIzquierda.png" id="flecha"></button>
+      </div>
+    </div>
+</form>
+<button id="sesion"><a href="/Registro">Registro</a></button>

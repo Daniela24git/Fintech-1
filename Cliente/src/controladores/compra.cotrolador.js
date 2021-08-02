@@ -1,24 +1,32 @@
 const compra = {}
-const pool = require('../configuracionBaseDatos/baseDatos.sql')
+const sql = require("../configuracionBaseDatos/baseDatos.sql")
+const orm = require("../configuracionBaseDatos/baseDatos.orm")
 
 compra.traer = async(req,res)=>{
-    const {id} = req.params
-    const producto = await pool.query('SELECT * FROM productos WHERE id = ?',[id])
+    const id = req.params.id
+    const producto = await sql.query('SELECT * FROM productos WHERE id = ?',[id])
     res.render('compras/compra',{producto});
 }
 
 compra.Mandar = async(req, res) =>{
-    const {id} = req.params
-    const{Nombre, Cantidad, Precio} = req.body
+    const id = req.params.id
+    const{Nombre, Cantidad, Precio, productoCantidad, codigo} = req.body
     const nuevaLista = {
         Nombre,
         Cantidad,
         Precio,
-        Cliente: req.user.id
+        listaProductoId: id
     }
-    await pool.query('INSERT INTO detallelistaproductos set ?', [nuevaLista])
-    req.flash("succes", "Se añadio correctamente")
-     res.redirect('/tienda/lista');
+    const nuevaCantidad = { 
+        productoCantidad
+    }
+    await orm.detalleListaProductos.create(nuevaLista)
+    await orm.productos.findOne({ where: { codigo: codigo } })
+        .then(clientes => {
+            clientes.update(nuevaCantidad)
+            req.flash('success', 'Se añadio Correctamente');
+            res.redirect('/producto/lista/' + id);
+        })
 }
 
 module.exports = compra

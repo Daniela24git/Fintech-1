@@ -1,5 +1,19 @@
 #contenedor{
     position: absolute;
-    top: 300px;
+    top: 250px;
     left: 920px;
+}
+
+#precioCambio{
+    display: none;
+}
+#cantidadCambio{
+    display: none;
+}
+
+#productoCantidad{
+    display: none;
+}
+#codigo{
+    display: none;
 }

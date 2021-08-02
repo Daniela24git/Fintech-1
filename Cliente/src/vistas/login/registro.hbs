@@ -1,19 +1,19 @@
-<link rel="stylesheet" href="/css/login/registro.css">
-<div id="contenedor">
-  <h1 id="h1">Registrate</h1>
-  <form action="/Registro" method="POST">
-    <div id="Nombre">
-      <label>Nombre :</label>
-      <input type="text" name="Nombres" id="nombre"><br>
-    </div>
-    <div id="Cedula">
-      <label>Cedula :</label>
-      <input type="number" name="username" id="cedula"><br>
-    </div>
-    <div id="Contraseña">
-      <label>Contraseña:</label>
-      <input type="password" name="password" id="contrasena"><br>
-    </div>
-    <button type="submit" id="button">Ingresar</button> <button id="button2"><a href="/">Salir</a></button>
-  </form>
+<LINK REL=StyleSheet HREF="/css/login/registro.css" TYPE="text/css" MEDIA=screen>
+<div id="imegen">
+  <img src="/img/avatar.png" id="avatar">
 </div>
+<form action="/Registro" method="POST">
+<div id="contenedor">
+    <div id="datos">
+      <label id="Usuario">Cedula: </label>
+      <input type="text" id="Nombre" name="username">
+    </div>
+    <div>
+      <label id="contraseña">Contraseña: </label>
+      <input type="password" id="Contraseña" name="password">
+    </div>
+    <div>
+      <button type="submit" id="boton"><img src="/img/guardar.png" id="guardar"></button>
+    </div>
+  </div>
+</form>

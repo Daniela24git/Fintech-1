@@ -26,7 +26,6 @@ body{
 button{
     border-radius: 30px;
     cursor: pointer;
-    display: flex;
     display: block;
     margin: auto;
 }

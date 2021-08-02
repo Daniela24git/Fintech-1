@@ -1,11 +1,12 @@
 const formaPago = {}
-const pool = require("../configuracionBaseDatos/baseDatos.sql")
+const sql = require("../configuracionBaseDatos/baseDatos.sql")
+const orm = require("../configuracionBaseDatos/baseDatos.orm")
 
 
 formaPago.traer = async(req,res)=>{
-    const datos = await pool.query("SELECT * FROM tiendas")
-    const cliente = await pool.query("SELECT * FROM clientes")
-    const lista = await pool.query("SELECT * FROM detallelistaproductos")
+    const datos = await sql.query("SELECT * FROM tiendas")
+    const cliente = await sql.query("SELECT * FROM clientes")
+    const lista = await sql.query("SELECT * FROM detallelistaproductos")
     res.render("formasPago/notaVenta", {datos, cliente, lista});
 }
 

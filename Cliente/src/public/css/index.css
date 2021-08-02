@@ -5,3 +5,21 @@
     width: 50%;
     text-align: justify;
 }
+
+#busqueda{
+    position: absolute;
+    top: 250px;
+    left: 350px;
+}
+
+#flecha{
+    width: 60px;
+}
+
+#siguiente{
+    background-color: transparent;
+    border-color: black;
+    width: 120px;
+    position: absolute;
+    left: 350px;
+}

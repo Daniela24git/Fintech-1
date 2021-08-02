@@ -6,4 +6,4 @@ const { renderUserProfile } = require('../controladores/usuario.controlador');
 
 router.get('/tienda', isLoggedIn, renderUserProfile);
 
-module.exports = router;
+module.exports = router; 
