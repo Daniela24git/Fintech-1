@@ -15,7 +15,7 @@
         <tr>
             <td id="nombres">
                 {{#each NombreLista}}
-                <input type="text" name="nombreLista" id="LISTAN" value="{{id}}{{nombreLista}}" readonly>
+                <input type="text" name="nombreLista" id="LISTAN" value="{{nombreLista}}" readonly>
                 {{/each}}
                 <p id="nombre">Lista de Productos</p>
             </td>
@@ -25,7 +25,7 @@
         </tr>
         {{#each lista}}
         <tr>
-            <td id="Producto">{{Nombre}}</td>
+            <td id="Producto">{{NombreProducto}}</td>
             <td id="precio">${{Precio}}</td>
         </tr>
         {{/each}}
@@ -41,7 +41,7 @@
         <div id="nombreLista">
             <div id="GuardarLista">
                 <label id="listaNombre">Nombre de Lista:</label>
-                <input type="text" name="nombreLista" id="NombreLista" value="{{user.Nombres}}" readonly>
+                <input type="text" name="nombreLista" id="NombreLista" value="Lista {{user.Nombres}}" readonly>
                 <button type="submit" id="btones"><img src="/img/guardar.png" id="guardar"></button>
             </div>
         </div>
@@ -53,7 +53,7 @@
                         <div class="card-body">
                             <input type="text" value="{{id}}" readonly id="cantidad">
                             <input type="text" value="{{NombreProducto}}" readonly id="cantidad">
-                            <input type="text" value="{{Cantidad}}" readonly id="cantidad">
+                            <input type="text" value="{{productoCantidad}}" readonly id="cantidad">
                             <input type="text" value="{{precioVenta}}" readonly id="cantidad">
                             <button id="comprar"><a href="/Compras/eleccion/{{id}}">COMPRAR</a></button>
                         </div>

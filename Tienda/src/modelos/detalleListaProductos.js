@@ -8,7 +8,6 @@ const detalleListaProductos = (sequelize, type)=>{
         NombreProducto: type.STRING,
         Cantidad: type.INTEGER,
         Precio: type.FLOAT(6.2),
-        Descripcion: type.STRING,
         UnidadMedida: type.STRING,
         categoria: type.STRING,
         FechaCadusidad: type.STRING,

@@ -14,11 +14,8 @@ class formato {
         this.precio.value = parseFloat(this.precioCambio.value).toFixed(2)
     }
     subir() {
-        if (parseInt(this.cantidadCambio.value) <= this.cantidad.value) {
+        if ((parseInt(this.cantidadCambio.value)-1) == this.cantidad.value) {
             alert('Cantidad Maxima Del Producto')
-            this.cantidad.value = parseInt(this.cantidadCambio.value)
-            let a = parseInt(this.cantidadCambio.value) * parseFloat(this.precioCambio.value)
-            this.precio.value = a.toFixed(2)
         } else {
             this.cantidad.value = parseInt(this.cantidad.value) + 1
             formatos.multiplicarPrecio()
@@ -45,17 +42,18 @@ class formato {
         this.precio.value = costo.toFixed(2)
         formatos.restaIncrementalProductos()
     }
-    restaIncrementalProductos(){
-        let a = parseInt(this.cantidad.value)
-        let b = parseInt(this.productoCantidad.value)
-        let c = a + b
-        this.productoCantidad.value = c
-    }
-    restaProdcutos(){
+    restaIncrementalProductos() {
         let a = parseInt(this.cantidad.value)
         let b = parseInt(this.cantidadCambio.value)
         let c = b - a
         this.productoCantidad.value = c
+    }
+    restaProdcutos() {
+        let a = parseInt(this.cantidad.value)
+        let b = parseInt(this.cantidadCambio.value)
+        let c = b - a
+        this.productoCantidad.value = c
+        console.log(c)
     }
 }
 

@@ -1,21 +1,20 @@
-const detalleListaProductos = (sequelize, type)=>{
-    return sequelize.define('detalleListaProductos', {
-        id: {
+const provedor = (sequelize, type)=>{
+    return sequelize.define('provedores', {
+        id:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        NombreProducto: type.STRING,
-        Cantidad: type.INTEGER,
-        Precio: type.FLOAT(6.2),
-        UnidadMedida: type.STRING,
-        categoria: type.STRING,
-        FechaCadusidad: type.STRING,
+        NombreProveedor: type.STRING,
+        Direccion: type.STRING,
+        Numero: type.INTEGER(10),
+        Estado: type.BOOLEAN,
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
+        //ON UPDATE CURRENT_TIMESTAMP pegar antes de crear la base
         updatedAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
@@ -24,5 +23,4 @@ const detalleListaProductos = (sequelize, type)=>{
     })
 }
 
-
-module.exports = detalleListaProductos
+module.exports = provedor

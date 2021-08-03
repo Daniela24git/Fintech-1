@@ -10,14 +10,17 @@ compra.traer = async(req,res)=>{
 
 compra.Mandar = async(req, res) =>{
     const id = req.params.id
-    const{Nombre, Cantidad, Precio, productoCantidad, codigo} = req.body
+    const{NombreProducto, Cantidad, categoria, UnidadMedida, FechaCadusidad, Precio, productoCantidad, codigo} = req.body
     const nuevaLista = {
-        Nombre,
+        NombreProducto,
         Cantidad,
+        categoria,
+        UnidadMedida,
+        FechaCadusidad,
         Precio,
         listaProductoId: id
     }
-    const nuevaCantidad = { 
+    const nuevaCantidad = {
         productoCantidad
     }
     await orm.detalleListaProductos.create(nuevaLista)

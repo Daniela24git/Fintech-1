@@ -27,6 +27,14 @@ form{
     top: 60px;
 }
 
+#productoCantidad{
+    display: none;
+}
+
+#UnidadMedidas{
+    display: none;
+}
+
 #guardar1{
     position: absolute;
     top: 500px;

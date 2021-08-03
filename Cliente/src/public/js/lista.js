@@ -6,7 +6,7 @@ class lista {
         this.mover = document.getElementById("mover")
         this.NombreLista = document.getElementById('nombreLista')
         this.nombreLista = document.getElementById('LISTAN')
-        this.nombre= document.getElementById('NombreLista') 
+        this.GuardarLista = document.getElementById('GuardarLista')
     }
     inicio() {
         this.mover.style.display = "none"
@@ -19,9 +19,9 @@ class lista {
     aparecerLista() {
         if (this.nombreLista.value === "") {
             this.NombreLista.style.display = 'block'
-            this.nombre.value = 'Lista '+ this.nombre.value
             this.carrito.style.display = "none"
             this.carrito1.style.display = "block"
+            this.GuardarLista.style.display = 'block'
         } else {
             this.lista.style.display = "block"
             this.carrito.style.display = "none"

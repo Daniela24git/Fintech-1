@@ -18,9 +18,9 @@ ProductosCtrl.renderEdit = async (req, res) => {
 ProductosCtrl.edit = async (req, res) => {
     const id = req.params.id;
     const IDS = req.user.id
-    const { precioVenta, Cantidad } = req.body;
+    const { precioVenta, productoCantidad } = req.body;
     const newProducto = {
-        Cantidad,
+        productoCantidad,
         precioVenta
     };
 

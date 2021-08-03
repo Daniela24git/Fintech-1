@@ -10,8 +10,8 @@
         </tr>
         {{#each lista}}
         <tr>
-            <td id="Producto"><input type="text" name="Nombre" value="{{Nombre}}" readonly></td>
-            <td id="Cantidad"><input type="number" name="Cantidad" id="cantidaes" value="1" min="1" max="{{Cantidad}}" onclick="listas.modificar()"></td>
+            <td id="Producto"><input type="text" name="Nombre" value="{{NombreProducto}}" readonly></td>
+            <td id="Cantidad"><input type="texto" name="Cantidad" id="cantidaes" value="{{Cantidad}}" min="1" max="{{Cantidad}}" onclick="listas.modificar()"></td>
             <td id="precio"><input type="text" name="Precio" value="{{Precio}}" readonly id="precios"></td>
             <td><button><a href="/producto/Compra/Eliminar/{{id}}">Eliminar</a></button></td>
         </tr>

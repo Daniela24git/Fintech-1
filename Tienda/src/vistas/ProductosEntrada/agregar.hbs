@@ -7,11 +7,11 @@
             <div id="cinco">
                 <div id="CODIGO">
                     <label>Codigo</label>
-                    <input type="text" name="codigo" id="codigo">
+                    <input type="text" name="codigo" id="codigo" maxlength="13" readonly>
                 </div>
                 <div id="NOMBREproducto">
                     <label>Nombre del Producto</label>
-                    <input type="text" name="NombreProducto" id="NombreProducto">
+                    <input type="text" name="NombreProducto" id="NombreProducto" required>
                 </div>
                 <div id="NOMBREproveedor">
                     <label>Nombre del Proveedor</label>
@@ -19,11 +19,12 @@
                 </div>
                 <div id="CANTIDAD">
                     <label>Cantidad</label>
-                    <input type="number" name="Cantidad" id="Cantidad">
+                    <input type="text" name="Cantidad" id="Cantidad" required>
+                    <input type="text" name="productoCantidad" id="productoCantidad">
                 </div>
                 <div id="CATEGORIA">
                     <label>Categoria</label>
-                    <select name="categoria" id="categoria">
+                    <select name="categoria" id="categoria" onclick="eleecion.aparicionUnidadMedida()">
                         <option name="categoria" value="Consumible">Consumible</option>
                         <option name="categoria" value="No consumible">No consumible</option>
                         <option name="categoria" value="Bebidas">Bebidas</option>
@@ -31,17 +32,20 @@
                 </div>
             </div>
             <div id="cuatro">
-                <div id="">
-                    <label>Unidad</label>
-                    <input type="text" name="UnidadMedida" id="descripcion">
+                <div>
+                    <label>Unidad de Medida</label>
+                    <input type="text" name="UnidadMedida" id="UnidadMedidas" readonly>
+                    <div id="UnidadMedidas1"></div>
+                    <div id="UnidadMedidas2"></div>
+                    <div id="UnidadMedidas3"></div>
                 </div>
                 <div id="">
                     <label>Precio Original ("Porfavor coloque los precios con un . ejemplo: 1.20")</label>
-                    <input type="text" name="precioActual" id="precio">
+                    <input type="text" name="precioActual" id="precio"required>
                 </div>
                 <div id="">
                     <label>Precio Venta</label>
-                    <input type="text" name="precioVenta" id="precio">
+                    <input type="text" name="precioVenta" id="precio" required>
                 </div>
                 <div id="">
                     <label>Fecha Caducidad</label>
@@ -53,3 +57,4 @@
     {{/each}}
 </div>
 <script src="/js/codigo.js"></script>
+<script src="/js/eleccionUnidad.js"></script>

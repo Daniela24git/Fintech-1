@@ -12,7 +12,7 @@ ProductoEntradaCtrl.renderEntrada = async (req, res) => {
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const id = req.params.id
     const IDS = req.user.id
-    const { NombreProducto, NombreProvedor, codigo, categoria, UnidadMedida, Cantidad, precioActual, FechaCadusidad, precioVenta } = req.body
+    const { NombreProducto, NombreProvedor, codigo, categoria, UnidadMedida, Cantidad, productoCantidad, precioActual, FechaCadusidad, precioVenta } = req.body
     const NuevaEntrada = {
         codigo,
         NombreProducto,
@@ -31,7 +31,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const productoVenta={
         codigo,
         NombreProducto,
-        Cantidad,
+        productoCantidad,
         UnidadMedida,
         precioVenta,
         FechaCadusidad,

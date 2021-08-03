@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/productos/listaProductos.css" TYPE="text/css" MEDIA=screen>
 <form action="/productos/lista/{{user.id}}">
-   <div id="contenedor">
+    <div id="contenedor">
         <div class="row">
             {{#each productos}}
             <div id="tarjeta">
@@ -14,15 +14,20 @@
                 </div>
                 <div id="CANTIDAD">
                     <label>Cantidad:</label>
-                    <input type="text" value="{{Cantidad}}" id="Cantidad" readonly></input>
+                    <input type="text" value="{{productoCantidad}}" id="Cantidad" readonly></input>
                 </div>
                 <div id="PRECIO">
                     <label>Precio:</label>
                     <input type="text" value="{{precioVenta}}$" id="precioActual" readonly></input>
                 </div>
+                <div id="CADUCIDAD">
+                    <label id="caducidad">Fecha:</label>
+                    <input type="datetime" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}"
+                        readonly>
+                </div>
                 <div>
-                    <a href="/productos/editar/{{id}}" id="BotonEditar"><img
-                                src="/img/iconos/editar.png" id="editar"></a>
+                    <a href="/productos/editar/{{id}}" id="BotonEditar"><img src="/img/iconos/editar.png"
+                            id="editar"></a>
                 </div>
             </div>
             {{else}}
@@ -36,3 +41,4 @@
         </div>
     </div>
 </form>
+<script src="/js/productosVentaAgregar.js"></script>

@@ -7,9 +7,9 @@
         <input type="text" name="NombreProducto" id="nombres" value="{{NombreProducto}}" readonly>
     </div>
     <div id="Cantidades">
-        <button type="button" onclick="formatos.subir()">+</button>
+        <button type="button" onclick="formatos.subir()" id="suma">+</button>
         <input type="text" name="Cantidad" id="Cantidad">
-        <input type="text" id="cantidadCambio" value="{{Cantidad}}" readonly>
+        <input type="text" id="cantidadCambio" value="{{productoCantidad}}" readonly>
         <input type="text" name="productoCantidad" id="productoCantidad"  readonly>
         <button type="button" onclick="formatos.bajar()">-</button>
     </div>
@@ -21,7 +21,7 @@
         <input type="text" name="categoria" id="categoria" value="{{categoria}}" readonly>
     </div>
     <div id="Unidades">
-        <input type="text" name="Unidad" id="Unidad" value="{{UnidadMedida}}" readonly>
+        <input type="text" name="UnidadMedida" id="Unidad" value="{{UnidadMedida}}" readonly>
     </div>
     <div id="caducidades">
         <input type="text" name="FechaCadusidad" id="caducidad" value="{{FechaCadusidad}}" readonly>
