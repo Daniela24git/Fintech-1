@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/entradasSalidas/entradasSalidas.css">
+<form action="/entradaSalida/Salidas/agregar/{{user.id}}" method="post">
+    <div id="Salidas">
+        <label>Salidas</label>
+    </div>
+    <div id="fecha">
+        <label>Fecha:</label>
+        <input type="text" value="" name="fecha" id="fechas" readonly>
+    </div>
+    <div id="CODIGO">
+        <label>C.Documento:</label>
+        {{#each salidaLista}}
+        <input type="text" value="{{codigo}}" name="codigoDocumento" id="codigoDocumento" readonly>
+        {{/each}}
+    </div>
+    <div id="Dtienda">
+        <label>Tienda:</label>
+        {{#each listaTienda}}
+        <input type="text" value="{{nombreNegocio}}" name="Tienda" id="Tienda" readonly>
+        {{/each}}
+    </div>
+    <div id="cliente">
+        <label>Proveedor:</label>
+        {{#each listaProveedor}}
+        <input type="text" name="nombreProveedor" id="NombreProveedor" value="{{NombreProveedor}}" readonly>
+        {{/each}}
+    </div>
+    <div id="tabla">
+        <table border="1">
+            <tr>
+                <td>Codigo</td>
+                <td>Producto</td>
+                <td>Medida</td>
+                <td>Salidas</td>
+                <td>CantidadActual</td>
+            </tr>
+            <tr>
+                {{#each listaProductos}}
+                <td><input type="text" name="codigoProducto" id="codigo" value="{{codigo}}" readonly></td>
+                <td><input type="text" name="nombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
+                </td>
+                <td><input type="text" name="unidadMedida" id="UnidadMedida" value="{{UnidadMedida}}" readonly></td>
+                <td><input type="text" name="entraCantidad" id="Cantidad" value="{{Cantidad}}" readonly></td>
+                {{/each}}
+                {{#each productosLista}}
+                <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{productoCantidad}}" readonly></td>
+                {{/each}}
+            </tr>
+        </table>
+    </div>
+</form>
+
+<script src="/js/fecha.js"></script>

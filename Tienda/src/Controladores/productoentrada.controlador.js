@@ -20,7 +20,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         Cantidad,
         UnidadMedida,
         precioActual,
-        FechaCadusidad,
+        FechaCadusidad, 
         provedoreId: id,
         tiendaId: IDS
     }
