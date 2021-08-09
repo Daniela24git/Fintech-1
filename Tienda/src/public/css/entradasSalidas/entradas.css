@@ -10,14 +10,6 @@
     font-size: 30px;
 }
 
-#Salidas{
-    position: absolute;
-    top: 110px;
-    left: 580px;
-    text-transform: uppercase;
-    font-size: 30px;
-}
-
 #fecha{
     position: absolute;
     top: 160px;

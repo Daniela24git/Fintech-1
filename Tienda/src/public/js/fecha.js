@@ -7,7 +7,6 @@ class fecha {
         const tiempoTranscurrido = Date.now();
         const hoy = new Date(tiempoTranscurrido);
         this.fecha.value = hoy.toLocaleDateString();
-        fechas.sumaNumeros()
     }
     sumaNumeros(){
         if(this.numeroDocumento.value == ""){
@@ -15,9 +14,9 @@ class fecha {
         }else{
             this.numeroDocumento.value = this.numeroDocumento.value + 1
         }
-        fechas.cambio()
     }
 }
 
 let fechas = new fecha();
 window.onload = fechas.obtencion()
+window.onload = fechas.sumaNumeros()

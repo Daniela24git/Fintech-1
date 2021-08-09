@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/entradasSalidas/entradasSalidas.css">
+<link rel="stylesheet" href="/css/entradasSalidas/Salidas.css">
 <form action="/entradaSalida/Salidas/agregar/{{user.id}}" method="post">
     <div id="Salidas">
         <label>Salidas</label>
@@ -41,11 +41,15 @@
                 </td>
                 <td><input type="text" name="unidadMedida" id="UnidadMedida" value="{{UnidadMedida}}" readonly></td>
                 <td><input type="text" name="entraCantidad" id="Cantidad" value="{{Cantidad}}" readonly></td>
+                </tr>
                 {{/each}}
+                <div id="cantidadProdcuto">
+                <tr>
                 {{#each productosLista}}
-                <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{productoCantidad}}" readonly></td>
+                <td><input type="text" name="cantidadRestante" id="Cantidades" value="{{productoCantidad}}" readonly></td>
+                </tr>
                 {{/each}}
-            </tr>
+                </div>
         </table>
     </div>
 </form>
