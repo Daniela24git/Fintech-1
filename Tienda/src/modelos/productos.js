@@ -5,13 +5,8 @@ const productos = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        codigo: type.STRING(13),
-        NombreProducto: type.STRING,
         productoCantidad: type.INTEGER,
-        UnidadMedida: type.STRING,
         precioVenta: type.FLOAT(6.2),
-        FechaCadusidad: type.DATE,
-        categoria: type.STRING,
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

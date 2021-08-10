@@ -1,12 +1,11 @@
-const detalleListaProductos = (sequelize, type)=>{
-    return sequelize.define('detalleListaProductos', {
-        id: {
+const detalleCategoria = (sequelize, type) => {
+    return sequelize.define('detalleCategorias', {
+        id:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        Cantidad: type.INTEGER,
-        Precio: type.FLOAT(6.2),
+        subCategoria: type.STRING,
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
@@ -20,5 +19,4 @@ const detalleListaProductos = (sequelize, type)=>{
     })
 }
 
-
-module.exports = detalleListaProductos
+module.exports = detalleCategoria
