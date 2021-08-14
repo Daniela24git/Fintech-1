@@ -28,7 +28,6 @@ perfilCtrl.addDatos = async (req, res) => {
 
 perfilCtrl.rederList = async (req, res) => {
     const id = req.params.id
-    const ids = req.user.id
     const usuarios = sql.query("SELECT * FROM usuarios ")
     const tiendas = await sql.query("SELECT * FROM tiendas WHERE usuarioId = ?", [id])
     res.render('tienda/tiendaLista', { tiendas, usuarios})

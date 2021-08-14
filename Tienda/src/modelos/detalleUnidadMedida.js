@@ -1,11 +1,11 @@
-const unidadMedida = (sequelize, type) => {
-    return sequelize.define('unidadMedidas', {
+const detalleUnidadMedida = (sequelize, type) => {
+    return sequelize.define('detalleUnidadMedidas', {
         id:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        unidadMedida: type.STRING,
+        cantidadMedida: type.FLOAT(6.2),
         createdAt:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
@@ -19,4 +19,4 @@ const unidadMedida = (sequelize, type) => {
     })
 }
 
-module.exports = unidadMedida 
+module.exports = detalleUnidadMedida

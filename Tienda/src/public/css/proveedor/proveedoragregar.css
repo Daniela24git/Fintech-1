@@ -45,33 +45,45 @@ nav{
 }
 
 
-#lblnumero{
+#lblcelular{
     position: absolute;
     top: 250px;
     left: 430px;
 }
 
-#Numero{
+#lbltelefono{
+    position: absolute;
+    top: 300px;
+    left: 430px;
+}
+
+#Celular{
     position: absolute;
     top: 250px;
     left: 550px;
 }
 
-#lblcodigo{
-    position: absolute;
-    top: 300px;
-    left: 450px;
-}
-
-#codigo{
+#Telefono{
     position: absolute;
     top: 300px;
     left: 550px;
 }
 
+#lblcodigo{
+    position: absolute;
+    top: 350px;
+    left: 450px;
+}
+
+#codigo{
+    position: absolute;
+    top: 350px;
+    left: 550px;
+}
+
 #guardar1{
     position: absolute;
-    top: 380px;
+    top: 420px;
     left: 500px;
     width: 420px;
 }

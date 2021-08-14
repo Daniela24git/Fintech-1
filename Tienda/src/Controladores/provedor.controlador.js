@@ -9,13 +9,15 @@ proveedorCtrl.renderAddProveedor = (req, res) => {
 
 proveedorCtrl.addProveedor = async (req, res) => {
     const id = req.params.id
-    const { NombreProveedor, Direccion, Numero, Estado } = req.body;
+    const { NombreProveedor, Direccion, Celular, Telefono, Estado } = req.body;
     const newProveedor = {
         NombreProveedor,
         Direccion,
-        Numero,
+        Celular,
+        Telefono,
         Estado,
-        usuarioId: id
+        usuarioId: id,
+        tiendaId: id
     };
     await orm.provedor.create(newProveedor)
         .then(() => {
@@ -44,11 +46,12 @@ proveedorCtrl.renderEditProveedor = async (req, res) => {
 
 proveedorCtrl.editProveedor = async (req, res) => {
     const id = req.params.id;
-    const { NombreProveedor, Direccion, Numero, Estado } = req.body;
+    const { NombreProveedor, Direccion, Celular, Telefono, Estado } = req.body;
     const newProveedor = {
         NombreProveedor,
         Direccion,
-        Numero,
+        Celular,
+        Telefono,
         Estado,
     };
     await orm.provedor.findOne({ where: { id: id } })

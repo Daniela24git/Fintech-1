@@ -1,9 +1,23 @@
 const Sequelize = require('sequelize')
+const mysql = require('mysql2/promise')
+
+const dbName = process.env.DB_SCHEMAS || "fintech";
+
+mysql.createConnection({
+    host: process.env.DB_HOST || "127.0.0.1",
+    port: process.env.DB_PORT || "3306",
+    user     : process.env.DB_USER || "root",
+    password : process.env.DB_PASSWORD || "",
+}).then( connection => {
+    connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName};`).then((res) => {
+        console.info("Base de datos creada o comprobada correctamente");
+    })
+})
 
 const UsuarioModelos = require('../modelos/usuario')
 const categoriaModelos = require('../modelos/Categoria')
 const tiendaModelos = require('../modelos/tienda')
-const listaProductosModelos = require('../modelos/listaProductos') 
+const listaProductosModelos = require('../modelos/listaProductos')
 const provedorModelos = require('../modelos/provedor')
 const productoEntradaModelos = require('../modelos/productoEntrada')
 const productoModelos = require('../modelos/productos')
@@ -14,21 +28,22 @@ const detalleCategoriasModelos = require('../modelos/detalleCategoria')
 const registroSalidasModelos = require('../modelos/registroSalidas')
 const unidadMedidasModelos = require('../modelos/unidadMedida')
 const detalleClientesModelos = require('../modelos/detalleCliente')
-const productoEntrada = require('../modelos/productoEntrada')
+const detalleUnidadMedidaModelos = require('../modelos/detalleUnidadMedida');
+const unidadMedida = require('../modelos/unidadMedida');
 
 const sequelize = new Sequelize(
-  'fintech', 
-  'root', 
-  '', 
+  'fintech',
+  'root',
+  '',
   {
-  host: 'localhost',
-  dialect: 'mysql',
-  pool:{
-    max:5,
-    min:0,
-    require:30000,
-    idle: 10000
-   }
+    host: 'localhost',
+    dialect: 'mysql',
+    pool: {
+      max: 5,
+      min: 0,
+      require: 30000,
+      idle: 10000
+    }
   }
 )
 
@@ -40,8 +55,8 @@ sequelize.authenticate()
     console.log('No se conecto')
   })
 
-  sequelize.sync({ force: false})
-  .then(() =>{
+sequelize.sync({ force: false })
+  .then(() => {
     console.log("Tablas sincronizadas")
   })
 
@@ -53,12 +68,13 @@ const provedor = provedorModelos(sequelize, Sequelize)
 const entredaProductos = productoEntradaModelos(sequelize, Sequelize)
 const productos = productoModelos(sequelize, Sequelize)
 const cliente = clienteModelos(sequelize, Sequelize)
-const detalleListaProductos = detalleListaProductosModelos(sequelize, Sequelize) 
+const detalleListaProductos = detalleListaProductosModelos(sequelize, Sequelize)
 const registroEntradas = registroEntradasModelos(sequelize, Sequelize)
 const registroSalidas = registroSalidasModelos(sequelize, Sequelize)
 const detalleCategoria = detalleCategoriasModelos(sequelize, Sequelize)
 const unidadMedidas = unidadMedidasModelos(sequelize, Sequelize)
 const detalleCliente = detalleClientesModelos(sequelize, Sequelize)
+const detalleUnidadMedidas =detalleUnidadMedidaModelos(sequelize, Sequelize)
 
 //Relaciones 
 //tienda-usuario
@@ -90,22 +106,20 @@ unidadMedidas.hasMany(entredaProductos)
 entredaProductos.belongsTo(unidadMedidas)
 
 //productos
-
 tienda.hasMany(productos)
 productos.belongsTo(tienda)
 
 usuarios.hasMany(productos)
-productos.belongsTo(usuarios) 
+productos.belongsTo(usuarios)
 
-//categoria
-usuarios.hasMany(categoria)
-categoria.belongsTo(usuarios)
+entredaProductos.hasMany(productos)
+productos.belongsTo(entredaProductos)
+
+//unidadMedida
+categoria.hasMany(unidadMedidas)
+unidadMedidas.belongsTo(categoria)
 
 //detalle categoria
-
-usuarios.hasMany(detalleCategoria)
-detalleCategoria.belongsTo(usuarios)
-
 categoria.hasMany(detalleCategoria)
 detalleCategoria.belongsTo(categoria)
 
@@ -116,9 +130,9 @@ detalleCliente.belongsTo(cliente)
 usuarios.hasMany(detalleCliente)
 detalleCliente.belongsTo(usuarios)
 
-//unidad Medida
-usuarios.hasMany(unidadMedidas)
-unidadMedidas.belongsTo(usuarios)
+//Detalle unidad Medida
+unidadMedidas.hasMany(detalleUnidadMedidas)
+detalleUnidadMedidas.belongsTo(unidadMedidas)
 
 //lista prodcutos
 tienda.hasMany(listaProductos)
@@ -176,5 +190,6 @@ module.exports = {
   registroEntradas,
   detalleCategoria,
   unidadMedidas,
-  detalleCliente
+  detalleCliente,
+  detalleUnidadMedidas
 }

@@ -10,7 +10,6 @@ const bodyparser = require('body-parser');
 
 const { database } = require('./keys'); 
 
-
 const app = express();
 require('./lib/passport');
 

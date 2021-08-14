@@ -54,15 +54,22 @@ form{
 
 #NOMBREproveedor{
     position: absolute;
-    top: 180px;
+    top: 200px;
+    width: 370px;
 }
 
 #CANTIDAD{
     position: absolute;
-    top: 270px;
+    top: 290px;
 }
 
 #CATEGORIA{
     position: absolute;
-    top: 360px;
+    top: 390px;
+    width: 370px;
+}
+#idproducto{
+    width: 50px;
+    background-color: transparent;
+    border-color: transparent;
 }

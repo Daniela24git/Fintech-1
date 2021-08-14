@@ -6,41 +6,48 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 ProductoEntradaCtrl.renderEntrada = async (req, res) => {
     const id = req.params.id
     const listaProveedor = await sql.query("SELECT * FROM provedores WHERE id = ?", [id])
-    res.render("ProductosEntrada/agregar", {listaProveedor})
+    const listaCategoria = await sql.query("SELECT * FROM categorias")
+    const idProductoEntrada = await sql.query("SELECT max(id) FROM productoEntradas")
+    const listaUnidad = await sql.query("SELECT * FROM unidadMedidas")
+    res.render("ProductosEntrada/agregar", { listaProveedor, listaCategoria, listaUnidad, idProductoEntrada })
 }
 
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
+
     const id = req.params.id
     const IDS = req.user.id
-    const { NombreProducto, NombreProvedor, codigo, categoria, UnidadMedida, Cantidad, productoCantidad, precioActual, FechaCadusidad, precioVenta } = req.body
+
+    const { productoEntradaId, NombreProducto, codigo, cantidadMedida, Cantidad, precioActual, FechaCadusidad, precioVenta, categoriaId, unidadMedidaId } = req.body
+
+    const productoVenta = {
+        productoCantidad: Cantidad,
+        precioVenta,
+        tiendaId: IDS,
+        usuarioId: IDS,
+        productoEntradaId: productoEntradaId,
+    }
+
     const NuevaEntrada = {
         codigo,
         NombreProducto,
-        NombreProvedor,
         Cantidad,
-        UnidadMedida,
         precioActual,
-        FechaCadusidad, 
-        provedoreId: id,
-        tiendaId: IDS
-    }
-    const NuevaCategoria ={
-        categoria,
-        usuarioId: IDS
-    }
-    const productoVenta={
-        codigo,
-        NombreProducto,
-        productoCantidad,
-        UnidadMedida,
-        precioVenta,
         FechaCadusidad,
-        categoria,
-        tiendaId: IDS
+        provedoreId: id,
+        tiendaId: IDS,
+        usuarioId: IDS,
+        categoriaId: categoriaId,
+        unidadMedidaId: unidadMedidaId
     }
+
+    const nuevaCantidadUnidad = {
+        cantidadMedida,
+        unidadMedidaId:unidadMedidaId
+    }
+
     await orm.entredaProductos.create(NuevaEntrada);
-    await orm.categoria.create(NuevaCategoria);
     await orm.productos.create(productoVenta);
+    await orm.detalleUnidadMedidas.create(nuevaCantidadUnidad)
     req.flash('success', "Se guardo correctamente")
     res.redirect("/ProductoEntrada/lista/" + IDS)
 }
@@ -53,7 +60,7 @@ ProductoEntradaCtrl.renderProductos = async (req, res) => {
 }
 
 ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
-    const id  = req.params.id;
+    const id = req.params.id;
     await orm.entredaProductos.destroy({ where: { id: id } });
     await orm.productos.destroy({ where: { id: id } });
     await orm.categoria.destroy({ where: { id: id } });
@@ -64,7 +71,7 @@ ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
 ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
     const id = req.params.id;
     const Productos = await sql.query("SELECT * FROM productoEntradas WHERE id =?", [id])
-    res.render("ProductosEntrada/editar", {Productos})
+    res.render("ProductosEntrada/editar", { Productos })
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
     const IDS = req.user.id

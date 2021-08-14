@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
 <div>
-    {{#each listaProveedor}}
-    <form action="/ProductoEntrada/agregar/{{id}}" method="POST">
-        <p id="TITULO">Nuevo Producto</p>
+    <form action="/ProductoEntrada/agregar/{{user.id}}" method="POST">
+    {{#each idProductoEntrada}}
+        <p id="TITULO">Nuevo Producto N°<input type="text" name="productoEntradaId" id="idproducto" value="{{id}}" readonly></p>
+    {{/each}}
         <div id="">
             <div id="cinco">
                 <div id="CODIGO">
@@ -15,33 +16,39 @@
                 </div>
                 <div id="NOMBREproveedor">
                     <label>Nombre del Proveedor</label>
-                    <input type="text" name="NombreProvedor" id="NombreProvedor" value="{{NombreProveedor}}" readonly>
+                    {{#each listaProveedor}}
+                    <input type="text" id="NombreProvedor" value="{{NombreProveedor}}" required readonly>
+                    {{/each}}
                 </div>
                 <div id="CANTIDAD">
                     <label>Cantidad</label>
                     <input type="text" name="Cantidad" id="Cantidad" required>
-                    <input type="text" name="productoCantidad" id="productoCantidad">
                 </div>
                 <div id="CATEGORIA">
                     <label>Categoria</label>
-                    <select name="categoria" id="categoria" onclick="eleecion.aparicionUnidadMedida()">
-                        <option name="categoria" value="Consumible">Consumible</option>
-                        <option name="categoria" value="No consumible">No consumible</option>
-                        <option name="categoria" value="Bebidas">Bebidas</option>
+                    <select name="categoriaId" id="categoria">
+                        {{#each listaCategoria}}
+                        <option value="{{this.id}}">{{this.categoria}}</option>
+                        {{/each}}
                     </select>
                 </div>
             </div>
             <div id="cuatro">
-                <div>
+                <div id="consumibles">
                     <label>Unidad de Medida</label>
-                    <input type="text" name="UnidadMedida" id="UnidadMedidas" readonly>
-                    <div id="UnidadMedidas1"></div>
-                    <div id="UnidadMedidas2"></div>
-                    <div id="UnidadMedidas3"></div>
+                    <select name="unidadMedidaId" id="unidadMedida">
+                        {{#each listaUnidad}}
+                        <option value="{{this.id}}">{{this.unidadMedida}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div>
+                    <label id="">Cantidad de Medida</label>
+                    <input type="number" name="cantidadMedida" id="cantidadMedida" required>
                 </div>
                 <div id="">
-                    <label>Precio Original ("Porfavor coloque los precios con un . ejemplo: 1.20")</label>
-                    <input type="text" name="precioActual" id="precio"required>
+                    <label>Precio Original: ("ejemplo: 1.20")</label>
+                    <input type="text" name="precioActual" id="precio" required>
                 </div>
                 <div id="">
                     <label>Precio Venta</label>
@@ -54,7 +61,6 @@
             </div>
             <button type="submit" id="guardar1">Guardar</button>
     </form>
-    {{/each}}
 </div>
 <script src="/js/codigo.js"></script>
 <script src="/js/eleccionUnidad.js"></script>
