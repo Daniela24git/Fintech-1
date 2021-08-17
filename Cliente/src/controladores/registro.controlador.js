@@ -24,7 +24,7 @@ authCtrl.signIn = passport.authenticate('local.signin', {
 
 authCtrl.cierreSeccion = (req, res, next) => {
     req.logOut();
-    res.redirect('/');
+    res.redirect('/Login');
 };
 
 module.exports = authCtrl;

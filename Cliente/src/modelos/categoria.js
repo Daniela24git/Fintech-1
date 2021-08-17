@@ -1,6 +1,6 @@
 const categorias = (sequelize, type)=>{
     return sequelize.define('categorias', {
-        id:{
+        idCategorias:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,

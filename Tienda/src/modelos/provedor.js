@@ -1,6 +1,6 @@
 const provedor = (sequelize, type)=>{
     return sequelize.define('provedores', {
-        id:{
+        idProvedores:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,

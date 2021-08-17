@@ -1,15 +1,10 @@
 const registroEntradas = (sequelize, type)=>{
     return sequelize.define('registroEntradas',{
-        id: {
+        idRegistroEntradas: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        codigo: type.INTEGER,
-        codigoProducto: type.STRING,
-        nombreProducto: type.STRING,
-        nombreProveedor: type.STRING,
-        unidadMedida: type.STRING,
         entraCantidad: type.INTEGER,
         cantidadRestante: type.INTEGER,
         createdAt:{

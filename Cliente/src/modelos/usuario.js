@@ -1,6 +1,6 @@
 const usuarios =(sequelize, type) =>{
     return sequelize.define('usuarios', {
-        id: {
+        idUsuarios: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,

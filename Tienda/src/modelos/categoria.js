@@ -1,6 +1,6 @@
 const categorias = (sequelize, type)=>{
     return sequelize.define('categorias', {
-        id:{
+        idCategorias:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -16,7 +16,7 @@ const categorias = (sequelize, type)=>{
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    })
+    }) 
 }
 
 module.exports = categorias

@@ -1,6 +1,6 @@
 const registroSalidas = (sequelize, type)=>{
     return sequelize.define('registroSalidas',{
-        id: {
+        idRegistroSalidas: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true

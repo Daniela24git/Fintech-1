@@ -1,6 +1,6 @@
 const listaProductos = (sequelize, type)=>{
     return sequelize.define('listaProductos',{
-        id:{
+        idListaProductos:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true

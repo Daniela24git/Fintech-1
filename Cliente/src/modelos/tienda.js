@@ -1,13 +1,13 @@
 const tienda = (sequelize, type)=>{
     return sequelize.define('tiendas', {
-        id: {
+        idTiendas: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        nombreNegocio: type.STRING,
         ruc: type.INTEGER(13),
-        fechaCreacion: type.DATE,
+        nombreNegocio: type.STRING,
+        fechaCreacion: type.STRING,
         direccion: type.STRING,
         celular: type.INTEGER(10),
         telefono: type.INTEGER(10),

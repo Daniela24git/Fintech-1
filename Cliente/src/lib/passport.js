@@ -53,7 +53,7 @@ passport.use(
       }
       newcliente.password = await helpers.encryptPassword(password);
       // Saving in the Database
-      const result = await orm.cliente.create(newUser);
+      const result = await orm.cliente.create(newcliente);
       newcliente.id = result.insertId;
       return done(null, newcliente);
     }

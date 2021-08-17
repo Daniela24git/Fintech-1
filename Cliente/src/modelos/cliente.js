@@ -1,6 +1,6 @@
 const cliente = (sequelize, type)=>{
     return sequelize.define('clientes', {
-        id: {
+        idClientes: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
