@@ -7,8 +7,9 @@ ProductoEntradaCtrl.renderEntrada = async (req, res) => {
     const id = req.params.id
     const listaProveedor = await sql.query("SELECT * FROM provedores WHERE id = ?", [id])
     const listaCategoria = await sql.query("SELECT * FROM categorias")
-    const idProductoEntrada = await sql.query("SELECT max(id) FROM productoEntradas")
+    const idProductoEntrada = await sql.query("SELECT * FROM idmaximo")
     const listaUnidad = await sql.query("SELECT * FROM unidadMedidas")
+    console.log(idProductoEntrada)
     res.render("ProductosEntrada/agregar", { listaProveedor, listaCategoria, listaUnidad, idProductoEntrada })
 }
 

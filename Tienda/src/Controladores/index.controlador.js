@@ -10,6 +10,8 @@ indexCtrl.mandar = async (req, res) => {
     if (categorias.length == 0) {
         const categoria = categorias[0]
         if (categoria === undefined) {
+            await pool.query("CREATE VIEW productoscantidad AS SELECT e.*, p.productoCantidad, u.unidadMedida FROM productoentradas e JOIN productos p ON p.productoEntradaId = e.id JOIN unidadmedidas u WHERE e.unidadMedidaId = u.id")
+            await pool.query("CREATE VIEW idmaximo AS SELECT MAX(id) FROM productoentradas")
             await pool.query("INSERT INTO categorias(id, categoria) VALUES (1, 'Consumible')")
             await pool.query("INSERT INTO categorias(id, categoria) VALUES (2, 'No consumible')")
             await pool.query("INSERT INTO categorias(id, categoria) VALUES (3, 'Bebidas')")

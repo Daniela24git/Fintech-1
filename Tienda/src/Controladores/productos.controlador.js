@@ -5,7 +5,7 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 ProductosCtrl.renderProductos = async (req, res) => {
     const id = req.params.id
-    const productos = await sql.query("SELECT * FROM productos where tiendaId = ?", [id])
+    const productos = await sql.query("SELECT * FROM productos p join productoEntradas e on p.productoEntradaId = e.id where p.tiendaId = ?", [id])
     res.render('productosVenta', { productos });
 }
 

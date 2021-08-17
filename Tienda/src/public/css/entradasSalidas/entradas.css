@@ -48,3 +48,15 @@
 #Cantidad{
     width: 150px;
 }
+
+#UnidadMedida{
+    width: 250px;
+}
+
+#precioActual{
+    width: 150px;
+}
+
+#NombreProducto{
+    width: 320px;
+}
