@@ -6,16 +6,18 @@ const detalleCategoria = (sequelize, type) => {
             autoIncrement: true,
         },
         subCategoria: type.STRING,
-        createdAt:{
+        creacionDetalleCategorias:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionDetalleCategorias:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

@@ -10,17 +10,18 @@ const provedor = (sequelize, type)=>{
         Celular: type.INTEGER(10),
         Telefono: type.INTEGER(10),
         Estado: type.BOOLEAN,
-        createdAt:{
+        creacionProvedores:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        //ON UPDATE CURRENT_TIMESTAMP pegar antes de crear la base
-        updatedAt:{
+        actualizacionProvedores:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

@@ -10,16 +10,18 @@ const productoEntrada = (sequelize, type)=>{
         Cantidad: type.INTEGER,
         precioActual: type.FLOAT(6.2),
         FechaCadusidad: type.DATE,
-        createdAt:{
+        creacionProductoEntradas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionProductoEntradas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

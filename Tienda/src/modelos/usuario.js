@@ -8,16 +8,18 @@ const usuarios =(sequelize, type) =>{
         username: type.STRING(99),
         password: type.STRING,
         email: type.STRING, 
-        createdAt:{
+        creacionUsuarios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionUsuarios:{
             type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'), 
+            defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

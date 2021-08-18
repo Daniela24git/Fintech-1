@@ -6,17 +6,19 @@ const categorias = (sequelize, type)=>{
             autoIncrement: true,
         },
         categoria: type.STRING,
-        createdAt:{
+        creacionCategorias:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionCategorias:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    })
+    },{
+        timestamps: false,
+    }) 
 }
 
 module.exports = categorias

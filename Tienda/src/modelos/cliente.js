@@ -11,16 +11,18 @@ const cliente = (sequelize, type)=>{
         password: type.STRING,
         telefono: type.INTEGER(7),
         Celular: type.INTEGER(10), 
-        createdAt:{
+        creacionClientes:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionClientes:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

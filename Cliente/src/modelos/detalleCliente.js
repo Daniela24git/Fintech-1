@@ -5,16 +5,18 @@ const detalleCliente = (sequelize ,type) => {
             primaryKey: true,
             autoIncrement: true
         },
-        createdAt:{
+        creacionDetalleCliente:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionDetalleCliente:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

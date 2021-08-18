@@ -6,16 +6,18 @@ const unidadMedida = (sequelize, type) => {
             autoIncrement: true,
         },
         unidadMedida: type.STRING,
-        createdAt:{
+        creacionUnidadMedidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionUnidadMedidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

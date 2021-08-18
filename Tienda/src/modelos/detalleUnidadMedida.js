@@ -6,16 +6,18 @@ const detalleUnidadMedida = (sequelize, type) => {
             autoIncrement: true,
         },
         cantidadMedida: type.FLOAT(6.2),
-        createdAt:{
+        creacionDetalleUnidadMedidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionDetalleUnidadMedidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

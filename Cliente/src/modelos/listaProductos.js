@@ -7,16 +7,18 @@ const listaProductos = (sequelize, type)=>{
         },
         nombreLista: type.STRING,
         comentario: type.STRING(500),
-        createdAt:{
+        creacionListaProductos:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionListaProductos:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

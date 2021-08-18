@@ -7,16 +7,18 @@ const registroSalidas = (sequelize, type)=>{
         },
         salidaCantidad: type.INTEGER,
         cantidadRestante: type.INTEGER,
-        createdAt:{
+        creacionRegistroSalidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionRegistroSalidas:{
             type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'),
+            defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 

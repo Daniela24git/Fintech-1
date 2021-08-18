@@ -7,16 +7,18 @@ const productos = (sequelize, type)=>{
         },
         productoCantidad: type.INTEGER,
         precioVenta: type.FLOAT(6.2),
-        createdAt:{
+        creacionProductos:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updatedAt:{
+        actualizacionProductos:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
+    },{
+        timestamps: false,
     })
 }
 
