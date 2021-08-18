@@ -4,7 +4,7 @@
     <label id="dato">{{user.username}}</label>
 </div>
 <div id="contenido">
-    <form action="/tienda/lista/{{user.id}}">
+    <form action="/tienda/lista/{{user.idUsuarios}}">
         {{#each tiendas}}
         <div id="nombreNegocio">
             <h1>{{nombreNegocio}}</h1>
@@ -30,16 +30,16 @@
         </div>
         <div id="botones">
         <div id="boton">
-            <button type="submit" id="Editar"><a href="/tienda/editar/{{id}}"> Editar Datos </a></button>
+            <button type="submit" id="Editar"><a href="/tienda/editar/{{idTiendas}}"> Editar Datos </a></button>
         </div>
         <div id="Boton">
-            <button id="Agregar"><a href="/proveedor/agregar/{{id}}">Agregar Proveedor</a></button>
+            <button id="Agregar"><a href="/proveedor/agregar/{{idTiendas}}">Agregar Proveedor</a></button>
         </div>
         </div>
         {{else}}
         <div id="aviso">
-            <p>¡Antes de continuar. de Click en Tienda!!</p>
-            <p>¡¡<a href="/tienda/agregar/{{user.id}}">Registre los datos de su Negocio.!</a></p>
+            <p>¡Antes de continuar de Click en Tienda!!</p>
+            <p>¡¡<a href="/tienda/agregar/{{user.idUsuarios}}">Registre los datos de su Negocio.!</a></p>
         </div>
         {{/each}}
     </form>

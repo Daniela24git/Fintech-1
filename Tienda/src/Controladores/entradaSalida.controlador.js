@@ -9,9 +9,9 @@ entradaSalida.mostrarEntradasSalidas = (req, res) => {
 
 entradaSalida.mostrarEntrada = async (req, res) => {
     const ids = req.user.id
-    const entrasLista = await sql.query('SELECT max(id) FROM registroentradas')
-    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioId = ?', [ids])
-    const listaProveedor = await sql.query('SELECT * FROM provedores WHERE usuarioId = ?', [ids])
+    const entrasLista = await sql.query('SELECT max(idRegistroEntradas) FROM registroentradas')
+    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioIdUsuarios = ?', [ids])
+    const listaProveedor = await sql.query('SELECT * FROM provedores WHERE usuarioIdUsuarios = ?', [ids])
     const listaProductos = await sql.query('SELECT * FROM productosCantidad')
     res.render('EntradasSalidas/entradas/entadaAgregar', { entrasLista, listaTienda, listaProveedor, listaProductos });
 }
@@ -19,11 +19,11 @@ entradaSalida.mostrarEntrada = async (req, res) => {
 entradaSalida.mostrarSalida = async (req, res) => { 
     const ids = req.user.id
     const id = req.params.id
-    const salidaLista = await sql.query('SELECT max(id) FROM registrosalidas')
-    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioId = ?', [ids])
-    const listaProveedor = await sql.query('SELECT NombreProveedor FROM provedores WHERE usuarioId = ?', [ids])
+    const salidaLista = await sql.query('SELECT max(idRegistroSalidas) FROM registrosalidas')
+    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioIdUsuarios = ?', [ids])
+    const listaProveedor = await sql.query('SELECT NombreProveedor FROM provedores WHERE idListaProductos = ?', [ids])
     const listaProductos = await sql.query('SELECT * FROM detallelistaproductos WHERE listaProductoId = ?', [id])
-    const productosLista = await sql.query('SELECT productoCantidad FROM productos WHERE tiendaId = ?', [ids])
+    const productosLista = await sql.query('SELECT productoCantidad FROM productos WHERE tiendaIdTiendas = ?', [ids])
     res.render('EntradasSalidas/salidas/salidasAgregar', { salidaLista, listaTienda, listaProveedor, listaProductos, productosLista });
 }
 

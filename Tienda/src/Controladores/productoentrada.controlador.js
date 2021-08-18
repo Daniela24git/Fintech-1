@@ -5,7 +5,7 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 ProductoEntradaCtrl.renderEntrada = async (req, res) => {
     const id = req.params.id
-    const listaProveedor = await sql.query("SELECT * FROM provedores WHERE id = ?", [id])
+    const listaProveedor = await sql.query("SELECT * FROM provedores WHERE idProvedores = ?", [id])
     const listaCategoria = await sql.query("SELECT * FROM categorias")
     const idProductoEntrada = await sql.query("SELECT * FROM idmaximo")
     const listaUnidad = await sql.query("SELECT * FROM unidadMedidas")
@@ -16,16 +16,16 @@ ProductoEntradaCtrl.renderEntrada = async (req, res) => {
 ProductoEntradaCtrl.addEntrada = async (req, res) => {
 
     const id = req.params.id
-    const IDS = req.user.id
+    const IDS = req.user.idUsuarios
 
-    const { productoEntradaId, NombreProducto, codigo, cantidadMedida, Cantidad, precioActual, FechaCadusidad, precioVenta, categoriaId, unidadMedidaId } = req.body
+    const { productoEntradaIdProductoEntradas, NombreProducto, codigo, cantidadMedida, Cantidad, precioActual, FechaCadusidad, precioVenta, categoriaIdCategorias, unidadMedidaIdUnidadMedidas } = req.body
 
     const productoVenta = {
         productoCantidad: Cantidad,
         precioVenta,
-        tiendaId: IDS,
-        usuarioId: IDS,
-        productoEntradaId: productoEntradaId,
+        tiendaIdTiendas: IDS,
+        usuarioIdUsuarios: IDS,
+        productoEntradaIdProductoEntradas: productoEntradaIdProductoEntradas,
     }
 
     const NuevaEntrada = {
@@ -34,16 +34,16 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
         Cantidad,
         precioActual,
         FechaCadusidad,
-        provedoreId: id,
-        tiendaId: IDS,
-        usuarioId: IDS,
-        categoriaId: categoriaId,
-        unidadMedidaId: unidadMedidaId
+        provedoreIdProvedores: id,
+        tiendaIdTiendas: IDS,
+        usuarioIdUsuarios: IDS,
+        categoriaIdCategorias: categoriaIdCategorias,
+        unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas
     }
 
     const nuevaCantidadUnidad = {
         cantidadMedida,
-        unidadMedidaId:unidadMedidaId
+        unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas
     }
 
     await orm.entredaProductos.create(NuevaEntrada);
@@ -55,23 +55,22 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
 
 ProductoEntradaCtrl.renderProductos = async (req, res) => {
     const id = req.params.id
-    const DatosProducto = await sql.query("SELECT * FROM productoEntradas WHERE tiendaId = ?", [id])
+    const DatosProducto = await sql.query("SELECT * FROM productoEntradas WHERE tiendaIdTiendas = ?", [id])
     res.render("ProductosEntrada/lista", { DatosProducto })
 
 }
 
 ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
     const id = req.params.id;
-    await orm.entredaProductos.destroy({ where: { id: id } });
-    await orm.productos.destroy({ where: { id: id } });
-    await orm.categoria.destroy({ where: { id: id } });
+    await orm.entredaProductos.destroy({ where: { idProductoEntradas: id } });
+    await orm.productos.destroy({ where: { idProductos: id } });
     req.flash('success', 'Se Elimino Correctamente');
     res.redirect('/ProductoEntrada/lista/' + id);
 
 }
 ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
     const id = req.params.id;
-    const Productos = await sql.query("SELECT * FROM productoEntradas WHERE id =?", [id])
+    const Productos = await sql.query("SELECT * FROM productoEntradas WHERE idProductoEntradas =?", [id])
     res.render("ProductosEntrada/editar", { Productos })
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
@@ -85,7 +84,7 @@ ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
         FechaCadusidad
     }
 
-    await orm.entredaProductos.findOne({ where: { id: id } })
+    await orm.entredaProductos.findOne({ where: { idProductoEntradas: id } })
         .then(productoEntrada => {
             productoEntrada.update(EntradaEditad)
             req.flash('success', 'Se Actualizo Correctamente');

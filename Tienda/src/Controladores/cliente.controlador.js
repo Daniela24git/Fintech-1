@@ -30,14 +30,14 @@ clienteCtrl.renderClientes = async (req, res) => {
 clienteCtrl.deleteClientes = async (req, res) => {
     const id  = req.params.id;
     const IDS = req.user.id
-    await orm.cliente.destroy({ where: { id: id } });
+    await orm.cliente.destroy({ where: { idClientes: id } });
     req.flash('success', 'Se Elimino Correctamente');
     res.redirect('/clientes/lista/' + IDS);
 };
 
 clienteCtrl.renderEditCliente = async (req, res) => {
     const id  = req.params.id;
-    const clientes = await sql.query('SELECT * FROM clientes WHERE id = ?', [id]);
+    const clientes = await sql.query('SELECT * FROM clientes WHERE idClientes = ?', [id]);
     res.render('Clientes/editar', { clientes});
 };
 
@@ -51,7 +51,7 @@ clienteCtrl.editCliente = async (req,res) => {
         Telefono,
         Celular
     };
-    await orm.cliente.findOne({ where: { id: id } })
+    await orm.cliente.findOne({ where: { idClientes: id } })
     .then(clientes => {
         clientes.update(actulizarCliente)
         req.flash('success', 'Se Actualizo Correctamente');

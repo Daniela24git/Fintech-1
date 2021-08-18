@@ -17,7 +17,7 @@ perfilCtrl.addDatos = async (req, res) => {
         telefono,
         ruc,
         direccion,
-        usuarioId: ids
+        usuarioIdUsuarios: ids
     }
     await orm.tienda.create(newTienda)
         .then(() => {
@@ -29,13 +29,13 @@ perfilCtrl.addDatos = async (req, res) => {
 perfilCtrl.rederList = async (req, res) => {
     const id = req.params.id
     const usuarios = sql.query("SELECT * FROM usuarios ")
-    const tiendas = await sql.query("SELECT * FROM tiendas WHERE usuarioId = ?", [id])
+    const tiendas = await sql.query("SELECT * FROM tiendas WHERE usuarioIdUsuarios = ?", [id])
     res.render('tienda/tiendaLista', { tiendas, usuarios})
 }
 
 perfilCtrl.renderEdit = async (req, res) => {
     const id = req.params.id
-    const tienda = await sql.query("SELECT * FROM tiendas WHERE id = ?", [id])
+    const tienda = await sql.query("SELECT * FROM tiendas WHERE idTiendas = ?", [id])
     res.render('tienda/tiendaEditar', { tienda: tienda });
 }
 
@@ -49,7 +49,7 @@ perfilCtrl.edit = async (req, res) => {
         telefono
     }
 
-    await orm.tienda.findOne({ where: { id: ids } })
+    await orm.tienda.findOne({ where: { idTiendas: ids } })
         .then(tiendas => {
             tiendas.update(newTienda)
             req.flash('success', "Se guardo correctamente")

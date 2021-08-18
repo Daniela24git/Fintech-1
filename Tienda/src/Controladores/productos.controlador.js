@@ -5,13 +5,13 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 ProductosCtrl.renderProductos = async (req, res) => {
     const id = req.params.id
-    const productos = await sql.query("SELECT * FROM productos p join productoEntradas e on p.productoEntradaId = e.id where p.tiendaId = ?", [id])
+    const productos = await sql.query("SELECT * FROM productoscantidad p where p.tiendaIdTiendas = ?", [id])
     res.render('productosVenta', { productos });
 }
 
 ProductosCtrl.renderEdit = async (req, res) => {
     const id = req.params.id;
-    const Productos = await sql.query('SELECT * FROM productos WHERE id = ?', [id]);
+    const Productos = await sql.query('SELECT * FROM productos WHERE idProductos = ?', [id]);
     res.render('productos/editar', { Productos });
 };
 
@@ -24,7 +24,7 @@ ProductosCtrl.edit = async (req, res) => {
         precioVenta
     };
 
-    await orm.productos.findOne({ where: { id: id } })
+    await orm.productos.findOne({ where: { idProductos: id } })
         .then(provedor => {
             provedor.update(newProducto)
             req.flash('success', 'Se Actualizo Correctamente');

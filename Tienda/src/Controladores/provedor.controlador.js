@@ -16,8 +16,8 @@ proveedorCtrl.addProveedor = async (req, res) => {
         Celular,
         Telefono,
         Estado,
-        usuarioId: id,
-        tiendaId: id
+        usuarioIdUsuarios: id,
+        tiendaIdTiendas: id
     };
     await orm.provedor.create(newProveedor)
         .then(() => {
@@ -27,20 +27,20 @@ proveedorCtrl.addProveedor = async (req, res) => {
 }
 proveedorCtrl.renderProveedor = async (req, res) => {
     const id = req.params.id
-    const proveedores  = await sql.query('SELECT * FROM provedores  WHERE usuarioId = ?', [id])
-    res.render('Proveedor/lista', {proveedores })
+    const proveedores  = await sql.query('SELECT * FROM provedores  WHERE usuarioIdUsuarios = ?', [id])
+    res.render('Proveedor/lista', {proveedores})
 }
 
 proveedorCtrl.deleteProveedor = async (req, res) => {
     const id = req.params.id;
-    await orm.provedor.destroy({ where: { id: id } });
+    await orm.provedor.destroy({ where: { idProvedores: id } });
     req.flash('success', 'Se Elimino Correctamente');
     res.redirect('/proveedor/lista/' + id);
 };
 
 proveedorCtrl.renderEditProveedor = async (req, res) => {
     const id = req.params.id;
-    const proveedores = await sql.query('SELECT * FROM provedores  WHERE id = ?', [id])
+    const proveedores = await sql.query('SELECT * FROM provedores  WHERE idProvedores = ?', [id])
     res.render('Proveedor/editar', {proveedores})
 };
 
@@ -54,7 +54,7 @@ proveedorCtrl.editProveedor = async (req, res) => {
         Telefono,
         Estado,
     };
-    await orm.provedor.findOne({ where: { id: id } })
+    await orm.provedor.findOne({ where: { idProvedores: id } })
         .then(provedor => {
             provedor.update(newProveedor)
             req.flash('success', 'Se Actualizo Correctamente');

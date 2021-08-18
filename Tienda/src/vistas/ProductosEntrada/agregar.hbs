@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
 <div>
-    <form action="/ProductoEntrada/agregar/{{user.id}}" method="POST">
+    <form action="/ProductoEntrada/agregar/{{user.idUsuarios}}" method="POST">
     {{#each idProductoEntrada}}
-        <p id="TITULO">Nuevo Producto N°<input type="text" name="productoEntradaId" id="idproducto" value="{{'MAX(id)'}}" readonly></p>
+        <p id="TITULO">Nuevo Producto N°<input type="text" name="productoEntradaIdProductoEntradas" id="idproducto" value="{{'MAX(idProductoEntradas)'}}" readonly></p>
     {{/each}}
         <div id="">
             <div id="cinco">
@@ -26,9 +26,9 @@
                 </div>
                 <div id="CATEGORIA">
                     <label>Categoria</label>
-                    <select name="categoriaId" id="categoria">
+                    <select name="categoriaIdCategorias" id="categoria">
                         {{#each listaCategoria}}
-                        <option value="{{this.id}}">{{this.categoria}}</option>
+                        <option value="{{this.idCategorias}}">{{this.categoria}}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -36,15 +36,15 @@
             <div id="cuatro">
                 <div id="consumibles">
                     <label>Unidad de Medida</label>
-                    <select name="unidadMedidaId" id="unidadMedida">
+                    <select name="unidadMedidaIdUnidadMedidas" id="unidadMedida">
                         {{#each listaUnidad}}
-                        <option value="{{this.id}}">{{this.unidadMedida}}</option>
+                        <option value="{{this.idUnidadMedidas}}">{{this.unidadMedida}}</option>
                         {{/each}}
                     </select>
                 </div>
                 <div>
-                    <label id="">Cantidad de Medida</label>
-                    <input type="number" name="cantidadMedida" id="cantidadMedida" required>
+                    <label id="">Cantidad de Medida (opsional)</label>
+                    <input type="number" name="cantidadMedida" id="cantidadMedida">
                 </div>
                 <div id="">
                     <label>Precio Original: ("ejemplo: 1.20")</label>

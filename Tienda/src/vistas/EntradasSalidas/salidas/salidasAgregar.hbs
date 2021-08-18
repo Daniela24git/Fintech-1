@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/entradasSalidas/Salidas.css">
-<form action="/entradaSalida/Salidas/agregar/{{user.id}}" method="POST">
+<form action="/entradaSalida/Salidas/agregar/{{user.idUsuarios}}" method="POST">
     <div id="Salidas">
         <label>Salidas</label>
     </div>
@@ -10,7 +10,7 @@
     <div id="CODIGO">
         <label>C.Documento:</label>
         {{#each salidaLista}}
-        <input type="text" value="{{'max(id)'}}" name="codigoDocumento" id="codigoDocumento" readonly>
+        <input type="text" value="{{'max(idRegistroSalidas)'}}" name="codigoDocumento" id="codigoDocumento" readonly>
         {{/each}}
     </div>
     <div id="Dtienda">

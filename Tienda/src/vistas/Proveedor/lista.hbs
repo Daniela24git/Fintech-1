@@ -1,5 +1,5 @@
 <LINK REL=StyleSheet HREF="/css/proveedor/listaproveedor.css" TYPE="text/css" MEDIA=screen>
-<form action="/proveedor/lista/{{user.id}}" id="f1">
+<form action="/proveedor/lista/{{user.idUsuarios}}" id="f1">
     <div id="conetendor">
         <div class="row">
             {{#each proveedores }}
@@ -33,17 +33,17 @@
                         </div>
                     </div>
                     <div>
-                        <a href="/proveedor/editar/{{id}}" id="BotonEditar"><img src="/img/iconos/editar.png" id="editar"></a>
+                        <a href="/proveedor/editar/{{idProvedores}}" id="BotonEditar"><img src="/img/iconos/editar.png" id="editar"></a>
                     </div>
                     <div>
-                        <button id="agregarProducto"><a href="/ProductoEntrada/agregar/{{id}}">Agregar un Producto</a></button>
+                        <button id="agregarProducto"><a href="/ProductoEntrada/agregar/{{idProvedores}}">Agregar un Producto</a></button>
                     </div>
                 </div>
             </div>
             {{else}}
             <div>
                 <p>¡No has registrado Proveedores.!</p>
-                <a href="/proveedor/agregar/{{user.id}}">¡Introducir uno!</a>
+                <a href="/proveedor/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
             </div>
             {{/each}}
         </div>
@@ -52,6 +52,6 @@
 
 <div>
     {{#each proveedores }}
-    <button id="masProveedor"><a href="/proveedor/agregar/{{id}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
+    <button id="masProveedor"><a href="/proveedor/agregar/{{idProvedores}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
     {{/each}}
 </div>

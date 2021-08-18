@@ -10,7 +10,7 @@
         <label>Datos del Negocio</label>
     </div>
     {{#each tienda}}
-    <form action="/tienda/editar/{{id}}" method="POST">
+    <form action="/tienda/editar/{{idTiendas}}" method="POST">
         <div id="NombreNegocio">
             <label id="Nombre">Nombre:</label>
             <input type="text" name="nombreNegocio" id="nombreNegocio" value="{{nombreNegocio}}">
