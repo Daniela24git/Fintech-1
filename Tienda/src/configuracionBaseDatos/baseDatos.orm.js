@@ -29,7 +29,8 @@ const registroSalidasModelos = require('../modelos/registroSalidas')
 const unidadMedidasModelos = require('../modelos/unidadMedida')
 const detalleClientesModelos = require('../modelos/detalleCliente')
 const detalleUnidadMedidaModelos = require('../modelos/detalleUnidadMedida');
-const unidadMedida = require('../modelos/unidadMedida');
+const detalleRegistroEntradasModelos = require('../modelos/detalleRegistroEntradas');
+const detalleRegistroSalidasModelos = require('../modelos/detalleRegistroSalidas')
 
 const sequelize = new Sequelize(
   'fintech',
@@ -75,6 +76,8 @@ const detalleCategoria = detalleCategoriasModelos(sequelize, Sequelize)
 const unidadMedidas = unidadMedidasModelos(sequelize, Sequelize)
 const detalleCliente = detalleClientesModelos(sequelize, Sequelize)
 const detalleUnidadMedidas =detalleUnidadMedidaModelos(sequelize, Sequelize)
+const detalleRegistroEntradas = detalleRegistroEntradasModelos(sequelize, Sequelize)
+const detalleRegistroSalidas = detalleRegistroSalidasModelos(sequelize,Sequelize)
 
 //Relaciones 
 //tienda-usuario
@@ -152,30 +155,30 @@ detalleListaProductos.belongsTo(productos)
 tienda.hasMany(registroEntradas)
 registroEntradas.belongsTo(tienda)
 
-entredaProductos.hasMany(registroEntradas)
-registroEntradas.belongsTo(entredaProductos)
-
-tienda.hasMany(registroEntradas)
-registroEntradas.belongsTo(tienda)
-
 provedor.hasMany(registroEntradas)
 registroEntradas.belongsTo(provedor)
 
 usuarios.hasMany(registroEntradas)
 registroEntradas.belongsTo(usuarios)
 
+//Detalle Registro Entradas
+
+entredaProductos.hasMany(detalleRegistroEntradas)
+detalleRegistroEntradas.belongsTo(entredaProductos)
+
 //registro Salidas
 tienda.hasMany(registroSalidas)
 registroSalidas.belongsTo(tienda)
-
-productos.hasMany(registroSalidas)
-registroSalidas.belongsTo(productos)
 
 cliente.hasMany(registroSalidas)
 registroSalidas.belongsTo(cliente)
 
 usuarios.hasMany(registroSalidas)
 registroSalidas.belongsTo(usuarios)
+
+//detalle Registro
+productos.hasMany(detalleRegistroSalidas)
+detalleRegistroSalidas.belongsTo(productos)
 
 module.exports = {
   usuarios,
@@ -191,5 +194,7 @@ module.exports = {
   detalleCategoria,
   unidadMedidas,
   detalleCliente,
-  detalleUnidadMedidas
+  detalleUnidadMedidas,
+  detalleRegistroEntradas,
+  detalleRegistroSalidas
 }

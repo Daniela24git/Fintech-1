@@ -37,7 +37,6 @@
 #tabla{
     position: absolute;
     top: 400px;
-    left: 10px;
     text-align: center;
 }
 
@@ -59,4 +58,14 @@
 
 #NombreProducto{
     width: 320px;
+}
+
+#boton{
+    position: absolute;
+    top: 340px;
+    left: 1200px;
+}
+
+#numero{
+    width: 70px;
 }

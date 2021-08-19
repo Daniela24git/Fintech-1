@@ -1,16 +1,18 @@
-const registroEntradas = (sequelize, type)=>{
-    return sequelize.define('registroEntradas',{
-        idRegistroEntradas: {
+const detalleRegistroSalidas = (sequelize, type)=>{
+    return sequelize.define('detalleRegistroSalidas',{
+        idRegistroSalidas: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        creacionRegistroEntradas:{
+        salidaCantidad: type.INTEGER,
+        cantidadRestante: type.INTEGER,
+        creacionRegistroSalidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionRegistroEntradas:{
+        actualizacionRegistroSalidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -20,4 +22,4 @@ const registroEntradas = (sequelize, type)=>{
     })
 }
 
-module.exports = registroEntradas
+module.exports = detalleRegistroSalidas
