@@ -1,0 +1,61 @@
+#contenido{
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    width: 800px;
+}
+
+#guardar{
+    position: absolute;
+    width: 85%;
+    top: 250px;
+}
+
+#PRODUCTOS{
+    position: absolute;
+}
+
+#Producto{
+    position: absolute;
+    left: 300px;
+}
+
+#UnidadVenta{
+    position: absolute;
+    top: 50px;
+}
+
+#unidadVeneta{
+    position: absolute;
+    left: 300px;
+}
+
+#ProductoCantidad{
+    position: absolute;
+    top: 100px;
+}
+
+#productoCantidad{
+    position: absolute;
+    left: 300px;
+}
+
+#CantidadVenta{
+    position: absolute;
+    top: 150px;
+}
+
+#cantidadVenta{
+    position: absolute;
+    left: 300px;
+}
+
+#Precioventa{
+    position: absolute;
+    top: 200px;
+}
+
+#precioVenta{
+    position: absolute;
+    left: 300px;
+}

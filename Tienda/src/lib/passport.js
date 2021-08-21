@@ -46,16 +46,33 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-        let newUser = {
+      const usuarios = await orm.usuarios.findOne({ where: { username: username } });
+      if (usuarios === null) {
+        let nuevoUsuario = {
           username,
           password
         };
-        newUser.password = await helpers.encryptPassword(password);
-        // Guardar en la base de datos
-        const result = await orm.usuarios.create(newUser);
-        newUser.id = result.insertId;
-        return done(null, newUser);
-
+        nuevoUsuario.password = await helpers.encryptPassword(password);
+        const resultado = await orm.usuarios.create(nuevoUsuario);
+        nuevoUsuario.id = resultado.insertId;
+        return done(null, nuevoUsuario);
+      } else {
+        if (usuarios) {
+          const usuario = usuarios
+          if (username == usuario.username) {
+            done(null, false, req.flash("message", "El nombre de usuario ya existe."))
+          } else {
+            let nuevoUsuario = {
+              username,
+              password
+            };
+            nuevoUsuario.password = await helpers.encryptPassword(password);
+            const resultado = await orm.usuarios.create(nuevoUsuario);
+            nuevoUsuario.id = resultado.insertId;
+            return done(null, nuevoUsuario);
+          }
+        }
+      }
     }
   )
 );

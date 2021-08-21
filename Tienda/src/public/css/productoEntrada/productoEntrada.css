@@ -2,74 +2,108 @@
     top: 80px;
 }
 
-form{
+#conten{
     position: absolute;
-    top: 90px;
-    left: 420px;
-    width: 60%;
+    top: 80px;
+    left: 350px;
+    width: 700px;
 }
 
+#idproducto{
+    width: 50px;
+    background-color: transparent;
+    font-size: 27px;
+    border-color: transparent;
+    font-weight: bold;
+}
 #TITULO{
     position: absolute;
-    left: 170px;
-
-}
-
-#cinco{
-    position: absolute;
-    left: -200px;
-    top: 60px;
-}
-
-#cuatro{
-    position: absolute;
-    left: 360px;
-    top: 60px;
-}
-
-#productoCantidad{
-    display: none;
-}
-
-#UnidadMedidas{
-    display: none;
-}
-
-#guardar1{
-    position: absolute;
-    top: 500px;
-    left: 60px;
-    width: 450px;
 }
 
 #CODIGO{
     position: absolute;
-    top: 0px;
+    top: 50px;
+}
+
+#codigo{
+    position: absolute;
+    left: 300px;
 }
 
 #NOMBREproducto{
     position: absolute;
-    top: 90px;
+    top: 100px; 
+}
+
+#NombreProducto{
+    position: absolute;
+    left: 300px;
 }
 
 #NOMBREproveedor{
     position: absolute;
-    top: 200px;
-    width: 370px;
+    top: 150px;  
 }
 
-#CANTIDAD{
+#NombreProvedor{
     position: absolute;
-    top: 290px;
+    left: 300px; 
 }
 
 #CATEGORIA{
     position: absolute;
-    top: 390px;
-    width: 370px;
+    top: 200px;
 }
-#idproducto{
-    width: 50px;
-    background-color: transparent;
-    border-color: transparent;
+
+#categoria{
+    position: absolute;
+    left: 300px;
+    border-radius: 20px;
+}
+
+#consumibles{
+    position: absolute;
+    top: 250px; 
+}
+
+#unidadMedida{
+    position: absolute;
+    left: 300px;
+    border-radius: 20px;
+}
+
+#PrecioActual{
+    position: absolute;
+    top: 300px;
+}
+
+#precioActual{
+    position: absolute;
+    left: 300px;
+}
+
+#CANTIDAD{
+    position: absolute;
+    top: 350px;  
+}
+
+#Cantidad{
+    position: absolute;
+    left: 300px;
+}
+
+#FECHA{
+    position: absolute;
+    top: 400px;   
+}
+
+#FechaCadusidad{
+    position: absolute;
+    left: 300px;
+}
+
+#guardar1{
+    position: absolute;
+    top: 450px;
+    width: 100%;
 }

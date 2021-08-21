@@ -1,34 +1,12 @@
+<link rel="stylesheet" href="/css/navegacion.css">
 {{#if user}}
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="/productos/lista/{{user.idUsuarios}}"> Productos</a>
-        </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link" href="/proveedor/lista/{{user.idUsuarios}}"> proveedores</a>
-        <li class="nav-item">
-           <li class="nav-item dropdown">
-          <a class="nav-link" href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Prodcutos Entrada</a>
-        <li class="nav-item">
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
-        <li class="nav-item">
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
-        <li class="nav-item">
-          <a class="nav-link" href="/entradaSalida/eleccion/{{user.idUsuarios}}">entradaSalida</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/CerrarSecion">Cierre la Secion</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<nav>
+  <a id="nav" href="/productos/lista/{{user.idUsuarios}}"> Productos</a>
+  <a id="nav" href="/proveedor/lista/{{user.idUsuarios}}"> proveedores</a>
+  <a id="nav" href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Prodcutos Entrada</a>
+  <a id="nav"  id="nav"href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
+  <a id="nav" href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
+  <a id="nav" href="/entradaSalida/eleccion/{{user.idUsuarios}}">entradaSalida</a>
+  <a id="nav" href="/CerrarSecion">Cierre la Secion</a>
 </nav>
 {{/if}}

@@ -6,9 +6,9 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 ProductoEntradaCtrl.renderEntrada = async (req, res) => {
     const id = req.params.id
     const listaProveedor = await sql.query("SELECT * FROM provedores WHERE idProvedores = ?", [id])
-    const listaCategoria = await sql.query("SELECT * FROM categorias")
+    const listaCategoria = await sql.query("SELECT * FROM categorias ORDER BY categoria ASC")
     const idProductoEntrada = await sql.query("SELECT * FROM idmaximo")
-    const listaUnidad = await sql.query("SELECT * FROM unidadMedidas")
+    const listaUnidad = await sql.query("SELECT * FROM unidadMedidas ORDER BY unidadMedida ASC")
     console.log(idProductoEntrada)
     res.render("ProductosEntrada/agregar", { listaProveedor, listaCategoria, listaUnidad, idProductoEntrada })
 }
@@ -18,15 +18,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const id = req.params.id
     const IDS = req.user.idUsuarios
 
-    const { productoEntradaIdProductoEntradas, NombreProducto, codigo, cantidadMedida, Cantidad, precioActual, FechaCadusidad, precioVenta, categoriaIdCategorias, unidadMedidaIdUnidadMedidas } = req.body
-
-    const productoVenta = {
-        productoCantidad: Cantidad,
-        precioVenta,
-        tiendaIdTiendas: IDS,
-        usuarioIdUsuarios: IDS,
-        productoEntradaIdProductoEntradas: productoEntradaIdProductoEntradas,
-    }
+    const {NombreProducto, codigo,Cantidad, precioActual, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas } = req.body
 
     const NuevaEntrada = {
         codigo,
@@ -42,12 +34,11 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     }
 
     const nuevaCantidadUnidad = {
-        cantidadMedida,
+        cantidadMedida: Cantidad,
         unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas
     }
 
     await orm.entredaProductos.create(NuevaEntrada);
-    await orm.productos.create(productoVenta);
     await orm.detalleUnidadMedidas.create(nuevaCantidadUnidad)
     req.flash('success', "Se guardo correctamente")
     res.redirect("/ProductoEntrada/lista/" + IDS)
@@ -74,7 +65,7 @@ ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
     res.render("ProductosEntrada/editar", { Productos })
 }
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
-    const IDS = req.user.id
+    const IDS = req.user.idUsuarios
     const id = req.params.id
     const { NombreProducto, Cantidad, precioActual, FechaCadusidad } = req.body
     const EntradaEditad = {

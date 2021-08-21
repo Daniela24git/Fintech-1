@@ -1,65 +1,55 @@
 <link rel="stylesheet" href="/css/productoEntrada/productoEntrada.css">
 <div>
     <form action="/ProductoEntrada/agregar/{{user.idUsuarios}}" method="POST">
-    {{#each idProductoEntrada}}
-        <p id="TITULO">Nuevo Producto N°<input type="text" name="productoEntradaIdProductoEntradas" id="idproducto" value="{{'MAX(idProductoEntradas)'}}" readonly></p>
-    {{/each}}
-        <div id="">
-            <div id="cinco">
-                <div id="CODIGO">
-                    <label>Codigo</label>
-                    <input type="text" name="codigo" id="codigo" maxlength="13" readonly>
-                </div>
-                <div id="NOMBREproducto">
-                    <label>Nombre del Producto</label>
-                    <input type="text" name="NombreProducto" id="NombreProducto" required>
-                </div>
-                <div id="NOMBREproveedor">
-                    <label>Nombre del Proveedor</label>
-                    {{#each listaProveedor}}
-                    <input type="text" id="NombreProvedor" value="{{NombreProveedor}}" required readonly>
-                    {{/each}}
-                </div>
-                <div id="CANTIDAD">
-                    <label>Cantidad</label>
-                    <input type="text" name="Cantidad" id="Cantidad" required>
-                </div>
-                <div id="CATEGORIA">
-                    <label>Categoria</label>
-                    <select name="categoriaIdCategorias" id="categoria">
-                        {{#each listaCategoria}}
-                        <option value="{{this.idCategorias}}">{{this.categoria}}</option>
-                        {{/each}}
-                    </select>
-                </div>
+        <div id="conten">
+            {{#each idProductoEntrada}}
+            <p id="TITULO">Nuevo Producto N°<input type="text" name="productoEntradaIdProductoEntradas" id="idproducto"
+                    value="{{'MAX(idProductoEntradas)'}}" readonly></p>
+            {{/each}}
+            <div id="CODIGO">
+                <label>Codigo:</label>
+                <input type="text" name="codigo" id="codigo" maxlength="13" readonly>
             </div>
-            <div id="cuatro">
-                <div id="consumibles">
-                    <label>Unidad de Medida</label>
-                    <select name="unidadMedidaIdUnidadMedidas" id="unidadMedida">
-                        {{#each listaUnidad}}
-                        <option value="{{this.idUnidadMedidas}}">{{this.unidadMedida}}</option>
-                        {{/each}}
-                    </select>
-                </div>
-                <div>
-                    <label id="">Cantidad de Medida (opsional)</label>
-                    <input type="number" name="cantidadMedida" id="cantidadMedida">
-                </div>
-                <div id="">
-                    <label>Precio Original: ("ejemplo: 1.20")</label>
-                    <input type="text" name="precioActual" id="precio" required>
-                </div>
-                <div id="">
-                    <label>Precio Venta</label>
-                    <input type="text" name="precioVenta" id="precio" required>
-                </div>
-                <div id="">
-                    <label>Fecha Caducidad</label>
-                    <input type="date" name="FechaCadusidad" id="FechaCadusidad">
-                </div>
+            <div id="NOMBREproducto">
+                <label>Nombre del Producto:</label>
+                <input type="text" name="NombreProducto" id="NombreProducto" required>
+            </div>
+            <div id="NOMBREproveedor">
+                <label>Nombre del Proveedor:</label>
+                {{#each listaProveedor}}
+                <input type="text" id="NombreProvedor" value="{{NombreProveedor}}" required readonly>
+                {{/each}}
+            </div>
+            <div id="CATEGORIA">
+                <label>Categoria:</label>
+                <select name="categoriaIdCategorias" id="categoria">
+                    {{#each listaCategoria}}
+                    <option value="{{this.idCategorias}}">{{this.categoria}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div id="consumibles">
+                <label>Unidad de Medida:</label>
+                <select name="unidadMedidaIdUnidadMedidas" id="unidadMedida">
+                    {{#each listaUnidad}}
+                    <option value="{{this.idUnidadMedidas}}">{{this.unidadMedida}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div id="PrecioActual">
+                <label id="">precioActual:</label>
+                <input type="text" name="precioActual" id="precioActual" required>
+            </div>
+            <div id="CANTIDAD">
+                <label>Cantidad:</label>
+                <input type="text" name="Cantidad" id="Cantidad" required>
+            </div>
+            <div id="FECHA">
+                <label>Fecha Caducidad:</label>
+                <input type="date" name="FechaCadusidad" id="FechaCadusidad">
             </div>
             <button type="submit" id="guardar1">Guardar</button>
+        </div>
     </form>
 </div>
 <script src="/js/codigo.js"></script>

@@ -126,6 +126,9 @@ unidadMedidas.belongsTo(categoria)
 categoria.hasMany(detalleCategoria)
 detalleCategoria.belongsTo(categoria)
 
+detalleCategoria.hasMany(productos)
+productos.belongsTo(detalleCategoria)
+
 //DETALLE CLIENTE
 cliente.hasMany(detalleCliente)
 detalleCliente.belongsTo(cliente)

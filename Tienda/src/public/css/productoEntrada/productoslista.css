@@ -64,3 +64,10 @@ input{
     top: 120px;
     width: 300px;
 }
+
+#agregarDetalleProducto{
+    width: 270px;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 130px;
+}

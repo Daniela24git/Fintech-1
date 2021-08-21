@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/detalleProductos/detalleAgregar.css">
+<form action="/detalleProducto/agregar/{{user.idUsuarios}}" method="post">
+    <div id="contenido">
+        {{#each prodcuto}}
+        <div id="PRODUCTOS">
+            <label id="Productos">Producto:</label>
+            <input type="text" name="" id="Producto" value="{{NombreProducto}}" readonly>
+        </div>
+        {{/each}}
+        <div id="UnidadVenta">
+            <label id="">Unidad de Venta:</label>
+            <input type="text" name="unidadVeneta" id="unidadVeneta" required>
+        </div>
+        <div id="ProductoCantidad">
+            <label id="">Cantidad Total:</label>
+            <input type="text" name="productoCantidad" id="productoCantidad" required>
+        </div>
+        <div id="CantidadVenta">
+            <label id="">Cantidad de Venta</label>
+            <input type="text" name="cantidadVenta" id="cantidadVenta" required>
+        </div>
+        <div id="Precioventa">
+            <label>Precio Venta:</label>
+            <input type="text" name="precioVenta" id="precioVenta" required>
+        </div>
+        <button type="submit" id="guardar">Guardar</button>
+    </div>
+</form>
