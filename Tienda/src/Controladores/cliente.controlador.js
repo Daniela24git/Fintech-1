@@ -29,7 +29,7 @@ clienteCtrl.renderClientes = async (req, res) => {
 
 clienteCtrl.deleteClientes = async (req, res) => {
     const id  = req.params.id;
-    const IDS = req.user.id
+    const IDS = req.user.idUsuarios
     await orm.cliente.destroy({ where: { idClientes: id } });
     req.flash('success', 'Se Elimino Correctamente');
     res.redirect('/clientes/lista/' + IDS);
@@ -43,7 +43,7 @@ clienteCtrl.renderEditCliente = async (req, res) => {
 
 clienteCtrl.editCliente = async (req,res) => {
     const id  = req.params.id;
-    const IDS = req.user.id
+    const IDS = req.user.idUsuarios
     const { Nombres, Telefono, Direccion, Celular} = req.body; 
     const actulizarCliente = {
         Nombres,

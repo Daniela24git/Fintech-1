@@ -1,4 +1,4 @@
-const detalleCategoria = (sequelize, type) => {
+const detalleCategoria = ( sequelize, type) => {
     return sequelize.define('detalleCategorias', {
         idDetalleCategorias:{
             type: type.INTEGER,

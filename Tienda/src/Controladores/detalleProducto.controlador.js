@@ -1,6 +1,5 @@
 const detalleProducto = {}
 
-const { or } = require('sequelize/types')
 const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const sql = require('../configuracionBaseDatos/baseDatos.sql')
 

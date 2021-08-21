@@ -41,7 +41,7 @@ perfilCtrl.renderEdit = async (req, res) => {
 
 perfilCtrl.edit = async (req, res) => {
     const ids = req.params.id
-    const id = req.user.id
+    const id = req.user.idUsuarios
     const { nombreNegocio, celular, telefono } = req.body
     const newTienda = {
         nombreNegocio,
