@@ -18,7 +18,8 @@ detalleProducto.MandarDetalle = async(req, res) =>{
         precioVenta,
         productoEntradaIdProductoEntradas: id,
         usuarioIdUsuarios: ids,
-        tiendaIdTiendas: ids
+        tiendaIdTiendas: ids,
+        detalleCategoriaIdDetalleCategorias: id
     }
     const nuevoSubcategoria = {
         unidadVeneta,

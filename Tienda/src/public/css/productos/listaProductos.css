@@ -52,6 +52,11 @@ input{
 
 #Cantidad{
     margin-left: 10px;
+    width: 80px;
+}
+
+#CantidadVenta{
+    width: 80px;
 }
 
 #precioActual{
