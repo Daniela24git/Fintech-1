@@ -18,12 +18,18 @@ ProductosCtrl.renderEdit = async (req, res) => {
 ProductosCtrl.edit = async (req, res) => {
     const id = req.params.id;
     const IDS = req.user.idUsuarios
-    const { precioVenta, productoCantidad } = req.body;
+    const { precioVenta, cantidadVenta } = req.body;
     const newProducto = {
-        productoCantidad,
         precioVenta
-    };
+    }
 
+    const nuevoDetalle = {
+        cantidadVenta
+    }
+    await orm.detalleCategoria.findOne({ where: { idDetalleCategorias: id } })
+        .then(detalle => {
+            detalle.update(nuevoDetalle)
+        })
     await orm.productos.findOne({ where: { idProductos: id } })
         .then(provedor => {
             provedor.update(newProducto)

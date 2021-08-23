@@ -2,7 +2,7 @@ const registro = {};
 
 const passport = require('passport');
 
-registro.mostrarRegistro = (req, res) => {
+registro.mostrarRegistro = async(req, res) => {
     res.render('Usuario/Registro');
 };
 

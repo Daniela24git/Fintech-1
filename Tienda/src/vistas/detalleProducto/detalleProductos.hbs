@@ -1,6 +1,12 @@
 <link rel="stylesheet" href="/css/detalleProductos/detalleAgregar.css">
 <form action="/detalleProducto/agregar/{{user.idUsuarios}}" method="post">
     <div id="contenido">
+        <div id="numero">
+            <label id="">Nuevo Producto N°</label>
+            {{#each ids}}
+            <input type="text" name="detalleCategoriaIdDetalleCategorias" id="idproducto" value="{{"max(idDetalleCategorias)"}}">
+            {{/each}}
+        </div>
         {{#each prodcuto}}
         <div id="PRODUCTOS">
             <label id="Productos">Producto:</label>
@@ -28,3 +34,5 @@
         <button type="submit" id="guardar">Guardar</button>
     </div>
 </form>
+
+<script src="/js/eleccionUnidad.js"></script>

@@ -169,6 +169,9 @@ registroEntradas.belongsTo(usuarios)
 entredaProductos.hasMany(detalleRegistroEntradas)
 detalleRegistroEntradas.belongsTo(entredaProductos)
 
+registroEntradas.hasMany(detalleRegistroEntradas)
+detalleRegistroEntradas.belongsTo(registroEntradas)
+
 //registro Salidas
 tienda.hasMany(registroSalidas)
 registroSalidas.belongsTo(tienda)

@@ -9,11 +9,12 @@ clienteCtrl.renderAddClientes = (req, res) => {
 
 clienteCtrl.addCliete = async (req, res) => {
     const id = req.params.id;
-    const {Nombres, Direccion, Celular, Telefono} = req.body;
+    const {username, Nombres, Direccion, Celular, telefono} = req.body;
     const nuevocliente = {
+        username,
         Nombres,
         Direccion,
-        Telefono,
+        telefono,
         Celular
     };
     await orm.cliente.create(nuevocliente);

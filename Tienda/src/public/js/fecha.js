@@ -2,6 +2,7 @@ class fecha {
     constructor() {
         this.fecha = document.getElementById('fechas')
         this.numeroDocumento = document.getElementById('codigoDocumento')
+        this.identrada = document.getElementById('idregistro')
     }
     obtencion() {
         const tiempoTranscurrido = Date.now();
@@ -11,8 +12,10 @@ class fecha {
     sumaNumeros(){
         if(this.numeroDocumento.value == ""){
             this.numeroDocumento.value = 1
+            this.identrada.value =this.numeroDocumento.value
         }else{
             this.numeroDocumento.value = this.numeroDocumento.value + 1
+            this.identrada.value =this.numeroDocumento.value
         }
     }
 }

@@ -12,14 +12,32 @@ entradaSalida.mostrarEntrada = async (req, res) => {
     const entrasLista = await sql.query('SELECT max(idRegistroEntradas) FROM registroentradas')
     const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioIdUsuarios = ?', [ids])
     const listaProveedor = await sql.query('SELECT * FROM provedores WHERE usuarioIdUsuarios = ?', [ids])
-    const listaProductos = await sql.query('SELECT * FROM productosCantidad')
-    res.render('EntradasSalidas/entradas/entadaAgregar', { entrasLista, listaTienda, listaProveedor, listaProductos });
+    const listaProductos = await sql.query('SELECT DISTINCT v.productoCantidad, p.*, u.unidadMedida FROM productoentradas p JOIN unidadmedidas u ON u.idUnidadMedidas = p.unidadMedidaIdUnidadMedidas JOIN productos v ON p.idProductoEntradas = v.productoEntradaIdProductoEntradas WHERE p.tiendaIdTiendas = ?', [ids])
+    res.render('EntradasSalidas/entradas/entadaAgregar', { listaTienda, listaProveedor, listaProductos, entrasLista });
 }
 
 entradaSalida.mandarEntrada = async(req, res) => {
     const id = req.params.id
     const ids = req.user.idUsuarios
-    const {entraCantidad, cantidadRestante, productoEntradaIdProductoEntradas, provedoreIdProvedores} = req.body
+    const {entraCantidad, cantidadRestante, registroEntradaIdRegistroEntradas, productoEntradaIdProductoEntradas, provedoreIdProvedores} = req.body
+    
+    const nuevaEntrada = {
+        tiendaIdTiendas: ids,
+        provedoreIdProvedores: id,
+        usuarioIdUsuarios: ids
+    }
+
+    const nuevaDetalleEntrada={
+        entraCantidad,
+        cantidadRestante,
+        productoEntradaIdProductoEntradas: productoEntradaIdProductoEntradas,
+        registroEntradaIdRegistroEntradas: registroEntradaIdRegistroEntradas
+    }
+
+    await orm.registroEntradas.create(nuevaEntrada)
+    await orm.detalleRegistroEntradas.create(nuevaDetalleEntrada)
+    req.flash('success', 'Exito al Guardar')
+     res.redirect('/entradaSalida/Salidas/Lista/' + ids);
 }
 
 entradaSalida.mostrarSalida = async (req, res) => { 

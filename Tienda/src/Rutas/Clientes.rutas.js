@@ -16,4 +16,4 @@ router.get('/Elimnar/:id', isLoggedIn, deleteClientes);
 router.get('/editar/:id', isLoggedIn, renderEditCliente);
 router.post('/editar/:id', isLoggedIn, editCliente);
 
-module.exports = router;
+module.exports = router; 

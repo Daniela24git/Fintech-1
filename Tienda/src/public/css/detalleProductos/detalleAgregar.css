@@ -59,3 +59,17 @@
     position: absolute;
     left: 300px;
 }
+
+#numero{
+    position: absolute;
+    top: -50px;
+    left: 120px;
+}
+
+#idproducto{
+    width: 50px;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 26px;
+    font-weight: bold;
+}

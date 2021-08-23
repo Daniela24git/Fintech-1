@@ -16,6 +16,14 @@
     left: 160px;
 }
 
+#idregistro{
+    width: 50px;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 26px;
+}
+
 #CODIGO{
     position: absolute;
     top: 220px;

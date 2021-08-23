@@ -55,6 +55,7 @@ ProductoEntradaCtrl.EliminarProductos = async (req, res) => {
     const id = req.params.id;
     await orm.entredaProductos.destroy({ where: { idProductoEntradas: id } });
     await orm.productos.destroy({ where: { idProductos: id } });
+    await orm.detalleCategoria.destroy({ where: { idDetalleCategorias: id } });
     req.flash('success', 'Se Elimino Correctamente');
     res.redirect('/ProductoEntrada/lista/' + id);
 
