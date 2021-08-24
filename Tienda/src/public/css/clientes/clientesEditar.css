@@ -18,27 +18,31 @@ form{
     left: 420px;
     top: 440px;
 }
-
-#CODIGO{
+#Cedula{
     position: absolute;
 }
 
-#PRODUCTO{
+#CODIGO{
     position: absolute;
     top: 140px;
 }
 
-#CANTIDAD{
+#PRODUCTO{
     position: absolute;
     top: 240px;
 }
 
+#CANTIDAD{
+    position: absolute;
+    top: 340px;
+}
+
 #PRECIO{
     position: absolute;
-    top:340px;
+    top:440px;
 }
 
 #CADUCIDAD{
     position: absolute;
-    top: 440px;
+    top: 540px;
 }

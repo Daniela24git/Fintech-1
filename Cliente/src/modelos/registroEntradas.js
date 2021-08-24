@@ -5,8 +5,6 @@ const registroEntradas = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        entraCantidad: type.INTEGER,
-        cantidadRestante: type.INTEGER,
         creacionRegistroEntradas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

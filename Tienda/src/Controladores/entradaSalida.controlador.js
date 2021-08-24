@@ -44,9 +44,9 @@ entradaSalida.mostrarSalida = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
     const salidaLista = await sql.query('SELECT max(idRegistroSalidas) FROM registrosalidas')
-    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE usuarioIdUsuarios = ?', [ids])
-    const listaProveedor = await sql.query('SELECT NombreProveedor FROM provedores WHERE idListaProductos = ?', [ids])
-    const listaProductos = await sql.query('SELECT * FROM detallelistaproductos WHERE listaProductoId = ?', [id])
+    const listaTienda = await sql.query('SELECT nombreNegocio FROM tiendas WHERE IdTiendas = ?', [ids])
+    const listaProveedor = await sql.query('SELECT NombreProveedor FROM provedores WHERE tiendaIdTiendas = ?', [ids])
+    const listaProductos = await sql.query('SELECT * FROM detallelistaproductos WHERE listaProductoIdListaProductos = ?', [id])
     const productosLista = await sql.query('SELECT productoCantidad FROM productos WHERE tiendaIdTiendas = ?', [ids])
     res.render('EntradasSalidas/salidas/salidasAgregar', { salidaLista, listaTienda, listaProveedor, listaProductos, productosLista });
 }

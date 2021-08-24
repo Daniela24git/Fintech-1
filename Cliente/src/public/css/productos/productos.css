@@ -8,20 +8,22 @@ a{
     padding: 20px;
     background-color: rgb(180, 194, 204);
 }
+
 #navegacion div {
     display: flex;
     background-color: rgb(180, 194, 204);
-    
-
 }
+
 #navegacion a{
     padding: 10px;
 }
+
 #navegacion #categorias{
     flex: 1;
     margin-left: 160px;
     
 }
+
 button{
     border-radius: 20px;
     width: 100%;
@@ -32,6 +34,7 @@ button{
     display: block;
     margin: auto;
 }
+
 #img{
     height: 36px;
     width: auto;
@@ -191,4 +194,5 @@ button{
 #LISTAN{
     background-color: transparent;
     border-color: transparent;
+    display: none;
 }

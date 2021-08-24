@@ -1,35 +1,51 @@
 <link rel="stylesheet" href="/css/compras/compra.css">
+<form action="/Compras/eleccion/{{user.idClientes}}" method="POST"></form>
+    <div>
+        {{#each ids}}
+        <label id="">Compra Producto N° <input type="text" name="idListaProductos" id="idListaProductos" value="{{'MAX(idListaProductos)'}}"></label>
+        {{/each}}
+    </div>
 <div id="contenedor">
-{{#each producto}}
-<form action="/Compras/eleccion/{{id}}" method="POST">
-    <div id="nombres">
-        <input type="text" name="codigo" id="codigo" value="{{codigo}}" readonly>
-        <input type="text" name="NombreProducto" id="nombres" value="{{NombreProducto}}" readonly>
-    </div>
-    <div id="Cantidades">
-        <button type="button" onclick="formatos.subir()" id="suma">+</button>
-        <input type="text" name="Cantidad" id="Cantidad">
-        <input type="text" id="cantidadCambio" value="{{productoCantidad}}" readonly>
-        <input type="text" name="productoCantidad" id="productoCantidad"  readonly>
-        <button type="button" onclick="formatos.bajar()">-</button>
-    </div>
-    <div id="Precios">
-        <input type="text" name="Precio" id="Precio" readonly>
-        <input type="text" id="precioCambio" value="{{precioVenta}}" readonly>
-    </div>
-    <div id="categorias">
-        <input type="text" name="categoria" id="categoria" value="{{categoria}}" readonly>
-    </div>
-    <div id="Unidades">
-        <input type="text" name="UnidadMedida" id="Unidad" value="{{UnidadMedida}}" readonly>
-    </div>
-    <div id="caducidades">
-        <input type="text" name="FechaCadusidad" id="caducidad" value="{{FechaCadusidad}}" readonly>
-    </div>
-    <div id="boton">
-        <button type="submit" id="comprar">Comprar</button>
-    </div>
-{{/each}}
-</form>
+    {{#each producto}}
+        <div id="Nombres">
+            <label id="">Producto:</label>
+            <input type="text" name="NombreProducto" id="nombres" value="{{NombreProducto}}" readonly>
+        </div>
+        <div id="Cantidades">
+            <div id="cantidadTotal">
+                <label id="ct">Cantidad Total:</label>
+                <input type="text" id="cantidadCambio" value="{{productoCantidad}}" readonly>
+            </div>
+            <div id="cantidad">
+                <button type="button" onclick="formatos.subir()" id="suma">+</button>
+                <input type="text" name="Cantidad" id="Cantidad" readonly>
+                <button type="button" onclick="formatos.bajar()" id="resta">-</button>
+            </div>
+            <div id="Unidades">
+                <label id="">Unidad:</label>
+                <input type="text" name="UnidadMedida" id="Unidad" value="{{unidadVeneta}}" readonly>
+            </div>
+            <div id="cantidadVentas">
+                <label id="cu">Cantidad Unidad:</label>
+                <input type="text" name="cantidadVenta" id="cantidadVenta" value="{{cantidadVenta}}" readonly>
+            </div>
+            <input type="text" name="productoCantidad" id="productoCantidad" readonly>
+        </div>
+        <div id="Precios">
+            <label id="pu">Precio de Unidad:</label>
+            <input type="text" name="Precio" id="Precio" readonly>
+        </div>
+        <div>
+            <input type="text" id="precioCambio" value="{{precioVenta}}" readonly>
+        </div>
+        <div id="caducidades">
+            <label id="fc">Fecha de Cadusidad:</label>
+            <input type="text" name="FechaCadusidad" id="caducidad" value="{{FechaCadusidad}}" readonly>
+        </div>
+        <div id="boton">
+            <button type="submit" id="comprar">Comprar</button>
+        </div>
+        {{/each}}
+    </form>
 </div>
 <script src="/js/eleccionCompra.js"></script>

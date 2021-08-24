@@ -1,15 +1,123 @@
 #contenedor{
     position: absolute;
-    top: 250px;
-    left: 920px;
+    top: 120px;
+    left: 910px;
+    border: 1px solid;
+    width: 450px;
+    height: 490px;
+    border-radius: 20px;
 }
 
 #precioCambio{
     display: none;
 }
+
 #productoCantidad{
     display: none;
 }
-#codigo{
-    display: none;
+
+#Nombres{
+    position: absolute;
+}
+
+#nombres{
+    position: absolute;
+    width: 250px;
+}
+
+#Cantidades{
+    position: absolute;
+    top: 50px;
+}
+#ct{
+    width: 200px;
+}
+
+#Cantidad{
+    position: absolute;
+    width: 200px;
+    top: 120px;
+    left: 140px;
+}
+
+#Precios{
+    position: absolute;
+    top: 300px;
+}
+
+#Precio{
+    position: absolute;
+    width: 200px;
+    left: 220px;
+}
+
+#pu{
+    width: 250px;
+}
+
+#cantidadCambio{
+    position: absolute;
+    width: 200px;
+    left: 200px;
+}
+
+#Unidad{
+    position: absolute;
+    width: 200px;
+}
+
+#cantidadVenta{
+    position: absolute;
+    width: 200px;
+    left: 220px;
+}
+
+#cu{
+    width: 250px;
+}
+
+#caducidades{
+    position: absolute;
+    top: 350px;
+}
+
+#caducidad{
+    width: 300px;
+}
+
+#boton{
+    position: absolute;
+    top: 450px;
+}
+
+#comprar{
+    width: 450px;
+}
+
+#suma{
+    position: absolute;
+    top: 120px;
+    left: 70px;
+}
+
+#resta{
+    position: absolute;
+    top: 120px;
+    left: 380px;
+}
+
+#cantidad{
+    position: absolute;
+}
+#cantidadTotal{
+    position: absolute;
+    top: 0px;
+}
+#Unidades{
+    position: absolute;
+    top: 50px;
+}
+#cantidadVentas{
+    position: absolute;
+    top: 190px;
 }

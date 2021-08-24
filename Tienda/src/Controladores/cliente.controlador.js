@@ -45,8 +45,9 @@ clienteCtrl.renderEditCliente = async (req, res) => {
 clienteCtrl.editCliente = async (req,res) => {
     const id  = req.params.id;
     const IDS = req.user.idUsuarios
-    const { Nombres, Telefono, Direccion, Celular} = req.body; 
+    const { username, Nombres, Telefono, Direccion, Celular} = req.body; 
     const actulizarCliente = {
+        username,
         Nombres,
         Direccion,
         Telefono,

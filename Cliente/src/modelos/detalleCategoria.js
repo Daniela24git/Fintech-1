@@ -1,11 +1,12 @@
-const detalleCategoria = (sequelize, type) => {
+const detalleCategoria = ( sequelize, type) => {
     return sequelize.define('detalleCategorias', {
         idDetalleCategorias:{
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        subCategoria: type.STRING,
+        unidadVeneta: type.STRING,
+        cantidadVenta: type.INTEGER,
         creacionDetalleCategorias:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

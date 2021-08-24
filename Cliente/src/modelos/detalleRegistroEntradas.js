@@ -1,25 +1,25 @@
-const detalleRegistroSalidas = (sequelize, type)=>{
-    return sequelize.define('detalleRegistroSalidas',{
-        iddetalleRegistroSalidas: {
+const detalleRegistroEntradas = (sequelize, type) => {
+    return sequelize.define('detalleRegistroEntradas', {
+        idDetalleRegistroEntradas: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        salidaCantidad: type.INTEGER,
+        entraCantidad: type.INTEGER,
         cantidadRestante: type.INTEGER,
-        creacionRegistroSalidas:{
+        creacionRegistroEntradas: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionRegistroSalidas:{
+        actualizacionRegistroEntradas: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
 
-module.exports = detalleRegistroSalidas
+module.exports = detalleRegistroEntradas

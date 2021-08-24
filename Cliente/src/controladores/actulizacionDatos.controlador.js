@@ -3,11 +3,10 @@ const actualizacionDatos = {}
 const orm = require('../configuracionBaseDatos/baseDatos.orm')
 const sql = require('../configuracionBaseDatos/baseDatos.sql')
 const helpers = require('../lib/helpers')
-const cliente = require('../modelos/cliente')
 
 actualizacionDatos.mostrar = async (req, res) => {
     const id = req.params.id
-    const nombreCliente = await sql.query("SELECT id, Nombres FROM clientes WHERE id = ?", [id])
+    const nombreCliente = await sql.query("SELECT idClientes, Nombres, username FROM clientes WHERE id = ?", [id])
     res.render('metodos/actualizacionDatos', { nombreCliente });
 }
 
@@ -18,7 +17,7 @@ actualizacionDatos.mandar = async (req, res) => {
         password
     }
     actualizacionDatos.password = await helpers.encryptPassword(password);
-    await orm.cliente.findOne({ where: { id: id } })
+    await orm.cliente.findOne({ where: { ididClientes: id } })
         .then(clientes => {
             clientes.update(actualizacionDatos)
             req.flash('success', 'Se Actualizo Correctamente');
