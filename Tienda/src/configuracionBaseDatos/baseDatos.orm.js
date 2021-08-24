@@ -186,6 +186,9 @@ registroSalidas.belongsTo(usuarios)
 productos.hasMany(detalleRegistroSalidas)
 detalleRegistroSalidas.belongsTo(productos)
 
+registroSalidas.hasMany(detalleRegistroSalidas)
+detalleRegistroSalidas.belongsTo(registroSalidas)
+
 module.exports = {
   usuarios,
   categoria,
@@ -202,5 +205,6 @@ module.exports = {
   detalleCliente,
   detalleUnidadMedidas,
   detalleRegistroEntradas,
-  detalleRegistroSalidas
+  detalleRegistroSalidas,
+  registroSalidas
 }

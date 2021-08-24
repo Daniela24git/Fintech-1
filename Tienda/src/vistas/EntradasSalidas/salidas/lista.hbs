@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="style.css">
+<form action="/entradaSalida/salidas/Lista/{{user.idUsuarios}}" method="get"></form>
+<div id="contenido">
+    <div class="row">
+        {{#each lista}}
+        <div id="tarjeta">
+            <div id="id">
+                <label id="">N°:</label>
+                <input type="text" name="idRegistroSalidas" id="idRegistroSalidas" value="{{idRegistroSalidas}}" readonly>
+            </div>
+            <div id="fecha">
+                <label id="">fecha:</label>
+                <input type="text" name="creacionRegistroSalidas" id="creacionRegistroSalidas" value="{{creacionRegistroSalidas}}" readonly>
+            </div>
+            <div id="boton">
+                <button><a href="" id="detalle">Detalle</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

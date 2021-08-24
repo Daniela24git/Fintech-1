@@ -9,6 +9,7 @@ clienteCtrl.renderAddClientes = (req, res) => {
 
 clienteCtrl.addCliete = async (req, res) => {
     const id = req.params.id;
+    const ids = req.user.idUsuarios
     const {username, Nombres, Direccion, Celular, telefono} = req.body;
     const nuevocliente = {
         username,
@@ -17,9 +18,16 @@ clienteCtrl.addCliete = async (req, res) => {
         telefono,
         Celular
     };
+
+    const nuevoDetalle = {
+        clienteIdClientes: id,
+        usuarioIdUsuarios: ids
+    }
+
+    await orm.detalleCliente.create(nuevoDetalle)
     await orm.cliente.create(nuevocliente);
     req.flash('success', 'Se Guardo Correctamente');
-    res.redirect('/clientes/lista/'+ id);
+    res.redirect('/clientes/lista/'+ ids);
 }
 
 clienteCtrl.renderClientes = async (req, res) => {
@@ -31,6 +39,7 @@ clienteCtrl.renderClientes = async (req, res) => {
 clienteCtrl.deleteClientes = async (req, res) => {
     const id  = req.params.id;
     const IDS = req.user.idUsuarios
+    await orm.detalleCliente.destroy({ where: { clienteIdClientes: id } })
     await orm.cliente.destroy({ where: { idClientes: id } });
     req.flash('success', 'Se Elimino Correctamente');
     res.redirect('/clientes/lista/' + IDS);

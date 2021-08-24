@@ -1,21 +1,3 @@
-# Notes App with Nodejs and Mysql
-![](docs/screenshot2.png)
-![](docs/screenshot.png)
+Sabias q el 5% de pérdidas de una tienda se basa en caducidad y la acumulación de los productos afectando la entrada y salida de estos mismos, provocando una insatisfacción del cliente al momento de adquirir los productos, perjudicando al negocio en un 50%. 
 
-## File Structure
-- database, it the folder with all the sql queries, you can use to recreate the database for this application
-- src, it's all the code for the Backend and Frontend Application
-- docs
-
-## Old Versions of this Project
-- [version-2018](https://github.com/FaztTech/nodejs-mysql-links/tree/version-2018)
-
-## Todo
-1. [x] Improve Links Routes
-1. [ ] Write Route Validation with Express Validator
-
-
-arreglos por hacer
-Estilos editar tienda
-estilos lista tienda
-estilos de lista proveedores
+Por lo cual automatizaremos el registro de cada uno de los productos con un tiempo de registro, evitando la caducidad y acumulación de productos, con un registro de proveedores, clientes, contando con un registros de Entresas y Salidas de los productos de esta manera reduciendo los porcentajes de perdidas q se generen en la tienda.

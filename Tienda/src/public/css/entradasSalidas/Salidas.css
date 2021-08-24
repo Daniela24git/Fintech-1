@@ -4,7 +4,7 @@
 
 #Salidas{
     position: absolute;
-    top: 110px;
+    top: 80px;
     left: 580px;
     text-transform: uppercase;
     font-size: 30px;
@@ -37,7 +37,6 @@
 #tabla{
     position: absolute;
     top: 400px;
-    left: 10px;
     text-align: center;
 }
 
@@ -59,4 +58,15 @@
 
 #NombreProducto{
     width: 320px;
+}
+
+#numero{
+    width: 70px;
+}
+
+#idregistro{
+    background-color: transparent;
+    border-color: transparent;
+    width: 70px;
+    font-weight: bolder;
 }
