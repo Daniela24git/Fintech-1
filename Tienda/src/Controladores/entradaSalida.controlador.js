@@ -17,13 +17,12 @@ entradaSalida.mostrarEntrada = async (req, res) => {
 }
 
 entradaSalida.mandarEntrada = async (req, res) => {
-    const id = req.params.id
     const ids = req.user.idUsuarios
-    const { fecha, entraCantidad, cantidadRestante, registroEntradaIdRegistroEntradas, productoEntradaIdProductoEntradas, provedoreIdProvedores } = req.body
+    const { fecha, entraCantidad, cantidadRestante, idRegistroEntradas, productoEntradaIdProductoEntradas, provedoreIdProvedores } = req.body
 
     const nuevaEntrada = {
         tiendaIdTiendas: ids,
-        provedoreIdProvedores: id,
+        provedoreIdProvedores: provedoreIdProvedores,
         usuarioIdUsuarios: ids
     }
 
@@ -31,14 +30,14 @@ entradaSalida.mandarEntrada = async (req, res) => {
         entraCantidad,
         cantidadRestante,
         creacionRegistroEntradas: fecha,
-        productoEntradaIdProductoEntradas: productoEntradaIdProductoEntradas,
-        registroEntradaIdRegistroEntradas: registroEntradaIdRegistroEntradas
+        registroEntradaIdRegistroEntradas: idRegistroEntradas,
+        productoEntradaIdProductoEntradas: productoEntradaIdProductoEntradas   
     }
 
     await orm.registroEntradas.create(nuevaEntrada)
     await orm.detalleRegistroEntradas.create(nuevaDetalleEntrada)
     req.flash('success', 'Exito al Guardar')
-    res.redirect('/entradaSalida/Salidas/Lista/' + ids);
+    res.redirect('/entradaSalida/entradas/Lista/' + ids);
 }
 
 entradaSalida.listaEntrada = async (req, res) => {
@@ -49,7 +48,7 @@ entradaSalida.listaEntrada = async (req, res) => {
 
 entradaSalida.detallelistaEntrada = async (req, res) => {
     const id = req.params.id
-    const lista = await sql.query('SELECT * FROM detalleregistroentradas WHERE registroEntradaIdRegistroEntradas = ?', [id])
+    const lista = await sql.query('SELECT * FROM detatalleentradaproductos WHERE registroEntradaIdRegistroEntradas = ?', [id])
     res.render('EntradasSalidas/entradas/detalleLista', { lista });
 }
 

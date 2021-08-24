@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/entradasSalidas/detalleLista.css">
 <form action="/entradaSalida/entradas/Lista/detalle{{user.idUsuarios}}" method="get"></form>
 <div id="contenido">
     <div class="row">
@@ -6,7 +6,7 @@
         <div id="tarjeta">
             <div id="id">
                 <label id="">N°</label>
-                <input type="text" name="idRegistroEntradas" id="idRegistroEntradas" value="{{idRegistroEntradas}}" readonly>
+                <input type="text" name="idDetalleRegistroEntradas" id="idDetalleRegistroEntradas" value="{{idDetalleRegistroEntradas}}" readonly>
             </div>
             <div id="nombre">
                 <label id="">Producto:</label>
@@ -19,9 +19,6 @@
             <div id="fecha">
                 <label id="">Fecha:</label>
                 <input type="text" name="creacionRegistroEntradas" id="creacionRegistroEntradas" value="{{creacionRegistroEntradas}}" readonly>
-            </div>
-            <div id="boton">
-                <button><a href="" id="detalle">Detalle</a></button>
             </div>
         </div>
         {{/each}}

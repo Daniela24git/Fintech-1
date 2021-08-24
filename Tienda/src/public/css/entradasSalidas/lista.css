@@ -1,0 +1,55 @@
+#contenido{
+    position: absolute;
+    top: 120px;
+    left: 180px;
+}
+
+#tarjeta{
+    border: 1px solid;
+    width: 375px;
+    height: 190px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.row{
+    gap: 20px;
+}
+
+#idRegistroEntradas{
+    width: 70px;
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bolder;
+}
+
+#fecha{
+    top: 50px;
+}
+
+#creacionRegistroEntradas{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#boton{
+    position: absolute;
+    top: 150px;
+}
+
+#detalles{
+    width: 375px;
+}
+
+#masProveedor{
+    position: absolute;
+    top: 90px;
+    left: 1250px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#mas{
+    width: 50px;
+}

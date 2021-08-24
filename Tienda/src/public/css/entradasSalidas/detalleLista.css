@@ -1,0 +1,25 @@
+#contenido{
+    position: absolute;
+    top: 120px;
+    left: 180px;
+}
+
+.row{
+    gap: 20px;
+}
+
+#tarjeta{
+    border: 1px solid;
+    width: 375px;
+    height: 310px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#idDetalleRegistroEntradas{
+    width: 70px;
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    font-weight: bolder;
+}

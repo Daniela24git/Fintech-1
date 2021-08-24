@@ -12,9 +12,9 @@ class fecha {
     sumaNumeros(){
         if(this.numeroDocumento.value == ""){
             this.numeroDocumento.value = 1
-            this.identrada.value =this.numeroDocumento.value
+            this.identrada.value = parseInt(this.numeroDocumento.value)
         }else{
-            this.numeroDocumento.value = this.numeroDocumento.value + 1
+            this.numeroDocumento.value = parseInt(this.numeroDocumento.value) + 1
             this.identrada.value =this.numeroDocumento.value
         }
     }
