@@ -15,6 +15,8 @@
     border: 1px solid;
     border-radius: 20px;
     width: 400px;
+    background-color: white;
+    color: black;
 }
 
 #eliminar{
@@ -40,6 +42,8 @@
 
 input{
     width: 50%;
+    border-color: transparent;
+    font-size: 25px;
 }
 
 #codigo{
@@ -68,6 +72,6 @@ input{
 #agregarDetalleProducto{
     width: 270px;
     position: absolute;
-    margin-top: -30px;
+    margin-top: -42px;
     margin-left: 130px;
 }

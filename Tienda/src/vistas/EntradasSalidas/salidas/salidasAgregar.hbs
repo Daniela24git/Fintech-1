@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/entradasSalidas/Salidas.css">
 <form action="/entradaSalida/Salidas/agregar/{{user.idUsuarios}}" method="POST">
     <div id="Salidas">
-        <label>Salidas N° <input type="text" name="registroSalidaIdRegistroSalidas" id="idregistro" readonly></label>
+        <label>Salidas N° <input type="text" name="idregistros" id="idregistro" readonly></label>
     </div>
     <div id="fecha">
         <label>Fecha:</label>
@@ -10,12 +10,12 @@
     <div id="CODIGO">
         <label>C.Documento:</label>
         {{#each salidaLista}}
-        <input type="text" value="{{'max(idRegistroSalidas)'}}" name="codigoDocumento" id="codigoDocumento" readonly>
+        <input type="text" value="{{'max(idRegistroSalidas)'}}" name="idRegistroSalidas" id="codigoDocumento" readonly>
         {{/each}}
     </div>
     <div id="Dtienda">
         <label>Tienda:</label>
-        <select name="tiendaIdTiendas" id="Tienda">
+        <select name="tienda" id="Tienda">
             {{#each listaTienda}}
             <option value="{{this.idTiendas}}">{{this.nombreNegocio}}</option>
             {{/each}}
@@ -24,10 +24,13 @@
     <div id="cliente">
         <label>Cliente:</label>
         <select name="clienteIdClientes" id="NombreProveedor">
-        {{#each listaClientes}}
-        <option value="{{this.idClientes}}">{{this.Nombres}}</option>
-        {{/each}}
+            {{#each listaClientes}}
+            <option value="{{this.idClientes}}">{{this.Nombres}}</option>
+            {{/each}}
         </select>
+    </div>
+    <div id="boton">
+        <button type="submit" id="RegistroGuardar">Guardar</button>
     </div>
     <div id="tabla">
         <table border="1">
@@ -43,15 +46,15 @@
             <tr>
                 {{#each listaProductos}}
                 <td><input type="text" name="productoIdProductos" id="numero" value="{{idProductos}}" readonly></td>
-                <td><input type="text" name="nombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly></td>
+                <td><input type="text" name="nombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
+                </td>
                 <td><input type="text" name="unidadMedida" id="UnidadMedida" value="{{unidadVeneta}}" readonly></td>
-                <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{Cantidad}}" readonly></td>
+                <td><input type="text" name="salidaCantidad" id="Cantidad" value="{{Cantidad}}" readonly></td>
                 <td><input type="text" name="ventaCantidad" id="Cantidad" value="{{cantidadVenta}}" readonly></td>
                 <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{productoCantidad}}" readonly></td>
                 <td><input type="text" name="Precio" id="precioActual" value="{{Precio}}" readonly></td>
             </tr>
             {{/each}}
-            <button type="submit" id="RegistroGuardar">Guardar</button>
         </table>
     </div>
 </form>

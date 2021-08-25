@@ -65,20 +65,20 @@ entradaSalida.mostrarSalida = async (req, res) => {
 entradaSalida.MandarSalida = async (req, res) => {
     const id = req.params.id
     const ids = req.user.idUsuarios
-    const { fecha, salidaCantidad, ventaCantidad, cantidadRestante, Precio, productoIdProductos, registroSalidaIdRegistroSalidas, clienteIdClientes, tiendaIdTiendas } = req.body
+    const { fecha, salidaCantidad, ventaCantidad, cantidadRestante, Precio, productoIdProductos, idregistros, clienteIdClientes  } = req.body
     const nuevaSalida = {
-        tiendaIdTiendas: tiendaIdTiendas,
-        clienteIdClientes: clienteIdClientes,
-        usuarioIdUsuarios: ids,
-        registroSalidaIdRegistroSalidas: registroSalidaIdRegistroSalidas
+        tiendaIdTiendas: id,
+        clienteIdClientes: clienteIdClientes, 
+        usuarioIdUsuarios: ids
     }
     const nuevoDetalleSalida = {
-        fecha,
+        creacionRegistroEntradas: fecha,
         salidaCantidad,
         ventaCantidad,
         cantidadRestante,
         Precio,
-        productoIdProductos: productoIdProductos
+        productoIdProductos: productoIdProductos,
+        registroSalidaIdRegistroSalidas: idregistros
     }
 
     await orm.registroSalidas.create(nuevaSalida)
@@ -95,7 +95,7 @@ entradaSalida.ListaSalidas = async (req, res) => {
 
 entradaSalida.detallelistaSalidas = async (req, res) => {
     const id = req.params.id
-    const lista = await sql.query('SELECT * FROM detalleregistrosalidas WHERE registroSalidaIdRegistroSalidas = ?', [id])
+    const lista = await sql.query('SELECT * FROM salidaProductos WHERE registroSalidaIdRegistroSalidas = ?', [id])
     res.render('EntradasSalidas/salidas/detalleLista', { lista });
 }
 

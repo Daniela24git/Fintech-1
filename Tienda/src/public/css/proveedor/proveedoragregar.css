@@ -1,7 +1,7 @@
 #f1{
     position: absolute;
     top: 50px;
-    width: 100%;
+    width: 700%;
 }
 
 #logo{
@@ -30,7 +30,7 @@
 #lbldireccion{
     position: absolute;
     top: 195px;
-    left: 400px;
+    left: 420px;
 }
 
 #Direccion{
@@ -43,7 +43,7 @@
 #lblcelular{
     position: absolute;
     top: 250px;
-    left: 430px;
+    left: 450px;
 }
 
 #lbltelefono{
@@ -79,6 +79,6 @@
 #guardar1{
     position: absolute;
     top: 420px;
-    left: 500px;
+    left: 430px;
     width: 420px;
 }

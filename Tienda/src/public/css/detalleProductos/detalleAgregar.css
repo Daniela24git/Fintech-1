@@ -7,8 +7,9 @@
 
 #guardar{
     position: absolute;
-    width: 85%;
+    width: 600px;
     top: 250px;
+    left: -10px;
 }
 
 #PRODUCTOS{
@@ -72,4 +73,5 @@
     border-color: transparent;
     font-size: 26px;
     font-weight: bold;
+    color: white;
 }

@@ -27,7 +27,7 @@
 #formulario{
     position: absolute;
     top: 120px;
-    left: 350px;
+    left: 400px;
     width: 50%;
 }
 
@@ -71,7 +71,7 @@
 #boton{
     position: absolute;
     top: 390px;
-    left: 50px;
+    left: -8px;
 }
 
 #guardar1{
@@ -94,7 +94,7 @@
 
 #contactos{
     position: absolute;
-    left: 230px;
+    left: 200px;
 }
 
 #Celular{

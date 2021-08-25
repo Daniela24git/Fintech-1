@@ -8,8 +8,8 @@ lista.mostrar = (req, res) => {
 
 lista.Lista = async (req, res) => {
     const {id} = req.params
-    const lista = await pool.query("SELECT id, NombreProducto, Cantidad, Precio  FROM detallelistaproductos ")
-    const tienda = await pool.query("SELECT * FROM  tiendas WHERE id = ?", [id])
+    const lista = await pool.query("SELECT NombreProducto, Cantidad, Precio  FROM listacompras ")
+    const tienda = await pool.query("SELECT * FROM  tiendas WHERE idTiendas = ?", [id])
     res.render("productos/lista", { lista, tienda });
 }
 

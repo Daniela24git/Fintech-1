@@ -8,13 +8,20 @@
 }
 
 .row{
-    gap: 20px;
+    gap: 50px;
 }
 
 #tarjeta{
     border: 1px solid;
     border-radius: 20px;
     width: 400px;
+    background-color: white;
+    color: black;
+}
+
+input{
+    border-color: transparent;
+    font-size: 23px;
 }
 
 #eliminar{
@@ -43,28 +50,36 @@ input{
 }
 
 #codigo{
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 #NombreProducto{
-    margin-left: 10px;
+    margin-left: 50px;
 }
 
 #Cantidad{
-    margin-left: 10px;
+    margin-left: 43px;
     width: 80px;
+}
+
+#unidadVenta{
+    width: 80px;
+    margin-left: 136px;
 }
 
 #CantidadVenta{
     width: 80px;
+    margin-left: -10px;
 }
 
 #precioActual{
-    margin-left: 43px;
+    width: 80px;
+    margin-left: 143px;
 }
 
 #FechaCadusidad{
-    margin-left: 43px;
+    width: 170px;
+    margin-left: 93px;
 }
 
 #agregar{

@@ -23,9 +23,8 @@ clienteCtrl.addCliete = async (req, res) => {
         clienteIdClientes: id,
         usuarioIdUsuarios: ids
     }
-
-    await orm.detalleCliente.create(nuevoDetalle)
     await orm.cliente.create(nuevocliente);
+    await orm.detalleCliente.create(nuevoDetalle)
     req.flash('success', 'Se Guardo Correctamente');
     res.redirect('/clientes/lista/'+ ids);
 }

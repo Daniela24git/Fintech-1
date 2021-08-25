@@ -1,8 +1,8 @@
 <LINK REL=StyleSheet HREF="/css/productoEntrada/editarproductos.css" TYPE="text/css" MEDIA=screen>
 {{#each Productos}}
 <form action="/ProductoEntrada/editar/{{idProductoEntradas}}" method="POST">
+<div id="contenedor">
     <p id="p">Edita Producto </p>
-    <div id="contenedor_1">
         <div id="CODIGO">
             <label id="codigos">Codigo:</label>
             <input type="text" name="codigo" id="codigo" value="{{codigo}}" readonly>
@@ -19,15 +19,11 @@
             <label id="precios">Precio:</label>
             <input type="text" name="precioActual" id="precio" value="{{precioActual}}">
         </div>
-        <div id="">
-            <label>Unidad</label>
-            <input type="text" name="UnidadMedida" id="descripcion">
-        </div>
         <div id="CADUCIDAD">
             <label id="caducidad">Fecha Caducidad:</label>
             <input type="datetime" name="FechaCadusidad" id="FechaCadusidad" value="{{FechaCadusidad}}">
         </div>
         <button type="submit" id="guardar1"> <img id="guardar_2" src="/img/guardar.png"></button>
-    </div>
+</div>
     {{/each}}
 </form>

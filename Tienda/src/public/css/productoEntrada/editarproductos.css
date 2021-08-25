@@ -2,10 +2,11 @@
     top: 80px;
 }
 
-form{
+#contenedor{
     position: absolute;
     top: 90px;
-    left: 450px;
+    left: 400px;
+    width: 600px;
 }
 #guardar_2{
     width: 80px;
@@ -15,12 +16,17 @@ form{
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    left: 420px;
-    top: 440px;
+    left: 550px;
+    top: 470px;
 }
 
 #CODIGO{
     position: absolute;
+}
+
+#codigo{
+    position: absolute;
+    left: 250px;
 }
 
 #PRODUCTO{
@@ -28,9 +34,19 @@ form{
     top: 140px;
 }
 
+#NombreProducto{
+    position: absolute;
+    left: 250px;
+}
+
 #CANTIDAD{
     position: absolute;
     top: 240px;
+}
+
+#Cantidad{
+    position: absolute;
+    left: 250px;
 }
 
 #PRECIO{
@@ -38,7 +54,17 @@ form{
     top:340px;
 }
 
+#precio{
+    position: absolute;
+    left: 250px;
+}
+
 #CADUCIDAD{
     position: absolute;
     top: 440px;
+}
+
+#FechaCadusidad{
+    position: absolute;
+    left: 250px;
 }

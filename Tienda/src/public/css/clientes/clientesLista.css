@@ -15,6 +15,12 @@
     border: 1px solid;
     border-radius: 20px;
     width: 400px;
+    background-color: white;
+    color: black;
+}
+
+input{
+    border-color: transparent;
 }
 
 #eliminar{
@@ -25,7 +31,7 @@
     border-color: transparent;
     background-color: transparent;
     position: absolute;
-    margin-top: -200px;
+    margin-top: -240px;
     margin-left: 340px;
 }
 
@@ -46,16 +52,16 @@ input{
     margin-left: 40px;
 }
 
-#NombreProducto{
-    margin-left: 10px;
+#nombres{
+    margin-left: 15px;
 }
 
-#Cantidad{
-    margin-left: 10px;
+#Direccion{
+    margin-left: 0px;
 }
 
-#precioActual{
-    margin-left: 43px;
+#celular{
+    margin-left: 33px;
 }
 
 #agregar{

@@ -2,35 +2,35 @@
 <div id="navegacion">
     <div id="categorias">
         <a id="Tiendas" href="/tienda/lista"> Tiendas</a>
-        <a id="Tiendas" href="/producto/lista/{{user.id}}"> Todos</a>
-        <a id="Consumibles" href="/productos/consumibles/{{user.id}}"> Consumibles</a>
-        <a id="noConsumibles" href="/productos/noconsumibles/{{user.id}}"> No consumibles</a>
-        <a id="Bebidas" href="/productos/bebidas/{{user.id}}"> Bebidas </a>
+        {{#each tienda}}
+        <a id="Consumibles" href="/productos/consumibles/{{idTiendas}}"> Consumibles</a>
+        <a id="noConsumibles" href="/productos/noconsumibles/{{idTiendas}}"> No consumibles</a>
+        <a id="Bebidas" href="/productos/bebidas/{{idTiendas}}"> Bebidas </a>
+        {{/each}}
     </div>
 </div>
-<hr>
 <div id="lista">
-    <table border="1" id="tabla">
+    <table id="tabla">
         <tr>
             <td id="nombres">
-                <p id="nombre">Lista de Productos</p>
+                <div id="NOMBRES">
+                    {{#each NombreLista}}
+                    <input type="text" name="nombreLista" id="nombresListas" value="{{nombreLista}}" readonly>
+                    {{/each}}
+                </div>
+                <div id="LISTa">
+                    <p id="nombre">Productos</p>
+                </div>
             </td>
             <td id="nombres">
-                <p id="precio">Precios</p>
+                <input id="precio" value="Precios"></input>
             </td>
         </tr>
         {{#each lista}}
         <tr>
-            <td id="Producto">{{Nombre}}</td>
+            <td id="Producto">{{NombreProducto }}</td>
             <td id="precio">${{Precio}}</td>
-        </tr>
-        {{/each}}
-        <tr>
-            <td>
-                <div id="mover">
-                    <button id="ver"><a href="Compra/listaCompleta" id="letras">Ver más productos</a></button>
-                </div>
-            </td>
+            {{/each}}
         </tr>
     </table>
 </div>
@@ -41,21 +41,36 @@
 <div id="contenido">
     <!--card--->
     <form action="/productos/consumibles/{{user.id}}" method="POST" id="tienda">
+        <div id="nombreLista">
+            <div id="GuardarLista">
+                <label id="listaNombre">Nombre de Lista:</label>
+                <input type="text" name="nombreLista" id="NombreLista" value="Lista {{user.Nombres}}" readonly>
+                <button type="submit" id="btones"><img src="/img/guardar.png" id="guardar"></button>
+            </div>
+        </div>
         <div class="container p-4">
             <div class="row">
                 {{#each consumibles}}
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <input type="text" name="Nombre" value="{{NombreProducto}}" readonly id="cantidad" >
-                            <input type="text" name="Cantidad" value="{{Cantidad}}" readonly id="cantidad">
-                            <input type="text" name="Precio" value="{{precioVenta}}" readonly id="cantidad">
-                            <button type="submit" id="comprar">COMPRAR</button>
+                            <input type="text" value="Producto#{{idProductos}}" readonly id="cantidad">
+                            <input type="text" value="{{NombreProducto}}" readonly id="cantidad">
+                            <input type="text" value="cant. x {{unidadVeneta}}" readonly id="cantidad">
+                            <input type="text" value="{{cantidadVenta}}" readonly id="cantidad">
+                            <input type="text" value="Stock: {{productoCantidad}}" readonly id="cantidad">
+                            <input type="text" value="Total a pagar: {{precioVenta}}0" readonly id="cantidad">
+                            <button id="comprar"><a href="/Compras/eleccion/{{idProductos}}">COMPRAR</a></button>
                         </div>
                     </div>
                 </div>
                 {{/each}}
             </div>
+        </div>
+        <div id="mover">
+            {{#each tienda}}
+            <button id="ver"><a href="/Compra/listaCompleta/{{idTiendas}}" id="letras">Ver más productos</a></button>
+            {{/each}}
         </div>
     </form>
 </div>

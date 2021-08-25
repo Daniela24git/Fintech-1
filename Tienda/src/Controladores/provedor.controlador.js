@@ -16,7 +16,7 @@ proveedorCtrl.addProveedor = async (req, res) => {
         Celular,
         Telefono,
         Estado,
-        usuarioIdUsuarios: id,
+        usuarioIdUsuarios: id, 
         tiendaIdTiendas: id
     };
     await orm.provedor.create(newProveedor)
@@ -46,6 +46,7 @@ proveedorCtrl.renderEditProveedor = async (req, res) => {
 
 proveedorCtrl.editProveedor = async (req, res) => {
     const id = req.params.id;
+    const ids = req.user.idUsuarios
     const { NombreProveedor, Direccion, Celular, Telefono, Estado } = req.body;
     const newProveedor = {
         NombreProveedor,
@@ -58,7 +59,7 @@ proveedorCtrl.editProveedor = async (req, res) => {
         .then(provedor => {
             provedor.update(newProveedor)
             req.flash('success', 'Se Actualizo Correctamente');
-            res.redirect('/proveedor/lista/' + id);
+            res.redirect('/proveedor/lista/' + ids);
         })
 }
 module.exports = proveedorCtrl

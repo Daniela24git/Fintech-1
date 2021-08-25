@@ -15,9 +15,10 @@
     font-size: 27px;
     border-color: transparent;
     font-weight: bold;
+    color: white;
 }
 #TITULO{
-    position: absolute;
+    text-align: center;
 }
 
 #CODIGO{
@@ -105,5 +106,6 @@
 #guardar1{
     position: absolute;
     top: 450px;
-    width: 100%;
+    left: -10px;
+    width: 630px;
 }

@@ -18,30 +18,12 @@
     gap: 20px;
 }
 
-#idRegistroEntradas{
+#idRegistroSalidas{
     width: 70px;
     position: absolute;
     background-color: transparent;
     border-color: transparent;
     font-weight: bolder;
-}
-
-#fecha{
-    top: 50px;
-}
-
-#creacionRegistroEntradas{
-    background-color: transparent;
-    border-color: transparent;
-}
-
-#boton{
-    position: absolute;
-    top: 150px;
-}
-
-#detalles{
-    width: 375px;
 }
 
 #masProveedor{
@@ -54,4 +36,22 @@
 
 #mas{
     width: 50px;
+}
+
+#fecha{
+    top: 50px;
+}
+
+#creacionRegistroSalidas{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#boton{
+    position: absolute;
+    top: 150px;
+}
+
+#detalles{
+    width: 375px;
 }

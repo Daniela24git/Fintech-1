@@ -23,7 +23,7 @@ compra.Mandar = async(req, res) =>{
         productoCantidad
     }
     await orm.detalleListaProductos.create(nuevaLista)
-    await orm.productos.findOne({ where: { productoEntradaIdProductoEntradas: id } })
+    await orm.productos.findOne({ where: { productoEntradaIdProductoEntradas: ids } })
         .then(clientes => {
             clientes.update(nuevaCantidad)
             req.flash('success', 'Se añadio Correctamente');
@@ -31,4 +31,4 @@ compra.Mandar = async(req, res) =>{
         })
 }
 
-module.exports = compra
+module.exports = compra 

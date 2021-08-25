@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="/css/compras/compra.css">
-<form action="/Compras/eleccion/{{user.idClientes}}" method="POST"></form>
-    <div>
+<form action="/Compras/eleccion/{{user.idClientes}}" method="POST">
+    <div id="N°">
         {{#each ids}}
-        <label id="">Compra Producto N° <input type="text" name="idListaProductos" id="idListaProductos" value="{{'MAX(idListaProductos)'}}"></label>
+        <label id="">Compra Producto N°<input type="text" name="idListaProductos" id="idListaProductos" readonly
+                value="{{'MAX(idListaProductos)'}}"></label>
         {{/each}}
     </div>
-<div id="contenedor">
-    {{#each producto}}
+    <div id="contenedor">
+        {{#each producto}}
         <div id="Nombres">
             <label id="">Producto:</label>
             <input type="text" name="NombreProducto" id="nombres" value="{{NombreProducto}}" readonly>
@@ -17,8 +18,9 @@
                 <input type="text" id="cantidadCambio" value="{{productoCantidad}}" readonly>
             </div>
             <div id="cantidad">
-                <button type="button" onclick="formatos.subir()" id="suma">+</button>
+                <label id="cn">Cantidad:</label>
                 <input type="text" name="Cantidad" id="Cantidad" readonly>
+                <button type="button" onclick="formatos.subir()" id="suma">+</button>
                 <button type="button" onclick="formatos.bajar()" id="resta">-</button>
             </div>
             <div id="Unidades">
@@ -46,6 +48,6 @@
             <button type="submit" id="comprar">Comprar</button>
         </div>
         {{/each}}
-    </form>
+</form>
 </div>
 <script src="/js/eleccionCompra.js"></script>

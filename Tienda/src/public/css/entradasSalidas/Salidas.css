@@ -19,7 +19,7 @@
 #CODIGO{
     position: absolute;
     top: 220px;
-    left: 75px;
+    left: 70px;
 }
 
 #Dtienda{
@@ -31,13 +31,18 @@
 #cliente{
     position: absolute;
     top: 340px;
-    left: 110px;
+    left: 145px;
 }
 
 #tabla{
     position: absolute;
     top: 400px;
     text-align: center;
+    background-color: black;
+}
+
+#salidaCantidad{
+    width: 270px;
 }
 
 #codigo{
@@ -45,15 +50,15 @@
 }
 
 #Cantidad{
-    width: 150px;
+    width: 170px;
 }
 
 #UnidadMedida{
-    width: 250px;
+    width: 260px;
 }
 
 #precioActual{
-    width: 150px;
+    width: 160px;
 }
 
 #NombreProducto{
@@ -69,4 +74,24 @@
     border-color: transparent;
     width: 70px;
     font-weight: bolder;
+    color: white;
+    font-size: 28px;
+}
+
+#boton{
+    position: absolute;
+    top: 355px;
+    left: 1230px;
+}
+
+#numero{
+    width: 70px;
+}
+
+#Tienda{
+    width: 275px;
+}
+
+#NombreProveedor{
+    width: 275px;
 }

@@ -4,26 +4,26 @@
     <div id="contenedor_1">
         <div>
             {{#each proveedores}}
-            <form action="/proveedor/editar/{{idProveedores}}" method="POST" id="f2">
-                <div id="">
-                    <label id="lblnombre" >Nombre :</label>
+            <form action="/proveedor/editar/{{idProvedores}}" method="POST" id="f2">
+                <div id="NOMBRES">
+                    <label id="lblnombre" >Nombre:</label>
                     <input type="text" name="NombreProveedor" id="NombreProveedor"
                         value="{{NombreProveedor}}">
                 </div>
-                <div id="">
-                    <label id="lbldir" >Direccion :</label>
-                    <input type="text" name="Direccion" id="Direccion" value="{{Direccion}}">
+                <div id="DIRECCION">
+                    <label id="lbldir" >Direccion:</label>
+                    <input type="text" name="Direccion" id="Celular" value="{{Direccion}}">
                 </div>
-                <div id="">
-                    <label id="lblCelular">Celular :</label>
+                <div id="CELULAR">
+                    <label id="lblCelular">Celular:</label>
                     <input type="text" name="Celular" id="Celular" value="{{Celular}}">
                 </div>
-                <div id="">
-                    <label id="lblTelefono">Telefono :</label>
+                <div id="TELEFONO">
+                    <label id="lblTelefono">Telefono:</label>
                     <input type="text" name="Telefono" id="Telefono" value="{{Telefono}}">
                 </div>
-                <div id="">
-                    <label id="lblestado">Estado :</label>
+                <div id="ESTADO">
+                    <label id="lblestado">Estado:</label>
                     <input type="text" name="Estado" id="Estado" value="{{Estado}}">
                 </div>
                 <button type="submit" id="guardar"> <img id="guardar_1" src="/img/guardar.png" alt="guardar"></button>

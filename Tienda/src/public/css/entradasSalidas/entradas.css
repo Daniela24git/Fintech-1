@@ -21,13 +21,14 @@
     background-color: transparent;
     border-color: transparent;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 28px;
+    color: white;
 }
 
 #CODIGO{
     position: absolute;
     top: 220px;
-    left: 75px;
+    left: 70px;
 }
 
 #Dtienda{
@@ -42,10 +43,16 @@
     left: 110px;
 }
 
+#NombreProveedor{
+    width: 270px;
+    text-align: center;
+}
+
 #tabla{
     position: absolute;
     top: 400px;
     text-align: center;
+    background-color: black;
 }
 
 #codigo{

@@ -7,17 +7,20 @@
         <a id="noConsumibles" href="/productos/noconsumibles/{{idTiendas}}"> No consumibles</a>
         <a id="Bebidas" href="/productos/bebidas/{{idTiendas}}"> Bebidas </a>
         {{/each}}
+        <a href="/cerrarSecion" id="cierre">Cerrar Seción</a>
     </div>
 </div>
 <div id="lista">
     <table id="tabla">
         <tr>
             <td id="nombres">
+                <div id="NOMBRES">
+                    {{#each NombreLista}}
+                    <input type="text" name="nombreLista" id="nombresListas" value="{{nombreLista}}" readonly>
+                    {{/each}}
+                </div>
                 <div id="LISTa">
-                {{#each NombreLista}}
-                <input type="text" name="nombreLista" id="LISTAN" value="{{nombreLista}}" readonly>
-                {{/each}}
-                <p id="nombre">Lista de Productos</p>
+                    <p id="nombre">Productos</p>
                 </div>
             </td>
             <td id="nombres">
@@ -28,7 +31,7 @@
         <tr>
             <td id="Producto">{{NombreProducto }}</td>
             <td id="precio">${{Precio}}</td>
-        {{/each}}
+            {{/each}}
         </tr>
     </table>
 </div>
@@ -52,12 +55,12 @@
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <input type="text" value="{{idProductos}}" readonly id="cantidad">
+                            <input type="text" value="Producto#{{idProductos}}" readonly id="cantidad">
                             <input type="text" value="{{NombreProducto}}" readonly id="cantidad">
-                            <input type="text" value="{{productoCantidad}}" readonly id="cantidad">
-                            <input type="text" value="{{unidadVeneta}}" readonly id="cantidad">
+                            <input type="text" value="cant. x {{unidadVeneta}}" readonly id="cantidad">
                             <input type="text" value="{{cantidadVenta}}" readonly id="cantidad">
-                            <input type="text" value="{{precioVenta}}" readonly id="cantidad">
+                            <input type="text" value="Stock: {{productoCantidad}}" readonly id="cantidad">
+                            <input type="text" value="Total a pagar: {{precioVenta}}$" readonly id="cantidad">
                             <button id="comprar"><a href="/Compras/eleccion/{{idProductos}}">COMPRAR</a></button>
                         </div>
                     </div>
@@ -67,10 +70,9 @@
         </div>
         <div id="mover">
             {{#each tienda}}
-            <button id="ver"><a href="/Compra/listaCompleta/{{idTiendas}}" id="letras">Ver más productos</a></button>
+            <button id="ver"><a href="/Compra/listaCompleta/{{idTiendas}}" id="letras">Lista Completa</a></button>
             {{/each}}
         </div>
     </form>
 </div>
-
 <script src="/js/lista.js"></script>

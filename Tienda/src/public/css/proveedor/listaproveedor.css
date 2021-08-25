@@ -6,7 +6,7 @@
 
 
 .row{
-    gap: 20px;
+    gap: 30px;
     margin-right: 0px;
 }
 
@@ -54,6 +54,10 @@
     text-transform:uppercase; 
 }
 
+#NOMBRES{
+    margin-left: 50px;
+}
+
 #NombreProveedor{
     background-color: transparent;
     border-color: transparent;
@@ -62,12 +66,28 @@
     text-transform:uppercase; 
 }
 
+#DIRECCION{
+    margin-left: 50px;
+}
+
 #Direccion{
     background-color: transparent;
     border-color: transparent;
     width: 100%;
     text-align: center;
     text-transform:uppercase; 
+}
+
+#CELULAR{
+    margin-left: 50px;
+}
+
+#TELEFONO{
+    margin-left: 50px;
+}
+
+#ESTADO{
+    margin-left: 50px;
 }
 
 #Numero{
@@ -109,16 +129,19 @@
 #agregarProducto{
     width: 270px;
     position: absolute;
-    margin-top: 190px;
-    margin-left: 130px;
+    margin-top: 205px;
+    margin-left: 115px;
+    border-radius: 20px;
 }
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 30px;
     height: 283px;
     width: 380px;
     row-gap: 20px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #id{

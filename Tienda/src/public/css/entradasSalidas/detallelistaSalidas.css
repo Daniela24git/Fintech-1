@@ -11,14 +11,14 @@
 #tarjeta{
     border: 1px solid;
     width: 375px;
-    height: 310px;
+    height: 410px;
     border-radius: 20px;
     text-align: center;
     background-color: white;
     color: black;
 }
 
-#idDetalleRegistroEntradas{
+#idRegistroSalidas{
     width: 70px;
     position: absolute;
     background-color: transparent;

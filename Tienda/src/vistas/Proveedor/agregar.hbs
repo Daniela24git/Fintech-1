@@ -1,5 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/proveedor/proveedoragregar.css" TYPE="text/css" MEDIA=screen>
 <form action="/proveedor/agregar/{{user.idUsuarios}}" method="POST" name="f1" id="f1">
+<div id="totalcontenido">
     <p id="p">Nuevo Proveedor</p>
     <div id="contenedor_1">
         <div id="contenedor">
@@ -7,7 +8,7 @@
             <input type="text" name="NombreProveedor" id="NombreProveedor">
         </div>
         <div id="contenedor">
-            <label id="lbldireccion">Direccion :</label>
+            <label id="lbldireccion">Direccion:</label>
             <input type="text" name="Direccion" id="Direccion">
         </div>
         <div id="contenedor">
@@ -24,6 +25,7 @@
         </div>
         <button type="submit" id="guardar1">Guardar</button>
     </div>
+</div>
 </form>
 <script>
     function inicio() {

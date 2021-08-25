@@ -5,7 +5,7 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 detalleProducto.MostrarDetalle = async(req, res) =>{
     const id = req.params.id
-    const prodcuto = await sql.query('SELECT * FROM productoEntradas WHERE idProductoEntradas = ?', [id])
+    const prodcuto = await sql.query('SELECT * FROM productoscantidad WHERE idProductoEntradas = ?', [id])
     const ids = await sql.query('SELECT max(idDetalleCategorias) FROM detallecategorias')
     res.render('detalleProducto/detalleProductos', {prodcuto, ids});
 }

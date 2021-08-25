@@ -23,6 +23,7 @@ button{
     height: auto;
     overflow: hidden;
     display: flex;
+    color: black;
 }
 .card-body{
     padding: auto;
