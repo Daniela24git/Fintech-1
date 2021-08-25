@@ -45,7 +45,7 @@ indexCtrl.mandar = async (req, res) => {
             await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (12, 'Litros', 3)")
             await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (13, 'Medio Litro', 3)")
             await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (14, 'Cuarto de Listro', 3)")
-            await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (15, 'Dolar', 1)")
+            await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (15, 'Dólar', 1)")
             console.log(" se guardo ")
         } 
     }else {

@@ -7,7 +7,7 @@
                     value="{{'MAX(idProductoEntradas)'}}" readonly></p>
             {{/each}}
             <div id="CODIGO">
-                <label>Codigo:</label>
+                <label>Código:</label>
                 <input type="text" name="codigo" id="codigo" maxlength="13" readonly>
             </div>
             <div id="NOMBREproducto">
@@ -21,7 +21,7 @@
                 {{/each}}
             </div>
             <div id="CATEGORIA">
-                <label>Categoria:</label>
+                <label>Categoría:</label>
                 <select name="categoriaIdCategorias" id="categoria">
                     {{#each listaCategoria}}
                     <option value="{{this.idCategorias}}">{{this.categoria}}</option>
@@ -37,7 +37,7 @@
                 </select>
             </div>
             <div id="PrecioActual">
-                <label id="">precioActual:</label>
+                <label id="">Precio Actual:</label>
                 <input type="text" name="precioActual" id="precioActual" required>
             </div>
             <div id="CANTIDAD">

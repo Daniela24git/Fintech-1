@@ -12,6 +12,10 @@
     width: 80px;
 }
 
+#p{
+    text-align: center;
+}
+
 #guardar1{
     background-color: transparent;
     border-color: transparent;

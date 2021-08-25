@@ -24,6 +24,10 @@ input{
     font-size: 23px;
 }
 
+label{
+    margin-left: 10px;
+}
+
 #eliminar{
     width: 70px;
 }

@@ -1,0 +1,30 @@
+#contenedor{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    width: 700px;
+}
+
+#id{
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    font-weight: bolder;
+}
+
+#nombres{
+    margin-left: 30px;
+}
+
+#cedula{
+    margin-left: 55px;
+}
+
+#boton{
+    position: absolute;
+    left: -10px;
+}
+
+#guardar{
+    width: 500px;
+}

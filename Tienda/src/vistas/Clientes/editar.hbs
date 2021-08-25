@@ -1,10 +1,10 @@
 <LINK REL=StyleSheet HREF="/css/clientes/clientesEditar.css" TYPE="text/css" MEDIA=screen>
  {{#each clientes}}
 <form action="/clientes/editar/{{idClientes}}" method="POST" id="f1">
-     <p id="p">Edita Clientes</p>
+     <p id="p">Editar Clientes</p>
     <div id="contenedor_1">
         <div id="Cedula">
-            <label id="">Cedula:</label>
+            <label id="">Cédula:</label>
             <input type="text" name="username" id="cedula" value="{{username}}">
         </div>
         <div id="CODIGO">
@@ -12,11 +12,11 @@
             <input type="text" name="Nombres" id="codigo" value="{{Nombres}}">
         </div>
         <div id="PRODUCTO">
-            <label id="producto">Direccion :</label>
+            <label id="producto">Dirección :</label>
             <input type="text" name="Direccion" id="NombreProducto" value="{{Direccion}}">
         </div>
         <div id="CANTIDAD">
-            <label id="cantidad">Telefono:</label>
+            <label id="cantidad">Teléfono:</label>
             <input type="text" name="telefono" id="Cantidad" value="{{telefono}}">
         </div>
         <div id="PRECIO">

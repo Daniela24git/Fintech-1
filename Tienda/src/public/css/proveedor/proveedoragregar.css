@@ -1,7 +1,7 @@
 #f1{
     position: absolute;
     top: 50px;
-    width: 700%;
+    width: 700px;
 }
 
 #logo{
@@ -13,12 +13,13 @@
     top: 70px;
     left: 550px;
     font-size: 35px;
+    width: 500px;
 }
 
 #lblnprovedor{
     position: absolute;
     top: 140px;
-    left: 300px;
+    left: 263px;
 }
 
 #NombreProveedor{

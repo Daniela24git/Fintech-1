@@ -7,7 +7,7 @@
         <a id="noConsumibles" href="/productos/noconsumibles/{{idTiendas}}"> No consumibles</a>
         <a id="Bebidas" href="/productos/bebidas/{{idTiendas}}"> Bebidas </a>
         {{/each}}
-        <a href="/cerrarSecion" id="cierre">Cerrar Seción</a>
+        <a href="/cerrarSecion" id="cierre">Cerrar Sesión</a>
     </div>
 </div>
 <div id="lista">
@@ -49,15 +49,16 @@
                 <button type="submit" id="btones"><img src="/img/guardar.png" id="guardar"></button>
             </div>
         </div>
+          </form>
         <div class="container p-4">
             <div class="row">
                 {{#each listaProductos}}
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <input type="text" value="Producto#{{idProductos}}" readonly id="cantidad">
+                            <input type="text" value="Producto #{{idProductos}}" readonly id="cantidad">
                             <input type="text" value="{{NombreProducto}}" readonly id="cantidad">
-                            <input type="text" value="cant. x {{unidadVeneta}}" readonly id="cantidad">
+                            <input type="text" value="Cant. x {{unidadVeneta}}" readonly id="cantidad">
                             <input type="text" value="{{cantidadVenta}}" readonly id="cantidad">
                             <input type="text" value="Stock: {{productoCantidad}}" readonly id="cantidad">
                             <input type="text" value="Total a pagar: {{precioVenta}}$" readonly id="cantidad">
@@ -73,6 +74,5 @@
             <button id="ver"><a href="/Compra/listaCompleta/{{idTiendas}}" id="letras">Lista Completa</a></button>
             {{/each}}
         </div>
-    </form>
 </div>
 <script src="/js/lista.js"></script>

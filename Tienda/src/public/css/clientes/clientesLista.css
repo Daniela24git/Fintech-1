@@ -60,6 +60,10 @@ input{
     margin-left: 0px;
 }
 
+label{
+    margin-left: 10px;
+}
+
 #celular{
     margin-left: 33px;
 }

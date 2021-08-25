@@ -2,6 +2,10 @@
     top: 80px;
 }
 
+#p{
+   margin-left: 50px;
+}
+
 form{
     position: absolute;
     top: 90px;
