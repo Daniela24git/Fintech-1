@@ -11,11 +11,7 @@ const tienda = (sequelize, type)=>{
         direccion: type.STRING,
         celular: type.INTEGER(10),
         telefono: type.INTEGER(10),
-        creacionTiendas:{
-            type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
+        creacionTiendas: type.STRING,
         actualizacionTiendas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),

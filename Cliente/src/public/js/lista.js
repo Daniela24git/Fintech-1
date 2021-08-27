@@ -16,6 +16,7 @@ class lista {
 
     }
     aparecerLista() {
+        this.nombreLista.style.display = "block"
         if (this.nombresListas.value === "") {
             this.carrito.style.display = 'none'
             this.nombreLista.style.display = "block"

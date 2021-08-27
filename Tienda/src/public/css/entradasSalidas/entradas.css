@@ -22,7 +22,7 @@
     border-color: transparent;
     font-weight: bold;
     font-size: 28px;
-    color: white;
+    color: black;
 }
 
 #CODIGO{
@@ -52,27 +52,42 @@
     position: absolute;
     top: 400px;
     text-align: center;
-    background-color: black;
+    background-color: white;
+}
+
+#columna{
+    background-color:midnightblue;
+    color:seashell;
 }
 
 #codigo{
     width: 250px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #Cantidad{
     width: 150px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #UnidadMedida{
     width: 250px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #precioActual{
     width: 150px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #NombreProducto{
     width: 320px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #boton{
@@ -83,4 +98,6 @@
 
 #numero{
     width: 70px;
+    border-color: transparent;
+    background-color: transparent;
 }

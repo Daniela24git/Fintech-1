@@ -10,6 +10,11 @@
     font-size: 30px;
 }
 
+#columna{
+    background-color:midnightblue;
+    color:seashell;
+}
+
 #fecha{
     position: absolute;
     top: 160px;
@@ -38,7 +43,7 @@
     position: absolute;
     top: 400px;
     text-align: center;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 #salidaCantidad{
@@ -51,22 +56,32 @@
 
 #Cantidad{
     width: 170px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #UnidadMedida{
     width: 260px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #precioActual{
     width: 160px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #NombreProducto{
     width: 320px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #numero{
     width: 70px;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 #idregistro{
@@ -74,7 +89,7 @@
     border-color: transparent;
     width: 70px;
     font-weight: bolder;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 28px;
 }
 

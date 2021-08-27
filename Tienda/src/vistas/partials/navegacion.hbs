@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/css/navegacion.css">
 {{#if user}}
 <nav>
-  <a id="nav" href="/productos/lista/{{user.idUsuarios}}"> Productos</a>
-  <a id="nav" href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
-  <a id="nav" href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Productos Entrada</a>
-  <a id="nav"  id="nav"href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
-  <a id="nav" href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
   <a id="nav" href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entrada-Salida</a>
+  <a id="nav"  id="nav"href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
+  <a id="nav" href="/productos/lista/{{user.idUsuarios}}"> Productos</a>
+  <a id="nav" href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Productos Entrada</a>
+  <a id="nav" href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
+  <a id="nav" href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
   <a id="nav" href="/CerrarSecion">Cierre la Sesión</a>
 </nav>
 {{/if}}

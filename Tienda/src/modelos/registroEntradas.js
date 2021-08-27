@@ -5,11 +5,7 @@ const registroEntradas = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        creacionRegistroEntradas:{
-            type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
+        creacionRegistroEntradas: type.STRING,
         actualizacionRegistroEntradas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),

@@ -37,9 +37,9 @@
         </div>
         </div>
         {{else}}
-        <div id="aviso">
-            <p>¡¡Antes de continuar de Click en Tienda!!</p>
-            <p>¡¡<a href="/tienda/agregar/{{user.idUsuarios}}">Registre los datos de su Negocio!!</a></p>
+        <div >
+            <p>¡¡<a href="/tienda/lista/{{user.idUsuarios}}" id="aviso">Mostrar los datos de su Negocio!!</a></p>
+            <button id="masTiendas"><a href="/tienda/agregar/{{idTiendas}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
         </div>
         {{/each}}
     </form>

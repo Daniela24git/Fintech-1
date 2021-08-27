@@ -4,9 +4,9 @@
 
 #conten{
     position: absolute;
-    top: 80px;
+    top: 50px;
     left: 350px;
-    width: 700px;
+    width: 500px;
 }
 
 #idproducto{
@@ -15,7 +15,7 @@
     font-size: 27px;
     border-color: transparent;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 #TITULO{
     text-align: center;
@@ -60,6 +60,7 @@
     position: absolute;
     left: 300px;
     border-radius: 20px;
+    width: 274px;
 }
 
 #consumibles{
@@ -71,11 +72,12 @@
     position: absolute;
     left: 300px;
     border-radius: 20px;
+    width: 274px;
 }
 
 #PrecioActual{
     position: absolute;
-    top: 300px;
+    top: 450px;
 }
 
 #precioActual{
@@ -85,7 +87,27 @@
 
 #CANTIDAD{
     position: absolute;
+    top: 300px;  
+}
+
+#UnidadCantidad{
+    position: absolute;
     top: 350px;  
+}
+
+#unidadCantidad{
+    position: absolute;
+    left: 300px;
+}
+
+#PrecioUnidad{
+    position: absolute;
+    top: 400px;
+}
+
+#precioUnidad{
+    position: absolute;
+    left: 300px;
 }
 
 #Cantidad{
@@ -95,17 +117,18 @@
 
 #FECHA{
     position: absolute;
-    top: 400px;   
+    top: 500px;   
 }
 
 #FechaCadusidad{
     position: absolute;
     left: 300px;
+    width: 274px;
 }
 
 #guardar1{
     position: absolute;
-    top: 450px;
+    top: 550px;
     left: -10px;
     width: 630px;
 }

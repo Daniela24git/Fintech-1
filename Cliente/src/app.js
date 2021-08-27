@@ -11,9 +11,9 @@ const bodyparser = require('body-parser');
 const { database } = require('./keys'); 
 
 
-const app = express();
+const app = express(); 
 require('./lib/passport');
-
+ 
 /// archivos compartidos
 app.set('port', process.env.PORT || 5000);
 app.set('views', path.join(__dirname, 'vistas'));

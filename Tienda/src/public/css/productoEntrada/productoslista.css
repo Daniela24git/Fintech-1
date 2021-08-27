@@ -28,7 +28,7 @@
     background-color: transparent;
     position: absolute;
     margin-top: -250px;
-    margin-left: 340px;
+    margin-left: 350px;
 }
 
 #editar{
@@ -38,6 +38,10 @@
 #BotonEditar{
     background-color: transparent;
     border-color: transparent;
+}
+
+label{
+    margin-left: 20px;
 }
 
 input{

@@ -5,7 +5,7 @@ const orm = require("../configuracionBaseDatos/baseDatos.orm")
 
 productos.calidad = async (req, res) => {
     const id = req.params.id
-    const listaProductos = await sql.query("SELECT * FROM ProductosLista WHERE tiendaIdTiendas = ?", [id]) 
+    const listaProductos = await sql.query("SELECT * FROM productoslista WHERE tiendaIdTiendas = ?", [id]) 
     const lista = await sql.query("SELECT * FROM listaCompras  WHERE listaProductoIdListaProductos = ?", [id])
     const tienda = await sql.query("SELECT * FROM Tiendas where idTiendas = ?", [id])
     const NombreLista = await sql.query('SELECT nombreLista FROM listaproductos WHERE tiendaIdTiendas = ?', [id])

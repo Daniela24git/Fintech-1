@@ -11,6 +11,7 @@
         <div id="PRODUCTOS">
             <label id="Productos">Producto:</label>
             <input type="text" name="" id="Producto" value="{{NombreProducto}}" readonly>
+            <input type="text"  name="producto" id="" value="{{idProductoEntradas}}" readonly style="display: none;">
         </div>
         {{/each}}
         <div id="UnidadVenta">
@@ -19,8 +20,8 @@
         </div>
         <div id="ProductoCantidad">
             <label id="">Cantidad Total:</label>
-            {{#each prodcuto}}
-            <input type="text" name="productoCantidad" id="productoCantidad" value="{{productoCantidad}}" readonly required>
+            {{#each listaCantidad}}
+            <input type="text" name="productoCantidad" id="productoCantidad" value="{{Cantidad}}" readonly required>
             {{/each}}
         </div>
         <div id="CantidadVenta">

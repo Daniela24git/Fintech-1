@@ -7,13 +7,14 @@ detalleProducto.MostrarDetalle = async(req, res) =>{
     const id = req.params.id
     const prodcuto = await sql.query('SELECT * FROM productoscantidad WHERE idProductoEntradas = ?', [id])
     const ids = await sql.query('SELECT max(idDetalleCategorias) FROM detallecategorias')
-    res.render('detalleProducto/detalleProductos', {prodcuto, ids});
+    const listaCantidad = await sql.query("SELECT Cantidad FROM productoentradas WHERE idProductoEntradas = ?", [id])
+    res.render('detalleProducto/detalleProductos', {prodcuto, ids, listaCantidad});
 }
 
 detalleProducto.MandarDetalle = async(req, res) =>{
     const id = req.params.id
     const ids = req.user.idUsuarios
-    const {unidadVeneta, cantidadVenta, productoCantidad, precioVenta, detalleCategoriaIdDetalleCategorias} = req.body
+    const {unidadVeneta, producto, cantidadVenta, productoCantidad, precioVenta, detalleCategoriaIdDetalleCategorias} = req.body
 
     const nuevoSubcategoria = {
         unidadVeneta,
@@ -22,7 +23,7 @@ detalleProducto.MandarDetalle = async(req, res) =>{
     const nuevoProducto = {
         productoCantidad,
         precioVenta,
-        productoEntradaIdProductoEntradas: id,
+        productoEntradaIdProductoEntradas: producto,
         usuarioIdUsuarios: ids,
         tiendaIdTiendas: ids,
         detalleCategoriaIdDetalleCategorias: detalleCategoriaIdDetalleCategorias

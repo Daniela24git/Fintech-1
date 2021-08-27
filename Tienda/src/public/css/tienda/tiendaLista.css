@@ -4,13 +4,29 @@
     max-width: 150px;
     position: absolute;
     left: 1150px;
-    top: 120px;
+    top: 170px;
+}
+
+#aviso{
+    color: black;
+}
+
+#masTiendas{
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    top:-100px;
+    left: 900px;
+}
+
+#mas{
+    width: 60px;
 }
 
 #datosUsuario{
     position: absolute;
     left: 1150px;
-    top: 220px;
+    top: 260px;
 }
 
 #dato{
