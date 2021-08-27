@@ -28,12 +28,25 @@
             <label id="">Cantidad de Venta</label>
             <input type="text" name="cantidadVenta" id="cantidadVenta" required>
         </div>
+        <div id="precioUnidad">
+            <label id="">Precio por Unidad:</label>
+            <input type="text" id="precio" value="{{precioUnidad}}" readonly required>
+        </div>
+        <div id="PROSENTAJES">
+            <label id="">Porcentaje Ganancia:</label>
+            <select name="porsentaje" id="porsentaje" onclick="porsentajes.calculo()">
+                {{#each porsentajes}}
+                <option value="{{this.porsentaje}}">{{this.porsentaje}}%</option>
+                {{/each}}
+            </select>
+        </div>
         <div id="Precioventa">
             <label>Precio Venta:</label>
-            <input type="text" name="precioVenta" id="precioVenta" required>
+            <input type="text" name="precioVenta" id="precioVenta" readonly required>
         </div>
         <button type="submit" id="guardar">Guardar</button>
     </div>
 </form>
 
 <script src="/js/eleccionUnidad.js"></script>
+<script src="/js/calculoPorsentajes.js"></script>

@@ -22,8 +22,8 @@ indexCtrl.mandar = async (req, res) => {
             await pool.query("INSERT INTO categorias(idCategorias	, categoria) VALUES (2, 'No consumible')")
             await pool.query("INSERT INTO categorias(idCategorias	, categoria) VALUES (3, 'Bebidas')")
             console.log(" se guardo ")
-        } 
-    }else {
+        }
+    } else {
         console.log("Ya existe")
     }
 
@@ -47,8 +47,28 @@ indexCtrl.mandar = async (req, res) => {
             await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (14, 'Cuarto de Listro', 3)")
             await pool.query("INSERT INTO unidadMedidas(idUnidadMedidas, unidadMedida, categoriaIdCategorias) VALUES (15, 'Dólar', 1)")
             console.log(" se guardo ")
-        } 
-    }else {
+        }
+    } else {
+        console.log("Ya existe")
+    }
+    const porsentajes = await pool.query("SELECT * FROM porsentajes")
+    if (porsentajes.length == 0) {
+        const porsentaje = porsentajes[0]
+        if (porsentaje === undefined) {
+            for (let i = 1; i <= 100; i++) {
+                let cont = 0;
+                let ids = 0
+                cont = cont + i;
+                ids = 0 + i
+                const contar = cont
+                const id = ids
+                if (cont <= 100) {
+                    await pool.query("INSERT INTO porsentajes(idPorsentajes,porsentaje) VALUES (?,?)", [id, contar])
+                    console.log(" se guardo ")
+                }
+            }
+        }
+    } else {
         console.log("Ya existe")
     }
     res.redirect('/Login');

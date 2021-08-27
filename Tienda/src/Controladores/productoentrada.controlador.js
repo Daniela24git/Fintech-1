@@ -18,7 +18,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const id = req.params.id
     const IDS = req.user.idUsuarios
 
-    const {NombreProducto, codigo,Cantidad, precioActual, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas } = req.body
+    const {NombreProducto, codigo,Cantidad, precioActual, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas, cantidadMedida } = req.body
 
     const NuevaEntrada = {
         codigo,
@@ -34,7 +34,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     }
 
     const nuevaCantidadUnidad = {
-        cantidadMedida: Cantidad,
+        cantidadMedida,
         unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas
     }
 

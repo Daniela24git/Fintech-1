@@ -7,8 +7,10 @@ const productoEntrada = (sequelize, type)=>{
         },
         codigo: type.STRING(13),
         NombreProducto: type.STRING,
-        Cantidad: type.INTEGER,
-        precioActual: type.FLOAT(6.2),
+        CantidadTotal: type.INTEGER,
+        unidadCantidad: type.INTEGER,
+        precioUnidad: type.FLOAT(6.2),
+        precioTotal: type.FLOAT(6.2),
         FechaCadusidad: type.STRING,
         creacionProductoEntradas:{
             type: 'TIMESTAMP',

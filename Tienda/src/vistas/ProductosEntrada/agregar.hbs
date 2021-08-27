@@ -38,11 +38,12 @@
             </div>
             <div id="CANTIDAD">
                 <label>Cantidad Requerida:</label>
-                <input type="text" name="Cantidad" id="Cantidad" required>
+                <input type="text" name="CantidadTotal" id="Cantidad" required>
             </div>
             <div id="UnidadCantidad">
                 <label id="">Unidad por Cantidad:</label>
-                <input type="text" name="unidadCantidad" id="unidadCantidad" required>
+                <input type="text" name="unidadCantidad" id="unidadCantidad" required onkeyup="eleecion.calculo()">
+                <input type="text" name="cantidadMedida" id="cantidadMedida" readonly>
             </div>
             <div id="PrecioUnidad">
                 <label id="">Precio por Unidad:</label>
