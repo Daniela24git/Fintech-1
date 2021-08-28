@@ -4,13 +4,13 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const passport = require('passport');
-const flash = require('connect-flash');
+const flash = require('connect-flash'); 
 const mysqlstore = require('express-mysql-session')(session);
 const bodyparser = require('body-parser');
 
 const { database } = require('./keys'); 
 
-const app = express();
+const app = express(); 
 require('./lib/passport');
 
 /// archivos compartidos

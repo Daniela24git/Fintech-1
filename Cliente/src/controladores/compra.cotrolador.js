@@ -24,8 +24,8 @@ compra.Mandar = async(req, res) =>{
     }
     await orm.detalleListaProductos.create(nuevaLista)
     await orm.productos.findOne({ where: { productoEntradaIdProductoEntradas: ids } })
-        .then(clientes => {
-            clientes.update(nuevaCantidad)
+        .then(productos => {
+            productos.update(nuevaCantidad)
             req.flash('success', 'Se añadio Correctamente');
             res.redirect('/producto/lista/' + ids);
         })

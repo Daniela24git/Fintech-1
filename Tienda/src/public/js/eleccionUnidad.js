@@ -4,6 +4,8 @@ class eleccionUnidad {
         this.cantidadMedida = document.getElementById('cantidadMedida')
         this.Cantidad = document.getElementById('Cantidad')
         this.unidadCantidad = document.getElementById('unidadCantidad')
+        this.precioActual = document.getElementById('precioActual')
+        this.precioUnidad = document.getElementById('precioUnidad')
     }
     inicio() {
         this.cantidadMedida.style.display = "none"
@@ -17,6 +19,11 @@ class eleccionUnidad {
 
     calculo(){
         this.cantidadMedida.value = parseInt(this.Cantidad.value) * parseInt(this.unidadCantidad.value)
+    }
+
+    calculo2(){
+        let a = parseFloat(this.precioUnidad.value) * parseFloat(this.cantidadMedida.value)
+        this.precioActual.value = a.toFixed(2)
     }
 }
 

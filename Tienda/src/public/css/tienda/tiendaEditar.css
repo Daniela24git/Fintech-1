@@ -28,13 +28,27 @@
     position: absolute;
     top: 120px;
     left: 400px;
-    width: 50%;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border-color: black;
+    border: 1px solid;
+}
+
+input{
+    border-color: black;
+    margin-left: 30px;
+}
+
+label{
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 #DatoNegocio{
     position: absolute;
     left: 120px;
-    top: -20px;
+    top: -15px;
     font-size:30px
 }
 
@@ -55,7 +69,7 @@
 
 #Contactos{
     position: absolute;
-    top: 220px;
+    top: 210px;
 }
 
 #CELULAR{
@@ -71,11 +85,12 @@
 #boton{
     position: absolute;
     top: 390px;
-    left: -8px;
+    left: 0px;
+    width: 100%;
 }
 
 #guardar1{
-    width: 450px
+    width: 100%;
 }
 
 #nombreNegocio{

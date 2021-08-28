@@ -5,11 +5,7 @@ const registroSalidas = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        creacionRegistroSalidas:{
-            type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
+        creacionRegistroSalidas: type.STRING,
         actualizacionRegistroSalidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),

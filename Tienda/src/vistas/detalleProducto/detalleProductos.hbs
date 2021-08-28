@@ -11,7 +11,7 @@
         <div id="PRODUCTOS">
             <label id="Productos">Producto:</label>
             <input type="text" name="" id="Producto" value="{{NombreProducto}}" readonly>
-            <input type="text"  name="producto" id="" value="{{idProductoEntradas}}" readonly style="display: none;">
+            <input type="text"  name="productos" id="productos" value="{{idProductoEntradas}}" readonly>
         </div>
         {{/each}}
         <div id="UnidadVenta">
@@ -20,17 +20,21 @@
         </div>
         <div id="ProductoCantidad">
             <label id="">Cantidad Total:</label>
-            {{#each listaCantidad}}
-            <input type="text" name="productoCantidad" id="productoCantidad" value="{{Cantidad}}" readonly required>
+            {{#each listaDetalleUnidad}}
+            <input type="text" name="productoCantidad" id="productoCantidad" value="{{cantidadMedida}}" readonly required>
             {{/each}}
         </div>
         <div id="CantidadVenta">
             <label id="">Cantidad de Venta</label>
-            <input type="text" name="cantidadVenta" id="cantidadVenta" required>
+            {{#each listaDetalleUnidad}}
+            <input type="text" name="cantidadVenta" id="cantidadVenta" value="{{cantidadMedida}}" required>
+            {{/each}}
         </div>
         <div id="precioUnidad">
             <label id="">Precio por Unidad:</label>
+            {{#each listaCantidad}}
             <input type="text" id="precio" value="{{precioUnidad}}" readonly required>
+             {{/each}}
         </div>
         <div id="PROSENTAJES">
             <label id="">Porcentaje Ganancia:</label>
@@ -43,6 +47,10 @@
         <div id="Precioventa">
             <label>Precio Venta:</label>
             <input type="text" name="precioVenta" id="precioVenta" readonly required>
+        </div>
+        <div id="PrecioTotalVenta">
+            <label>Precio Total de Venta:</label>
+            <input type="text" name="precioTotalVenta" id="precioTotalVenta" readonly required>
         </div>
         <button type="submit" id="guardar">Guardar</button>
     </div>

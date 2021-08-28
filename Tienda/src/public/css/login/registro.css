@@ -1,12 +1,12 @@
 #imegen{
     position: absolute;
     left: 600px;
-    top: 150px;
+    top: 100px;
 }
 #avatar{
     display: flex;
     flex-wrap: wrap;
-    max-width: 250px;
+    max-width: 280px;
 }
 #contenedor{
     position: absolute;

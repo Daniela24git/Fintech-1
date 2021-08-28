@@ -1,26 +1,24 @@
-const productos = (sequelize, type)=>{
-    return sequelize.define('productos', {
-        idProductos: {
+const porsentajes = (sequelize, type) => {
+    return sequelize.define('porsentajes', {
+        idPorsentajes: {
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
-        productoCantidad: type.INTEGER,
-        precioVenta: type.FLOAT(6.2),
-        precioTotalVenta: type.FLOAT(6.2),
-        creacionProductos:{
+        porsentaje: type.STRING,
+        creacionCategorias: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionProductos:{
+        actualizacionCategorias: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
 
-module.exports = productos
+module.exports = porsentajes

@@ -15,8 +15,8 @@
     position: absolute;
     background-color: transparent;
     border-color: transparent;
-    top:-100px;
-    left: 900px;
+    top:80px;
+    left: 1260px;
 }
 
 #mas{
@@ -48,27 +48,35 @@
 
 #contenido{
     position: absolute;
-    top: 180px;
+    top: 170px;
     left: 360px;
-    width: 50%;
+    width: 700px;
+    background-color: white;
+    height: 380px;
+    border-color: black;
+    border: 1px solid;
+}
+
+input{
+    border-color: black;
 }
 
 #nombreNegocio{
     position: absolute;
     left: 220px;
-    top: -20px;
+    top: 5px;
 }
 
 #RUC{
     position: absolute;
     top: 60px;
-    left: 50px;
+    left: 80px;
 }
 
 #DIRECCION{
     position: absolute;
     top: 120px;
-    left: 50px;
+    left: 80px;
 }
 
 #contactos{
@@ -86,6 +94,11 @@
     left:135px;
 }
 
+#direccion{
+    position: absolute;
+    left: 135px;
+}
+
 #Contactos{
     position: absolute;
     left: 270px;
@@ -94,27 +107,39 @@
 #CELULAR{
     position: absolute;
     top: 40px;
-    left: -40px;
+    left: 40px;
 }
 
 #TELEFONO{
     position: absolute;
     top: 40px;
-    left: 380px;
+    left: 470px;
 }
 
 #boton{
     position: absolute;
-    left: 380px;
+    left: 500px;
 }
 
 #Boton{
     position: absolute;
-    left: -40px;
+    left: 0px;
+}
+
+#telefono{
+    width: 200px;
 }
 
 #Editar{
     width: 200px;
+}
+
+#Celular{
+    margin-left: 80px;
+}
+
+#Telefono{
+    margin-left: 35px;
 }
 
 #Agregar{
@@ -323,6 +348,7 @@
     #telefono{
         position: absolute;
         left: 470px;
+        width: 200px;
     }
 
     #boton1{

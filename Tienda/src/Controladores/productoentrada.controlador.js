@@ -18,13 +18,15 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
     const id = req.params.id
     const IDS = req.user.idUsuarios
 
-    const {NombreProducto, codigo,Cantidad, precioActual, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas, cantidadMedida } = req.body
+    const {NombreProducto, codigo, CantidadTotal, unidadCantidad, precioUnidad, precioTotal, FechaCadusidad, categoriaIdCategorias, unidadMedidaIdUnidadMedidas, cantidadMedida,idproducto } = req.body
 
     const NuevaEntrada = {
         codigo,
         NombreProducto,
-        Cantidad,
-        precioActual,
+        CantidadTotal,
+        unidadCantidad,
+        precioUnidad,
+        precioTotal,
         FechaCadusidad,
         provedoreIdProvedores: id,
         tiendaIdTiendas: IDS,
@@ -35,7 +37,8 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
 
     const nuevaCantidadUnidad = {
         cantidadMedida,
-        unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas
+        unidadMedidaIdUnidadMedidas: unidadMedidaIdUnidadMedidas,
+        productoEntradaIdProductoEntradas: idproducto
     }
 
     await orm.entredaProductos.create(NuevaEntrada);

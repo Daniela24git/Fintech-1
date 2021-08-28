@@ -8,7 +8,7 @@
 #guardar{
     position: absolute;
     width: 600px;
-    top: 350px;
+    top: 400px;
     left: -10px;
 }
 
@@ -72,12 +72,28 @@
     width: 273px;
 }
 
+#productos{
+    width: 30px;
+    position: absolute;
+    left: 300px;
+}
+
 #Precioventa{
     position: absolute;
     top: 300px;
 }
 
 #precioVenta{
+    position: absolute;
+    left: 300px;
+}
+
+#PrecioTotalVenta{
+    position: absolute;
+    top: 350px;
+}
+
+#precioTotalVenta{
     position: absolute;
     left: 300px;
 }

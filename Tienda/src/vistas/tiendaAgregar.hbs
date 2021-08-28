@@ -2,7 +2,7 @@
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
-        <label id="dato">{{user.username}}</label>
+        <p id="dato">{{user.username}}</p>
     </p>
 </div>
 <div id="contenido">
@@ -10,29 +10,31 @@
     <div id="formulario">
         <form action="/tienda/agregar/{{user.idUsuarios}}" method="POST">
             <div>
-                <label id="Nombre">Nombre:</label>
-                <input type="text" name="nombreNegocio" id="nombreNegocio" checked>
-            </div>
-            <div>
-                 <div>
-                     <label id="RUC">RUC:</label>
-                     <input type="text" name="ruc" id="ruc" maxlength="13" checked>
-                 </div>
-                 <div>
-                     <label id="Direccion">Dirección</label>
-                     <input type="text" name="direccion" id="direccion" checked>
-                 </div>
-                <div id="CELULAR">
-                    <label id="celular1">Celular:</label>
-                    <input type="text" name="celular" maxlength="10" id="celular" checked>
+                <div>
+                    <label id="Nombre">Nombre:</label>
+                    <input type="text" name="nombreNegocio" id="nombreNegocio" checked>
                 </div>
-                <div id="Telefonos">
-                    <label id="telefono">Teléfono:</label>
-                    <input type="text" name="telefono" maxlength="10" id="Telefono">
+                <div>
+                    <div>
+                        <label id="RUC">RUC:</label>
+                        <input type="text" name="ruc" id="ruc" maxlength="13" checked>
+                    </div>
+                    <div>
+                        <label id="Direccion">Dirección</label>
+                        <input type="text" name="direccion" id="direccion" checked>
+                    </div>
+                    <div id="CELULAR">
+                        <label id="celular1">Celular:</label>
+                        <input type="text" name="celular" maxlength="10" id="celular" checked>
+                    </div>
+                    <div id="Telefonos">
+                        <label id="telefono">Teléfono:</label>
+                        <input type="text" name="telefono" maxlength="10" id="Telefono">
+                    </div>
                 </div>
-            </div>
-            <div id="boton">
-                <button type="submit" id="guardar1">Guardar</button>
+                <div id="boton">
+                    <button type="submit" id="guardar1">Guardar</button>
+                </div>
             </div>
         </form>
     </div>

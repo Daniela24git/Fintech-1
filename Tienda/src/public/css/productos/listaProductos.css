@@ -78,7 +78,12 @@ input{
 
 #precioActual{
     width: 80px;
-    margin-left: 143px;
+    margin-left: 70px;
+}
+
+#precioVenta{
+    width: 80px;
+    margin-left: 25px;
 }
 
 #FechaCadusidad{

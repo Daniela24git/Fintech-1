@@ -25,7 +25,7 @@
             </div>
             <div id="TELEFONO">
                 <label id="Telefono">Teléfono:</label>
-                <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}" readonly>
+                <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}"readonly>
             </div>
         </div>
         <div id="botones">
@@ -39,8 +39,10 @@
         {{else}}
         <div >
             <p>¡¡<a href="/tienda/lista/{{user.idUsuarios}}" id="aviso">Mostrar los datos de su Negocio!!</a></p>
-            <button id="masTiendas"><a href="/tienda/agregar/{{idTiendas}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
         </div>
         {{/each}}
     </form>
+</div>
+<div id="agregar">
+    <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
 </div>

@@ -23,7 +23,8 @@ entradaSalida.mandarEntrada = async (req, res) => {
     const nuevaEntrada = {
         tiendaIdTiendas: ids,
         provedoreIdProvedores: provedoreIdProvedores,
-        usuarioIdUsuarios: ids
+        usuarioIdUsuarios: ids,
+        creacionRegistroEntradas: fecha 
     }
 
     const nuevaDetalleEntrada = {

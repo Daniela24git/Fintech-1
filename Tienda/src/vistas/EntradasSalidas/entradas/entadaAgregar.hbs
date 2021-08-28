@@ -21,7 +21,7 @@
     </div>
     <div id="cliente">
         <label>Proveedor:</label>
-        <select name="nombreProveedor" id="NombreProveedor">
+        <select name="provedoreIdProvedores" id="NombreProveedor">
             {{#each listaProveedor}}
             <option value="{{this.idProvedores}}" readonly>{{this.NombreProveedor}}</option>
             {{/each}}
@@ -48,8 +48,8 @@
                 <td><input type="text" name="codigoProducto" id="codigo" value="{{codigo}}" readonly></td>
                 <td><input type="text" name="nombreProducto" id="NombreProducto" value="{{NombreProducto}}" readonly>
                 </td>
-                <td><input type="text" name="entraCantidad" id="Cantidad" value="{{Cantidad}}" readonly></td>
-                <td><input type="text" name="precioActual" id="precioActual" value="{{precioActual}}" readonly></td>
+                <td><input type="text" name="entraCantidad" id="Cantidad" value="{{CantidadTotal}}" readonly></td>
+                <td><input type="text" name="precioActual" id="precioActual" value="{{precioTotal}}" readonly></td>
                 <td><input type="text" name="unidadMedida" id="UnidadMedida" value="{{unidadMedida}}" readonly></td>
                 <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{productoCantidad}}" readonly>
             </tr>

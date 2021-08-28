@@ -10,11 +10,7 @@ const provedor = (sequelize, type)=>{
         Celular: type.INTEGER(10),
         Telefono: type.INTEGER(10),
         Estado: type.BOOLEAN,
-        creacionProvedores:{
-            type: 'TIMESTAMP',
-            defaultValue: type.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
+        creacionProvedores: type.STRING,
         actualizacionProvedores:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),

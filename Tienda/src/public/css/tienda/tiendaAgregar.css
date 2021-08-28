@@ -16,99 +16,99 @@
 
 #DatoNegocio{
     position: absolute;
-    left: 470px;
-    top: 90px;
+    left: 70px;
     font-size: 40px;
 }
 
-#contactos{
-    position: absolute;
-    left: 550px;
-    top: 165px;
-    font-size: 40px;
-
-}
 #Nombre{
     position: absolute;
-    top: 180px;
-    left: 400px;
+    top: 60px;
     
 }
 
 #nombreNegocio{
     position: absolute;
-    top: 180px;
-    left: 600px;
+    top: 60px;
+    left: 200px;
 }
 
 #RUC{
     position: absolute;
-    top: 235px;
-    left: 400px;
-    
+    top: 120px;
 }
 
 #ruc{
     position: absolute;
-    top: 235px;
-    left: 600px;
+    top: 120px;
+    left: 200px;
 }
 
 #Direccion{
     position: absolute;
-    top: 300px;
-    left: 400px;
+    top: 180px;
+    left: 0px;
 
 }
 
 #direccion{
     position: absolute;
-    top: 300px;
-    left: 600px;
+    top: 180px;
+    left: 200px;
 
 }
 
 #celular1{
     position: absolute;
-    top: 355px;
-    left: 400px;
+    top: 240px;
+    left: 0px;
 
 }
 
 #celular{
     position: absolute;
-    top: 355px;
-    left: 600px;
+    top: 240px;
+    left: 200px;
 
 }
 
 #telefono{
     position: absolute;
-    top: 415px;
-    left: 400px;
+    top: 300px;
+    left: 0px;
 }
 
 #Telefono{
     position: absolute;
-    top: 410px;
-    left: 600px;
+    top: 300px;
+    left: 200px;
 }
 
 #guardar1{
     position: absolute;
-    top: 490px;
-    left: 400px;
-    width: 43%;
+    top: 360px;
+    width: 100%;
 }
 
-#contenido{
-    position: absolute;
-    top: 50px;
-    left: -60px;
-    width: 100%;
+label{
+    margin-left: 20px;
+}
+
+input{
+    border-color: black;
 }
 
 #logo{
     position: absolute;
     top: 120px;
+}
+
+#contenido{
+    background-color: white;
+    height: 400px;
+    width: 500px;
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    border-color: black;
+    border: 1px solid;
 }

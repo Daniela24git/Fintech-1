@@ -8,78 +8,87 @@
     top: 120px;
 }
 
-#p{
+#totalcontenido{
+    background-color: white;
+    border-color: black;
+    border: 1px solid;
+    width: 575px;
+    height: 460px;
+    left: 400px;
     position: absolute;
     top: 70px;
-    left: 550px;
+}
+
+label{
+    margin-left: 20px;
+}
+
+#p{
+    position: absolute;
+    top: 10px;
+    left: 130px;
     font-size: 35px;
     width: 500px;
 }
 
 #lblnprovedor{
     position: absolute;
-    top: 140px;
-    left: 263px;
+    top: 70px;
 }
 
 #NombreProveedor{
     position: absolute;
-    top: 148px;
-    left: 550px;
+    top: 70px;
+    left: 300px;
 }
 
 #lbldireccion{
     position: absolute;
-    top: 195px;
-    left: 420px;
+    top: 140px;
 }
 
 #Direccion{
     position: absolute;
-    top: 200px;
-    left: 550px;
+    top: 140px;
+    left: 300px;
 }
 
 
 #lblcelular{
     position: absolute;
-    top: 250px;
-    left: 450px;
+    top: 210px;
 }
 
 #lbltelefono{
     position: absolute;
-    top: 300px;
-    left: 430px;
+    top: 280px;
 }
 
 #Celular{
     position: absolute;
-    top: 250px;
-    left: 550px;
+    top: 210px;
+    left: 300px;
 }
 
 #Telefono{
     position: absolute;
-    top: 300px;
-    left: 550px;
+    top: 280px;
+    left: 300px;
 }
 
 #lblcodigo{
     position: absolute;
     top: 350px;
-    left: 450px;
 }
 
 #codigo{
     position: absolute;
     top: 350px;
-    left: 550px;
+    left: 300px;
 }
 
 #guardar1{
     position: absolute;
     top: 420px;
-    left: 430px;
-    width: 420px;
+    width: 100%;
 }

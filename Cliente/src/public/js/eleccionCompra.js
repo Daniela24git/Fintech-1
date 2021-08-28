@@ -8,14 +8,12 @@ class formato {
         this.productoCantidad = document.getElementById('productoCantidad')
         this.cantidadVenta = document.getElementById('cantidadVenta')
     }
-    cambio() {
-        let a = formatos.fecha.value.slice(4, 15)
-        this.fecha.value = a
+    cambio() { 
         this.cantidad.value = 1
         this.precio.value = parseFloat(this.precioCambio.value).toFixed(2)
     }
     subir() {
-        if ((parseInt(this.cantidadCambio.value)) == (this.cantidad.value * parseInt(this.cantidadVenta.value))) {
+        if ((parseInt(this.cantidadVenta.value)) == (this.cantidad.value)) {
             alert('Cantidad Maxima Del Producto')
         } else {
             this.cantidad.value = parseInt(this.cantidad.value) + 1
@@ -45,18 +43,14 @@ class formato {
     }
     restaIncrementalProductos() {
         let a = parseInt(this.cantidad.value)
-        let b = parseInt(this.cantidadCambio.value)
         let d = parseInt(this.cantidadVenta.value)
-        let e = a * d
-        let c = b - e
+        let c = d - a
         this.productoCantidad.value = c
     }
     restaProdcutos() {
         let a = parseInt(this.cantidad.value)
-        let b = parseInt(this.cantidadCambio.value)
         let d = parseInt(this.cantidadVenta.value)
-        let e = a * d
-        let c = b - e
+        let c = d - a
         this.productoCantidad.value = c
         console.log(c)
     }

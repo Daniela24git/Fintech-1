@@ -24,9 +24,13 @@
                     <label>Cantidad x Unidad:</label>
                     <input type="text" value="{{cantidadVenta}}" id="CantidadVenta" readonly></input>
                 </div>
+                <div id="PrecioVenta">
+                    <label id="">Precio de Venta:</label>
+                    <input type="text" name="precioVenta" id="precioVenta" value="{{precioVenta}}$" readonly>
+                </div>
                 <div id="PRECIO">
-                    <label>Precio:</label>
-                    <input type="text" value="{{precioVenta}}$" id="precioActual" readonly></input>
+                    <label>Precio Total:</label>
+                    <input type="text" value="{{precioTotalVenta}}$" id="precioActual" readonly></input>
                 </div>
                 <div id="CADUCIDAD">
                     <label id="caducidad">Fecha:</label>
@@ -42,7 +46,7 @@
             <div id="agregar">
                 <div>
                     <p>¡No has registrado Productos.!</p>
-                    <a href="/productos/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
+                    <a href="/ProductoEntrada/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
                 </div>
             </div>
             {{/each}}

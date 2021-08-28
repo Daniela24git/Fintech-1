@@ -142,6 +142,9 @@ detalleCliente.belongsTo(usuarios)
 unidadMedidas.hasMany(detalleUnidadMedidas)
 detalleUnidadMedidas.belongsTo(unidadMedidas)
 
+entredaProductos.hasMany(detalleUnidadMedidas)
+detalleUnidadMedidas.belongsTo(entredaProductos)
+
 //lista prodcutos
 tienda.hasMany(listaProductos)
 listaProductos.belongsTo(tienda)
