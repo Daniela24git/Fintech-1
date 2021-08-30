@@ -16,7 +16,7 @@ detalleProducto.MostrarDetalle = async(req, res) =>{
 detalleProducto.MandarDetalle = async(req, res) =>{
     const id = req.params.id
     const ids = req.user.idUsuarios
-    const {unidadVeneta, precioTotalVenta, productos, cantidadVenta, productoCantidad, precioVenta, detalleCategoriaIdDetalleCategorias} = req.body
+    const {unidadVeneta, precioTotalVenta, productos, cantidadVenta, productoCantidad, precioVenta, categoria} = req.body
 
     const nuevoSubcategoria = {
         unidadVeneta,
@@ -29,7 +29,7 @@ detalleProducto.MandarDetalle = async(req, res) =>{
         productoEntradaIdProductoEntradas: productos,
         usuarioIdUsuarios: ids,
         tiendaIdTiendas: ids,
-        detalleCategoriaIdDetalleCategorias: detalleCategoriaIdDetalleCategorias
+        detalleCategoriaIdDetalleCategorias: categoria
     }
     await orm.detalleCategoria.create(nuevoSubcategoria)
     await orm.productos.create(nuevoProducto)

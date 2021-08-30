@@ -5,7 +5,11 @@
 form{
     position: absolute;
     top: 90px;
-    left: 450px;
+    left: 400px;
+    height: 500px;
+    width: 550px;
+    background-color: white;
+    text-align: center;
 }
 #guardar_2{
     width: 80px;
@@ -15,8 +19,8 @@ form{
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    left: 420px;
-    top: 440px;
+    left: 520px;
+    top: 420px;
 }
 
 #CODIGO{
@@ -41,4 +45,13 @@ form{
 #CADUCIDAD{
     position: absolute;
     top: 440px;
+}
+
+label{
+    margin-left: 20px;
+}
+
+input{
+    position: absolute;
+    left: 250px;
 }

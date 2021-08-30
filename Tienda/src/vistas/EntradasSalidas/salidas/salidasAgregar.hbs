@@ -39,9 +39,9 @@
                 <td>Producto</td>
                 <td>Unidad</td>
                 <td>Cantidad de Venta</td>
+                <td>Precio de Venta</td>
                 <td>Cantidad de Unidad</td>
                 <td>Cantidad Actual</td>
-                <td>Precio de Venta</td>
             </tr>
             <tr>
                 {{#each listaProductos}}
@@ -50,9 +50,9 @@
                 </td>
                 <td><input type="text" name="unidadMedida" id="UnidadMedida" value="{{unidadVeneta}}" readonly></td>
                 <td><input type="text" name="salidaCantidad" id="Cantidad" value="{{Cantidad}}" readonly></td>
+                <td><input type="text" name="Precio" id="precioActual" value="{{Precio}}" readonly></td>
                 <td><input type="text" name="ventaCantidad" id="Cantidad" value="{{cantidadVenta}}" readonly></td>
                 <td><input type="text" name="cantidadRestante" id="Cantidad" value="{{productoCantidad}}" readonly></td>
-                <td><input type="text" name="Precio" id="precioActual" value="{{Precio}}" readonly></td>
             </tr>
             {{/each}}
         </table>

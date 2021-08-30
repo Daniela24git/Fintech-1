@@ -66,6 +66,12 @@ input{
     margin-left: 43px;
 }
 
+#precioUnidad{
+    position: absolute;
+    width: 80px;
+    margin-left: 20px;
+}
+
 #agregar{
     position: absolute;
     left: 400px;

@@ -2,14 +2,19 @@
     position: absolute;
     top: 120px;
     left: 350px;
-    width: 800px;
+    width: 600px;
+    height: 400px;
+    background-color: white;
 }
 
 #guardar{
     position: absolute;
     width: 600px;
     top: 400px;
-    left: -10px;
+}
+
+label{
+    margin-left: 20px;
 }
 
 #PRODUCTOS{
@@ -99,6 +104,9 @@
 }
 
 #numero{
+    background-color: white;
+    width: 480px;
+    height: 80px;
     position: absolute;
     top: -50px;
     left: 120px;

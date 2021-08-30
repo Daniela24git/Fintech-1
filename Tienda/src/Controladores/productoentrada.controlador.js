@@ -71,11 +71,11 @@ ProductoEntradaCtrl.renderEditarEntrada = async (req, res) => {
 ProductoEntradaCtrl.EditarEntrada = async (req, res) => {
     const IDS = req.user.idUsuarios
     const id = req.params.id
-    const { NombreProducto, Cantidad, precioActual, FechaCadusidad } = req.body
+    const { NombreProducto, CantidadTotal, precioTotal, FechaCadusidad } = req.body
     const EntradaEditad = {
         NombreProducto,
-        Cantidad,
-        precioActual,
+        CantidadTotal,
+        precioTotal,
         FechaCadusidad
     }
 
