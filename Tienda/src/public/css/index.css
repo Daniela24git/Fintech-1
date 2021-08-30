@@ -70,3 +70,32 @@
         left: 130px; 
     }
 }
+
+@media(max-width: 400px){
+    #boton{
+        position: absolute;
+        top: 450px;
+        left: 80px; 
+    }
+}
+
+@media(max-width: 290px){
+    #inicio{
+        position: absolute;
+        top: 230px;
+    }
+    #boton{
+        position: absolute;
+        top: 480px;
+        left: 40px; 
+    }
+}
+
+
+@media(max-width: 230px){
+    #boton{
+        position: absolute;
+        top: 480px;
+        left: 40px; 
+    }
+}

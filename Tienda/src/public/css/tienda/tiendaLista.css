@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     max-width: 150px;
     position: absolute;
-    left: 1150px;
-    top: 170px;
+    left: 1190px;
+    top: 130px;
 }
 
 #aviso{
@@ -15,8 +15,8 @@
     position: absolute;
     background-color: transparent;
     border-color: transparent;
-    top:80px;
-    left: 1260px;
+    top:-90px;
+    left: 900px;
 }
 
 #mas{
@@ -25,14 +25,13 @@
 
 #datosUsuario{
     position: absolute;
-    left: 1150px;
-    top: 260px;
+    left: 1180px;
+    top: 240px;
 }
 
 #dato{
     font-size: 35px;
     font-style: italic;
-    font-family: fantasy;
 }
 
 #logo{
@@ -49,7 +48,7 @@
 #contenido{
     position: absolute;
     top: 170px;
-    left: 360px;
+    left: 330px;
     width: 700px;
     background-color: white;
     height: 380px;
@@ -153,306 +152,225 @@ input{
 @media(max-width: 1125px){
     #datosUsuario{
         position: absolute;
-        left: 980px;
+        left: 1180px;
     }
     #avatar{
         position: absolute;
-        left: 970px;
+        left: 1180px;
     }
 
     #contenido{
         position: absolute;
-        left: -70px;
+        left: 290px;
     }
 }
 
 @media(max-width: 1090px){
     #datosUsuario{
         position: absolute;
-        left: 920px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 900px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -100px;
+        left: 320px;
     }
 }
 
 @media(max-width: 1060px){
     #datosUsuario{
         position: absolute;
-        left: 920px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 900px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -100px;
+        left: 320px;
     }
 }
 
 @media(max-width: 1030px){
     #datosUsuario{
         position: absolute;
-        left: 860px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 840px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -160px;
+        left: 320px;
     }
 }
 
 @media(max-width: 1000px){
     #datosUsuario{
         position: absolute;
-        left: 860px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 840px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -160px;
+        left: 320px;
     }
 }
 
 @media(max-width: 960px){
     #datosUsuario{
         position: absolute;
-        left: 790px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 790px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -210px;
+        left: 320px;
     }
 }
 
 @media(max-width: 920px){
     #datosUsuario{
         position: absolute;
-        left: 760px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 750px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -210px;
+        left: 320px;
     }
 }
 
 @media(max-width: 870px){
     #datosUsuario{
         position: absolute;
-        left: 720px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 710px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -250px;
+        left: 320px;
     }
 }
 
 @media(max-width: 830px){
     #datosUsuario{
         position: absolute;
-        left: 680px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 670px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -290px;
+        left: 320px;
     }
 }
 
 @media(max-width: 750px){
     #datosUsuario{
         position: absolute;
-        left: 600px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 590px;
+        left: 1200px;
     }
 
     #contenido{
         position: absolute;
-        left: -300px;
+        left: 320px;
     }
 }
 
 @media(max-width: 710px){
     #datosUsuario{
         position: absolute;
-        left: 560px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 550px;
+        left: 1200px;
     }
 }
 
 @media(max-width: 670px){
     #datosUsuario{
         position: absolute;
-        left: 520px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 510px;
-    }
-    #nombreNegocio{
-        position: absolute;
-        left: 500px;
-    }
-    #contactos{
-        position: absolute;
-        left: 510px;
-    }
-
-    #celular{
-        position: absolute;
-        left: 470px;
-    
-    }
-    
-    #telefono{
-        position: absolute;
-        left: 470px;
-        width: 200px;
-    }
-
-    #boton1{
-        position: absolute;
-        left: 360px;
-    }
-
-    #guardar1{
-        position: absolute;
-        left: 760px;
+        left: 1200px;
     }
 }
 
 @media(max-width: 630px){
     #datosUsuario{
         position: absolute;
-        left: 480px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 470px;
-    }
-    #nombreNegocio{
-        position: absolute;
-        left: 460px;
-    }
-    #contactos{
-        position: absolute;
-        left: 480px;
-    }
-
-    #celular{
-        position: absolute;
-        left: 470px;
-        width: 300px;
-    
-    }
-    
-    #telefono{
-        position: absolute;
-        left: 470px;
-        width: 300px;
-    }
-
-    #boton1{
-        position: absolute;
-        left: 320px;
-    }
-
-    #guardar1{
-        position: absolute;
-        left: 720px;
+        left: 1200px;
     }
 }
 
 @media(max-width: 590px){
     #datosUsuario{
         position: absolute;
-        left: 440px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 430px;
-    }
-    #nombreNegocio{
-        position: absolute;
-        left: 460px;
-    }
-    #contactos{
-        position: absolute;
-        left: 480px;
-    }
-
-    #celular{
-        position: absolute;
-        left: 470px;
-        width: 300px;
-    
-    }
-    
-    #telefono{
-        position: absolute;
-        left: 470px;
-        width: 300px;
-    }
-
-    #boton1{
-        position: absolute;
-        left: 310px;
-    }
-
-    #guardar1{
-        position: absolute;
-        left: 680px;
+        left: 1200px;
     }
 }
 
 @media(max-width: 590px){
     #datosUsuario{
         position: absolute;
-        left: 400px;
+        left: 1200px;
     }
     #avatar{
         position: absolute;
-        left: 390px;
+        left: 1200px;
     }
-}    
+}
+
+@media(max-width: 334px){
+    #datosUsuario{
+        position: absolute;
+        left: 1100px;
+    }
+    #avatar{
+        position: absolute;
+        left: 1100px;
+    }
+}

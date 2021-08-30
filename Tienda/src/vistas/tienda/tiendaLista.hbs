@@ -25,24 +25,25 @@
             </div>
             <div id="TELEFONO">
                 <label id="Telefono">Teléfono:</label>
-                <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}"readonly>
+                <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}" readonly>
             </div>
         </div>
         <div id="botones">
-        <div id="boton">
-            <button type="submit" id="Editar"><a href="/tienda/editar/{{idTiendas}}"> Editar Datos </a></button>
-        </div>
-        <div id="Boton">
-            <button id="Agregar"><a href="/proveedor/agregar/{{idTiendas}}">Agregar Proveedor</a></button>
-        </div>
+            <div id="boton">
+                <button type="submit" id="Editar"><a href="/tienda/editar/{{idTiendas}}"> Editar Datos </a></button>
+            </div>
+            <div id="Boton">
+                <button id="Agregar"><a href="/proveedor/agregar/{{idTiendas}}">Agregar Proveedor</a></button>
+            </div>
         </div>
         {{else}}
-        <div >
+        <div>
             <p>¡¡<a href="/tienda/lista/{{user.idUsuarios}}" id="aviso">Mostrar los datos de su Negocio!!</a></p>
+        </div>
+        <div id="agregar">
+            <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png"
+                        id="mas"></a></button>
         </div>
         {{/each}}
     </form>
-</div>
-<div id="agregar">
-    <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
 </div>
