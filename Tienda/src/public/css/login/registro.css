@@ -1,8 +1,13 @@
 #imegen{
     position: absolute;
-    left: 600px;
-    top: 100px;
+    left: 450px;
+    top: 250px;
 }
+
+#usuario{
+    font-size: 30px;
+}
+
 #avatar{
     display: flex;
     flex-wrap: wrap;
@@ -18,27 +23,25 @@
     top: -60px;
 }
 #Usuario{
-    font-size: 35px;
+    font-size: 30px;
     font-style: italic;
-    font-family: fantasy;
 }
 #Nombre{
     position: absolute;
     top: 10px;
-    left: 200px;
+    left: 220px;
     display: flex;
     width: 270px;
     height: auto;
 }
 #contraseña{
-    font-size: 35px;
+    font-size: 30px;
     font-style: italic;
-    font-family: fantasy;
 }
 #Contraseña{
     position:absolute;
     top: 10px;
-    left: 200px;
+    left: 220px;
     display: flex;
     width: 270px;
     height: auto;
@@ -49,8 +52,10 @@
     margin: auto;
 }
 #boton{
-    background-color: rgb(255, 240, 245);
+    background-color:rgb(75, 115, 236);
+    border-radius: 20px;
     border-color: black;
+    color: white;
     width: 380px;
     position: absolute;
     top: 70px;

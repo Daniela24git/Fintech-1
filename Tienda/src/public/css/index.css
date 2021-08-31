@@ -1,9 +1,31 @@
 #inicio{
     position: absolute;
     text-align: center; 
-    top: 250px;
+    top: 150px;
     left: 250px;
     background-color: rgba(255, 255, 255, 0.034);
+    border: 1px solid;
+    border-color: rgb(0, 0, 0);
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#mov{
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+
+#Bienvenida{
+    color: blue;
+    margin-top: 45px;
+    font-size: 50px;
+}
+
+#Mensaje{
+    font-size: 30px;
+    margin-top: 60px;
 }
 
 #imagen{
@@ -14,8 +36,8 @@
     position: absolute;
     background-color: rgba(240, 248, 255, 0);
     border-color: rgba(240, 248, 255, 0);
-    top: 360px;
-    left: 570px; 
+    top: 450px;
+    left: 450px; 
 }
 
 @media(max-width: 1125px){
