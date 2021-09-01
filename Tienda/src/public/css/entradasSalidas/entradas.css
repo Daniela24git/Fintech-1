@@ -2,6 +2,11 @@
     top: 80px;
 }
 
+button{
+    background-color: white;
+    border: solid black;
+}
+
 #Entradas{
     position: absolute;
     top: 110px;

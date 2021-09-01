@@ -9,7 +9,6 @@ ProductoEntradaCtrl.renderEntrada = async (req, res) => {
     const listaCategoria = await sql.query("SELECT * FROM categorias ORDER BY categoria ASC")
     const idProductoEntrada = await sql.query("SELECT * FROM idmaximo")
     const listaUnidad = await sql.query("SELECT * FROM unidadMedidas ORDER BY unidadMedida ASC")
-    console.log(idProductoEntrada)
     res.render("ProductosEntrada/agregar", { listaProveedor, listaCategoria, listaUnidad, idProductoEntrada })
 }
 

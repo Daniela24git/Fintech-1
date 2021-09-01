@@ -3,7 +3,7 @@
     <form action="/ProductoEntrada/agregar/{{user.idUsuarios}}" method="POST">
         <div id="conten">
             {{#each idProductoEntrada}}
-            <p id="TITULO">Nuevo Producto N°<input type="text" name="productoEntradaIdProductoEntradas" id="idproducto"
+            <p id="TITULO">Nuevo Producto N°<input type="text" name="idproducto" id="idproducto"
                     value="{{'MAX(idProductoEntradas)'}}" readonly></p>
             {{/each}}
             <div id="CODIGO">

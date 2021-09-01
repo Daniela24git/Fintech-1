@@ -1,9 +1,9 @@
 #conetendor{
     position: absolute;
-    top: 170px;
-    left: 170px;
+    top: 70px;
+    left: 45px;
+    width: 1200px;
 }
-
 
 .row{
     gap: 30px;
@@ -36,8 +36,8 @@
 
 #masProveedor{
     position: absolute;
-    top: 90px;
-    left: 1250px;
+    top: 55px;
+    left: 1270px;
     background-color: transparent;
     border-color: transparent;
 }

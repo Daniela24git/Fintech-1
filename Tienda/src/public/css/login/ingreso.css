@@ -1,7 +1,7 @@
 #imegen{
     position: absolute;
-    left: 750px;
-    top: 250px;
+    left: 130px;
+    top: 10px;
     font-size: 35px;
 }
 #avatar{
@@ -11,12 +11,15 @@
 }
 #contenedor{
     position: absolute;
-    top: 370px;
+    top: 200px;
     left: 450px;
+    background-color: white;
+    width: 380px;
+    height: 250px;
 }
 #datos{
     position: absolute;
-    top: -60px;
+    top: 60px;
 }
 #Usuario{
     font-size: 35px;
@@ -24,8 +27,8 @@
 }
 #Nombre{
     position: absolute;
-    top: 10px;
-    left: 230px;
+    top: 30px;
+    left: 40px;
     display: flex;
     width: 270px;
     height: auto;
@@ -37,8 +40,8 @@
 }
 #Contraseña{
     position:absolute;
-    top: 10px;
-    left: 230px;
+    top: 160px;
+    left: 40px;
     display: flex;
     width: 270px;
     height: auto;
@@ -55,8 +58,8 @@
     color: white;
     width: 380px;
     position: absolute;
-    top: 70px;
-    left: 80px;
+    top: 230px;
+    left: 0px;
 }
 #sesion{
     position: absolute;

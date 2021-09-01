@@ -8,13 +8,13 @@ class eleccionUnidad {
         this.precioUnidad = document.getElementById('precioUnidad')
     }
     inicio() {
-        this.cantidadMedida.style.display = "none"
         if(idproducto.value === ""){
             idproducto.value = 1
         }else{
             let a = parseInt(idproducto.value) + 1
             idproducto.value = a
         }
+        this.cantidadMedida.style.display = "none"
     }
 
     calculo(){

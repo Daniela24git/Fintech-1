@@ -10,6 +10,11 @@
     font-size: 30px;
 }
 
+button{
+    background-color: white;
+    border: solid black;
+}
+
 #columna{
     background-color:midnightblue;
     color:seashell;

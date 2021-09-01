@@ -1,7 +1,13 @@
 #contenido{
     position: absolute;
-    top: 120px;
-    left: 180px;
+    top: 90px;
+    left: 45px;
+    width: 1250px;
+}
+
+button{
+    background-color: white;
+    border: 2px solid black;
 }
 
 #tarjeta{
@@ -46,8 +52,8 @@
 
 #masProveedor{
     position: absolute;
-    top: 90px;
-    left: 1250px;
+    top: 60px;
+    left: 1300px;
     background-color: transparent;
     border-color: transparent;
 }

@@ -1,19 +1,24 @@
 #contenido{
     position: absolute;
-    top: 120px;
-    left: 180px;
+    top: 90px;
+    left: 45px;
+    width: 1250px;
 }
 
 .row{
     gap: 20px;
 }
 
+button{
+    background-color: white;
+    border: solid black;
+}
+
 #tarjeta{
     border: 1px solid;
     width: 375px;
-    height: 310px;
+    height: 200px;
     border-radius: 20px;
-    text-align: center;
     background-color: white;
     color: black;
 }
@@ -26,14 +31,40 @@
     font-weight: bolder;
 }
 
-input{
-    border-color: transparent;
+#id{
+    margin-left: 150px;
 }
 
-#creacionRegistroEntradas{
+input{
+    border-color: transparent;
     width: 130px;
 }
 
+#NombreProducto{
+    position: absolute;
+    left: 240px;
+}
+
+#nombre{
+    position: absolute;
+}
+
+#cantidadEntrada{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+
+#entraCantidad{
+    position: absolute;
+}
+
 #fecha{
-    margin-right: 30px;
+    position: absolute;
+    top: 150px;
+}
+
+#fechas{
+    position: absolute;
+    left: 240px;
 }

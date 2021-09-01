@@ -1,11 +1,17 @@
 #contenido{
     position: absolute;
-    top: 120px;
-    left: 180px;
+    top: 90px;
+    left: 45px;
+    width: 1250px;
 }
 
 .row{
     gap: 20px;
+}
+
+button{
+    background-color: white;
+    border: solid black;
 }
 
 #tarjeta{

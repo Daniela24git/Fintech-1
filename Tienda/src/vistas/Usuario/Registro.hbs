@@ -1,16 +1,14 @@
 <LINK REL=StyleSheet HREF="/css/login/registro.css" TYPE="text/css" MEDIA=screen>
-<div id="imegen">
-  <p id="usuario">Registra tu Usuario y Contraseña</p>
-</div>
 <form action="/Registro" method="POST">
-<div id="contenedor">
+  <div id="contenedor">
+    <div id="imegen">
+      <p id="usuario">Registra tu Usuario y Contraseña</p>
+    </div>
     <div id="datos">
-      <label id="Usuario">Usuario: </label>
-      <input type="text" id="Nombre" name="username">
+      <input type="text" id="Nombre" name="username" placeholder="Usuario:">
     </div>
     <div>
-      <label id="contraseña">Contraseña: </label>
-      <input type="password" id="Contraseña" name="password">
+      <input type="password" id="Contraseña" name="password" placeholder="Contraseña:">
     </div>
     <div>
       <button type="submit" id="boton">Guardar</button>

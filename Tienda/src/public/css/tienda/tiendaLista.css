@@ -7,6 +7,11 @@
     top: 130px;
 }
 
+#bienvenida{
+    text-align: center;
+    margin-top: 50px;
+}
+
 #aviso{
     color: black;
 }
@@ -15,12 +20,12 @@
     position: absolute;
     background-color: transparent;
     border-color: transparent;
-    top:-90px;
-    left: 900px;
+    top: 250px;
+    left: 320px;
 }
 
 #mas{
-    width: 60px;
+    width: 50px;
 }
 
 #datosUsuario{
@@ -47,7 +52,7 @@
 
 #contenido{
     position: absolute;
-    top: 170px;
+    top: 120px;
     left: 330px;
     width: 700px;
     background-color: white;
@@ -85,7 +90,7 @@ input{
 
 #botones{
     position: absolute;
-    top: 340px;
+    top: 335px;
 }
 
 #ruc{

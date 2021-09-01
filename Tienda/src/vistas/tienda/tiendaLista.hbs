@@ -37,14 +37,14 @@
             </div>
         </div>
         {{else}}
-        <div>
+        <div id="bienvenida">
             <p>¡¡Bienvenido a Fintech!!<br>
             ¿Aun no tienes informacion en el inventario? <br> O ¿ya lo tienes?<br>
             Da click en más.
             </p>
         </div>
         <div id="agregar">
-            <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}">+</a></button>
+            <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
         </div>
         {{/each}}
     </form>

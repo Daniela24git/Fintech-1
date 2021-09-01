@@ -1,14 +1,15 @@
 #contenedor{
     position: absolute;
-    top: 120px;
-    left:170px;
+    top: 75px;
+    left: 45px;
+    width: 1250px;
 }
 #logo{
     top: 80px;
 }
 
 .row{
-    gap: 50px;
+    gap: 20px;
 }
 
 #tarjeta{

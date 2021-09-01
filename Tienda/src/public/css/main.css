@@ -1,9 +1,9 @@
 body{
     color: black;
-    background-color: white;
+    background-image: url('/img/fondo.jpg');
     font-size: 25px;
-    font-style: italic;
-    font-weight: bolder;
+    font-style: arial;
+    background-size: cover;
     max-width: 100%;
     max-height: 100%;
 }
@@ -22,25 +22,6 @@ button{
 input{
     font-size: 21px;
     text-align: center;   
-}
-
-#bordes{
-    background-color: rgb(89, 89, 99);
-    width: 200px;
-    height: 657px;
-    border: 3px solid black;
-}
-
-#marco{
-    width: 1166px;
-    height: 657px;
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    border: 3px solid black;
-    background-image: url(/img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #texto{

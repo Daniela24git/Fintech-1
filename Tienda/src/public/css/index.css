@@ -1,14 +1,14 @@
 #inicio{
     position: absolute;
     text-align: center; 
-    top: 150px;
-    left: 250px;
-    background-color: rgba(255, 255, 255, 0.034);
+    top: 100px;
+    left: 100px;
+    background-color: rgb(255, 255, 255);
     border: 1px solid;
     border-color: rgb(0, 0, 0);
-    width: 600px;
-    height: 300px;
-    border-radius: 10px;
+    width: 800px;
+    height: 400px;
+    border-radius: 300px;
 }
 
 #mov{
@@ -36,8 +36,8 @@
     position: absolute;
     background-color: rgba(240, 248, 255, 0);
     border-color: rgba(240, 248, 255, 0);
-    top: 450px;
-    left: 450px; 
+    top: 230px;
+    left: 330px; 
 }
 
 @media(max-width: 1125px){

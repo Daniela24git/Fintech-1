@@ -5,15 +5,17 @@
 #eleccion1{
     position: absolute;
     top: 300px;
-    left: 190px;
+    left: 210px;
 }
 #eleccion2{
     position: absolute;
     top: 300px;
-    left: 680px;
+    left: 750px;
 }
 
 button{
     width: 400px;
     height: 70px;
+    background-color: white;
+    border: solid black;
 }

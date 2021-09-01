@@ -1,7 +1,8 @@
 #contenedor{
     position: absolute;
-    top: 120px;
-    left:170px;
+    top: 70px;
+    left:45px;
+    width: 1250px;
 }
 #logo{
     top: 80px;
@@ -27,7 +28,7 @@
     border-color: transparent;
     background-color: transparent;
     position: absolute;
-    margin-top: -250px;
+    margin-top: -300px;
     margin-left: 350px;
 }
 
