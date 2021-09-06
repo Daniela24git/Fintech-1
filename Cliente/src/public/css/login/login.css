@@ -3,58 +3,68 @@
     left: 600px;
     top: 150px;
 }
+
+p{
+    text-align: center;
+    font-size: 30px;
+}
+
+label{
+    margin-left: 20px;
+}
+
 #avatar{
     display: flex;
     flex-wrap: wrap;
     max-width: 250px;
 }
+
 #contenedor{
     position: absolute;
-    top: 370px;
+    top: 230px;
     left: 450px;
+    background-color: white;
+    width: 500px;
+    height: 205px;
+    border: 1px solid black;
 }
-#datos{
+
+#usuarios{
     position: absolute;
-    top: -60px;
+    top: 50px;
 }
-#Usuario{
-    font-size: 35px;
-    font-style: italic;
-    font-family: fantasy;
-}
+
 #Nombre{
     position: absolute;
-    top: 10px;
-    left: 200px;
-    display: flex;
-    width: 270px;
-    height: auto;
+    left: 170px;
+    border: 1px solid black;
 }
-#contraseña{
-    font-size: 35px;
-    font-style: italic;
-    font-family: fantasy;
+
+#contraseñas{
+    position: absolute;
+    top: 100px;
 }
+
 #Contraseña{
-    position:absolute;
-    top: 10px;
-    left: 200px;
-    display: flex;
-    width: 270px;
-    height: auto;
+    position: absolute;
+    left: 170px;
+    border: 1px solid black;
 }
+
 #flecha{
     max-width: 50px;
     display: block;
     margin: auto;
 }
+
 #boton{
-    background-color: rgb(255, 240, 245);
+    background-color: rgb(75, 115, 236);
     border-color: black;
-    width: 380px;
+    width: 100%;
+    border-radius: 0px;
     position: absolute;
-    top: 70px;
-    left: 80px;
+    top: 150px;
+    left: 0px;
 }
 #sesion{
     position: absolute;

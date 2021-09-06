@@ -1,20 +1,22 @@
 <LINK REL=StyleSheet HREF="/css/login/login.css" TYPE="text/css" MEDIA=screen>
 <div id="imegen">
-  <img src="/img/avatar.png" id="avatar">
 </div>
 <form action="/Login" method="POST" id="ingresar">
-    <div id="contenedor">
-      <div id="datos">
+  <div id="contenedor">
+    <div>
+      <p>Login</p>
+    </div>
+    <div id="usuarios">
       <label id="Usuario">Cedula:</label>
       <input type="text" id="Nombre" name="username">
-      </div>
-      <div>
-        <label id="contraseña">Contraseña: </label>
-        <input type="password" id="Contraseña" name="password">
-      </div>
-      <div>
-        <button type="submit" id="boton"><img src="/img/flechaIzquierda.png" id="flecha"></button>
-      </div>
     </div>
+    <div id="contraseñas">
+      <label id="contraseña">Contraseña: </label>
+      <input type="password" id="Contraseña" name="password">
+    </div>
+    <div>
+      <button type="submit" id="boton"><img src="/img/flechaIzquierda.png" id="flecha"></button>
+    </div>
+  </div>
 </form>
 <button id="sesion"><a href="/Registro">Registro</a></button>

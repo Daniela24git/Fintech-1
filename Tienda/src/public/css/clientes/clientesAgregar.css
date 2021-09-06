@@ -1,84 +1,82 @@
 #f1{
     position: absolute;
-    top: 50px;
-    width: 100%;
+    top: 150px;
+    left: 450px;
+    width: 500px;
+    height: 343px;
+    background-color: white;
+    border: 1px solid;
+    border-color: black;
 }
 
 #logo{
     top: 120px;
 }
 
+label{
+    margin-left: 20px;
+}
+
 #p{
-    position: absolute;
-    top: 70px;
-    left: 550px;
+    text-align: center;
     font-size: 35px;
 }
 
 #lblncedula{
     position: absolute;
-    top: 140px;
-    left: 448px; 
+    top: 50px;
 }
 
 #username{
     position: absolute;
-    top: 148px;
-    left: 550px;
+    left: 245px;
 }
 
 #lblnprovedor{
     position: absolute;
-    top: 195px;
-    left: 313px;
+    top: 100px;
 }
 
 #Nombres{
     position: absolute;
-    top: 200px;
-    left: 550px;
+    left: 245px;
 }
 
 #lbldireccion{
     position: absolute;
-    top: 250px;
-    left: 413px;
+    top: 150px;
 }
 
 #Direccion{
     position: absolute;
-    top: 250px;
-    left: 550px;
+    left: 245px;
 }
 
 
 #lblnumero{
     position: absolute;
-    top: 300px;
-    left: 450px;
+    top: 200px;
 }
 
 #Numero{
     position: absolute;
-    top: 300px;
-    left: 550px;
+    left: 245px;
 }
 
 #lblcodigo{
     position: absolute;
-    top: 352px;
-    left: 430px;
+    top: 250px;
 }
 
 #telefono{
     position: absolute;
-    top: 350px;
-    left: 550px;
+    left: 245px;
 }
 
 #guardar1{
     position: absolute;
-    top: 410px;
-    left: 420px;
-    width: 420px;
+    top: 300px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid;
 }

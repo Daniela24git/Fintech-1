@@ -1,15 +1,27 @@
 #frase{
     position: absolute;
-    top: 120px;
-    left: 350px;
-    width: 50%;
-    text-align: justify;
+    top: 80px;
+    left: 250px;
+    width: 900px;
+    height: 300px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 500px;
+}
+
+#frase p{
+    margin-top: 25px;
 }
 
 #busqueda{
     position: absolute;
-    top: 270px;
+    top: 230px;
     left: 450px;
+}
+
+#busqueda input{
+    border: 1px solid black;
 }
 
 #flecha{
@@ -17,8 +29,8 @@
 }
 
 #siguiente{
-    background-color: white;
-    border-color: black;
+    background-color: transparent;
+    border-color: transparent;
     width: 120px;
     position: absolute;
     top: 60px;

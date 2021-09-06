@@ -2,6 +2,34 @@
     top: 80px;
 }
 
+#fechas{
+    border: 1px solid black;
+    position: absolute;
+    left: 80px;
+}
+
+#codigoDocumento{
+    border: 1px solid black;
+    position: absolute;
+    left: 205px;
+}
+
+#Tienda{
+    border: 1px solid black;
+    position: absolute;
+    left: 90px;
+}
+
+#arriba{
+    background-color: white;
+    border: 1px solid black;
+    height: 400px;
+    position: absolute;
+    width: 1366px;
+    left:0px;
+    top: 110px;
+}
+
 button{
     background-color: white;
     border: solid black;
@@ -9,7 +37,7 @@ button{
 
 #Entradas{
     position: absolute;
-    top: 110px;
+    top: 0px;
     left: 580px;
     text-transform: uppercase;
     font-size: 30px;
@@ -17,7 +45,7 @@ button{
 
 #fecha{
     position: absolute;
-    top: 160px;
+    top: 60px;
     left: 160px;
 }
 
@@ -32,25 +60,28 @@ button{
 
 #CODIGO{
     position: absolute;
-    top: 220px;
+    top: 120px;
     left: 33px;
 }
 
 #Dtienda{
     position: absolute;
-    top: 280px;
+    top: 180px;
     left: 150px;
 }
 
 #cliente{
     position: absolute;
-    top: 340px;
+    top: 240px;
     left: 110px;
 }
 
 #NombreProveedor{
-    width: 270px;
+    width: 250px;
     text-align: center;
+    border: 1px solid black;
+    position: absolute;
+    left: 130px;
 }
 
 #tabla{
@@ -58,6 +89,8 @@ button{
     top: 400px;
     text-align: center;
     background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 #columna{
@@ -97,8 +130,8 @@ button{
 
 #boton{
     position: absolute;
-    top: 340px;
-    left: 1200px;
+    top: 230px;
+    left: 1230px;
 }
 
 #numero{

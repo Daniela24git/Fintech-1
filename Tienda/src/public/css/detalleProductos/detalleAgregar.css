@@ -5,12 +5,13 @@
     width: 600px;
     height: 400px;
     background-color: white;
+    border: 1px solid black;
 }
 
 #guardar{
     position: absolute;
     width: 600px;
-    top: 400px;
+    top: 398px;
 }
 
 label{
@@ -23,7 +24,7 @@ label{
 
 #Producto{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #UnidadVenta{
@@ -33,7 +34,7 @@ label{
 
 #unidadVeneta{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #ProductoCantidad{
@@ -43,7 +44,7 @@ label{
 
 #productoCantidad{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #CantidadVenta{
@@ -53,7 +54,7 @@ label{
 
 #cantidadVenta{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #precioUnidad{
@@ -63,7 +64,7 @@ label{
 
 #precio{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #PROSENTAJES{
@@ -73,14 +74,14 @@ label{
 
 #porsentaje{
     position: absolute;
-    left: 300px;
-    width: 273px;
+    left: 320px;
+    width: 252px;
 }
 
 #productos{
     width: 30px;
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #Precioventa{
@@ -90,7 +91,7 @@ label{
 
 #precioVenta{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #PrecioTotalVenta{
@@ -100,16 +101,19 @@ label{
 
 #precioTotalVenta{
     position: absolute;
-    left: 300px;
+    left: 320px;
 }
 
 #numero{
     background-color: white;
-    width: 480px;
-    height: 80px;
+    width: 300px;
+    height: 50px;
     position: absolute;
     top: -50px;
     left: 120px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
 }
 
 #idproducto{

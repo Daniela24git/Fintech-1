@@ -1,9 +1,13 @@
 body{
     color: black;
-    background-color: steelblue;
+    background-color: #eaeded;
+    background-image: url(/img/fondo.jpg);
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     max-width: 100%;
     max-height: 100%;
     

@@ -1,297 +1,162 @@
-#imegen{
-    position: absolute;
-    left: 130px;
-    top: 10px;
-    font-size: 35px;
-}
-#avatar{
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 280px;
-}
 #contenedor{
     position: absolute;
-    top: 200px;
-    left: 450px;
+    top: 32%;
+    left: 36%;
     background-color: white;
-    width: 380px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    max-width: 380px;
+    max-height: 271px;
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid black;
 }
+
+#imegen{
+    margin-top: 20px;
+}
+
 #datos{
     position: absolute;
-    top: 60px;
+    top: 35%;
+    left: 16%;
 }
+
 #Usuario{
     font-size: 35px;
-    font-style: italic;
 }
+
 #Nombre{
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    display: flex;
-    width: 270px;
+    width: 100%;
     height: auto;
+    max-width: 270px;
 }
+
 #contraseña{
     font-size: 35px;
-    font-style: italic;
 
 }
-#Contraseña{
+
+#contraseñas{
     position:absolute;
     top: 160px;
-    left: 40px;
+    left: 16%;
     display: flex;
-    width: 270px;
+}
+
+#Contraseña{
+    width: 100%;
     height: auto;
+    max-width: 270px;
 }
-#flecha{
-    max-width: 50px;
-    display: block;
-    margin: auto;
-}
+
 #boton{
     background-color:rgb(75, 115, 236);
-    border-radius: 20px;
     border-color: black;
     color: white;
-    width: 380px;
+    width: 100%;
     position: absolute;
     top: 230px;
-    left: 0px;
 }
+
 #sesion{
     position: absolute;
-    top: 40px;
-    left: 1150px;
-    border-radius: 20px;
-    font-size: 32px;
-    font-style: italic;
+    top: 0px;
+    left: 77.5%;
+    font-size: 20px;
 }
 
-@media(max-width: 1125px){
+@media(max-width: 800px){ 
     #contenedor{
-        position: absolute;
-        left: 320px;
+        left: 26%;
     }
-    #imegen{
-        position: absolute;
-        left: 470px;
-    }
-    #sesion{
-        position: absolute;
-        left: 920px;
-      
-    }    
 }
 
-@media(max-width: 1075px){
+@media(max-width: 600px){ 
     #contenedor{
-        position: absolute;
-        left: 320px;
+        left: 20%;
     }
-    #imegen{
-        position: absolute;
-        left: 470px;
-    }
-    #sesion{
-        position: absolute;
-        left: 920px;
-      
-    }    
-}
-@media(max-width: 1050px){
-    #contenedor{
-        position: absolute;
-        left: 300px;
-    }
-    #imegen{
-        position: absolute;
-        left: 450px;
-    }
-    #sesion{
-        position: absolute;
-        left: 900px;
-      
-    }    
-}
-@media(max-width: 1025px){
-    #contenedor{
-        position: absolute;
-        left: 260px;
-    }
-    #imegen{
-        position: absolute;
-        left: 410px;
-    }
-    #sesion{
-        position: absolute;
-        left: 860px;
-      
-    }    
-}
-@media(max-width: 985px){
-    #contenedor{
-        position: absolute;
-        left: 270px;
-    }
-    #imegen{
-        position: absolute;
-        left: 410px;
-    }
-    #sesion{
-        position: absolute;
-        left: 770px;
-    }    
-}
-@media(max-width: 920px){
-    #contenedor{
-        position: absolute;
-        left: 250px;
-    }
-    #imegen{
-        position: absolute;
-        left: 420px;
-    }
-    #sesion{
-        position: absolute;
-        left: 750px;
-    }    
-}
-@media(max-width: 878px){
-    #contenedor{
-        position: absolute;
-        left: 200px;
-    }
-    #imegen{
-        position: absolute;
-        left: 350px;
-    }
-    #sesion{
-        position: absolute;
-        left: 700px;
-    }    
-}
-@media(max-width: 825px){
-    #contenedor{
-        position: absolute;
-        left: 150px;
-    }
-    #imegen{
-        position: absolute;
-        left: 250px;
-    }
-    #sesion{
-        position: absolute;
-        left: 650px;
-    }    
-}
-@media(max-width: 775px){
-    #contenedor{
-        position: absolute;
-        left: 100px;
-    }
-    #imegen{
-        position: absolute;
-        left: 200px;
-    }
-    #sesion{
-        position: absolute;
-        left: 600px;
-    }  
-}
-@media(max-width: 725px){
-    #contenedor{
-        position: absolute;
-        left: 50px;
-    }
-    #imegen{
-        position: absolute;
-        left: 150px;
-    }
-    #sesion{
-        position: absolute;
-        left: 550px;
-    }  
-}
-@media(max-width: 675px){
-    #contenedor{
-        position: absolute;
-        left: 0px;
-    }
-    #imegen{
-        position: absolute;
-        left: 100px;
-    }
-    #sesion{
-        position: absolute;
-        left: 500px;
-    }  
-}
-@media(max-width: 625px){
-    #contenedor{
-        position: absolute;
-        left: 0px;
-    }
-    #imegen{
-        position: absolute;
-        left: 50px;
-    }
-    #sesion{
-        position: absolute;
-        left: 450px;
-    }  
-}
-@media(max-width: 625px){
-    #contenedor{
-        position: absolute;
-        left: 0px;
-    }
-    #imegen{
-        position: absolute;
-        left: 160px;
-    }
-    #sesion{
-        position: absolute;
-        left: 400px;
-    }  
-}
-@media(max-width: 525px){
-    #contenedor{
-        position: absolute;
-        left: 0px;
-    }
-    #imegen{
-        position: absolute;
-        left: 160px;
-    }
-    #sesion{
-        position: absolute;
-        left: 330px;
-    }  
 }
 
-@media(max-width: 465px){
+@media(max-width: 500px){ 
     #contenedor{
-        position: absolute;
-        left: 0px;
+        left: 12%;
     }
-    #imegen{
-        position: absolute;
-        left: 100px;
+}
+
+@media(max-width: 470px){ 
+    #contenedor{
+        left: 7%;
     }
+}
+
+@media(max-width: 420px){ 
+    #contenedor{
+        left: 3%;
+    }
+}
+
+@media(max-width: 400px){ 
+    #contenedor{
+        left: 1.5%;
+    }
+}
+
+@media(max-width: 388px){ 
+    #contenedor{
+        left: 0.5%;
+    }
+
     #sesion{
-        position: absolute;
-        left: 290px;
+        left: 76%;
     }
-    #boton{
-        width: 300px;
+}
+
+@media(max-width: 360px){ 
+    #contenedor{
+        left: 0%;
     }
-    #Nombre{
-        width: 220px;
+}
+
+@media(max-width: 335px){ 
+    #sesion{
+        left: 74%;
     }
-    #Contraseña{
-        width: 220px;
+}
+
+@media(max-width: 315px){ 
+    #sesion{
+        left: 72.5%;
+    }
+    #datos{
+        left: 8%;
+    }
+    #contraseñas{
+        left: 8%;
+    }
+}
+
+@media(max-width: 300px){ 
+    #sesion{
+        left: 71%;
+    }
+    #datos{
+        left: 5%;
+    }
+    #contraseñas{
+        left: 5%;
+    }
+}
+
+@media(max-width: 290px){ 
+    #sesion{
+        left: 68%;
+    }
+    #datos{
+        left: 4%;
+    }
+    #contraseñas{
+        left: 4%;
     }
 }
