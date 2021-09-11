@@ -1,35 +1,29 @@
 #contenedor{
-    width: 500px;
-    height: 385px;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 385px;
     position: absolute;
-    top: 120px;
-    left: 400px;
+    top: 17%;
+    left: 31%;
     background-color: white;
     color: black;
-}
-
-#logo{
-    top: 80px;
+    border: 1px solid black;
 }
 
 #p{
-    position: absolute;
-    left: 130px;
-}
-
-#contenedor_1{
-    position: absolute;
-    top: 80px;
+    text-align: center;
 }
 
 #guardar{
     position: absolute;
-    width: 500px;
-    top: 250px;
-    left: 0px;
+    width: 100%;
+    top: 86%;
+    left: 0%;
+    background-color:rgb(75, 115, 236);
 }
 #guardar_1{
-    width: 50px;
+    width: 50px;   
 }
 
 label{
@@ -38,49 +32,62 @@ label{
 
 #NOMBRES{
     position: absolute;
+    top: 14%;
 }
 
 #NombreProveedor{
     position: absolute;
-    left: 150px;
+    left: 246px;
 }
 
 #DIRECCION{
     position: absolute;
-    top: 50px;
+    top: 28%;
 }
 
-#Celular{
+#direccion{
     position: absolute;
-    left: 150px;
+    left: 246px;
+}
+
+#celular{
+    position: absolute;
+    left: 246px;
 }
 
 #CELULAR{
     position: absolute;
-    top: 100px;
-}
-
-#Celular{
-    position: absolute;
-    left: 150px;
+    top: 42%;
 }
 
 #TELEFONO{
     position: absolute;
-    top: 150px
+    top: 56%
 }
 
 #Telefono{
     position: absolute;
-    left: 150px;
+    left: 246px;
 }
 
 #ESTADO{
     position: absolute;
-    top: 200px;
+    top: 70%;
 }
 
 #Estado{
     position: absolute;
-    left: 150px;
+    left: 246px;
+}
+
+@media (max-width: 1024px) {
+    #contenedor{
+        top: 8%;
+    }
+}
+
+@media (max-width: 600px) {
+    #contenedor{
+        left: 15%;
+    }
 }

@@ -1,43 +1,22 @@
 #conetendor{
     position: absolute;
-    top: 70px;
-    left: 45px;
-    width: 1200px;
+    top: 15%;
+    left: 5%;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    max-height: auto;
 }
 
 .row{
-    gap: 30px;
-    margin-right: 0px;
-}
-
-#logo{
-    top: 80px;
-}
-
-#agregar{
-    position: absolute;
-    left: 400px;
-}
-
-#ver{
-    position: absolute;
-    left: 650px;
-}
-
-#NombreP{
-    position: absolute;
-    left: 300px;
-}
-
-#direccion{
-    position: absolute;
-    left: 300px;
+    gap: 3%;
+    row-gap: 20px;
 }
 
 #masProveedor{
     position: absolute;
-    top: 55px;
-    left: 1270px;
+    top: 11%;
+    left: 94%;
     background-color: transparent;
     border-color: transparent;
 }
@@ -54,20 +33,12 @@
     text-transform:uppercase; 
 }
 
-#NOMBRES{
-    margin-left: 50px;
-}
-
 #NombreProveedor{
     background-color: transparent;
     border-color: transparent;
     width: 100%;
     text-align: center;
     text-transform:uppercase; 
-}
-
-#DIRECCION{
-    margin-left: 50px;
 }
 
 #Direccion{
@@ -78,18 +49,6 @@
     text-transform:uppercase; 
 }
 
-#CELULAR{
-    margin-left: 50px;
-}
-
-#TELEFONO{
-    margin-left: 50px;
-}
-
-#ESTADO{
-    margin-left: 50px;
-}
-
 #Numero{
     background-color: transparent;
     border-color: transparent;
@@ -98,16 +57,24 @@
     text-transform:uppercase; 
 }
 
+#celular{
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    text-align: center;
+    text-transform:uppercase; 
+}   
+
 #eliminar{
-    width: 70px;
+    width: 60px;
 }
 
 #botonX{
     border-color: transparent;
     background-color: transparent;
     position: absolute;
-    margin-top: -59px;
-    margin-left: 312px;
+    margin-top: -5%;
+    margin-left: 19%;
 }
 
 #datosPerosnales{
@@ -119,35 +86,56 @@
     width: 50px;
 }
 
-#BotonEditar{
+#Editar{
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    margin-top: 180px;
-}
-
-#agregarProducto{
-    width: 270px;
-    position: absolute;
-    margin-top: 205px;
-    margin-left: 115px;
-    border-radius: 20px;
+    margin-top: -5%;
 }
 
 #tarjeta{
     border: 1px solid;
-    height: 283px;
-    width: 380px;
+    height: 100%;
+    width: 100%;
     row-gap: 20px;
     color: black;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 10%;
+    max-width: 283px;
+    max-height: 380px;
 }
 
-#id{
-    position: absolute;
+#agregar{
+    width: 100%;
 }
 
-#datos{ 
-    position: absolute;
+#agregarProducto{
+    background-color: black;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    #conetendor{
+        top: 6%;
+        left: 15%;
+        max-width: 900px;
+    }
+    #masProveedor{
+        top: 1%;
+    }
+}
+
+@media (max-width: 800px) {
+    #conetendor{
+        top: 6%;
+        left: 17%;
+        max-width: 600px;
+    }
+    #masProveedor{
+        top: 1%;
+    }
+    .row{
+        gap: 5%;
+        row-gap: 20px;
+    }
 }

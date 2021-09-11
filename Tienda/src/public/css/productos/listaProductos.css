@@ -1,23 +1,25 @@
 #contenedor{
     position: absolute;
-    top: 75px;
-    left: 45px;
-    width: 1250px;
-}
-#logo{
-    top: 80px;
+    top: 12%;
+    left: 4%;
+    width: 100%;
+    height: auto;
+    max-width: 1250px;
+    max-height: auto;
 }
 
 .row{
     gap: 20px;
+    row-gap: 20px;
 }
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 20px;
-    width: 400px;
+    border-radius: 6%;
+    width: 100%;
     background-color: white;
     color: black;
+    max-width: 400px;
 }
 
 input{
@@ -27,18 +29,6 @@ input{
 
 label{
     margin-left: 10px;
-}
-
-#eliminar{
-    width: 70px;
-}
-
-#botonX{
-    border-color: transparent;
-    background-color: transparent;
-    position: absolute;
-    margin-top: -250px;
-    margin-left: 340px;
 }
 
 #editar{
@@ -92,9 +82,18 @@ input{
     margin-left: 93px;
 }
 
-#agregar{
-    position: absolute;
-    left: 400px;
-    top: 120px;
-    width: 300px;
+@media (max-width: 1024px) {
+    #contenedor{
+        left: 19%;
+        max-width: 820px;
+        top: 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    #contenedor{
+        left: 24%;
+        max-width: 420px;
+        top: 1%;
+    }
 }

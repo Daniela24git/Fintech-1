@@ -1,22 +1,15 @@
-#f1{
-    position: absolute;
-    top: 50px;
-    width: 700px;
-}
-
-#logo{
-    top: 120px;
-}
 
 #totalcontenido{
     background-color: white;
     border-color: black;
     border: 1px solid;
-    width: 575px;
-    height: 460px;
-    left: 400px;
+    width: 100%;
+    height: 100%;
+    max-width: 575px;
+    max-height: 460px;
     position: absolute;
-    top: 70px;
+    top: 17%;
+    left: 29%;
 }
 
 label{
@@ -24,71 +17,83 @@ label{
 }
 
 #p{
-    position: absolute;
-    top: 10px;
-    left: 130px;
+    text-align: center;
     font-size: 35px;
-    width: 500px;
+    width: 100%;
 }
 
-#lblnprovedor{
+#NOMBRE{
     position: absolute;
-    top: 70px;
+    top: 15%;
 }
 
 #NombreProveedor{
     position: absolute;
-    top: 70px;
     left: 300px;
 }
 
-#lbldireccion{
+#DIRECCION{
     position: absolute;
-    top: 140px;
+    top: 30%;
 }
 
 #Direccion{
     position: absolute;
-    top: 140px;
     left: 300px;
 }
 
 
-#lblcelular{
+#CELULAR{
     position: absolute;
-    top: 210px;
+    top: 45%;
 }
 
-#lbltelefono{
+#TELEFONO{
     position: absolute;
-    top: 280px;
+    top: 60%;
 }
 
 #Celular{
     position: absolute;
-    top: 210px;
     left: 300px;
 }
 
 #Telefono{
     position: absolute;
-    top: 280px;
     left: 300px;
 }
 
-#lblcodigo{
+#ESTADO{
     position: absolute;
-    top: 350px;
+    top: 75%;
 }
 
 #codigo{
     position: absolute;
-    top: 350px;
     left: 300px;
 }
 
 #guardar1{
     position: absolute;
-    top: 420px;
+    top: 91.3%;
     width: 100%;
+    background-color:rgb(75, 115, 236);
+}
+
+@media (max-width: 1024px ) {
+    #totalcontenido{
+        top: 4%;
+    }
+}
+
+@media (max-width: 800px ) {
+    #totalcontenido{
+        left: 19%;
+    }
+}
+
+@media (max-width: 640px ) {
+    #totalcontenido{
+        left: 13%;
+    }
 }

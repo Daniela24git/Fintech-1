@@ -1,7 +1,3 @@
-#logo{
-    top: 80px;
-}
-
 #p{
    text-align: center;
    margin-top: 10px;
@@ -9,50 +5,49 @@
 
 form{
     position: absolute;
-    top: 90px;
-    left: 450px;
-    width: 500px;
-    height: 520px;
+    top: 15%;
+    left: 27%;
+    width: 100%;
+    height: 100%;
     background-color: white;
+    max-width: 500px;
+    max-height: 520px;
 }
 #guardar_2{
-    width: 80px;
+    width: 60px;
 }
 
 #guardar1{
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    left: 420px;
-    top: 440px;
+    width: 100%;
+    background-color: black;
+    top: 91%;
 }
 #Cedula{
     position: absolute;
+    top: 16%;
 }
 
 #CODIGO{
     position: absolute;
-    top: 140px;
+    top: 32%;
 }
 
 #PRODUCTO{
     position: absolute;
-    top: 240px;
+    top: 48%;
 }
 
 #CANTIDAD{
     position: absolute;
-    top: 340px;
+    top: 64%;
 }
 
 #PRECIO{
     position: absolute;
-    top:440px;
-}
-
-#CADUCIDAD{
-    position: absolute;
-    top: 540px;
+    top: 80%;
 }
 
 input{

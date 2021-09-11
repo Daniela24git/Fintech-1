@@ -1,23 +1,26 @@
 #contenedor{
     position: absolute;
-    top: 70px;
-    left:45px;
-    width: 1250px;
-}
-#logo{
-    top: 80px;
+    top: 15%;
+    left: 4%;
+    width: 100%;
+    height: 100%;
+    max-width: 1250px;
+    max-height: auto;
 }
 
-.row{
-    gap: 20px;
+#contenedor .row{
+    gap: 3%;
+    row-gap: 20px;
 }
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 20px;
-    width: 400px;
+    border-radius: 10%;
+    width: 100%;
     background-color: white;
     color: black;
+    max-width: 400px;
+    display: block;
 }
 
 #eliminar{
@@ -49,6 +52,7 @@ input{
     width: 50%;
     border-color: transparent;
     font-size: 25px;
+    max-width: 100%;
 }
 
 #codigo{
@@ -69,20 +73,39 @@ input{
 
 #precioUnidad{
     position: absolute;
-    width: 80px;
+    width: 100%;
     margin-left: 20px;
+    max-width: 80px;
 }
 
 #agregar{
     position: absolute;
-    left: 400px;
-    top: 120px;
-    width: 300px;
+    left: 27%;
+    top: 15%;
+    width: 100%;
+    max-width: 300px;
 }
 
 #agregarDetalleProducto{
-    width: 270px;
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 129px;
+    width: 100%;
+    background-color: black;
+}
+
+@media (max-width: 1024px) {
+    #contenedor{
+        top: 1%;
+        left: 17%;
+        max-width: 850px;  
+    }
+    .row{
+        gap: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+    #contenedor{
+        top: 3%;
+        left: 27%;
+        max-width: 400px;  
+    }
 }

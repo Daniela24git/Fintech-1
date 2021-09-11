@@ -1,12 +1,16 @@
 #contenido{
     position: absolute;
-    top: 90px;
-    left: 45px;
-    width: 1250px;
+    top: 15%;
+    left: 4%;
+    width: 100%;
+    height: auto;
+    max-width:  1250px;
+    max-height: auto;
 }
 
 .row{
     gap: 20px;
+    row-gap: 20px;
 }
 
 button{
@@ -16,19 +20,22 @@ button{
 
 #tarjeta{
     border: 1px solid;
-    width: 375px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     background-color: white;
     color: black;
+    max-width: 375px;
+    max-height: 200px;
 }
 
 #idDetalleRegistroEntradas{
-    width: 70px;
+    width: 100%;
     position: absolute;
     background-color: transparent;
     border-color: transparent;
     font-weight: bolder;
+    max-width: 70px;
 }
 
 #id{
@@ -41,30 +48,28 @@ input{
 }
 
 #NombreProducto{
-    position: absolute;
-    left: 240px;
+    margin-left: 110px;
 }
-
-#nombre{
-    position: absolute;
-}
-
 #cantidadEntrada{
     width: 100%;
-    position: absolute;
-    top: 100px;
-}
-
-#entraCantidad{
-    position: absolute;
-}
-
-#fecha{
-    position: absolute;
-    top: 150px;
 }
 
 #fechas{
-    position: absolute;
-    left: 240px;
+    margin-left: 30px;
+}
+
+@media (max-width: 1024px) {
+    #contenido{
+        top: 3%;
+        left: 17%;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    #contenido{
+        top: 3%;
+        left: 24%;
+        max-width: 400px;
+    }
 }

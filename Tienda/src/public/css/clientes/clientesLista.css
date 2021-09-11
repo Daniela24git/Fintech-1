@@ -1,23 +1,25 @@
 #contenedor{
     position: absolute;
-    top: 80px;
-    left: 45px;
-    width: 1250px;
-}
-#logo{
-    top: 80px;
+    top: 15%;
+    left: 3%;
+    width: 100%;
+    height: auto;
+    max-width: 1250px;
+    max-height: auto;
 }
 
 .row{
     gap: 20px;
+    row-gap: 20px;
 }
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 20px;
-    width: 400px;
+    border-radius: 10%;
+    width: 100%;
     background-color: white;
     color: black;
+    max-width: 400px;
 }
 
 input{
@@ -82,8 +84,28 @@ label{
 
 #masProveedor{
     position: absolute;
-    top: -20px;
-    left: 1250px;
+    top: -10%;
+    left: 99%;
     background-color: transparent;
     border-color: transparent;
+}
+
+@media (max-width: 1024px) {
+    #contenedor{
+        top: 4%;
+        max-width: 850px;
+        left: 16%;
+    }
+}
+
+@media (max-width: 600px) {
+    #contenedor{
+        top: 2%;
+        max-width: 450px;
+        left: 20%;
+    }
+    #masProveedor{
+        top: 0%;
+        left: 90%;
+    }
 }

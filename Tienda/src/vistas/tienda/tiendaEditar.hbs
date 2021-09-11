@@ -2,12 +2,12 @@
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
-        <p id="dato">{{user.username}}</p>
+    <p id="dato">{{user.username}}</p>
     </p>
 </div>
 <div id="formulario">
     <div id="DatoNegocio">
-        <label>Datos del Negocio</label>
+        <p>Datos del Negocio</p>
     </div>
     {{#each tienda}}
     <form action="/tienda/editar/{{idTiendas}}" method="POST">
@@ -24,7 +24,7 @@
             <input type="text" name="direccion" id="direccion" value="{{direccion}}">
         </div>
         <div id="Contactos">
-            <label id="contactos">Contactos</label>
+            <p id="contactos">Contactos</p>
         </div>
         <div id="CELULAR">
             <label id="celular">Celular:</label>

@@ -1,50 +1,50 @@
-#logo{
-    top: 80px;
-}
-
 form{
     position: absolute;
-    top: 90px;
-    left: 400px;
-    height: 500px;
-    width: 550px;
+    top: 15%;
+    left: 29%;
+    height: 100%;
+    width: 100%;
+    max-width: 550px;
+    max-height: 500px;
     background-color: white;
+    border: 1px solid black;
     text-align: center;
 }
 #guardar_2{
-    width: 80px;
+    width: 70px;
 }
 
 #guardar1{
-    background-color: transparent;
-    border-color: transparent;
+    background-color: black;
+    border: 1px solid black;
+    width: 100%;
     position: absolute;
-    left: 520px;
-    top: 420px;
+    top: 90%;
 }
 
 #CODIGO{
     position: absolute;
+    top: 16%;
 }
 
 #PRODUCTO{
     position: absolute;
-    top: 140px;
+    top: 32%;
 }
 
 #CANTIDAD{
     position: absolute;
-    top: 240px;
+    top: 48%;
 }
 
 #PRECIO{
     position: absolute;
-    top:340px;
+    top: 64%;
 }
 
 #CADUCIDAD{
     position: absolute;
-    top: 440px;
+    top: 80%;
 }
 
 label{
@@ -54,4 +54,16 @@ label{
 input{
     position: absolute;
     left: 250px;
+}
+
+@media (max-width: 1024px) {
+    form{
+        top: 3%;
+    }
+}
+
+@media (max-width: 1024px) {
+    form{
+        left: 19%;
+    }
 }

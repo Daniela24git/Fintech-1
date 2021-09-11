@@ -26,14 +26,16 @@
                             <input type="text" value="{{Telefono}}" id="Numero" readonly>
                         </div>
                         <div id="ESTADO">
-                            <input type="text" id="estado" value="" readonly>
+                            <input type="text" id="estado" value="{{Estado}}" readonly>
                         </div>
                     </div>
-                    <div>
-                        <a href="/proveedor/editar/{{idProvedores}}" id="BotonEditar"><img src="/img/iconos/editar.png" id="editar"></a>
+                    <div id="Editar">
+                        <a href="/proveedor/editar/{{idProvedores}}" id="BotonEditar"><img src="/img/iconos/editar.png"
+                                id="editar"></a>
                     </div>
-                    <div>
-                        <button id="agregarProducto"><a href="/ProductoEntrada/agregar/{{idProvedores}}">Agregar un Producto</a></button>
+                    <div id="agregar">
+                        <button id="agregarProducto"><a href="/ProductoEntrada/agregar/{{idProvedores}}">Agregar un
+                                Producto</a></button>
                     </div>
                 </div>
             </div>
@@ -49,6 +51,7 @@
 
 <div>
     {{#each proveedores }}
-    <button id="masProveedor"><a href="/proveedor/agregar/{{idProvedores}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
+    <button id="masProveedor"><a href="/proveedor/agregar/{{idProvedores}}"><img src="/img/iconos/mas.png"
+                id="mas"></a></button>
     {{/each}}
 </div>

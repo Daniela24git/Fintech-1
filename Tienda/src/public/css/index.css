@@ -1,6 +1,6 @@
 #mov{
     position: absolute;
-    top: 20%;
+    top: 17%;
     left: 20%;
     width: 100%;
     height: 100%;
@@ -9,7 +9,7 @@
     background-color: rgb(255, 255, 255);
     border: 1px solid;
     border-color: rgb(0, 0, 0);
-    border-radius: 200px;
+    border-radius: 50%;
     box-sizing: border-box;
     display: block;
     text-align: center;
