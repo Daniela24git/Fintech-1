@@ -69,11 +69,12 @@ entradaSalida.MandarSalida = async (req, res) => {
     const { fecha, salidaCantidad, ventaCantidad, cantidadRestante, Precio, productoIdProductos, idregistros, clienteIdClientes  } = req.body
     const nuevaSalida = {
         tiendaIdTiendas: id,
+        creacionRegistroSalidas: fecha,
         clienteIdClientes: clienteIdClientes, 
         usuarioIdUsuarios: ids
     }
     const nuevoDetalleSalida = {
-        creacionRegistroEntradas: fecha,
+        creacionDetalleRegistroSalidas: fecha,
         salidaCantidad,
         ventaCantidad,
         cantidadRestante,

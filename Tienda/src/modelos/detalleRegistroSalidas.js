@@ -9,7 +9,7 @@ const detalleRegistroSalidas = (sequelize, type)=>{
         ventaCantidad: type.INTEGER,
         salidaCantidad: type.INTEGER,
         cantidadRestante: type.INTEGER,
-        creacionRegistroEntradas: type.STRING,
+        creacionDetalleRegistroSalidas: type.STRING,
         actualizacionRegistroSalidas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),

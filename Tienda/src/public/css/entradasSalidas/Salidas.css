@@ -1,28 +1,23 @@
-#logo{
-    top: 80px;
-}
-
-
 #arriba{
     background-color: white;
     border: 1px solid black;
-    height: 400px;
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    max-height: 400px;
     position: absolute;
-    width: 1366px;
-    left:0px;
-    top: 110px;
+    left: 0%;
+    top: 15%;
 }
 
 #Salidas{
-    position: absolute;
-    top: 80px;
-    left: 580px;
+    text-align: center;
     text-transform: uppercase;
     font-size: 30px;
 }
 
 button{
-    background-color: white;
+    background-color: cadetblue;
     border: solid black;
 }
 
@@ -33,35 +28,36 @@ button{
 
 #fecha{
     position: absolute;
-    top: 160px;
-    left: 160px;
+    top: 16%;
+    left: 11.5%;
 }
 
 #CODIGO{
     position: absolute;
-    top: 220px;
-    left: 33px;
+    top: 32%;
+    left: 2.5%;
 }
 
 #Dtienda{
     position: absolute;
-    top: 280px;
-    left: 150px;
+    top: 48%;
+    left: 10.7%;
 }
 
 #cliente{
     position: absolute;
-    top: 340px;
-    left: 145px;
+    top: 64%;
+    left: 10.7%;
 }
 
 #tabla{
     position: absolute;
-    top: 400px;
+    top: 65%;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    max-width: 1389px;
 }
 
 #salidaCantidad{
@@ -103,18 +99,19 @@ button{
 }
 
 #idregistro{
+    width: 100%;
     background-color: transparent;
     border-color: transparent;
-    width: 70px;
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
+    font-weight: bold;
     font-size: 28px;
+    color: black;
+    max-width: 50px;
 }
 
 #boton{
     position: absolute;
-    top: 355px;
-    left: 1230px;
+    top: 70%;
+    left: 90%;
 }
 
 #numero{
@@ -122,9 +119,43 @@ button{
 }
 
 #Tienda{
-    width: 275px;
+    width: 250px;
 }
 
 #NombreProveedor{
-    width: 275px;
+    width: 250px;
+}
+
+@media (max-width:1024px) {
+    #arriba{
+        left:15%;
+        top: 1%;
+        max-width: 1366px;
+        max-height: 400px;
+    }
+    #tabla{
+        top: 25%;
+        left: 15%;
+    }
+}
+
+@media (max-width:800px) {
+    #tabla{
+        top: 27%;
+        left: 15%;
+    }
+}
+
+@media (max-width:600px) {
+    #tabla{
+        top: 33%;
+        left: 15%;
+    }
+}
+
+@media (max-width:500px) {
+    #tabla{
+        top: 53%;
+        left: 15%;
+    }
 }
