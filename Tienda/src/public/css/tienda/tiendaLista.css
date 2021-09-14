@@ -34,6 +34,17 @@
     max-width: 50px;
 }
 
+#mapa{
+    position: absolute;
+    top: 25%;
+    left: 435px;
+    border: 1px solid black;
+}
+
+label{
+    margin-left: 20px;
+}
+
 #datosUsuario{
     position: absolute;
     left: 87%;
@@ -66,6 +77,7 @@
     max-height: 380px;
     border-color: black;
     border: 1px solid;
+    border-radius: 10px;
 }
 
 input{
@@ -73,14 +85,14 @@ input{
 }
 
 #nombreNegocio{
-    margin-top: 1%;
+    margin-top: 30px;
     text-align: center;
 }
 
 #RUC{
     position: absolute;
-    top: 20%;
-    left: 15%;
+    top: 30%;
+    left: 0%;
     width: 100%;
     height: auto;
     max-width: 389px;
@@ -88,8 +100,8 @@ input{
 
 #DIRECCION{
     position: absolute;
-    top: 34%;
-    left: 15%;
+    top: 48%;
+    left: 0%;
     width: 100%;
     height: auto;
     max-width: 389px;
@@ -97,36 +109,23 @@ input{
 
 #ruc{
     position: absolute;
-    left: 35%;
+    left: 150px;
 }
 
 #direccion{
     position: absolute;
-    left: 35%;
-}
-
-#contactos{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 100%;
-    max-width: 698px;
-    max-height: 190px;
-    text-align: center;
+    left: 150px;
 }
 
 #CELULAR{
     position: absolute;
-    top: 11%;
+    top: 65%;
     text-align: center;
-    width: 20%;
 }
 
-#TELEFONO{
+#celular{
     position: absolute;
-    top: 11%;
-    left: 64%;
-    text-align: center;
+    left: 150px;
 }
 
 #botones{

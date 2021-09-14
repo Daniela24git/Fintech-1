@@ -46,6 +46,7 @@ button{
     left: 95%;
     background-color: transparent;
     border-color: transparent;
+    width: 50px;
 }
 
 #mas{

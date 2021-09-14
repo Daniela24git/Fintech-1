@@ -29,7 +29,7 @@
 }
 
 button{
-    background-color: cadetblue;
+    background-color: #C7C7C7;
     border: solid black;
 }
 
@@ -37,6 +37,7 @@ button{
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
+    color: #D700FF;
 }
 
 #fecha{

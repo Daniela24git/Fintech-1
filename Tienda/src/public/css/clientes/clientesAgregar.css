@@ -18,6 +18,7 @@ label{
 #p{
     text-align: center;
     font-size: 35px;
+    color: #D700FF;
 }
 
 #lblncedula{
@@ -75,7 +76,7 @@ label{
     position: absolute;
     top: 91%;
     width: 100%;
-    background-color:rgb(75, 115, 236);
+    background-color:#C7C7C7;
     border: 1px solid;
 }
 

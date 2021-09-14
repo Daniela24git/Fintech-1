@@ -73,4 +73,5 @@ indexCtrl.mandar = async (req, res) => {
     }
     res.redirect('/Login');
 }
+
 module.exports = indexCtrl;

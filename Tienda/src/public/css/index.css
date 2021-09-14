@@ -1,99 +1,32 @@
-#mov{
+#movs{
     position: absolute;
-    top: 17%;
-    left: 20%;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
-    max-width: 800px;
-    max-height: 400px;
-    background-color: rgb(255, 255, 255);
+    max-width: 1000px;
+    max-height: 800px;
     border: 1px solid;
     border-color: rgb(0, 0, 0);
-    border-radius: 50%;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: block;
     text-align: center;
-    margin: 20px 0;
-}
-
-#Bienvenida{
-    color: blue;
-    margin-top: 45px;
-    font-size: 50px;
-}
-
-#Mensaje{
-    font-size: 30px;
-    margin-top: 60px;
 }
 
 #imagen{
-    width: 120px;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
-#boton{
+
+#inicio{
     position: absolute;
-    background-color: rgba(240, 248, 255, 0);
-    border-color: rgba(240, 248, 255, 0);
-    top: 65%;
-    left: 39%; 
+    top: 85%;
+    left: 2%;
+    background-color: #C7C7C7;
 }
 
-@media(max-width: 999px){
-    #mov{
-        left: 6%;
-    }
-}
-
-@media(max-width: 800px){
-    #mov{
-        left: 0%;
-    }
-}
-
-
-@media(max-width: 600px){
-    #Bienvenida{
-        color: blue;
-        margin-top: 80px;
-        font-size: 40px;
-    }
-}
-
-
-@media(max-width: 440px){
-    #Bienvenida{
-        color: blue;
-        margin-top: 60px;
-        font-size: 40px;
-    }
-    #imagen{
-        width: 50px;
-    }
-    #boton{
-        bottom: 2%;
-    }
-    #Mensaje{
-        margin-top: 20px;
-    }
-}
-
-@media(max-width: 320px){
-    #mov{
-        top: 5%;
-    }
-    #imagen{
-        width: 50px;
-    }
-    #boton{
-        bottom: 2%;
-    }
-    #Bienvenida{
-        color: blue;
-        margin-top: 60px;
-        font-size: 40px;
-    }
-    #Mensaje{
-        margin-top: 40px;
-    }
+#Mensaje{
+    font-size: 38.60px;
 }

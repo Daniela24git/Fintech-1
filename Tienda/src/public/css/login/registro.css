@@ -1,5 +1,14 @@
+body{
+    background-image: url(/img/fondo.png);
+    background-size: cover;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 #usuario{
     font-size: 30px;
+    color: #D700FF;
 }
 
 #contenedor{
@@ -10,7 +19,7 @@
     width: 100%;
     height: 100%;
     max-width: 500px;
-    max-height: 279px;
+    max-height: 250px;
     text-align: center;
     box-sizing: border-box;
     display: block;
@@ -30,7 +39,7 @@
 
 #contraseñas{
     position:absolute;
-    top: 60%;
+    top: 50%;
     left: 20%;
     display: flex;
 }
@@ -42,12 +51,12 @@
 }
 
 #boton{
-    background-color:rgb(75, 115, 236);
+    background-color:#424242;
     border-color: black;
     color: white;
     width: 100%;
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 0%;
 }
 

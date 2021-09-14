@@ -29,6 +29,7 @@ label{
 }
 #TITULO{
     text-align: center;
+    color: #D700FF;
 }
 
 #CODIGO{
@@ -138,8 +139,8 @@ label{
     position: absolute;
     top: 99%;
     width: 100%;
-    background-color:rgb(75, 115, 236);
-}
+    background-color:#C7C7C7;
+};
 
 @media (max-width: 1024px) {
     #conten{

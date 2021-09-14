@@ -11,11 +11,15 @@ form{
     text-align: center;
 }
 #guardar_2{
-    width: 70px;
+    width: 60px;
+}
+
+#p{
+    color: #D700FF;
 }
 
 #guardar1{
-    background-color: black;
+    background-color: #C7C7C7;
     border: 1px solid black;
     width: 100%;
     position: absolute;

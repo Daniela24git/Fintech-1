@@ -1,7 +1,7 @@
 <LINK REL=StyleSheet HREF="/css/tienda/tiendaLista.css" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
-    <label id="dato">{{user.username}}</label>
+    <p id="dato">{{user.username}}</p>
 </div>
 <div id="contenido">
     <form action="/tienda/lista/{{user.idUsuarios}}">
@@ -17,16 +17,9 @@
             <label id="Direccion">Dirección:</label>
             <input type="text" name="direccion" id="direccion" value="{{direccion}}" readonly>
         </div>
-        <div id="contactos">
-            <p>Contactos</p>
-            <div id="CELULAR">
-                <label id="Celular">Celular:</label>
-                <input type="number" name="celular" min="0" id="celular" value="{{celular}}" readonly>
-            </div>
-            <div id="TELEFONO">
-                <label id="Telefono">Teléfono:</label>
-                <input type="number" name="telefono" min="0" id="telefono" value="{{telefono}}" readonly>
-            </div>
+        <div id="CELULAR">
+            <label id="Celular">Movil:</label>
+            <input type="number" name="celular" min="0" id="celular" value="{{celular}}" readonly>
         </div>
         <div id="botones">
             <div id="boton">
@@ -36,15 +29,19 @@
                 <button id="Agregar"><a href="/proveedor/agregar/{{idTiendas}}">Agregar Proveedor</a></button>
             </div>
         </div>
+        <div id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2372.308874614081!2d-78.50365769356631!3d-0.3767686909205783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1631581549639!5m2!1ses-419!2sec" width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
         {{else}}
         <div id="bienvenida">
             <p>¡¡Bienvenido a Fintech!!<br>
-            ¿Aun no tienes informacion en el inventario? <br> O ¿ya lo tienes?<br>
-            Da click en más.
+                ¿Aun no tienes informacion en el inventario? <br> O ¿ya lo tienes?<br>
+                Da click en más.
             </p>
         </div>
         <div id="agregar">
-            <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png" id="mas"></a></button>
+            <button id="masTiendas"><a href="/tienda/agregar/{{user.idUsuarios}}"><img src="/img/iconos/mas.png"
+                        id="mas"></a></button>
         </div>
         {{/each}}
     </form>

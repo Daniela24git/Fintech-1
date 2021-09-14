@@ -19,11 +19,12 @@ label{
 }
 
 #guardar_2{
-    width: 80px;
+    width: 60px;
 }
 
 #p{
     text-align: center;
+    color: #D700FF;
 }
 
 #guardar1{
@@ -32,7 +33,7 @@ label{
     position: absolute;
     top: 90%;
     width: 100%;
-    background-color: black;
+    background-color: #C7C7C7;
 }
 
 #CODIGO{

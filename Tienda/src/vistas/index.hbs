@@ -1,10 +1,29 @@
 <LINK REL=StyleSheet HREF="/css/index.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/login/ingreso.css" TYPE="text/css" MEDIA=screen>
 <form action="/" method="post">
-    <div id="mov">
+    <div id="movs">
+        <img src="/img/fondo.png" id="imagen">
         <div id="inicio">
-            <button type="submit" id="boton"><img src="/img/flecha.png" id="imagen"></button>
-            <h1 id="Bienvenida"> Bienvenidos a Fintech</h1>
             <h2 id="Mensaje">¡¡ Tener todo en orden significa tener todo bajo control !!</h2>
         </div>
     </div>
 </form>
+<form action="/Login" method="POST" id="ingresar">
+    <div id="contenedor">
+        <div id="imegen">
+            Fintech
+        </div>
+        <div id="datos">
+            <input type="text" id="Nombre" name="username" placeholder="Usuario:">
+        </div>
+        <div id="contraseñas">
+            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:">
+        </div>
+        <div>
+            <button type="submit" id="boton">Ingresar</button>
+        </div>
+    </div>
+</form>
+<div id="sesion">
+    <button id="registro"><a href="/Registro">Registro</a></button>
+</div>

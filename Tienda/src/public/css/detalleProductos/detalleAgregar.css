@@ -14,7 +14,7 @@
     position: absolute;
     width: 100%;
     top: 91%;
-    background-color:rgb(75, 115, 236);
+    background-color:#C7C7C7;
 }
 
 label{
@@ -112,6 +112,7 @@ label{
     width: 100%;
     text-align: center;
     position: absolute;
+    color: #D700FF;
 }
 
 #idproducto{
@@ -121,6 +122,9 @@ label{
     font-size: 26px;
     font-weight: bold;
     color: black;
+    position: absolute;
+    top: 0px;
+    left: 66%;
 }
 
 @media (max-width: 1024px) {

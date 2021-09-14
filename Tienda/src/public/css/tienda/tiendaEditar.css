@@ -27,6 +27,10 @@
     overflow: hidden;
 }
 
+#DatoNegocio{
+    color: #D700FF;
+}
+
 #dato{
     font-size: 35px;
 }
@@ -95,7 +99,7 @@ label{
 
 #guardar1{
     width: 100%;
-    background-color: rgb(75, 115, 236);
+    background-color: #C7C7C7;
 }
 
 #nombreNegocio{

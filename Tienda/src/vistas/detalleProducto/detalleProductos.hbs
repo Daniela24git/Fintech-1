@@ -2,7 +2,7 @@
 <form action="/detalleProducto/agregar/{{user.idUsuarios}}" method="post">
     <div id="contenido">
         <div id="numero">
-            <label id="">Nuevo Producto N°</label>
+            <p id="tit">Nuevo Producto N°</p>
             {{#each ids}}
             <input type="text" name="categoria" id="idproducto" readonly value="{{"max(idDetalleCategorias)"}}">
             {{/each}}
