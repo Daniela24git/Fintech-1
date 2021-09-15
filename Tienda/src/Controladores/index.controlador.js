@@ -71,7 +71,7 @@ indexCtrl.mandar = async (req, res) => {
     } else {
         console.log("Ya existe")
     }
-    res.redirect('/Login');
+    res.redirect('/tienda');
 }
 
 module.exports = indexCtrl;
