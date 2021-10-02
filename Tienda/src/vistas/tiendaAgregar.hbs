@@ -1,4 +1,38 @@
 <LINK REL=StyleSheet HREF="/css/tienda/tiendaAgregar.css" TYPE="text/css" MEDIA=screen>
+<div class="row align-items-center">
+    <div class="col-md-11"></div>
+    <div class="col-md-1 text-center bg-info rounded-circle">
+        <img src="/img/avatar.png" id="avatar"></img><br>
+        <p class="text-center text-light h2"> {{user.username}}</p>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-3 text-center"></div>
+    <div class="col-6 p-4">
+        <form action="/tienda/agregar/{{user.idUsuarios}}" method="POST">
+            <div class="border rounded  " id="Formulario">
+                            <h4 class="text-center text-primary">Datos del Negocio</h4>
+                            <label class="form-label text-primary h5">Nombre<i class="bi bi-person"></i></label>
+                            <input class="form-control border-secondary" type="text" name="nombreNegocio" checked> 
+                            <label class="form-label text-primary h5 ">Ruc <i class="bi bi-credit-card-2-front"></i></label>
+                            <input class="form-control border-secondary" type="text" name="ruc" maxlength="13" checked>
+                            <label class="form-label text-primary h5">Dirección <i class="bi bi-pin-map"></i></label>
+                            <input class="form-control border-secondary" type="text" name="direccion" checked>
+                            <label class="form-label text-primary h5">Celular <i class="bi bi-phone"></i></label>
+                            <input class="form-control border-secondary" type="text" name="celular" maxlength="10" checked>
+                            <label class="form-label text-primary h5">Teléfono <i class="bi bi-telephone"></i></label>
+                            <input class="form-control border-secondary" type="text" name="telefono" maxlength="10">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end p-3 text-secundary">
+                            <button type="submit" class="btn btn-outline-info text-primaty">Guardar <i class="bi bi-check2-circle"></i></button>
+                            </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-3 text-center"></div>
+</div>
+
+
+<!--<LINK REL=StyleSheet HREF="/css/tienda/tiendaAgregar.css" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p>
@@ -38,4 +72,4 @@
             </div>
         </form>
     </div>
-</div>
+</div> -->
