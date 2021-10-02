@@ -21,7 +21,7 @@
     max-height: 70px;
 }
 
-buttons{
+button{
     border: 0px;
     text-align: center;
     margin-top: 10px;
@@ -55,11 +55,4 @@ buttons{
         top: 22%;
         left: 20%;
     }
-}
-
-
-
-
-#botones{
-    padding-top:15%;
 }

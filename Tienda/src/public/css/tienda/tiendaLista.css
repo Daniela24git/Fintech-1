@@ -1,4 +1,4 @@
-#avatar01{
+#avatar{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -66,7 +66,7 @@ label{
     font-style: italic;
 }
 
-#contenidos{
+#contenido{
     position: absolute;
     top: 25%;
     left: 25%;
@@ -80,7 +80,7 @@ label{
     border-radius: 10px;
 }
 
-inputr{
+input{
     border-color: black;
 }
 
@@ -159,7 +159,7 @@ inputr{
         top: 8%;
         left: 16%;
     }
-    #avatar01{
+    #avatar{
         top: 1%;
         left: 85%;
     }
@@ -174,7 +174,7 @@ inputr{
         top: 8%;
         left: 13%;
     }
-    #avatar01{
+    #avatar{
         top: 0%;
         left: 70%;
         max-width: 90px;
@@ -190,7 +190,7 @@ inputr{
         top: 0%;
         left: 13%;
     }
-    #avatar01{
+    #avatar{
         display: none;
     }
     #datosUsuario{
@@ -216,23 +216,4 @@ inputr{
         top: 5%;
         max-width: 550px;
     }
-}
-
-
-#avatar{
-    max-width: 120px;
-}
-#Formulario{
-    padding-top:1%;
-    padding-left:10%;
-    padding-right:10%;
-    padding-bottom:20px;
-    background-color: rgb(255, 255, 255);
-}
-#Formulario2{
-    padding-top:1%;
-    padding-left:5%;
-    padding-right:5%;
-    padding-bottom:20px;
-    background-color: rgb(255, 255, 255);
 }
