@@ -1,9 +1,15 @@
 <link rel="stylesheet" href="/css/entradasSalidas/entradaSalidasEleccion.css">
 <form action="/entradaSalida/eleccion/{{user.idUsuarios}}" method="get">
-<div id="eleccion1">
-    <button><a href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}">Registro de Entradas</a></button>
-</div>
-<div id="eleccion2">
-    <button><a href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}">Registro de Salidas</a></button>
-</div>
+    <nav id="nav">
+        <div>
+            <a id="entradas" href="/productos/lista/{{user.idUsuarios}}">Bodega</a>
+            <a id="bodega" href="/ProductoEntrada/lista/{{user.idUsuarios}}">Productos</a>
+        </div>
+    </nav>
+    <div id="eleccion1">
+        <button><a href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}">Registro de Entradas</a></button>
+    </div>
+    <div id="eleccion2">
+        <button><a href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}">Registro de Salidas</a></button>
+    </div>
 </form>

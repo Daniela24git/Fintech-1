@@ -1,5 +1,11 @@
 <LINK REL=StyleSheet HREF="/css/productos/listaProductos.css" TYPE="text/css" MEDIA=screen>
 <form action="/productos/lista/{{user.idUsuarios}}">
+    <nav id="nav">
+        <div>
+            <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entradas y Salidas</a>
+            <a id="bodega" href="/ProductoEntrada/lista/{{user.idUsuarios}}">Productos</a>
+        </div>
+    </nav>
     <div id="contenedor">
         <div class="row">
             {{#each productos}}

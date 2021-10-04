@@ -1,5 +1,11 @@
 <LINK REL=StyleSheet HREF="/css/productoEntrada/productoslista.css" TYPE="text/css" MEDIA=screen>
 <form action="/ProductoEntrada/lista/{{user.idUsuarios}}">
+    <nav id="nav">
+        <div>
+            <a id="entradas" href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entradas y Salidas</a>
+            <a id="bodega" href="/productos/lista/{{user.idUsuarios}}">Bodega</a>
+        </div>
+    </nav>
     <div id="contenedor">
         <div class="row">
             {{#each DatosProducto}}
@@ -33,7 +39,8 @@
                             src="/img/iconos/eliminar.png" id="eliminar"></a></a>
                 </div>
                 <div>
-                    <button id="agregarDetalleProducto"><a href="/detalleProducto/agregar/{{idProductoEntradas}}">Detalle</a></button>
+                    <button id="agregarDetalleProducto"><a
+                            href="/detalleProducto/agregar/{{idProductoEntradas}}">Detalle</a></button>
                 </div>
             </div>
             {{else}}

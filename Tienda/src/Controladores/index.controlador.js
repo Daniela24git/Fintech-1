@@ -55,14 +55,14 @@ indexCtrl.mandar = async (req, res) => {
     if (porsentajes.length == 0) {
         const porsentaje = porsentajes[0]
         if (porsentaje === undefined) {
-            for (let i = 1; i <= 100; i++) {
+            for (let i = 1; i < 100; i++) {
                 let cont = 0;
                 let ids = 0
                 cont = cont + i;
                 ids = 0 + i
                 const contar = cont
                 const id = ids
-                if (cont <= 100) {
+                if (cont < 100) {
                     await pool.query("INSERT INTO porsentajes(idPorsentajes,porsentaje) VALUES (?,?)", [id, contar])
                     console.log(" se guardo ")
                 }

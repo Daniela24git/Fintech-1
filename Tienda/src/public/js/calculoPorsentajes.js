@@ -10,7 +10,8 @@ class calculo {
         let a = parseFloat(this.precio.value)
         let b = parseFloat(this.porsentaje.value)
         let c = b / 100
-        this.precioVenta.value = (a + c).toFixed(2)
+        let d = (1 - c)
+        this.precioVenta.value = (a / d).toFixed(2)
         porsentajes.calculo2()
     }
     calculo2(){

@@ -1,8 +1,10 @@
 body{
     color: black;
-    background-color: #424242;
+    background-image: url(/img/fondo1.png);
     font-size: 25px;
     font-family: 'Lato', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     width: 100%;
