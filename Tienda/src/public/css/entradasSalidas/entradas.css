@@ -22,14 +22,15 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    left:0%;
+    left:5%;
     top: 15%;
-    max-width: 1366px;
+    max-width: 90%;
     max-height: 400px;
 }
 
 button{
-    background-color: #C7C7C7;
+    background-color: #0d437e;
+    color: white;
     border: solid black;
 }
 
@@ -37,7 +38,7 @@ button{
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #fecha{
@@ -84,45 +85,48 @@ button{
 
 #tabla{
     position: absolute;
-    top: 65%;
+    top: 67%;
+    left: 12%;
+    width: 100%;
     text-align: center;
     background-color: white;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    max-width: 1389px;
+    max-width: 77%;
 }
 
 #columna{
     background-color:midnightblue;
     color:seashell;
+    font-size: 23px;
 }
 
 #codigo{
-    width: 250px;
+    width: 170px;
     border-color: transparent;
     background-color: transparent;
 }
 
 #Cantidad{
-    width: 150px;
+    width: 70px;
     border-color: transparent;
     background-color: transparent;
 }
 
 #UnidadMedida{
-    width: 250px;
+    width: 200px;
     border-color: transparent;
     background-color: transparent;
 }
 
 #precioActual{
-    width: 150px;
+    width: 100px;
     border-color: transparent;
     background-color: transparent;
 }
 
 #NombreProducto{
-    width: 320px;
+    width: 250px;
     border-color: transparent;
     background-color: transparent;
 }
@@ -134,7 +138,7 @@ button{
 }
 
 #numero{
-    width: 70px;
+    width: 40px;
     border-color: transparent;
     background-color: transparent;
 }

@@ -13,7 +13,7 @@ index.madar = async(req,res) => {
      if(verificacion){
          const clientes = verificacion
          if(clientes.username === null || clientes.password === null){
-              res.redirect('/actualizacion/Datos/' + clientes.idClientes              );
+              res.redirect('/actualizacion/Datos/' + clientes.idClientes);
          }else{
               res.redirect('/Login');
          }

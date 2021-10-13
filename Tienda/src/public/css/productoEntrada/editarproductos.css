@@ -18,22 +18,18 @@ label{
     margin-left: 20px;
 }
 
-#guardar_2{
-    width: 60px;
-}
-
 #p{
     text-align: center;
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #guardar1{
-    background-color: transparent;
-    border-color: transparent;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
+    width: 100%;
     position: absolute;
     top: 90%;
-    width: 100%;
-    background-color: #C7C7C7;
 }
 
 #CODIGO{

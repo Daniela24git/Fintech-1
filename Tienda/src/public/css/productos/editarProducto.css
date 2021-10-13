@@ -10,20 +10,18 @@ form{
     border: 1px solid black;
     text-align: center;
 }
-#guardar_2{
-    width: 60px;
-}
 
 #p{
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #guardar1{
-    background-color: #C7C7C7;
+    background-color: #0d437e;
+    color: white;
     border: 1px solid black;
     width: 100%;
     position: absolute;
-    top: 90%;
+    top: 92%;
 }
 
 #CODIGO{

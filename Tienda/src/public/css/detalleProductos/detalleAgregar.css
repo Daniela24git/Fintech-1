@@ -11,10 +11,12 @@
 }
 
 #guardar{
-    position: absolute;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
     width: 100%;
+    position: absolute;
     top: 91%;
-    background-color:#C7C7C7;
 }
 
 label{
@@ -112,7 +114,7 @@ label{
     width: 100%;
     text-align: center;
     position: absolute;
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #idproducto{

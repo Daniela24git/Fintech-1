@@ -28,18 +28,19 @@
     left: 4%;
     width: 100%;
     height: 100%;
-    max-width: 1250px;
-    max-height: auto;
+    max-width: 93%;
+    max-height: 96%;
 }
 
 #contenedor .row{
     gap: 3%;
-    row-gap: 20px;
+    row-gap: 30px;
 }
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 10%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     width: 100%;
     background-color: white;
     color: black;
@@ -55,17 +56,18 @@
     border-color: transparent;
     background-color: transparent;
     position: absolute;
-    margin-top: -300px;
+    margin-top: -280px;
     margin-left: 350px;
 }
 
-#editar{
-    width: 50px;
+#BotonEditar{
+    width: 20%;
+    background-color: black;
+    text-align: center;
 }
 
-#BotonEditar{
-    background-color: transparent;
-    border-color: transparent;
+#BotonEditar a{
+    color: white;
 }
 
 label{
@@ -111,8 +113,18 @@ input{
 }
 
 #agregarDetalleProducto{
-    width: 100%;
-    background-color: black;
+    position: absolute;
+    margin-top: -3.1%;
+    margin-left: 24.5%;
+   
+}
+
+#agregarDetalleProducto button{
+    background-color: #0d437e;
+}
+
+#agregarDetalleProducto a{
+    color: white;
 }
 
 @media (max-width: 1024px) {

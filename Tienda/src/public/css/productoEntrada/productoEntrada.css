@@ -29,7 +29,7 @@ label{
 }
 #TITULO{
     text-align: center;
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #CODIGO{
@@ -136,10 +136,12 @@ label{
 }
 
 #guardar1{
-    position: absolute;
-    top: 99%;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
     width: 100%;
-    background-color:#C7C7C7;
+    position: absolute;
+    top: 99.9%;
 };
 
 @media (max-width: 1024px) {

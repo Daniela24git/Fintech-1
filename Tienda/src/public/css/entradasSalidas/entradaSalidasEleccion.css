@@ -28,28 +28,42 @@
     left: 15%;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #0d437e;
     border: solid black;
     max-width: 400px;
     max-height: 70px;
 }
+#eleccion1 button{
+    text-align: center;
+    margin-top: 10px;
+    border: 0px;
+    background-color: transparent;
+}
+
+#eleccion1 a{
+    color: white;
+}
+
 #eleccion2{
     position: absolute;
     top: 45%;
     left: 55%;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #0d437e;
     border: solid black;
     max-width: 400px;
     max-height: 70px;
 }
-
-button{
-    border: 0px;
+#eleccion2 button{
     text-align: center;
     margin-top: 10px;
-    background-color: black;
+    border: 0px;
+    background-color: transparent;
+}
+
+#eleccion2 a{
+    color: white;
 }
 
 @media (max-width: 1024px) {

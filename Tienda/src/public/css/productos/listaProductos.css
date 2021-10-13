@@ -34,12 +34,13 @@
 
 .row{
     gap: 20px;
-    row-gap: 20px;
+    row-gap: 30px;
 }
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 6%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 20px;
     width: 100%;
     background-color: white;
     color: black;
@@ -55,13 +56,14 @@ label{
     margin-left: 10px;
 }
 
-#editar{
-    width: 50px;
+#BotonEditar{
+    width: 20%;
+    background-color: black;
+    text-align: center;
 }
 
-#BotonEditar{
-    background-color: transparent;
-    border-color: transparent;
+#BotonEditar a{
+    color: white;
 }
 
 input{
