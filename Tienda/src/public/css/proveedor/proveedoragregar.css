@@ -1,4 +1,3 @@
-
 #totalcontenido{
     background-color: white;
     border-color: black;
@@ -24,7 +23,7 @@ label{
     text-align: center;
     font-size: 35px;
     width: 100%;
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #NOMBRE{
@@ -81,8 +80,10 @@ label{
 #guardar1{
     position: absolute;
     top: 91.3%;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
     width: 100%;
-    background-color:#C7C7C7;
 }
 
 @media (max-width: 1024px ) {

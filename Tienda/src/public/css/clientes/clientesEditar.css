@@ -1,7 +1,7 @@
 #p{
    text-align: center;
    margin-top: 10px;
-   color: #D700FF;
+   color: #0a1b2e;
 }
 
 form{
@@ -14,17 +14,14 @@ form{
     max-width: 500px;
     max-height: 520px;
 }
-#guardar_2{
-    width: 60px;
-}
 
 #guardar1{
-    background-color: transparent;
-    border-color: transparent;
-    position: absolute;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
     width: 100%;
-    background-color: #C7C7C7;
-    top: 91%;
+    position: absolute;
+    top: 93%;
 }
 #Cedula{
     position: absolute;
@@ -59,4 +56,5 @@ input{
 
 label{
     margin-left: 20px;
+    color: #0a1b2e;
 }

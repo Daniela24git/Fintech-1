@@ -15,7 +15,8 @@
 
 #tarjeta{
     border: 1px solid;
-    border-radius: 10%;
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
     width: 100%;
     background-color: white;
     color: black;
@@ -38,13 +39,30 @@ input{
     margin-left: 340px;
 }
 
-#editar{
-    width: 50px;
+#BotonEditar{
+    width: 20%;
+    text-align: center;
 }
 
-#BotonEditar{
-    background-color: transparent;
+#BotonEditar button{
+    background-color: black;
+    color: white;
+}
+
+#botonX{
+    text-align: center;
+    position: absolute;
+    margin-top: -3.25%;
+    margin-left: 23.5%;
+}
+
+#botonX button{
+    background-color: red;
     border-color: transparent;
+}
+
+#BotonEditar a{
+    color: white;
 }
 
 input{

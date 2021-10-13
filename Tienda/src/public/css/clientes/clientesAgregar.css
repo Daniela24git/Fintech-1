@@ -13,12 +13,13 @@
 
 label{
     margin-left: 20px;
+    color: #0a1b2e;
 }
 
 #p{
     text-align: center;
     font-size: 35px;
-    color: #D700FF;
+    color: #0a1b2e;
 }
 
 #lblncedula{
@@ -75,9 +76,10 @@ label{
 #guardar1{
     position: absolute;
     top: 91%;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
     width: 100%;
-    background-color:#C7C7C7;
-    border: 1px solid;
 }
 
 @media (max-width: 1024px) {

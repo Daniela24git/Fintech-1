@@ -13,15 +13,17 @@
 
 #p{
     text-align: center;
-    color: #D700FF;
+    font-size: 30px;
+    color: #0a1b2e;
 }
 
 #guardar{
-    position: absolute;
+    background-color: #0d437e;
+    color: white;
+    border: 1px solid black;
     width: 100%;
-    top: 86%;
-    left: 0%;
-    background-color:#C7C7C7;
+    position: absolute;
+    top: 90%;
 }
 #guardar_1{
     width: 50px;   
@@ -29,6 +31,7 @@
 
 label{
     margin-left: 20px;
+    color: #0a1b2e;
 }
 
 #NOMBRES{

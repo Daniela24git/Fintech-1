@@ -33,12 +33,11 @@
                 <div id="BotonEditar">
                     <a href="/ProductoEntrada/editar/{{idProductoEntradas}}">Editar</a>
                 </div>
-                <div>
-                    <a href="/ProductoEntrada/Eliminar/{{idProductoEntradas}}" id="botonX"><img
-                            src="/img/iconos/eliminar.png" id="eliminar"></a></a>
+                <div id="botonX">
+                    <a href="/ProductoEntrada/Eliminar/{{idProductoEntradas}}"><button>Eliminar</button></a>
                 </div>
                 <div id="agregarDetalleProducto">
-                    <button><a href="/detalleProducto/agregar/{{idProductoEntradas}}">Detalle</a></button>
+                    <a href="/detalleProducto/agregar/{{idProductoEntradas}}"><button>Detalles</button></a>
                 </div>
             </div>
             {{else}}

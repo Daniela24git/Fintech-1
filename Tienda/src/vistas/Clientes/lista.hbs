@@ -20,12 +20,11 @@
                 <label>Celular:</label>
                 <input type="text" value="0{{Celular}}" id="celular" readonly></input>
             </div>
-            <div>
-                <a href="/clientes/editar/{{idClientes}}" id="BotonEditar"><img src="/img/iconos/editar.png" id="editar"></a>
+            <div id="BotonEditar">
+                <a href="/clientes/editar/{{idClientes}}"><button>Editar</button></a>
             </div>
-            <div>
-                <a href="/clientes/Eliminar/{{idClientes}}" id="botonX"><img src="/img/iconos/eliminar.png"
-                        id="eliminar"></a></a>
+            <div id="botonX">
+                <a href="/clientes/Eliminar/{{idClientes}}" ><button>Eliminar</button></a>
             </div>
         </div>
         {{else}}
