@@ -70,8 +70,5 @@ app.use('/Compra', require('./rutas/lista.rutas'));
 app.use('/Compras', require('./rutas/compras.rutas'));
 app.use('/formaPago', require('./rutas/formasPago.rutas'));
 
-//public
 
-app.use(express.static(path.join(__dirname, 'public')));
-//public
 module.exports = app; 
