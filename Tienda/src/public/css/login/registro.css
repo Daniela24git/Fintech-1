@@ -76,6 +76,10 @@
     left: 13%;
 }
 
+#boton button:focus{
+    border-radius: 6px solid #233675;
+}
+
 @media(max-width: 800px){
     #contenedor{
         left: 20%;

@@ -1,7 +1,9 @@
 <LINK REL=StyleSheet HREF="/css/tienda/tiendaLista.css" TYPE="text/css" MEDIA=screen>
+<div id="usuario">
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p id="dato">{{user.username}}</p>
+</div>
 </div>
 <div id="contenido">
     <form action="/tienda/lista/{{user.idUsuarios}}">
@@ -38,11 +40,11 @@
         <div id="bienvenida">
             <p>
                 ¿Aun no tienes informacion en el inventario? <br> O ¿ya lo tienes?<br>
-                Da click en más.
+                Da click en Iniciar.
             </p>
-        </div>
-        <div id="agregar">
-            <a href="/tienda/lista/{{user.idUsuarios}}" id="masTiendas"><img src="/img/iconos/mas.png" id="mas"></a>
+            <div id="masTiendas">
+            <a href="/tienda/agregar/{{user.idUsuarios}}"><button type="button">Iniciar</button></a>
+            </div>
         </div>
         {{/each}}
     </form>
