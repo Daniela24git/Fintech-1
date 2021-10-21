@@ -1,4 +1,4 @@
-/*#avatar01{
+#avatar01{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -235,26 +235,4 @@ inputr{
         top: 5%;
         max-width: 550px;
     }
-}*/
-
-
-#avatar{
-    max-width: 120px;
-}
-#Formulario{
-    padding-top:1%;
-    padding-left:10%;
-    padding-right:10%;
-    padding-bottom:20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-}
-#Formulario2{
-    padding-top:1%;
-    padding-left:5%;
-    padding-right:5%;
-    padding-bottom:20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-
 }

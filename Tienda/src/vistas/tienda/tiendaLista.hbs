@@ -1,73 +1,4 @@
 <LINK REL=StyleSheet HREF="/css/tienda/tiendaLista.css" TYPE="text/css" MEDIA=screen>
-<div class="row align-items-center">
-    <div class="col-11"></div>
-    <div class="col-1 text-center bg-info rounded-circle">
-        <img src="/img/avatar.png" id="avatar"></img><br>
-        <p class="text-center text-light h2"> {{user.username}}</p>
-    </div>
-</div>
-{{#each tiendas}}
-<div class="row ">
-    <div class="col-2 "></div>
-    <div class="col-8  p-4">
-        <form action="/tienda/lista/{{user.idUsuarios}}" method="GET">
-            <div class="border border-primary" id="Formulario">
-                <div class="container">
-                    <div class="row-8 p-4">
-                        <h1 class="text-primary text-uppercase text-center">{{nombreNegocio}}</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2372.308874614081!2d-78.50365769356631!3d-0.3767686909205783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sec!4v1631581549639!5m2!1ses-419!2sec"
-                                width="390" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                class="border border-primary rounded"></iframe>
-                        </div>
-                        <div class="col">
-                            <label class="form-label text-primary">Ruc <i class="bi bi-credit-card-2-front"></i></label>
-                            <input class="form-control border-white" type="text" name="ruc" value="{{ruc}}" readonly>
-                            <label class="form-label text-primary">Dirección <i class="bi bi-pin-map"></i></label>
-                            <input class="form-control border-white" type="text" name="direccion" value="{{direccion}}"
-                                readonly>
-                            <label class="form-label text-primary">Móvil <i class="bi bi-phone"></i></label>
-                            <input class="form-control border-white" type="number" name="celular" min="0" value="{{celular}}"
-                                readonly>
-                            <div class="row p-3">
-                                <div class="col "><button type="submit" class="btn btn-outline-info "><a class="text-decoration-none"
-                                        href="/tienda/editar/{{idTiendas}}"> Editar Datos </a></button></div>
-                                <div class="col "><button class="btn btn-outline-info "><a class="text-decoration-none" href="/proveedor/agregar/{{idTiendas}}">Agregar
-                                        Proveedor</a></button></div>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-{{else}}
-<div class="row ">
-    <div class="col-3 "></div>
-    <div class="col-6">
-        <form action="/tienda/lista/{{user.idUsuarios}}">
-            <div class="border rounded" id="Formulario2">
-                <div class="text-primary text-capitalize h2" >
-                    <p class="font-monospace text-center ">¡¡Bienvenido a Fintech!!<br>
-                        ¿Aun no tienes informacion en el inventario? <br> O ¿ya lo tienes?<br>
-                        Da click.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-primary "><a href="/tienda/agregar/{{user.idUsuarios}}" class="text-white text-decoration-none h3" >Iniciar</a></button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="col-3"></div>
-</div>
-{{/each}}
-<!-- <LINK REL=StyleSheet HREF="/css/tienda/tiendaLista.css" TYPE="text/css" MEDIA=screen>
 <img src="/img/avatar.png" id="avatar"></img>
 <div id="datosUsuario">
     <p id="dato">{{user.username}}</p>
@@ -115,4 +46,4 @@
         </div>
         {{/each}}
     </form>
-</div> -->
+</div>

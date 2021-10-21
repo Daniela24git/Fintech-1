@@ -1,11 +1,11 @@
-const porsentajes = (sequelize, type) => {
-    return sequelize.define('porsentajes', {
-        idPorsentajes: {
+const porcentajes = (sequelize, type) => {
+    return sequelize.define('porcentajes', {
+        idPorcentaje: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        porsentaje: type.STRING,
+        porcentaje: type.STRING,
         creacionCategorias: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
@@ -21,4 +21,4 @@ const porsentajes = (sequelize, type) => {
     })
 }
 
-module.exports = porsentajes
+module.exports = porcentajes

@@ -17,14 +17,14 @@
 
 #contenedor{
     position: absolute;
-    top: 30%;
+    top: 22.5%;
     left: 35%;
     background-color: white;
     width: 100%;
     height: 100%;
     text-align: center;
     max-width: 400px;
-    max-height: 271px;
+    max-height: 350px;
     box-sizing: border-box;
     display: block;
 }
@@ -36,7 +36,7 @@
 
 #datos{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 16%;
 }
 
@@ -57,7 +57,7 @@
 
 #contraseñas{
     position:absolute;
-    top: 75%;
+    top: 65%;
     left: 16%;
     display: flex;
 }
@@ -72,8 +72,8 @@
     color: white;
     background-color: #5e6a92;
     position: absolute;
-    top: 91%;
-    left: 73.5%;
+    top: 88.4%;
+    width: 100%;
     border-color: transparent;
 }
 
@@ -84,11 +84,11 @@
     font-size: 25px;
 }
 
-#registro{
+#sesion button{
     background-color: transparent;
     border-color: transparent;
 }
 
-a{
+button{
     color: #5e6a92;
 }

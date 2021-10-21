@@ -31,7 +31,7 @@ const detalleClientesModelos = require('../modelos/detalleCliente')
 const detalleUnidadMedidaModelos = require('../modelos/detalleUnidadMedida');
 const detalleRegistroEntradasModelos = require('../modelos/detalleRegistroEntradas');
 const detalleRegistroSalidasModelos = require('../modelos/detalleRegistroSalidas')
-const porsentajesModelos = require('../modelos/porcentajes')
+const porcentajesModelos = require('../modelos/porcentajes')
 
 const sequelize = new Sequelize(
   'fintech',
@@ -79,7 +79,7 @@ const detalleCliente = detalleClientesModelos(sequelize, Sequelize)
 const detalleUnidadMedidas =detalleUnidadMedidaModelos(sequelize, Sequelize)
 const detalleRegistroEntradas = detalleRegistroEntradasModelos(sequelize, Sequelize)
 const detalleRegistroSalidas = detalleRegistroSalidasModelos(sequelize,Sequelize)
-const porsentajes = porsentajesModelos(sequelize,Sequelize)
+const porcentajes = porcentajesModelos(sequelize,Sequelize)
 
 //Relaciones 
 //tienda-usuario
@@ -212,5 +212,5 @@ module.exports = {
   detalleRegistroEntradas,
   detalleRegistroSalidas,
   registroSalidas,
-  porsentajes
+  porcentajes
 }

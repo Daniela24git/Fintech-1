@@ -52,10 +52,10 @@ indexCtrl.mandar = async (req, res) => {
     } else {
         console.log("Ya existe")
     }
-    const porsentajes = await pool.query("SELECT * FROM porsentajes")
-    if (porsentajes.length == 0) {
-        const porsentaje = porsentajes[0]
-        if (porsentaje === undefined) {
+    const porcentajes = await pool.query("SELECT * FROM porcentajes")
+    if (porcentajes.length == 0) {
+        const porcentaje = porcentajes[0]
+        if (porcentaje === undefined) {
             for (let i = 1; i < 100; i++) {
                 let cont = 0;
                 let ids = 0
@@ -64,7 +64,7 @@ indexCtrl.mandar = async (req, res) => {
                 const contar = cont
                 const id = ids
                 if (cont < 100) {
-                    await pool.query("INSERT INTO porsentajes(idPorsentajes,porsentaje) VALUES (?,?)", [id, contar])
+                    await pool.query("INSERT INTO porcentajes(idPorCentaje,porcentaje) VALUES (?,?)", [id, contar])
                     console.log(" se guardo ")
                 }
             }
