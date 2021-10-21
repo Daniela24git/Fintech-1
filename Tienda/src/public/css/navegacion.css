@@ -1,3 +1,4 @@
+/*
 nav{
     position: absolute;
     top: 0%;
@@ -154,4 +155,24 @@ nav a{
     #nav5{
         top: 28%;
     }
+
+    #nav6{
+        top: 35%;
+        left: 0%;
+    }
+
+    #nav7{
+        top: 42%;
+    }
+}
+*/
+nav{
+    position: absolute;
+    max-height:  50px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+}
+.navegacion{
+    background-color: none;
 }

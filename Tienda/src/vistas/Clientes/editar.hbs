@@ -1,4 +1,35 @@
 <LINK REL=StyleSheet HREF="/css/clientes/clientesEditar.css" TYPE="text/css" MEDIA=screen>
+<div class="row mt-5">
+    <div class="col-4 "></div>
+    <div class="col-4 p-4 mt-5">
+        <form action="/clientes/editar/{{idClientes}}" method="POST">
+            <div class="border rounded " id="Formulario">
+                <div class="container">
+                    <label class="form-label text-primary m-2">Cédula <i class="bi bi-credit-card-2-front"></i></label>
+                    <input class="form-control" type="text" name="username" value="{{username}}">
+
+                    <label class="form-label text-primary">Nombre y Apellido <i class="bi bi-person-circle"></i></label>
+                    <input class="form-control" type="text" name="Nombres" value="{{Nombres}}">
+
+                    <label class="form-label text-primary">Dirección <i class="bi bi-geo"></i></label>
+                    <input class="form-control" type="text" name="Direccion" value="{{Direccion}}">
+
+                    <label class="form-label text-primary">Celular <i class="bi bi-phone"></i></label>
+                    <input class="form-control" type="text" name="Celular" id="precio" value="0{{Celular}}">
+
+                    <label class="form-label text-primary">Teléfono <i class="bi bi-telephone"></i></label>
+                    <input class="form-control" type="text" name="telefono" id="Cantidad" value="{{telefono}}">
+
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-outline-primary text-primaty ">Guardar </button>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+<!--
+<LINK REL=StyleSheet HREF="/css/clientes/clientesEditar.css" TYPE="text/css" MEDIA=screen>
  {{#each clientes}}
 <form action="/clientes/editar/{{idClientes}}" method="POST" id="f1">
      <p id="p">Editar Clientes</p>
@@ -27,3 +58,5 @@
     </div>
 </form>
 {{/each}}
+
+-->

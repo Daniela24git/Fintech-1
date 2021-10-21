@@ -48,7 +48,7 @@ ProductoEntradaCtrl.addEntrada = async (req, res) => {
 
 ProductoEntradaCtrl.renderProductos = async (req, res) => {
     const id = req.params.id
-    const DatosProducto = await sql.query("SELECT e.* FROM productoEntradas e  WHERE e.tiendaIdTiendas = ?", [id])
+    const DatosProducto = await sql.query("SELECT e.* FROM detalle_productosentrada e  WHERE e.tiendaIdTiendas = ?", [id])
     res.render("ProductosEntrada/lista", { DatosProducto })
 
 }

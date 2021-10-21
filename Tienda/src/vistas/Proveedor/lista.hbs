@@ -1,4 +1,57 @@
 <LINK REL=StyleSheet HREF="/css/proveedor/listaproveedor.css" TYPE="text/css" MEDIA=screen>
+<div class="row align-items-center mt-3">
+    <div class="col-8"></div>
+    <div class="col-3 p-4">
+        {{#each proveedores }}
+        <button id="masProveedor" class="btn-online-primary bg-light rounded-circle border-primary">
+            <a href="/proveedor/agregar/{{idProvedores}}" class="text-primary text-decoration-none fw-bold h5">
+                <img src="/img/iconos/mas01.png" id="mas"> Agregar
+            </a>
+        </button>
+        {{/each}}
+    </div>
+</div>
+<div class="row">
+    <form action="/proveedor/lista/{{user.idUsuarios}}" id="f1">
+        <div class="ml-5 mt-5 ">
+            <div class="card-group mt-2">
+                {{#each proveedores }}
+                <div class="col-3">
+                    <div id="car">
+                        <div class="card-body" >
+                            <div id="botonesproveedor">
+                                <a href="/proveedor/editar/{{idProvedores}}" class="ml-1"><i
+                                        class="bi bi-pencil-square text-success"></i></a>
+                                <a href="/proveedor/Eliminar/{{idProvedores}}" class="ml-1"><i
+                                        class="bi bi-person-x-fill text-danger"></i></a>
+                            </div>
+                            <h4 id="titulo">Datos Proveedor</h4>
+                            <input type="text" value="{{NombreProveedor}}" id="item" readonly>
+                            <input type="text" value="{{Direccion}}" id="item"  readonly>
+                            <input type="text" value="{{Celular}}" id="item"  readonly>
+                            <input type="text" value="{{Telefono}}" id="item"  readonly>
+                            <input type="text" value="{{Estado}}" id="item"  readonly>
+                            <a href="/ProductoEntrada/agregar/{{idProvedores}}"
+                                class="btn btn-outline-info" id="boton">Agregar un Producto<i
+                                    class="bi bi-bag-plus-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+            </div>
+
+            <div>
+                <p>¡No has registrado Proveedores.!</p>
+                <a href="/proveedor/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
+            </div>
+            {{/each}}
+        </div>
+    </form>
+</div>
+
+
+<!---
+<LINK REL=StyleSheet HREF="/css/proveedor/listaproveedor.css" TYPE="text/css" MEDIA=screen>
 <form action="/proveedor/lista/{{user.idUsuarios}}" id="f1">
     <div id="conetendor">
         <div class="row">

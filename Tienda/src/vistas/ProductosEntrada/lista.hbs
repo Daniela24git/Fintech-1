@@ -1,4 +1,80 @@
 <LINK REL=StyleSheet HREF="/css/productoEntrada/productoslista.css" TYPE="text/css" MEDIA=screen>
+<div class="nav position-absolute top-0 end-50 mr-5">
+    <a class="nav-item nav-link h5 text-light fw-bold bg-secondary m-2 rounded-pill"
+        href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entradas y Salidas</a>
+    <a class="nav-item nav-link h5 text-light fw-bold bg-secondary m-2 rounded-pill"
+        href="/productos/lista/{{user.idUsuarios}}">Bodega</a>
+</div>
+<div class="row">
+    <form action="/ProductoEntrada/lista/{{user.idUsuarios}}">
+        <div class="ml-2 mt-3 mr-5">
+            <div class="card-group ">
+                {{#each DatosProducto}}
+                <div class="col-4">
+                    <div class="container">
+                        <div id="car">
+                            <div class="card-body">
+                                <div  id="botonesProducto">
+                                    <a href="/ProductoEntrada/editar/{{idProductoEntradas}}" class="text-end"><i
+                                            class="bi bi-pencil-square text-success"></i></a>
+                                    <a href="/ProductoEntrada/Eliminar/{{idProductoEntradas}}"><i
+                                            class="bi bi-trash text-danger"></i></a>
+                                </div>
+                                <label class="h5">Código</label>
+                                <input class="form-control" type="text" value="{{codigo}}" readonly></input>
+
+                                <label class="h5">Producto</label>
+                                <input class="form-control" type="text" value="{{NombreProducto}}" readonly></input>
+
+                                <label class="h5">Unidad de medida</label>
+                                <input class="form-control" type="text" value="{{CantidadTotal}} {{unidadmedida}}"
+                                    readonly></input>
+
+                                <label class="h5">Unidades individuales</label>
+                                <input class="form-control" type="text" value="{{unidadCantidad}}" readonly></input>
+
+                                <label class="h5">Precio</label>
+                                <input class="form-control" type="text" value="{{precioTotal}}$" readonly></input>
+
+                                <label class="h5">Precio Unidad</label>
+                                <input class="form-control" type="text" value="{{precioUnidad}}$" readonly></input>
+                                
+                                <div id="vermas" style="display: none;">
+                                    <label class="h5">Precio Unidad</label>
+                                    <input class="form-control" type="text" value="{{precioUnidad}}$" readonly></input>
+
+                                    <label class="h5">Precio Unidad</label>
+                                    <input class="form-control" type="text" value="{{precioUnidad}}$" readonly></input>
+                                </div>
+                                
+                                <div id="espaciobotonmas">
+                                    <button type="button" class=" position-absolute btn btn-outline-success border-0 end-0 mr-4" id="botonvermas">Ver mas</button>                                    
+                                </div>
+                            </div>
+
+                            <!--
+                            <div id="agregarDetalleProducto">
+                                <a href="/detalleProducto/agregar/{{idProductoEntradas}}"><button>Detalles</button></a>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+                <div id="agregar">
+                    <div>
+                        <p>¡No has registrado Productos.!</p>
+                        <a href="/ProductoEntrada/agregar/{{user.idUsuarios}}">¡Introducir uno!</a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/js/vermas.js"></script>
+
+<!-- 
+   <LINK REL=StyleSheet HREF="/css/productoEntrada/productoslista.css" TYPE="text/css" MEDIA=screen>
 <form action="/ProductoEntrada/lista/{{user.idUsuarios}}">
     <nav id="nav">
         <div>
@@ -51,3 +127,4 @@
         </div>
     </div>
 </form>
+-->

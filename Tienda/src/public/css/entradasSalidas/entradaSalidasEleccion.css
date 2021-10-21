@@ -1,3 +1,4 @@
+/*
 #nav{
     position: absolute;
     left: 0%;
@@ -55,7 +56,9 @@
     max-width: 400px;
     max-height: 70px;
 }
-#eleccion2 button{
+
+buttons{
+    border: 0px;
     text-align: center;
     margin-top: 10px;
     border: 0px;
@@ -93,4 +96,32 @@
         top: 22%;
         left: 20%;
     }
+}
+
+
+*/
+
+#botones{
+    padding-top:15%;
+}
+
+#eleccion1{
+    position: absolute;
+    top: 45%;
+    left: 27%;
+}
+#eleccion1 a{
+width: 300px;
+height: 60px;
+padding-top: 16px;
+}
+#eleccion2{
+    position: absolute;
+    top: 45%;
+    left: 55%;
+}
+#eleccion2 a{
+    width: 300px;
+    height: 60px;
+    padding-top: 16px;
 }

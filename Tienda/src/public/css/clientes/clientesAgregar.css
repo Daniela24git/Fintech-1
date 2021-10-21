@@ -1,3 +1,11 @@
+#Formulario{
+    padding-top:1%;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom:20px;
+    background-color: rgb(255, 255, 255);
+}
+/*
 #f1{
     position: absolute;
     top: 15%;
@@ -94,3 +102,4 @@ label{
         left: 17%;
     }
 }
+*/

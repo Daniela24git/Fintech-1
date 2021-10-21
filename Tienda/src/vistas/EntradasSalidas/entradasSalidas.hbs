@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="/css/entradasSalidas/entradaSalidasEleccion.css">
+<div class="nav position-absolute top-0 end-50 mr-5">
+    <a class="nav-item nav-link h5 text-light fw-bold bg-secondary m-2 rounded-pill"
+        href="/ProductoEntrada/lista/{{user.idUsuarios}}">Productos</a>
+    <a class="nav-item nav-link h5 text-light fw-bold bg-secondary m-2 rounded-pill"
+        href="/productos/lista/{{user.idUsuarios}}">Bodega</a>
+</div>
 <form action="/entradaSalida/eleccion/{{user.idUsuarios}}" method="get">
-    <nav id="nav">
-        <div>
-            <a id="entradas" href="/productos/lista/{{user.idUsuarios}}">Bodega</a>
-            <a id="bodega" href="/ProductoEntrada/lista/{{user.idUsuarios}}">Productos</a>
-        </div>
-    </nav>
     <div id="eleccion1">
-        <button><a href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}">Registro de Entradas</a></button>
+        <a class="btn btn-primary rounded-pill " href="/entradaSalida/entradas/Lista/{{user.idUsuarios}}">Registro de Entradas</a>
     </div>
     <div id="eleccion2">
-        <button><a href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}">Registro de Salidas</a></button>
+        <a class="btn btn-primary rounded-pill " href="/entradaSalida/Salidas/Lista/{{user.idUsuarios}}">Registro de Salidas</a>
     </div>
 </form>

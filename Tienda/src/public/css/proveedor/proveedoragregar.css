@@ -1,3 +1,11 @@
+#Formulario{
+    padding-top:1%;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom:20px;
+    background-color: rgb(255, 255, 255);
+}
+/*
 #totalcontenido{
     background-color: white;
     border-color: black;
@@ -103,3 +111,4 @@ label{
         left: 13%;
     }
 }
+*/

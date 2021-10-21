@@ -1,4 +1,4 @@
-#avatar{
+/* #avatar01{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -114,12 +114,12 @@
     color: white;
 }
 
-label{
+labels{
     margin-left: 20px;
     color: black;
 }
 
-input{
+inputr{
     border-color: black;
 }
 
@@ -128,7 +128,7 @@ input{
     top: 120px;
 }
 
-#contenido{
+#contenidos{
     background-color: white;
     height: 400px;
     width: 500px;
@@ -137,4 +137,18 @@ input{
     left: 400px;
     border-color: black;
     border: 1px solid;
+}*/
+
+
+
+
+#avatar{
+    max-width: 120px;
+}
+#Formulario{
+    padding-top:1%;
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom:25px;
+    background-color: rgb(255, 255, 255);
 }
