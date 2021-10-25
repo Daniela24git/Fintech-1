@@ -1,20 +1,28 @@
-var i =0
-
-var boton =document.querySelector('#botonvermas').addEventListener('click', function(){
-    //alert('Funcionando');
-    if (!i) {
-        document.getElementById('vermas').style.display='inline';
-        document.getElementById('botonvermas').innerHTML='Ver menos';
-        document.getElementById('botonvermas').className = "position-absolute btn btn-outline-danger border-0 end-0 mr-4";
-
-
-        i=1
-    }else{
-        document.getElementById('vermas').style.display='none';
-        document.getElementById('botonvermas').innerHTML='Ver mas';
-        document.getElementById('botonvermas').className = "position-absolute btn btn-outline-success border-0 end-0 mr-4";
-
-        i=0
+class vermas{
+    constructor(){
+        this.verma = document.getElementById('vermas')
+        this.RegistroGuardar = document.getElementById('RegistroGuardar')
+        this.x = document.getElementById('x')
+        this.tabla = document.getElementById('tabla')
     }
+    inicio(){
+        this.RegistroGuardar.style.display = 'none'
+        this.x.style.display = 'none'
+        this.tabla.style.display = 'none'
+    }
+    cambio(){
+        this.RegistroGuardar.style.display = 'block'
+        this.x.style.display = 'block'
+        this.tabla.style.display = 'block'
+        this.verma.style.display = 'none'
+    }
+    devuelta(){
+        this.RegistroGuardar.style.display = 'none'
+        this.x.style.display = 'none'
+        this.tabla.style.display = 'none'
+        this.verma.style.display = 'block'
+    }
+}
 
-})
+let ver = new vermas()
+window.onload = ver.inicio()

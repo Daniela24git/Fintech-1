@@ -25,7 +25,7 @@
             {{/each}}
         </div>
         <div id="CantidadVenta">
-            <label id="">Cantidad de Venta</label>
+            <label id="">Cantidad Restante</label>
             {{#each listaDetalleUnidad}}
             <input type="text" name="cantidadVenta" id="cantidadVenta" value="{{cantidadMedida}}" required>
             {{/each}}
@@ -40,7 +40,7 @@
             <label id="">Porcentaje Ganancia:</label>
             <select name="porsentaje" id="porsentaje" onclick="porsentajes.calculo()">
                 {{#each porsentajes}}
-                <option value="{{this.porsentaje}}">{{this.porsentaje}}%</option>
+                <option value="{{this.porcentaje}}">{{this.porcentaje}}%</option>
                 {{/each}}
             </select>
         </div>

@@ -5,6 +5,7 @@ class calculo {
         this.precioVenta = document.getElementById('precioVenta')
         this.precioTotalVenta = document.getElementById('precioTotalVenta')
         this.cantidadVenta = document.getElementById('cantidadVenta')
+        this.cantidadVenta = document.getElementById('cantidadVenta')
     }
     calculo(){
         let a = parseFloat(this.precio.value)
@@ -20,7 +21,11 @@ class calculo {
         let c = b * a
         this.precioTotalVenta.value = c.toFixed(2)
     }
+    cantidad(){
+        this.cantidadVenta.value = this.cantidadVenta.value * 0.1
+    }
 }
 
 let porsentajes = new calculo()
 window.onload = porsentajes.calculo()
+window.onload = porsentajes.cantidad()

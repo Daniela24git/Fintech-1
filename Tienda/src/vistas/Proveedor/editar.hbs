@@ -1,68 +1,31 @@
 <LINK REL=StyleSheet HREF="/css/proveedor/editarproveedor.css" TYPE="text/css" MEDIA=screen>
-<div class="row mt-5">
-    <div class="col-4 "></div>
-    <div class="col-4 p-4 mt-5">
+<div id="contenedor">
+    <p id="p"> Editar Proveedor</p>
+    <div>
         {{#each proveedores}}
-        <form action="/proveedor/editar/{{idProvedores}}" method="POST">
-            <div class="border rounded " id="Formulario">
-                <div class="container">
-                    <label class="form-label text-primary m-2">Nombre <i class="bi bi-person-circle"></i></label>
-                    <input class="form-control" type="text" name="NombreProveedor" value="{{NombreProveedor}}">
-
-                    <label class="form-label text-primary">Dirección <i class="bi bi-geo"></i></label>
-                    <input class="form-control" type="text" name="Direccion" id="direccion" value="{{Direccion}}">
-
-                    <label class="form-label text-primary">Celular <i class="bi bi-phone"></i></label>
-                    <input class="form-control" type="text" name="Celular" id="celular" value="{{Celular}}">
-
-                    <label class="form-label text-primary">Teléfono <i class="bi bi-telephone"></i></label>
-                    <input class="form-control" type="text" name="Telefono" id="Telefono" value="{{Telefono}}">
-
-                    <label class="form-label text-primary">Estado </label>
-                    <input class="form-control" type="text" name="Estado" id="Estado" value="{{Estado}}">
-
-
-                    <div class="text-center mt-3">
-                        <button type="submit" class="btn btn-outline-primary text-primaty ">Guardar </button>
-                    </div>
-                </div>
+        <form action="/proveedor/editar/{{idProvedores}}" method="POST" id="f2">
+            <div id="NOMBRES">
+                <label id="lblnombre">Nombre:</label>
+                <input type="text" name="NombreProveedor" id="NombreProveedor" value="{{NombreProveedor}}">
             </div>
+            <div id="DIRECCION">
+                <label id="lbldir">Dirección:</label>
+                <input type="text" name="Direccion" id="direccion" value="{{Direccion}}">
+            </div>
+            <div id="CELULAR">
+                <label id="lblCelular">Celular:</label>
+                <input type="text" name="Celular" id="celular" value="{{Celular}}">
+            </div>
+            <div id="TELEFONO">
+                <label id="lblTelefono">Teléfono:</label>
+                <input type="text" name="Telefono" id="Telefono" value="{{Telefono}}">
+            </div>
+            <div id="ESTADO">
+                <label id="lblestado">Estado:</label>
+                <input type="text" name="Estado" id="Estado" value="{{Estado}}">
+            </div>
+            <button type="submit" id="guardar">Editar</button>
         </form>
         {{/each}}
     </div>
 </div>
-<!--
-<LINK REL=StyleSheet HREF="/css/proveedor/editarproveedor.css" TYPE="text/css" MEDIA=screen> 
-<div id="contenedor">
-    <p id="p"> Editar Proveedor</p>
-    <div id="contenedor_1">
-        <div>
-            {{#each proveedores}}
-            <form action="/proveedor/editar/{{idProvedores}}" method="POST" id="f2">
-                <div id="NOMBRES">
-                    <label id="lblnombre" >Nombre:</label>
-                    <input type="text" name="NombreProveedor" id="NombreProveedor" value="{{NombreProveedor}}">
-                </div>
-                <div id="DIRECCION">
-                    <label id="lbldir" >Dirección:</label>
-                    <input type="text" name="Direccion" id="direccion" value="{{Direccion}}">
-                </div>
-                <div id="CELULAR">
-                    <label id="lblCelular">Celular:</label>
-                    <input type="text" name="Celular" id="celular" value="{{Celular}}">
-                </div>
-                <div id="TELEFONO">
-                    <label id="lblTelefono">Teléfono:</label>
-                    <input type="text" name="Telefono" id="Telefono" value="{{Telefono}}">
-                </div>
-                <div id="ESTADO">
-                    <label id="lblestado">Estado:</label>
-                    <input type="text" name="Estado" id="Estado" value="{{Estado}}">
-                </div>
-                <button type="submit" id="guardar">Editar</button>
-            </form>
-            {{/each}}
-        </div>
-    </div>
-</div>
--->

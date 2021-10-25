@@ -1,34 +1,19 @@
-#avatar01{
-    display: flex;
-    flex-wrap: wrap;
+#datosUsuario{
+    background-color: white;
     width: 100%;
-    height: auto;
-    max-width: 150px;
+    height: 100%;
+    max-width: 10%;
+    max-height: 20%;
     position: absolute;
-    left: 87%;
-    top: 13%;
-    background-color: #17a2b8;
-    border: 1px solid black;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+    left: 88%;
+    top: 10%;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
-#datosUsuario{
-    position: absolute;
-    left: 87%;
-    top: 30%;
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    max-height: auto;
-    text-align: center;
-    background-color: white;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    overflow: hidden;
+#avatar{
+    width: 80%;
 }
 
 #dato{
@@ -128,7 +113,7 @@ input{
     top: 120px;
 }
 
-#contenidos{
+#contenido{
     background-color: white;
     height: 400px;
     width: 500px;

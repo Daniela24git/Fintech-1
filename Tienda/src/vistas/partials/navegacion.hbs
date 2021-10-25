@@ -1,33 +1,20 @@
 <link rel="stylesheet" href="/css/navegacion.css">
 {{#if user}}
-<nav class="navbar navbar-expand-lg navbar-light" id="navegacion">
-  <div class="container-fluid">
-    <a class="navbar-brand">
-      <img src="/img/logo3.png" alt="logo" style="width: 110px; ">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav  w-100 justify-content-end text-light fw-bold">
-           <!-- <a class="nav-item nav-link  h5 text-light bg-primary fw-bold m-2 rounded-pill"
-              href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entrada-Salida</a> -->
-            <a class="nav-item nav-link  h5 text-light fw-bold bg-primary m-2 rounded-pill"
-              href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
-            <a class="nav-item nav-link  h5 text-light fw-bold bg-primary m-2 rounded-pill"
-              href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Inventario</a>
-            <a class="nav-item nav-link  h5 text-light fw-bold bg-primary m-2 rounded-pill"
-              href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
-            <a class="nav-item nav-link  h5 text-light fw-bold bg-primary m-2 rounded-pill"
-              href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
-            <a class="nav-item nav-link  h5 text-light fw-bold bg-primary m-2 rounded-pill" href="/CerrarSecion">Cierre
-              la Sesión</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<nav>
+  <div id="nav1">
+    <a id="nav" href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
+  </div>
+  <div id="nav2">
+    <a href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Inventario</a>
+  </div>
+  <div id="nav3">
+    <a href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
+  </div>
+  <div id="nav4">
+    <a href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
+  </div>
+  <div id="nav5">
+    <a href="/CerrarSecion">Cierre la Sesión</a>
+  </div>
 </nav>
 {{/if}}

@@ -1,54 +1,3 @@
-<LINK REL=StyleSheet HREF="/css/clientes/clientesLista.css" TYPE="text/css" MEDIA=screen>
-<div class="row align-items-center mt-2">
-    <div class="col-8"></div>
-    <div class="col-3 mt-4 p-4">
-        <button id="masCliente" class="btn-online-primary bg-light rounded-circle border-primary">
-            <a href="/clientes/agregar/{{user.idUsuarios}}">
-                <img src="/img/iconos/mas01.png" id="mas"> Agregar
-            </a>
-        </button>
-    </div>
-</div>
-
-<div class="row">
-    <form action="/clientes/lista/{{user.idUsuarios}}">
-        <div class="ml-2 mt-3 mr-5">
-            <div class="card-group ">
-                {{#each clientes}}
-                <div class="col-3">
-                    <div class="container">
-                        <div id="car">
-                            <div class="card-body" >
-                                <div  id="botonescliente">
-                                    <a href="/clientes/editar/{{idClientes}} " class="text-end"><i
-                                            class="bi bi-pencil-square text-success"></i></a>
-                                    <a href="/clientes/Eliminar/{{idClientes}}"><i
-                                            class="bi bi-person-x-fill text-danger"></i></a>
-                                </div>
-                                <label>Cedula</label>
-                                <input class="form-control" type="text" value="{{username}}" id="codigo"
-                                    readonly></input>
-                                <label>Nombres</label>
-                                <input class="form-control" type="text" value="{{Nombres}}" id="nombres"
-                                    readonly></input>
-                                <label>Dirección</label>
-                                <input class="form-control" type="text" value="{{Direccion}}" id="Direccion"
-                                    readonly></input>
-                                <label>Celular</label>
-                                <input class="form-control" type="text" value="{{Celular}}" id="celular"
-                                    readonly></input>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
-        </div>
-    </form>
-
-</div>
-
-<!--
 <form action="/clientes/lista/{{user.idUsuarios}}"></form>
 <LINK REL=StyleSheet HREF="/css/clientes/clientesLista.css" TYPE="text/css" MEDIA=screen>
 <div id="contenedor">
@@ -89,4 +38,3 @@
     </div>
 </div>
 </form>
-    -->
