@@ -81,7 +81,8 @@ label{
 #porsentaje{
     position: absolute;
     left: 320px;
-    width: 100%;
+    width: 105%;
+    text-align: center;
 }
 
 #productos{
