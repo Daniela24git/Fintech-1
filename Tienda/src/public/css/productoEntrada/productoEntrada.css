@@ -70,7 +70,8 @@ label{
 #categoria{
     position: absolute;
     left: 300px;
-    width: 252px;
+    width: 273px;
+    text-align: center;
 }
 
 #consumibles{
@@ -81,7 +82,8 @@ label{
 #unidadMedida{
     position: absolute;
     left: 300px;
-    width: 252px;
+    width: 273px;
+    text-align: center;
 }
 
 #PrecioActual{

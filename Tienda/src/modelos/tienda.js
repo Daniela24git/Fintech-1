@@ -5,7 +5,7 @@ const tienda = (sequelize, type)=>{
             primaryKey: true,
             autoIncrement: true
         },
-        ruc: type.INTEGER(13),
+        ruc: type.STRING,
         nombreNegocio: type.STRING,
         fechaCreacion: type.STRING,
         direccion: type.STRING,

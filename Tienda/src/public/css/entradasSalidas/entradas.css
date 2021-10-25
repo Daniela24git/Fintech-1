@@ -1,13 +1,13 @@
 #fechas{
     border: 1px solid black;
     position: absolute;
-    left: 80px;
+    left: 115px;
 }
 
 #codigoDocumento{
     border: 1px solid black;
     position: absolute;
-    left: 205px;
+    left: 213px;
 }
 
 #Tienda{
@@ -76,7 +76,7 @@ button{
 }
 
 #NombreProveedor{
-    width: 250px;
+    width: 273px;
     text-align: center;
     border: 1px solid black;
     position: absolute;

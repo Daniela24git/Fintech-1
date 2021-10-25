@@ -76,6 +76,12 @@
     left: 13%;
 }
 
+#boton button{
+    background-color:#5e6a92;
+    border-color: transparent;
+    color: white;
+}
+
 #boton button:focus{
     border-radius: 6px solid #233675;
 }
