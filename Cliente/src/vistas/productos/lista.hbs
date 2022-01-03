@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/productos/lista.css">
 {{#each tienda}}
-<form action="/Compra/listaCompleta/{{id}}">
+<form action="/Compra/listaCompleta/{{idTiendas}}">
 {{/each}}
     <table id="tabla">
         <tr>
@@ -11,7 +11,7 @@
         {{#each lista}}
         <tr>
             <td id="Producto"><input type="text" name="Nombre" value="{{NombreProducto}}" readonly></td>
-            <td id="Cantidad"><input type="texto" name="Cantidad" id="cantidaes" value="{{Cantidad}}" min="1" max="{{Cantidad}}" onclick="listas.modificar()"></td>
+            <td id="Cantidad"><input type="texto" name="Cantidad" id="cantidaes" value="{{Cantidad}}" readonly></td>
             <td id="precio"><input type="text" name="Precio" value="{{Precio}}" readonly id="precios"></td>
             <td><button><a href="/producto/Compra/Eliminar/{{id}}">Eliminar</a></button></td>
         </tr>
@@ -27,9 +27,11 @@
         <tr>
             <td id="nombres"><p id="nombre">Confirmar Compra</p></td>
             <td></td>
-            <td><button id="boton"><a href="/formaPago/notaVenta">Comprar</a></button></td>
+            {{#each tienda}}
+            <td><button id="boton"><a href="/formaPago/notaVenta/{{idTiendas}}">Comprar</a></button></td>
+            {{/each}}
         </tr>
     </table>
 </form>
 
-<script src="/js/listaCompleta.js"></script>
+<script src="/js/calculoPrecio.js"></script>

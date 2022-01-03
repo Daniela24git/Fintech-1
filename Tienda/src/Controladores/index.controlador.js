@@ -21,7 +21,7 @@ indexCtrl.mandar = async (req, res) => {
             await pool.query("CREATE VIEW detalle_productosentrada as select uni.unidadmedida, pro.* from productoentradas as pro join unidadmedidas uni on uni.idunidadmedidas = pro.unidadMedidaIdUnidadMedidas")
             await pool.query("INSERT INTO categorias(idCategorias	, categoria) VALUES (1, 'Consumible')")
             await pool.query("INSERT INTO categorias(idCategorias	, categoria) VALUES (2, 'No consumible')")
-            await pool.query("INSERT INTO  categorias(idCategorias	, categoria) VALUES (3, 'Bebidas')")
+            await pool.query("INSERT INTO categorias(idCategorias	, categoria) VALUES (3, 'Bebidas')")
             console.log(" se guardo ")
         }
     } else {

@@ -10,9 +10,8 @@ compra.traer = async(req,res)=>{
 }
 
 compra.Mandar = async(req, res) =>{
-    const id = req.params.id
     const ids = req.user.idClientes
-    const{ Cantidad, Precio, productoCantidad, idListaProductos} = req.body
+    const{id, Cantidad, Precio, productoCantidad, idListaProductos} = req.body
     const nuevaLista = {
         Cantidad,
         Precio,
@@ -23,7 +22,7 @@ compra.Mandar = async(req, res) =>{
         productoCantidad
     }
     await orm.detalleListaProductos.create(nuevaLista)
-    await orm.productos.findOne({ where: { productoEntradaIdProductoEntradas: ids } })
+    await orm.productos.findOne({ where: { productoEntradaIdProductoEntradas: id } })
         .then(productos => {
             productos.update(nuevaCantidad)
             req.flash('success', 'Se añadio Correctamente');

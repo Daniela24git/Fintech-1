@@ -5,6 +5,6 @@ const {traer} = require("../controladores/formaPago.controlador")
 
 const {isLoggedIn} = require("../lib/auth")
 
-rutas.get("/notaVenta", isLoggedIn, traer)
+rutas.get("/notaVenta/:id", isLoggedIn, traer)
 
 module.exports = rutas

@@ -7,7 +7,7 @@ lista.mostrar = (req, res) => {
 }
 
 lista.Lista = async (req, res) => {
-    const {id} = req.params
+    const id = req.params.id
     const lista = await pool.query("SELECT NombreProducto, Cantidad, Precio  FROM listacompras ")
     const tienda = await pool.query("SELECT * FROM  tiendas WHERE idTiendas = ?", [id])
     res.render("productos/lista", { lista, tienda });

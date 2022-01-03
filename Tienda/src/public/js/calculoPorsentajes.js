@@ -22,7 +22,7 @@ class calculo {
         this.precioTotalVenta.value = c.toFixed(2)
     }
     cantidad(){
-        this.cantidadVenta.value = this.cantidadVenta.value * 0.1
+        this.cantidadVenta.value = parseInt(this.cantidadVenta.value * 0.1)
     }
 }
 

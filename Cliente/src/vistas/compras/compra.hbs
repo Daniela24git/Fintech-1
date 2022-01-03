@@ -9,7 +9,8 @@
     <div id="contenedor">
         {{#each producto}}
         <div id="Nombres">
-            <label id="">Producto:</label>
+            <label id="">Producto</label>
+            <input id="id" type="text" name="id" value="{{idProductoEntradas}}"readonly></input>
             <input type="text" name="NombreProducto" id="nombres" value="{{NombreProducto}}" readonly>
         </div>
         <div id="Cantidades">
@@ -29,7 +30,7 @@
             </div>
             <div id="cantidadVentas">
                 <label id="cu">Cantidad Unidad:</label>
-                <input type="text" name="cantidadVenta" id="cantidadVenta" value="{{cantidadVenta}}" readonly>
+                <input type="text" name="cantidadVenta" id="cantidadVenta" value="{{productoCantidad}}" readonly>
             </div>
             <input type="text" name="productoCantidad" id="productoCantidad" readonly>
         </div>

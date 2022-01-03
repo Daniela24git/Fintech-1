@@ -26,17 +26,10 @@ entradaSalida.mandarEntrada = async (req, res) => {
         usuarioIdUsuarios: ids,
         creacionRegistroEntradas: fecha 
     }
-
-    const nuevaDetalleEntrada = {
-        entraCantidad,
-        cantidadRestante,
-        creacionRegistroEntradas: fecha,
-        registroEntradaIdRegistroEntradas: idRegistroEntradas,
-        productoEntradaIdProductoEntradas: productoEntradaIdProductoEntradas   
-    }
-
     await orm.registroEntradas.create(nuevaEntrada)
-    await orm.detalleRegistroEntradas.create(nuevaDetalleEntrada)
+    for(let i = 0; i < productoEntradaIdProductoEntradas.length; i++){
+        await sql.query('INSERT INTO detalleregistroentradas(entraCantidad,cantidadRestante,creacionRegistroEntradas,registroEntradaIdRegistroEntradas,productoEntradaIdProductoEntradas) VALUES (?,?,?,?,?)',[entraCantidad[i],cantidadRestante[i],fecha,idRegistroEntradas,productoEntradaIdProductoEntradas[i]])
+    }
     req.flash('success', 'Exito al Guardar')
     res.redirect('/entradaSalida/entradas/Lista/' + ids);
 }
@@ -50,9 +43,9 @@ entradaSalida.listaEntrada = async (req, res) => {
 entradaSalida.detallelistaEntrada = async (req, res) => {
     const id = req.params.id
     const lista = await sql.query('SELECT * FROM detatalleentradaproductos WHERE registroEntradaIdRegistroEntradas = ?', [id])
-    res.render('EntradasSalidas/entradas/detalleLista', { lista });
+    res.render('EntradasSalidas/entradas/detalleLista', { lista }); 
 }
-
+ 
 entradaSalida.mostrarSalida = async (req, res) => {
     const ids = req.user.idUsuarios
     const id = req.params.id
@@ -73,18 +66,10 @@ entradaSalida.MandarSalida = async (req, res) => {
         clienteIdClientes: clienteIdClientes, 
         usuarioIdUsuarios: ids
     }
-    const nuevoDetalleSalida = {
-        creacionDetalleRegistroSalidas: fecha,
-        salidaCantidad,
-        ventaCantidad,
-        cantidadRestante,
-        Precio,
-        productoIdProductos: productoIdProductos,
-        registroSalidaIdRegistroSalidas: idregistros
-    }
-
     await orm.registroSalidas.create(nuevaSalida)
-    await orm.detalleRegistroSalidas.create(nuevoDetalleSalida)
+    for(let i = 0; i < productoIdProductos.length; i++){
+        await sql.query('INSERT INTO detalleregistrosalidas(Precio,ventaCantidad,salidaCantidad,cantidadRestante,creacionDetalleRegistroSalidas,productoIdProductos,registroSalidaIdRegistroSalidas) VALUES (?,?,?,?,?,?,?)',[Precio[i],ventaCantidad[i],salidaCantidad,cantidadRestante[i],fecha,productoIdProductos,idregistros ])
+    }
     req.flash('success', 'Exito al Guardar')
     res.redirect('/entradaSalida/Salidas/Lista/' + ids);
 }

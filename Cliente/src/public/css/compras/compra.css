@@ -8,6 +8,10 @@
     background-color: white;
     color: black;
 }
+#id{
+    width: 100%;
+    max-width: 5%;
+}
 
 input{
     border-color: transparent;
