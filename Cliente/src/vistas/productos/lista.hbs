@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/productos/lista.css">
 {{#each tienda}}
-<form action="/Compra/listaCompleta/{{idTiendas}}">
+<form action="/Compra/listaCompleta/{{idTiendas}}" method="get">
 {{/each}}
     <table id="tabla">
         <tr>
@@ -21,17 +21,21 @@
             <td></td>
             <td><input type="text" name="" id="total"></td>
         </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td id="nombres"><p id="nombre">Confirmar Compra</p></td>
-            <td></td>
-            {{#each tienda}}
-            <td><button id="boton"><a href="/formaPago/notaVenta/{{idTiendas}}">Comprar</a></button></td>
-            {{/each}}
-        </tr>
+<input type="button" id="confirmar" onclick="elecciones.aparacion()" value="confirmar">
     </table>
 </form>
 
+<div id="eleccion">
+    <button type="button" onclick="elecciones.desaparicion()">X</button>
+     {{#each tienda}}
+    <div id="notaVenta">
+     <a href="/formaPago/notaVenta/{{idTiendas}}">Nota de Venta</a>
+    </div>
+    <div id="Factura">
+        <a href="/formaPago/notaVenta/{{idTiendas}}">Factura</a>
+    </div>
+    {{/each}}
+</div>
+
 <script src="/js/calculoPrecio.js"></script>
+<script src="/js/eleccion.js"></script>

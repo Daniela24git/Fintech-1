@@ -200,25 +200,18 @@ notaVenta.belongsTo(tienda)
 cliente.hasMany(notaVenta)
 notaVenta.belongsTo(cliente)
 
-productos.hasMany(notaVenta)
-notaVenta.belongsTo(productos)
-
-detalleListaProductos.hasMany(notaVenta)
-notaVenta.belongsTo(detalleListaProductos)
+listaProductos.hasMany(notaVenta)
+notaVenta.belongsTo(listaProductos)
 
 //factura
-
 tienda.hasMany(factura)
 factura.belongsTo(tienda)
 
 cliente.hasMany(factura)
 factura.belongsTo(cliente)
 
-productos.hasMany(factura)
-factura.belongsTo(productos)
-
-detalleListaProductos.hasMany(factura)
-factura.belongsTo(detalleListaProductos)
+listaProductos.hasMany(factura)
+factura.belongsTo(listaProductos)
 
 module.exports = {
   usuarios,

@@ -32,6 +32,8 @@ const detalleUnidadMedidaModelos = require('../modelos/detalleUnidadMedida');
 const detalleRegistroEntradasModelos = require('../modelos/detalleRegistroEntradas');
 const detalleRegistroSalidasModelos = require('../modelos/detalleRegistroSalidas')
 const porcentajesModelos = require('../modelos/porcentajes')
+const notaVentaModelo = require('../modelos/NotaVenta')
+const FacturaModelo = require('../modelos/factura')
 
 const sequelize = new Sequelize(
   'fintech',
@@ -80,6 +82,9 @@ const detalleUnidadMedidas =detalleUnidadMedidaModelos(sequelize, Sequelize)
 const detalleRegistroEntradas = detalleRegistroEntradasModelos(sequelize, Sequelize)
 const detalleRegistroSalidas = detalleRegistroSalidasModelos(sequelize,Sequelize)
 const porcentajes = porcentajesModelos(sequelize,Sequelize)
+const notaVenta = notaVentaModelo(sequelize, Sequelize)
+const factura = FacturaModelo(sequelize, Sequelize)
+
 
 //Relaciones 
 //tienda-usuario
@@ -194,6 +199,33 @@ detalleRegistroSalidas.belongsTo(productos)
 registroSalidas.hasMany(detalleRegistroSalidas)
 detalleRegistroSalidas.belongsTo(registroSalidas)
 
+//nota Venta
+tienda.hasMany(notaVenta)
+notaVenta.belongsTo(tienda)
+
+cliente.hasMany(notaVenta)
+notaVenta.belongsTo(cliente)
+
+productos.hasMany(notaVenta)
+notaVenta.belongsTo(productos)
+
+detalleListaProductos.hasMany(notaVenta)
+notaVenta.belongsTo(detalleListaProductos)
+
+//factura
+
+tienda.hasMany(factura)
+factura.belongsTo(tienda)
+
+cliente.hasMany(factura)
+factura.belongsTo(cliente)
+
+productos.hasMany(factura)
+factura.belongsTo(productos)
+
+detalleListaProductos.hasMany(factura)
+factura.belongsTo(detalleListaProductos)
+
 module.exports = {
   usuarios,
   categoria,
@@ -212,5 +244,7 @@ module.exports = {
   detalleRegistroEntradas,
   detalleRegistroSalidas,
   registroSalidas,
-  porcentajes
+  porcentajes,
+  notaVenta,
+  factura
 }

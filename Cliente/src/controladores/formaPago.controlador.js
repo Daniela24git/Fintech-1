@@ -9,7 +9,22 @@ formaPago.traer = async(req,res)=>{
     const datos = await sql.query("SELECT * FROM tiendas where idTiendas = ?", [id])
     const cliente = await sql.query("SELECT * FROM clientes where idClientes = ?", [ids])
     const lista = await sql.query("SELECT * FROM listacompras")
-    res.render("formasPago/notaVenta", {datos, cliente, lista});
+    const unico = await sql.query("SELECT DISTINCT(listaProductoIdListaProductos) FROM listacompras where clienteIdClientes =?", [ids])
+    const numero = await sql.query("select max(idNotaVenta) from notaventas")
+    res.render("formasPago/notaVenta", {datos, cliente, lista, numero, unico});
 }
 
-module.exports=formaPago
+formaPago.Mandar = async(req, res)=>{
+    const {valorTotal, numero, idTiendas, idclientes, listaProductoIdListaProductos} = req.body
+    const ingreso = {
+        idNotaVenta: numero,
+        valorTotal: valorTotal,
+        tiendaIdTiendas: idTiendas,
+        clienteIdClientes: idclientes,
+        listaProductoIdListaProductos: listaProductoIdListaProductos,
+    }
+    await orm.notaVenta.create(ingreso)
+     res.redirect('/perfilCliente'+ idclientes);
+}
+
+module.exports = formaPago

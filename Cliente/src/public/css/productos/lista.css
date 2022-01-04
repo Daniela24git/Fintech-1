@@ -1,10 +1,6 @@
 #img{
     width: 30px;
 }
-#boton{
-  width: 100%; 
-  font-size: 30px; 
-}
 
 #tabla{
     position: absolute;
@@ -15,3 +11,7 @@
     text-align: center;
 }
 
+#eleccion{
+  background-color: aqua;
+  position: absolute;
+}
