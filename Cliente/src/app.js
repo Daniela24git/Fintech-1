@@ -69,6 +69,7 @@ app.use('/productos', require('./rutas/Categoria.rutas'));
 app.use('/Compra', require('./rutas/lista.rutas'));
 app.use('/Compras', require('./rutas/compras.rutas'));
 app.use('/formaPago', require('./rutas/formasPago.rutas'));
+app.use('/perfil', require('./rutas/perfil'))
 
 
 module.exports = app; 

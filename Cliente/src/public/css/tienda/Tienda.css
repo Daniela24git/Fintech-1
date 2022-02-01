@@ -7,6 +7,27 @@ button{
     overflow: hidden;
     display: flex;
 }
+
+#Perfil{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+#perfil{
+    width: 100%;
+    max-width: 100px;
+    position: absolute;
+    top: 5px;
+    left: 92%;
+}
+
+#contenido{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    width: 90%;
+}
+
 #contenido .row{
     padding: 10px;
     gap: 20px;

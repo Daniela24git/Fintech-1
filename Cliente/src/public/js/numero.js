@@ -3,10 +3,11 @@ class optencion {
         this.numero = document.getElementById('numero')
     }
     cambio(){
-        if(this.numero === null){
+        if(this.numero.value == ''){
             this.numero.value = 1
         }else{
-            this.numero.value = this.numero.value + 1
+            let a = parseInt(this.numero.value)
+            this.numero.value = a + 1
         }
     }
 }

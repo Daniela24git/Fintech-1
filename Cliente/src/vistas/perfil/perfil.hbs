@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="/css/perfil/cliente.css">
+<form action="/perfil/Cliente/{{user.idClientes}}" method="get"></form>
+<div id="cerrar">
+    <a href="/cerrarSecion"><button type="button" id="Cerrar">Cerrar Sesión</button></a>
+</div>
+<div id="tienda">
+    <a href="/tienda/lista"><button type="button" id="Tienda">Tiendas</button></a>
+</div>
+<div id="cliente">
+    <div id="Foto">
+        <img src="/img/avatar.png" id="foto">
+    </div>
+    <div id="datos">
+        {{#each cliente}}
+        <div id="Cedula">
+            <label id="">Cedula:</label>
+            <input type="text" name="cedula" id="cedula" value="{{username}}" readonly>
+        </div>
+        <div id="Nombres">
+            <label id="">Nombres:</label>
+            <input type="text" name="cliente" id="Nombre" value="{{Nombres}}" readonly>
+        </div>
+        <div id="Direccion">
+            <label id="">Direccion:</label>
+            <input type="text" name="direccion" id="direccion" value="{{Direccion}}" readonly>
+        </div>
+        <div id="Celular">
+            <label id="">Celular:</label>
+            <input type="text" name="celular" id="celular" value="{{Celular}}" readonly>
+        </div>
+        <div id="Telefono">
+            <label id="">Telefono:</label>
+            <input type="text" name="telefono" id="telefono" value="{{telefono}}" readonly>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div id="notaVenta">
+    <div id="Titulo">
+        <label>Notas de Venta</label>
+    </div>
+    <div class="row">
+        {{#each nota}}
+        <div id="Ntarjeta">
+            <div id="Numero">
+                <label >N° Nota de Venta:</label>
+                <input type="text" name="id" id="id" value="{{idNotaVenta}}" readonly>
+            </div>
+            <div id="Fecha">
+                <label>Fecha Emición:</label>
+                <input type="text" name="fecha" id="fecha" value="{{creacionNotaVentas}}" readonly>
+            </div>
+            <div id="Valor">
+                <label>Valor:</label>
+                <input type="text" name="valor" id="valor" value="{{valorTotal}}" readonly>
+            </div>
+            <div id="boton">
+                <button type="button"><a href="">Detalle</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div id="Facrura">
+    <div id="Titulo">
+        <label>Facturas</label>
+    </div>
+    <div class="row">
+        {{#each Facturas}}
+        <div id="Ntarjetas">
+            <div id="Numero">
+                <label >N° Factura:</label>
+                <input type="text" name="id" id="id" value="{{idFactura}}" readonly>
+            </div>
+            <div id="Fecha">
+                <label>Fecha Emición:</label>
+                <input type="text" name="fecha" id="fecha" value="{{creacionFactura}}" readonly>
+            </div>
+            <div id="Valor">
+                <label>Valor:</label>
+                <input type="text" name="valor" id="valor" value="{{valorTotal}}" readonly>
+            </div>
+            <div id="boton">
+                <button type="button"><a href="">Detalle</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
