@@ -69,4 +69,12 @@ clienteCtrl.editCliente = async (req,res) => {
     })
 }
 
+clienteCtrl.Perfil = async (req, res) => {
+    const ids = req.user.idUsuarios
+    const cliente = await sql.query("SELECT * FROM clientes where idClientes = ?", [ids])
+    const nota = await sql.query("select * from notaventas where clienteIdClientes = ?", [ids])
+    const Facturas = await sql.query("select * from facturas where clienteIdClientes = ?", [ids])
+    res.render('Clientes/Perfil',{cliente, nota, Facturas})
+}
+
 module.exports = clienteCtrl;
