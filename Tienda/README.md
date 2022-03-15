@@ -1,3 +1,3 @@
 Sabias q el 5% de pérdidas de una tienda se basa en caducidad y la acumulación de los productos afectando la entrada y salida de estos mismos, provocando una insatisfacción del cliente al momento de adquirir los productos, perjudicando al negocio en un 50%. 
 
-Por lo cual automatizaremos el registro de cada uno de los productos con un tiempo de registro, evitando la caducidad y acumulación de productos, con un registro de proveedores, clientes, contando con un registros de Entresas y Salidas de los productos de esta manera reduciendo los porcentajes de perdidas q se generen en la tienda.
+Por lo cual automatizaremos el registro de cada uno de los productos con un tiempo de registro, evitando la caducidad y acumulación de productos, con un registro de proveedores, clientes, contando con un registros de Entresas y Salidas de los productos de esta manera reduciendo los porcentajes de perdidas q se generan en las tiendas.
