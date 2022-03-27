@@ -23,10 +23,18 @@ label{
     position: absolute;
     top: 230px;
     left: 450px;
-    background-color: white;
+    background-image: url(/img/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;  
     width: 500px;
     height: 205px;
-    border: 1px solid black;
+    border: 1px solid rgb(252, 252, 252);
+    box-shadow: 0 0 10px white;
+    color:rgb(112, 136, 182);
+    border-radius: 5px;
+
 }
 
 #usuarios{
@@ -37,7 +45,11 @@ label{
 #Nombre{
     position: absolute;
     left: 170px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
+    border-radius: 4px;
+
 }
 
 #contraseñas{
@@ -48,7 +60,11 @@ label{
 #Contraseña{
     position: absolute;
     left: 170px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
+    border-radius: 4px;
+
 }
 
 #flecha{
@@ -56,16 +72,22 @@ label{
     display: block;
     margin: auto;
 }
-
-#boton{
-    background-color: rgb(75, 115, 236);
-    border-color: black;
-    width: 100%;
-    border-radius: 0px;
+#boton{    
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border-color: #ffff;
+    width: 100.5%;
+    border-radius: 4px;
     position: absolute;
-    top: 150px;
-    left: 0px;
+    top: 147px;
+    left: -1px;
 }
+#boton:focus{
+    outline: none;
+}
+#boton:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #8e9bfc 100%);
+}
+/*
 #sesion{
     position: absolute;
     top: 40px;
@@ -74,7 +96,58 @@ label{
     font-size: 32px;
     font-family: fantasy;
     font-style: italic;
+}*/
+#sesion{
+    position: absolute;
+    top: 40px;
+    left: 1150px;
+    color: #fff;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;    
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
 }
+#sesion a{
+    text-decoration: none;
+    color: #ffff;
+}
+#sesion:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+#sesion:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+  
+#sesion:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 
 @media(max-width: 1125px){
     #contenedor{

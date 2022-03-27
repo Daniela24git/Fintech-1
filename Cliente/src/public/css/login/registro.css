@@ -22,10 +22,17 @@ label{
     position: absolute;
     top: 230px;
     left: 450px;
-    background-color: white;
+    background-image: url(/img/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;  
     width: 500px;
     height: 205px;
-    border: 1px solid black;
+    border: 1px solid rgb(252, 252, 252);
+    box-shadow: 0 0 10px white;
+    color:rgb(112, 136, 182);
+    border-radius: 5px;
 }
 
 #usuarios{
@@ -36,7 +43,11 @@ label{
 #Nombre{
     position: absolute;
     left: 170px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
+    border-radius: 4px;
+
 }
 
 #contraseñas{
@@ -47,22 +58,37 @@ label{
 #Contraseña{
     position: absolute;
     left: 170px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
+    border-radius: 4px;
+
 }
 #guardar{
     max-width: 50px;
     display: block;
     margin: auto;
 }
-#boton{
-    background-color: rgb(75, 115, 236);
-    border-color: black;
-    width: 100%;
-    border-radius: 0px;
+#boton{    
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border-color: #ffff;
+    width: 100.5%;
+    border-radius: 4px;
     position: absolute;
-    top: 150px;
-    left: 0px;
+    top: 147px;
+    left: -1px;
 }
+#boton:focus{
+    outline: none;
+}
+#boton:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #8e9bfc 100%);
+}
+#boton img{
+    padding-top: 2px;
+    flood-opacity: 20%;
+}
+
 
 @media(max-width: 1125px){
     #contenedor{

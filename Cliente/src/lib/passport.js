@@ -29,7 +29,7 @@ passport.use(
         return done(
           null,
           false,
-          req.flash("message", "El usuario no extixte")
+          req.flash("message", "El usuario no existe")
         );
       }
     }

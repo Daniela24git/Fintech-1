@@ -1,41 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
 #contenido{
     position: absolute;
-    top: 17%;
-    left: 20%;
+    top: 15%;
+    left: 14%;
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: #ffffff;
-    border: 1px solid black;
-    border-radius: 50%;
-    max-width: 900px;
-    max-height: 400px;
+    /*
+    background: rgb(175,211,242);
+    background: linear-gradient(90deg, rgba(175,211,242,1) 0%, rgba(255,255,255,1) 51%, rgba(175,211,242,1) 100%);    
+    
+    */
+    border-radius: 60%;
+    box-shadow: 0 0 10px white;
+    background-image: url(/img/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;    
+    max-width: 1000px;
+    max-height: 450px;
+    font-family: monospace;
+    color:rgb(112, 136, 182);
 }
 
 #frase{
     text-align: center;
     position: absolute;
-    top: 28%;
-    left: 5%;
+    top: 30%;
+    left: 7%;
+    text-transform: uppercase;
 }
 
 #frase p{
-    font-size: 29px;
+    font-size: 26px;
     font-weight: bolder;
 }
 
 #busqueda{
     position: absolute;
     top: 60%;
-    left: 27%;
+    left: 23%;
 }
 
 #busqueda input{
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 7px 0 rgb(192, 192, 253);
+    outline: none;
 }
 
 #flecha{
     width: 60px;
+}
+#flecha:hover {
+    transform: translateY(-2px);
+}  
+#flechan:active {
+    transform: translateY(2px);
 }
 
 #siguiente{
@@ -43,7 +64,25 @@
     border-color: transparent;
     width: 120px;
 }
+#siguiente:focus {
+    outline: none;
+    box-shadow: none;
+}
+#contenidodiv{
+    margin-top:20px;
+    height:70px;
+    width:480px;
+}
+#contenidodiv h1{
+    width: 100%;
+    font-size:13px;
+    margin-top:-12px;
+    margin-left:15px;
+    border-color: transparent;
+}
 
 #Nombres{
     width: 70%;
+    border-radius: 5px;
+
 }
