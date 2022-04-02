@@ -5,7 +5,7 @@ const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
 
 perfilCtrl.renderPerfil = (req, res) => {
-    res.render('tiendaAgregar');
+    res.render('tiendaAgregar');  
 }
 
 perfilCtrl.addDatos = async (req, res) => {
