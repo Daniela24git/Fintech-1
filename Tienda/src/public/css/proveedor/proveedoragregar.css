@@ -9,10 +9,30 @@
     position: absolute;
     top: 17%;
     left: 29%;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }
 
 input{
-    border: 1px solid black;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+input:focus{
+    outline: none;
+}
+#codigo{
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    color: #0d6efd;
+    position: absolute;
+    width: 270px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+}
+#codigo:focus{
+    outline: none;
 }
 
 label{
@@ -23,7 +43,7 @@ label{
     text-align: center;
     font-size: 35px;
     width: 100%;
-    color: #0a1b2e;
+    color: #0d6efd;
 }
 
 #NOMBRE{
@@ -80,10 +100,18 @@ label{
 #guardar1{
     position: absolute;
     top: 91.3%;
-    background-color: #0d437e;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
     color: white;
-    border: 1px solid black;
     width: 100%;
+}
+#guardar1:focus{
+    outline: none;
+}
+#guardar1:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);
+    color: #0d6efd;
 }
 
 @media (max-width: 1024px ) {

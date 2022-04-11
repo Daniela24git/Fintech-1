@@ -6,16 +6,17 @@
     height: 100%;
     max-width: 100%;
     max-height: 85%;
+    margin-right: 70px;
 }
 
-.row{
+#conetendor .row{
     gap: 3%;
     row-gap: 20px;
 }
 
 #masProveedor{
     position: absolute;
-    top: 11%;
+    top: 11.2%;
     left: 94%;
     background-color: transparent;
     border-color: transparent;
@@ -30,7 +31,7 @@
     border-color: transparent;
     width: 100%;
     text-align: center;
-    text-transform:uppercase; 
+    outline: none;
 }
 
 #NombreProveedor{
@@ -39,6 +40,7 @@
     width: 100%;
     text-align: center;
     text-transform:uppercase; 
+    outline: none;
 }
 
 #Direccion{
@@ -47,6 +49,7 @@
     width: 100%;
     text-align: center;
     text-transform:uppercase; 
+    outline: none;
 }
 
 #Numero{
@@ -55,6 +58,7 @@
     width: 100%;
     text-align: center;
     text-transform:uppercase; 
+    outline: none;
 }
 
 #celular{
@@ -63,29 +67,48 @@
     width: 100%;
     text-align: center;
     text-transform:uppercase; 
+    outline: none;
 }   
 
 #datosPerosnales{
     width: 100%;
     text-align: center;
+    margin-top: 9px;
 }
 
 #Editar{
-    width: 30%;
-    background-color: black;
+    margin-left: 15%;
     text-align: center;
     position: absolute;
+    display: inline-block;    
 }
-
-#Editar a{
-    color: white;
-}
-
-#tarjeta{
+#Editar img{
+    width: 40px;
     position: absolute;
+    border-radius: 50%;
+}
+#Editar #tooltip{
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(166, 212, 96);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;  
+  /* Posicion del tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  margin-left: -30px;
+}
+#Editar:hover #tooltip {
+    visibility: visible;
+}
+#tarjeta{
+    position: relative;
     left: 2%;
-    border: 1px solid;
-    height: 100%;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    height: 102%;
     width: 100%;
     row-gap: 20px;
     color: black;
@@ -93,37 +116,67 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     max-width: 283px;
-    max-height: 317px;
+    max-height: 317px;  
+    margin-top: 2.3%;  
 }
 
 #botonX{
-    background-color: black;
+    margin-top: -1%;
+    margin-left: 70%;
+    display: inline-block; 
     text-align: center;
-    position: absolute;
-    margin-top: 0%;
-    margin-left: 67%;
+    position: relative;
 }
-
+#botonX img{
+    width: 45px;
+    position: relative;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+#botonX #tooltips{
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(236, 91, 91);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;  
+    /* Posicion del tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -80px;
+}
+#botonX:hover #tooltips {
+    visibility: visible;
+}
 
 #agregar{
-    width: 100%;
+    width: 100.4%;
     position: absolute;
-    margin-top: 12%;
-}
-
-#botonX button{
-    background-color: red;
-    border-color: transparent;
-    font-size: 22px;
 }
 
 #agregarProducto{
-    background-color: #0d437e;
-    width: 100%;
+    width: 100.47%;
+    margin-top: 0%;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border-color: transparent;
+    border-radius: 4px;
+    position: absolute;
+    left: -1.5px;
+    outline: none;
 }
 
 #agregarProducto a{
     color: white;
+    text-decoration: none;
+}
+#agregarProducto:focus{
+    outline: none;
+}
+#agregarProducto:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);
+
 }
 
 #bienvenida{
@@ -137,25 +190,6 @@
     max-width: 600px;
     max-height: 200px;
     border-radius: 20px;
-}
-
-#masTiendas{
-    position: absolute;
-    top: 70%;
-    left: 33%;
-    width: 34%;
-}
-
-#masTiendas button{
-    border: transparent;
-    background-color: #5e6a92;
-    color: white;
-    width: 100%;
-    font-size: 25px;
-}
-
-#masTiendas button:focus{
-    border-radius: 6px solid #233675;
 }
 
 @media (max-width: 1024px) {

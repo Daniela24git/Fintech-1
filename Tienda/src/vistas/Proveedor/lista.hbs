@@ -10,6 +10,7 @@
                     </div>
                 </div>
                 <div>
+
                     <div id="datos">
                         <div id="NOMBRES">
                             <input type="text" value="{{NombreProveedor}}" id="NombreProveedor" readonly>
@@ -18,20 +19,30 @@
                             <input type="text" value="{{Direccion}}" id="Direccion" readonly>
                         </div>
                         <div id="CELULAR">
-                            <input type="text" value="{{Celular}}" id="Numero" readonly>
+                            <input type="text" value="0{{Celular}}" id="Numero" readonly>
                         </div>
                         <div id="TELEFONO">
                             <input type="text" value="{{Telefono}}" id="Numero" readonly>
                         </div>
                         <div id="ESTADO">
-                            <input type="text" id="estado" value="{{Estado}}" readonly>
+                            {{#if Estado}}
+                            <input type="text" id="estado" value="Activo" readonly> 
+                            {{else}}
+                            <input type="text" id="estado" value="Inactivo" readonly> 
+                            {{/if}}
                         </div>
                     </div>
                     <div id="Editar">
-                        <a href="/proveedor/editar/{{idProvedores}}" id="BotonEditar">Editar</a>
+                        <a href="/proveedor/editar/{{idProvedores}}" id="BotonEditar">
+                            <img src="/img/iconos/edit.png"><span id="tooltip">Editar</span>
+                        </a>
                     </div>
+                    <div>
                     <div id="botonX">
-                        <a href="/proveedor/Eliminar/{{idProvedores}}"><button>Eliminar</button></a>
+                        <a href="/proveedor/Eliminar/{{idProvedores}}">
+                            <img src="/img/iconos/borrar.png"><span id="tooltips">Eliminar</span>
+                        </a>
+                    </div>
                     </div>
                     <div id="agregar">
                         <button id="agregarProducto"><a href="/ProductoEntrada/agregar/{{idProvedores}}">Agregar un
@@ -50,7 +61,6 @@
         </div>
     </div>
 </form>
-
 <div>
     <button id="masProveedor"><a href="/tienda/lista/{{user.idUsuarios}}"><img src="/img/iconos/mas.png"
                 id="mas"></a></button>

@@ -1,31 +1,38 @@
 <LINK REL=StyleSheet HREF="/css/proveedor/proveedoragregar.css" TYPE="text/css" MEDIA=screen>
 <form action="/proveedor/agregar/{{user.idUsuarios}}" method="POST" name="f1" id="f1">
-<div id="totalcontenido">
-    <p id="p">Nuevo Proveedor</p>
-    <div id="contenedor_1">
-        <div id="NOMBRE">
-            <label id="lblnprovedor">Nombre del Proveedor:</label>
-            <input type="text" name="NombreProveedor" id="NombreProveedor">
-        </div>
-        <div id="DIRECCION">
-            <label id="lbldireccion">Dirección:</label>
-            <input type="text" name="Direccion" id="Direccion">
-        </div>
-        <div id="CELULAR">
-            <label id="lblcelular">Celular:</label>
-            <input type="text" name="Celular" id="Celular" maxlength="10">
-        </div>
-        <div id="TELEFONO">
-            <label id="lbltelefono">Teléfono:</label>
-            <input type="text" name="Telefono" id="Telefono" maxlength="10">
-        </div>
-        <div id="ESTADO">
-            <label id="lblcodigo">Estado:</label>
+    <div id="totalcontenido">
+        <p id="p">Nuevo Proveedor</p>
+        <div id="contenedor_1">
+            <div id="NOMBRE">
+                <label id="lblnprovedor">Nombre del Proveedor:</label>
+                <input type="text" name="NombreProveedor" id="NombreProveedor">
+            </div>
+            <div id="DIRECCION">
+                <label id="lbldireccion">Dirección:</label>
+                <input type="text" name="Direccion" id="Direccion">
+            </div>
+            <div id="CELULAR">
+                <label id="lblcelular">Celular:</label>
+                <input type="text" name="Celular" id="Celular" maxlength="10" >
+            </div>
+            <div id="TELEFONO">
+                <label id="lbltelefono">Teléfono:</label>
+                <input type="text" name="Telefono" id="Telefono" maxlength="10">
+            </div>
+            <div id="ESTADO">
+                <label id="lblcodigo">Estado:</label>
+                <select name="Estado" id="codigo">
+                    <option disabled="" selected="">Seleccionar Estado</option>
+                    <option value="true">Activo</option>
+                    <option value="false">Inactivo</option>
+                </select>
+            <!-- cambio en el input
             <input type="text" name="Estado" id="codigo">
+            -->
+            </div>
+            <button type="submit" id="guardar1">Guardar</button>
         </div>
-        <button type="submit" id="guardar1">Guardar</button>
     </div>
-</div>
 </form>
 <script>
     function inicio() {

@@ -22,7 +22,11 @@
             </div>
             <div id="ESTADO">
                 <label id="lblestado">Estado:</label>
-                <input type="text" name="Estado" id="Estado" value="{{Estado}}">
+                <select name="Estado" id="Estado" value="{{Estado}}">
+                    <option disabled="" selected="">Seleccionar Estado</option>
+                    <option value="true">Activo</option>
+                    <option value="false">Inactivo</option>
+                </select>
             </div>
             <button type="submit" id="guardar">Editar</button>
         </form>

@@ -1,4 +1,4 @@
-#contenedor{
+#contenedor {
     width: 100%;
     height: 100%;
     max-width: 550px;
@@ -7,91 +7,120 @@
     top: 17%;
     left: 31%;
     background-color: white;
-    color: black;
-    border: 1px solid black;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }
 
-#p{
+input {
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#p {
     text-align: center;
+    color: #0d6efd;
     font-size: 30px;
-    color: #0a1b2e;
 }
 
-#guardar{
-    background-color: #0d437e;
-    color: white;
-    border: 1px solid black;
+#guardar {
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
+    color: #fff;
     width: 100%;
     position: absolute;
     top: 90%;
 }
-#guardar_1{
-    width: 50px;   
+#guardar:focus{
+    outline: none;
+}
+#guardar:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);    
 }
 
-label{
+#guardar_1 {
+    width: 50px;
+}
+
+label {
     margin-left: 20px;
     color: #0a1b2e;
 }
 
-#NOMBRES{
+#NOMBRES {
     position: absolute;
     top: 14%;
 }
 
-#NombreProveedor{
+#NombreProveedor {
     position: absolute;
     left: 246px;
 }
 
-#DIRECCION{
+#DIRECCION {
     position: absolute;
     top: 28%;
 }
 
-#direccion{
+#direccion {
     position: absolute;
     left: 246px;
 }
 
-#celular{
+#celular {
     position: absolute;
     left: 246px;
 }
 
-#CELULAR{
+#CELULAR {
     position: absolute;
     top: 42%;
 }
 
-#TELEFONO{
+#TELEFONO {
     position: absolute;
     top: 56%
 }
 
-#Telefono{
+#Telefono {
     position: absolute;
     left: 246px;
 }
 
-#ESTADO{
+#ESTADO {
     position: absolute;
     top: 70%;
 }
 
-#Estado{
+#Estado {
     position: absolute;
     left: 246px;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    color: #0d6efd;
+    position: absolute;
+    width: 270px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+}
+#Estado:focus {
+    outline: none;
 }
 
 @media (max-width: 1024px) {
-    #contenedor{
+    #contenedor {
         top: 8%;
     }
 }
 
 @media (max-width: 600px) {
-    #contenedor{
+    #contenedor {
         left: 15%;
     }
 }
