@@ -1,28 +1,111 @@
-#nav{
+#nav {
     position: absolute;
     left: 0%;
-    background-color: #17a2b8;
     width: 100%;
     max-width: 35%;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-#nav a{
-    color: white;
+#nav div a {
+    color: rgb(23, 42, 95);
+    font: 23px Raleway;
+    text-decoration: none;
+    z-index: 100;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    cursor: pointer;
 }
-
-#entradas{
+#entradas {
     position: absolute;
     top: 14%;
     left: 3%;
+    z-index: 100;
 }
-
-#bodega{
+#entradas:hover{
+    color: #FFF;
+}
+#entradas div a{
+    z-index: 100;
+}
+#entradas:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;      
+}
+#entradas:before
+{
+    left: 0px;
+} 
+#entradas:hover:before
+{
+    width: 100%;
+}
+#bodega {
     position: absolute;
     top: 14%;
     left: 55%;
 }
+#bodega:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;      
+}
+#bodega:before
+{
+    left: 0px;
+} 
+#bodega:hover:before
+{
+    width: 100%;
+}
+#bodega:hover{
+    color: #FFF;
+}
 
-#contenedor{
+img {
+    width: 47.5px;
+    position: relative;
+    border-radius: 50%;
+}
+#delete{
+    width: 50px;
+
+}
+
+#botonX #tooltips {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(236, 91, 91);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Posicion del tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -80px;
+}
+
+#botonX:hover #tooltips {
+    visibility: visible;
+}
+
+#contenedor {
     position: absolute;
     top: 15%;
     left: 3.5%;
@@ -32,85 +115,103 @@
     max-height: 85%;
 }
 
-#contenedor .row{
+#contenedor .row {
     gap: 3%;
     row-gap: 30px;
 }
 
-#tarjeta{
+#tarjeta {
     width: 100%;
     background-color: white;
     color: black;
     max-width: 404px;
+    max-height: 550px;
     display: block;
-    border: 1px solid black;
+    padding-bottom: 50px;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 3px;
 }
 
-#eliminar{
-    width: 70px;
+#eliminar {
+    width: 66px;
 }
 
-#botonX{
-    background-color: black;
+#botonX {
     text-align: center;
     position: absolute;
-    margin-top: -3.12%;
-    margin-left: 11%;
-}
-#botonX button{
-    background-color: red;
+    margin-top: -0%;
+    margin-left: 200px;
 }
 
-#BotonEditar{
+#BotonEditar {
     width: 20%;
-    background-color: black;
     text-align: center;
+    position: absolute;
+    display: inline-block;  
+    margin-top: -0%;
+    margin-left: -50px;
 }
 
-#BotonEditar a{
-    color: white;
+#BotonEditar #tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(166, 212, 96);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Posicion del tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    margin-left: -80px;
 }
 
-label{
+#BotonEditar:hover #tooltip {
+    visibility: visible;
+}
+
+label {
     margin-left: 20px;
 }
 
-input{
+input {
     width: 50%;
     border-color: transparent;
     font-size: 25px;
     max-width: 100%;
 }
 
-#codigo{
+#codigo {
     margin-left: 40px;
 }
 
-#NombreProducto{
+#NombreProducto {
     margin-left: 10px;
 }
 
-#Cantidad{
+#Cantidad {
     margin-left: 10px;
     width: 200px;
 }
-#Cantidad2{
+
+#Cantidad2 {
     margin-left: 10px;
     width: 100px;
 }
 
-#precioActual{
+#precioActual {
     margin-left: 43px;
 }
 
-#precioUnidad{
+#precioUnidad {
     position: absolute;
     width: 100%;
     margin-left: 20px;
     max-width: 80px;
 }
 
-#agregar{
+#agregar {
     position: absolute;
     left: 27%;
     top: 15%;
@@ -118,19 +219,31 @@ input{
     max-width: 300px;
 }
 
-#agregarDetalleProducto{
+#agregarDetalleProducto {
     position: absolute;
-    margin-top: -3.12%;
-    margin-left: 23.5%;
-   
+    margin-top: 0.5%;
+    margin-left: 295px;
+
+}
+#agregarDetalleProducto a {
+    text-decoration: none;
+}
+#agregarDetalleProducto a button {
+    outline: none;
+    border-color: transparent;
+    color: 0d6efd;
 }
 
-#agregarDetalleProducto button{
-    background-color: #0d437e;
-    color: white;
+#agregarDetalleProducto a button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    color: #fff;
+    transition: all 0.3s;
+    border-radius: 4px;
 }
 
-#bienvenida{
+#bienvenida {
     background-color: white;
     position: absolute;
     text-align: center;
@@ -143,14 +256,14 @@ input{
     border-radius: 20px;
 }
 
-#masTiendas{
+#masTiendas {
     position: absolute;
     top: 70%;
     left: 33%;
     width: 34%;
 }
 
-#masTiendas button{
+#masTiendas button {
     border: transparent;
     background-color: #5e6a92;
     color: white;
@@ -158,51 +271,54 @@ input{
     font-size: 25px;
 }
 
-#masTiendas button:focus{
+#masTiendas button:focus {
     border-radius: 6px solid #233675;
 }
 
 @media (max-width: 1024px) {
-    #contenedor{
+    #contenedor {
         top: 1%;
         left: 17%;
-        max-width: 850px;  
+        max-width: 850px;
     }
-    .row{
+
+    .row {
         gap: 5%;
     }
 }
 
 @media (max-width: 800px) {
-    #contenedor{
+    #contenedor {
         top: 3%;
         left: 27%;
-        max-width: 400px;  
+        max-width: 400px;
     }
 }
-*/
 
-#car{
-    border-radius: 30px; 
+*/ #car {
+    border-radius: 30px;
     padding: 12px;
     border-color: #0d6efd;
     width: 100%;
-	margin: 20px;
-	background:#fff;
-	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    background: #fff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
-#botonesProducto{
-    position:absolute;
+
+#botonesProducto {
+    position: absolute;
     margin-right: 11px;
     margin-top: 10px;
     top: 20px;
     right: 5%;
 }
-#espaciobotonmas{
+
+#espaciobotonmas {
     padding: 20px;
 }
-#botonvermas{
-    position:absolute;
+
+#botonvermas {
+    position: absolute;
     margin-right: 11px;
     right: 5%;
 }

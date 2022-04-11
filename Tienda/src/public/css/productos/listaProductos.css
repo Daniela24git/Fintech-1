@@ -1,25 +1,79 @@
-#nav{
+#nav {
     position: absolute;
     left: 0%;
-    background-color: #17a2b8;
     width: 100%;
     max-width: 35%;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-#nav a{
-    color: white;
+#nav div a {
+    color: rgb(23, 42, 95);
+    font: 23px Raleway;
+    text-decoration: none;
+    z-index: 100;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    cursor: pointer;
 }
-
-#entradas{
+#entradas {
     position: absolute;
     top: 14%;
     left: 3%;
+    z-index: 100;
 }
-
-#bodega{
+#entradas:hover{
+    color: #FFF;
+}
+#entradas div a{
+    z-index: 100;
+}
+#entradas:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;      
+}
+#entradas:before
+{
+    left: 0px;
+} 
+#entradas:hover:before
+{
+    width: 100%;
+}
+#bodega {
     position: absolute;
     top: 14%;
     left: 55%;
+}
+#bodega:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;      
+}
+#bodega:before
+{
+    left: 0px;
+} 
+#bodega:hover:before
+{
+    width: 100%;
+}
+#bodega:hover{
+    color: #FFF;
 }
 
 #contenedor{
@@ -122,4 +176,18 @@ input{
         max-width: 420px;
         top: 1%;
     }
+}
+
+#agregar{
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+    margin-top: 10%;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 200px;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }

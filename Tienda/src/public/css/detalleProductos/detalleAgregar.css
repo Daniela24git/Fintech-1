@@ -7,16 +7,35 @@
     max-width: 600px;
     max-height: 450px;
     background-color: white;
-    border: 1px solid black;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
+}
+input {
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+#tit{
+    color:#0d6efd;
+}
+input:focus {
+    outline: none;
 }
 
 #guardar{
-    background-color: #0d437e;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
     color: white;
-    border: 1px solid black;
     width: 100%;
     position: absolute;
     top: 91%;
+}
+#guardar:focus{
+    outline: none;
+}
+#guardar:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);    
 }
 
 label{
@@ -80,9 +99,18 @@ label{
 
 #porsentaje{
     position: absolute;
-    left: 320px;
+    left: 318px;
     width: 105%;
     text-align: center;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    color: #0d6efd;
+    text-align: center;
+
+}
+#porsentaje:focus {
+    outline: none;
+    text-decoration: none;
 }
 
 #productos{
@@ -124,7 +152,7 @@ label{
     border-color: transparent;
     font-size: 26px;
     font-weight: bold;
-    color: black;
+    color:#0d6efd;
     position: absolute;
     top: 0px;
     left: 66%;

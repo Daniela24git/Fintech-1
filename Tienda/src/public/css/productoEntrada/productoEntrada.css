@@ -9,11 +9,30 @@
     width: 100%;
     height: 100%;
     background-color: white;
-    border: 1px solid black;
     max-width: 630px;
     max-height: 590px;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }
-
+input {
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+select:focus{
+    outline: none;
+}
+select{
+    text-align: center;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    color: #0d6efd;
+    text-align: center;
+    font-size: 19px;
+}
+input:focus {
+    outline: none;
+}
 label{
     margin-left: 20px;
 }
@@ -24,12 +43,12 @@ label{
     font-size: 27px;
     border-color: transparent;
     font-weight: bold;
-    color: black;
+    color: #0d6efd;
     max-width: 50px;
 }
 #TITULO{
     text-align: center;
-    color: #0a1b2e;
+    color: #0d6efd;
 }
 
 #CODIGO{
@@ -138,13 +157,23 @@ label{
 }
 
 #guardar1{
-    background-color: #0d437e;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
     color: white;
-    border: 1px solid black;
     width: 100%;
     position: absolute;
     top: 99.9%;
-};
+}
+#guardar1:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}
+#guardar1:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);    
+}
 
 @media (max-width: 1024px) {
     #conten{

@@ -31,10 +31,12 @@
                     <input type="text" value="{{precioUnidad}}$" id="precioUnidad" readonly></input>
                 </div>
                 <div id="BotonEditar">
-                    <a href="/ProductoEntrada/editar/{{idProductoEntradas}}">Editar</a>
+                    <a href="/ProductoEntrada/editar/{{idProductoEntradas}}"><img src="/img/iconos/edit.png"><span id="tooltip">Editar</span></a>
                 </div>
                 <div id="botonX">
-                    <a href="/ProductoEntrada/Eliminar/{{idProductoEntradas}}"><button type="button">Eliminar</button></a>
+                    <a href="/ProductoEntrada/Eliminar/{{idProductoEntradas}}">
+                    <img src="/img/iconos/borrar.png" id="delete"><span id="tooltips">Eliminar</span>
+                    </a>
                 </div>
                 <div id="agregarDetalleProducto">
                     <a href="/detalleProducto/agregar/{{idProductoEntradas}}"><button type="button">Detalles</button></a>

@@ -11,7 +11,16 @@
     background-color: white;
     max-width: 600px;
     max-height: 400px;
-    border: 1px solid black;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
+}
+input{
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+input:focus{
+    outline: none;
 }
 
 label{
@@ -21,16 +30,23 @@ label{
 
 #p{
     text-align: center;
-    color: #0a1b2e;
+    color: #0d6efd;
 }
 
 #guardar1{
-    background-color: #0d437e;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
     color: white;
-    border: 1px solid black;
     width: 100%;
     position: absolute;
     top: 90%;
+}
+#guardar1:focus{
+    outline: none;
+}
+#guardar1:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);    
 }
 
 #CODIGO{
