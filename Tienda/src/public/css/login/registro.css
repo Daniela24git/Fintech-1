@@ -28,11 +28,13 @@
     width: 100%;
     height: 100%;
     max-width: 500px;
-    max-height: 250px;
+    max-height: 230px;
     text-align: center;
     box-sizing: border-box;
     display: block;
     border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }
 #datos{
     position: absolute;
@@ -42,7 +44,7 @@
 
 #nombres{
     position: absolute;
-    top: 5%;
+    top: 8%;
     left: 5%;
 }
 
@@ -50,11 +52,14 @@
     width: 100%;
     height: auto;
     max-width: 270px;
+    outline: none;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
 }
 
 #contraseñas{
     position:absolute;
-    top: 50%;
+    top: 57%;
     left: 20%;
     display: flex;
 }
@@ -63,27 +68,36 @@
     width: 100%;
     height: auto;
     max-width: 270px;
+    outline: none;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+
 }
 
 #boton{
-    background-color:#5e6a92;
-    border-color: black;
-    border-radius: 20px;
-    color: white;
-    width: 70%;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 4px;
+    width: 100%;
     position: absolute;
-    top: 80%;
-    left: 13%;
+    top: 85%;
 }
 
 #boton button{
-    background-color:#5e6a92;
+    background-color: transparent;
     border-color: transparent;
     color: white;
+    outline: none;
+
 }
 
-#boton button:focus{
-    border-radius: 6px solid #233675;
+#boton:focus{
+    outline: none;
+}
+#boton:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);
+    color: #0d6efd;
+
 }
 
 @media(max-width: 800px){

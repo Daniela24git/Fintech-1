@@ -27,6 +27,8 @@
     max-height: 350px;
     box-sizing: border-box;
     display: block;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }
 
 #login{
@@ -37,9 +39,8 @@
 #datos{
     position: absolute;
     top: 45%;
-    left: 16%;
+    left: 16%;    
 }
-
 #Usuario{
     font-size: 35px;
 }
@@ -48,11 +49,9 @@
     width: 100%;
     height: auto;
     max-width: 270px;
-}
-
-#contraseña{
-    font-size: 35px;
-
+    outline: none;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
 }
 
 #contraseñas{
@@ -66,15 +65,26 @@
     width: 100%;
     height: auto;
     max-width: 270px;
+    outline: none;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
 }
 
 #boton{
-    color: white;
-    background-color: #5e6a92;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border-color: transparent;
+    border-radius: 4px;
     position: absolute;
     top: 88.4%;
     width: 100%;
-    border-color: transparent;
+    color: #fff;
+}
+#boton:focus{
+    outline: none;
+}
+#boton:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);
+
 }
 
 #sesion{
@@ -87,8 +97,23 @@
 #sesion button{
     background-color: transparent;
     border-color: transparent;
+    outline: none;
 }
-
 button{
     color: #5e6a92;
+
+}
+#sesion a {
+    text-decoration: none;
+}
+#sesion a button {
+    outline: none;
+}
+#sesion a button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    color: #fff;
+    transition: all 0.3s;
+    border-radius: 4px;
 }
