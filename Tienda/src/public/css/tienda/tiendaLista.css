@@ -10,6 +10,8 @@
     text-align: center;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 35%;
 }
 
 #avatar{
@@ -26,7 +28,6 @@
     height: 100%;
     max-width: 600px;
     max-height: 200px;
-    border-radius: 20px;
 }
 
 #masTiendas{
@@ -35,18 +36,58 @@
     left: 33%;
     width: 34%;
 }
+#masTiendas a{
+ text-decoration: none;
+}
 
 #masTiendas button{
-    border: transparent;
-    background-color: #5e6a92;
-    color: white;
     width: 100%;
-    font-size: 25px;
+    height: 100%;
+    color: #fff;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;    
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    outline: none;
 }
 
-#masTiendas button:focus{
-    border-radius: 6px solid #233675;
+#masTiendas button:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+#masTiendas button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
 }
+  
+#masTiendas button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 
 #aviso{
     color: black;
@@ -56,8 +97,8 @@
     position: absolute;
     top: 14%;
     left: 358px;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
 }
 
 label{
@@ -68,7 +109,6 @@ label{
 
 #dato{
     font-size: 30px;
-    margin-top: 10px;
 }
 
 #contenido{
@@ -80,15 +120,18 @@ label{
     background-color: white;
     height: 100%;
     max-height: 380px;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 5px;
 }
 
 input{
-    border-color: black;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
 }
 
 #nombreNegocio{
     text-align: center;
-    color: black;
+    color: #0d6efd;
 }
 
 #nombreNegocio h1{
@@ -106,7 +149,7 @@ input{
 
 #DIRECCION{
     position: absolute;
-    top: 48%;
+    top: 46.8%;
     left: 0%;
     width: 100%;
     height: auto;
@@ -140,7 +183,7 @@ input{
 #botones{
     position: absolute;
     top: 86%;
-    width: 100%;
+    width: 100%;    
 }
 
 #boton{
@@ -155,20 +198,40 @@ input{
 
 #Editar{
     width: 200px;
-    background-color: #0d437e;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
 }
 
 #Editar a{
     color: white;
+    text-decoration: none;
+}
+#Editar:focus{
+    outline: none;
+}
+#Editar:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);
+    color: #0d6efd;
 }
 
 #Agregar{
     width: 300px;
-    background-color: #0d437e;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
 }
 
 #Agregar a{
   color: white;
+  text-decoration: none;
+}
+#Agregar:focus{
+    outline: none;
+}
+#Agregar:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);
+    color: #0d6efd;
 }
 
 @media (max-width:1024px) {

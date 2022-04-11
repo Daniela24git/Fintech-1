@@ -4,49 +4,185 @@ nav{
     left: 48%;
     right: 0%;
     font-size: 26px;
-    background-color: #0d437e;
     width: 100%;
     height: 100%;
-    max-width: 52%;
+    max-width: 55%;
     max-height:  70px;
     display: block;
     cursor: pointer;
     overflow: hidden;
+    
 }
 nav a{
-    color: white;
+    color: rgb(23, 42, 95);
+    font: 23px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
 }
+#nav1 a:hover{
+    color: #FFF;
+}
+#nav2 a:hover{
+    color: #FFF;
+}
+#nav3 a:hover{
+    color: #FFF;
+}
+#nav4 a:hover{
+    color: #FFF;
+}
+#nav5 a:hover{
+    color: #FFF;
+}
+
 
 #nav1{
     position: absolute;
     top: 14%;
-    left: 3%;
+    left: 0%;       
 }
-
+#nav1 a{
+    text-decoration: none;
+    z-index: 100;
+}
+#nav1:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;      
+}
+#nav1:before
+{
+    left: 0px;
+} 
+#nav1:hover:before
+{
+    width: 100%;
+}
 #nav2{
     position: absolute;
     top: 14%;
-    left: 18%;
+    left: 16%;    
+}
+#nav2 a{
+    text-decoration: none;
+    z-index: 100;
+}
+#nav2:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;
+}
+#nav2:before
+{
+    left: 0px;
+} 
+
+
+#nav2:hover:before
+{
+    width: 100%;
 }
 
 #nav3{
     position: absolute;
     top: 14%;
-    left: 35%;
+    left: 34.5%;
 }
+#nav3 a{
+    text-decoration: none;
+    z-index: 100;
+}
+#nav3:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;
+}
+#nav3:before
+{
+    left: 0px;
+} 
 
+#nav3:hover:before
+{
+    width: 100%;
+}
 #nav4{
     position: absolute;
     top: 14%;
-    left: 56%;
+    left: 55%;
 }
+#nav4 a{
+    text-decoration: none;
+}
+#nav4:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;
+}
+#nav4:before
+{
+    left: 0px;
+} 
 
+#nav4:hover:before
+{
+    width: 100%;
+}
 #nav5{
     position: absolute;
     top: 14%;
-    left: 68%;
+    left: 70%;
 }
+#nav5 a{
+    text-decoration: none;
+}
+#nav5:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #094399;
+    opacity: 0.3;
+    transition: all 0.4s;
 
+}
+#nav5:before
+{
+    left: 0px;
+} 
+#nav5:hover:before
+{
+    width: 100%;
+}
 @media (max-width: 1100px) {
     #nav1{
         left: 1%;
