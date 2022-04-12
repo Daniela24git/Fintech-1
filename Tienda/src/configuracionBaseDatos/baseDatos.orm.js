@@ -34,6 +34,12 @@ const detalleRegistroSalidasModelos = require('../modelos/detalleRegistroSalidas
 const porcentajesModelos = require('../modelos/porcentajes')
 const notaVentaModelo = require('../modelos/NotaVenta')
 const FacturaModelo = require('../modelos/factura')
+const cajaModelo = require('../modelos/caja')
+const detalleCajaModelo = require('../modelos/detallecaja')
+const diaPagoModelo = require('../modelos/diapago')
+const gananciaDiaModelo = require('../modelos/gananciadia')
+const gananciaSemanalModelo = require('../modelos/gananciasemanal')
+const tipoCajaModelo = require('../modelos/tipocaja')
 
 const sequelize = new Sequelize(
   'fintech',
@@ -84,6 +90,12 @@ const detalleRegistroSalidas = detalleRegistroSalidasModelos(sequelize,Sequelize
 const porcentajes = porcentajesModelos(sequelize,Sequelize)
 const notaVenta = notaVentaModelo(sequelize, Sequelize)
 const factura = FacturaModelo(sequelize, Sequelize)
+const caja = cajaModelo(sequelize, Sequelize)
+const detalleCaja = detalleCajaModelo(sequelize, Sequelize)
+const diaPago = diaPagoModelo(sequelize, Sequelize)
+const gananciaDia = gananciaDiaModelo(sequelize, Sequelize)
+const gananciaSemanal = gananciaSemanalModelo(sequelize, Sequelize)
+const tipoCaja = tipoCajaModelo(sequelize, Sequelize)
 
 
 //Relaciones 
@@ -226,6 +238,9 @@ factura.belongsTo(productos)
 detalleListaProductos.hasMany(factura)
 factura.belongsTo(detalleListaProductos)
 
+caja.hasMany(detalleCaja)
+detalleCaja.belongsTo(caja)
+
 module.exports = {
   usuarios,
   categoria,
@@ -246,5 +261,7 @@ module.exports = {
   registroSalidas,
   porcentajes,
   notaVenta,
-  factura
+  factura,
+  caja,
+  detalleCaja
 }
