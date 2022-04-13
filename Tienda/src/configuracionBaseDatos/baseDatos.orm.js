@@ -39,7 +39,6 @@ const detalleCajaModelo = require('../modelos/detallecaja')
 const diaPagoModelo = require('../modelos/diapago')
 const gananciaDiaModelo = require('../modelos/gananciadia')
 const gananciaSemanalModelo = require('../modelos/gananciasemanal')
-const tipoCajaModelo = require('../modelos/tipocaja')
 
 const sequelize = new Sequelize(
   'fintech',
@@ -95,7 +94,6 @@ const detalleCaja = detalleCajaModelo(sequelize, Sequelize)
 const diaPago = diaPagoModelo(sequelize, Sequelize)
 const gananciaDia = gananciaDiaModelo(sequelize, Sequelize)
 const gananciaSemanal = gananciaSemanalModelo(sequelize, Sequelize)
-const tipoCaja = tipoCajaModelo(sequelize, Sequelize)
 
 
 //Relaciones 
@@ -241,6 +239,18 @@ factura.belongsTo(detalleListaProductos)
 caja.hasMany(detalleCaja)
 detalleCaja.belongsTo(caja)
 
+usuarios.hasMany(caja)
+caja.belongsTo(usuarios)
+
+usuarios.hasMany(gananciaSemanal)
+gananciaSemanal.belongsTo(usuarios)
+
+diaPago.hasMany(gananciaSemanal)
+gananciaSemanal.belongsTo(diaPago)
+
+gananciaDia.hasMany(gananciaSemanal)
+gananciaSemanal.belongsTo(gananciaDia)
+
 module.exports = {
   usuarios,
   categoria,
@@ -263,5 +273,8 @@ module.exports = {
   notaVenta,
   factura,
   caja,
-  detalleCaja
+  detalleCaja,
+  diaPago,
+  gananciaDia,
+  gananciaSemanal
 }

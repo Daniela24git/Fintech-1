@@ -5,8 +5,8 @@ const gananciaDia = (sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true,
         },
-        nombreGananciaDia: type.STRING,
-        valorGanancia: type.STRING,
+        valorTotalGanancia: type.STRING,
+        fecha: type.STRING,
         creacionGananciaDia:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

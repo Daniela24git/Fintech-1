@@ -5,7 +5,8 @@ const detalleCaja = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        valorTotalCaja: type.STRING,
+        nombreCaja : type.STRING,
+        valorCaja: type.STRING,
         creacionDetalleCaja:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

@@ -5,9 +5,7 @@ const detallePago = (sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true,
         },
-        motivoPago: type.STRING,
         valorPago: type.STRING,
-        valorRestante: type.STRING,
         creacionDetallePago:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

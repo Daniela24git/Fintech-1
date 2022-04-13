@@ -5,8 +5,10 @@ const diaPago = (sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true,
         },
-        nombrePago: type.STRING,
+        motivoPago: type.STRING,
         valorTotalPago: type.STRING,
+        restantePago: type.STRING,
+        fecha: type.STRING,
         creaciondiaPago:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
