@@ -21,10 +21,14 @@
                 <input type="text" value="0{{Celular}}" id="celular" readonly></input>
             </div>
             <div id="BotonEditar">
-                <a href="/clientes/editar/{{idClientes}}"><button>Editar</button></a>
+                <a href="/clientes/editar/{{idClientes}}">
+                <img src="/img/iconos/edit.png"><span id="tooltip">Editar</span>
+                </a>
             </div>
             <div id="botonX">
-                <a href="/clientes/Eliminar/{{idClientes}}" ><button>Eliminar</button></a>
+                <a href="/clientes/Eliminar/{{idClientes}}" >
+                <img src="/img/iconos/borrar.png" id="delete"><span id="tooltips">Eliminar</span>
+                </a>
             </div>
             <div id="detalle">
                 <a href="/clientes/Perfil/{{idClientes}}"><button>Detalle</button></a>

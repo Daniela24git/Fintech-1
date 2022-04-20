@@ -231,7 +231,7 @@ input {
 #agregarDetalleProducto a button {
     outline: none;
     border-color: transparent;
-    color: 0d6efd;
+    color: #0d6efd;
 }
 
 #agregarDetalleProducto a button:hover {

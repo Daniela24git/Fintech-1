@@ -5,12 +5,19 @@
     width: 100%;
     height: 100%;
     background-color: white;
-    border: 1px solid;
-    border-color: black;
     max-width: 550px;
     max-height: 450px;
+    border: transparent;
+    box-shadow: 0 0 10px rgb(147, 175, 252);
+    border-radius: 4px;
 }
-
+input {
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+}
+input:focus {
+    outline: none;
+}
 label{
     margin-left: 20px;
     color: #0a1b2e;
@@ -76,10 +83,18 @@ label{
 #guardar1{
     position: absolute;
     top: 91%;
-    background-color: #0d437e;
-    color: white;
-    border: 1px solid black;
     width: 100%;
+    background-color: #051e38;
+    color: white;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #4257fa 100%);
+    border-color: transparent;
+    border-radius: 2px;
+}
+#guardar1:focus{
+    outline: none;
+}
+#guardar1:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #63dcfd 0, #949ff7 100%);    
 }
 
 @media (max-width: 1024px) {
