@@ -22,50 +22,27 @@ nav a{
     cursor: pointer;
     z-index: 100;
 }
-#nav1 a:hover{
-    color: #FFF;
-}
-#nav2 a:hover{
-    color: #FFF;
-}
-#nav3 a:hover{
-    color: #FFF;
-}
-#nav4 a:hover{
-    color: #FFF;
-}
-#nav5 a:hover{
-    color: #FFF;
-}
-
-
 #nav1{
     position: absolute;
     top: 14%;
     left: 0%;       
 }
 #nav1 a{
+    text-decoration: none;    
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #3d92ca 100%);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+}
+#nav1 a:hover{
     text-decoration: none;
     z-index: 100;
-}
-#nav1:before
-{
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0px;
-    content: '';
-    background: #094399;
-    opacity: 0.3;
-    transition: all 0.4s;      
-}
-#nav1:before
-{
-    left: 0px;
-} 
-#nav1:hover:before
-{
-    width: 100%;
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #264c66 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #32688b 100%);
+    color: #fff;
+    border-radius: 4px;
+    transform: translateY(-2px);
+    transition: all 0.3s;
 }
 #nav2{
     position: absolute;
@@ -73,59 +50,43 @@ nav a{
     left: 16%;    
 }
 #nav2 a{
+    text-decoration: none;    
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #3d92ca 100%);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+}
+#nav2 a:hover{
     text-decoration: none;
     z-index: 100;
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #264c66 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #32688b 100%);
+    color: #fff;
+    border-radius: 4px;
+    transform: translateY(-2px);
+    transition: all 0.3s;
 }
-#nav2:before
-{
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0px;
-    content: '';
-    background: #094399;
-    opacity: 0.3;
-    transition: all 0.4s;
-}
-#nav2:before
-{
-    left: 0px;
-} 
-
-
-#nav2:hover:before
-{
-    width: 100%;
-}
-
 #nav3{
     position: absolute;
     top: 14%;
     left: 34.5%;
 }
 #nav3 a{
+    text-decoration: none;    
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #3d92ca 100%);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+}
+#nav3 a:hover{
     text-decoration: none;
     z-index: 100;
-}
-#nav3:before
-{
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0px;
-    content: '';
-    background: #094399;
-    opacity: 0.3;
-    transition: all 0.4s;
-}
-#nav3:before
-{
-    left: 0px;
-} 
-
-#nav3:hover:before
-{
-    width: 100%;
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #264c66 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #32688b 100%);
+    color: #fff;
+    border-radius: 4px;
+    transform: translateY(-2px);
+    transition: all 0.3s;
 }
 #nav4{
     position: absolute;
@@ -133,27 +94,21 @@ nav a{
     left: 55%;
 }
 #nav4 a{
+    text-decoration: none;    
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #3d92ca 100%);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+}
+#nav4 a:hover{
     text-decoration: none;
-}
-#nav4:before
-{
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0px;
-    content: '';
-    background: #094399;
-    opacity: 0.3;
-    transition: all 0.4s;
-}
-#nav4:before
-{
-    left: 0px;
-} 
-
-#nav4:hover:before
-{
-    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #264c66 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #32688b 100%);
+    color: #fff;
+    border-radius: 4px;
+    transform: translateY(-2px);
+    transition: all 0.3s;
 }
 #nav5{
     position: absolute;
@@ -161,27 +116,21 @@ nav a{
     left: 70%;
 }
 #nav5 a{
+    text-decoration: none;    
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #3d92ca 100%);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgb(255, 255, 255);
+}
+#nav5 a:hover{
     text-decoration: none;
-}
-#nav5:before
-{
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    top: 0px;
-    content: '';
-    background: #094399;
-    opacity: 0.3;
-    transition: all 0.4s;
-
-}
-#nav5:before
-{
-    left: 0px;
-} 
-#nav5:hover:before
-{
-    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #264c66 0 -3px 0 inset;
+    background-image: radial-gradient(100% 100% at 100% 0, #93d6fd 0, #32688b 100%);
+    color: #fff;
+    border-radius: 4px;
+    transform: translateY(-2px);
+    transition: all 0.3s;
 }
 @media (max-width: 1100px) {
     #nav1{
